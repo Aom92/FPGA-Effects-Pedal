@@ -1,0 +1,41 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate "D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\ADC_test\ADC.qsys" --block-symbol-file --output-directory="D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\ADC_test\ADC" --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading ADC_test/ADC.qsys
+Progress: Reading input file
+Progress: Adding altpll_0 [altpll 20.1]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding modular_adc_0 [altera_modular_adc 20.1]
+Progress: Parameterizing module modular_adc_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: ADC.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate "D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\ADC_test\ADC.qsys" --synthesis=VHDL --output-directory="D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\ADC_test\ADC\synthesis" --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading ADC_test/ADC.qsys
+Progress: Reading input file
+Progress: Adding altpll_0 [altpll 20.1]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding modular_adc_0 [altera_modular_adc 20.1]
+Progress: Parameterizing module modular_adc_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: ADC.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Info: ADC: Generating ADC "ADC" for QUARTUS_SYNTH
+Info: altpll_0: "ADC" instantiated altpll "altpll_0"
+Info: modular_adc_0: "ADC" instantiated altera_modular_adc "modular_adc_0"
+Info: rst_controller: "ADC" instantiated altera_reset_controller "rst_controller"
+Info: control_internal: "modular_adc_0" instantiated altera_modular_adc_control "control_internal"
+Info: ADC: Done "ADC" with 5 modules, 13 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

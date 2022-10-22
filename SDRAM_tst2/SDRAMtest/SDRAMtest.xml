@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2022.10.12.17:14:03"
+ outputDirectory="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="MAX 10"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="10M08DAF484C8G"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="8"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DE10_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DE10_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DE10_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="avalon_reset" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port name="avalon_reset_reset" direction="output" role="reset" width="1" />
+  </interface>
+  <interface name="de10_clk" kind="clock" start="0">
+   <property name="clockRate" value="50000000" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="de10_clk_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="master_controller" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port
+       name="master_controller_address"
+       direction="input"
+       role="address"
+       width="26" />
+   <port name="master_controller_read" direction="input" role="read" width="1" />
+   <port
+       name="master_controller_waitrequest"
+       direction="output"
+       role="waitrequest"
+       width="1" />
+   <port
+       name="master_controller_readdata"
+       direction="output"
+       role="readdata"
+       width="16" />
+   <port
+       name="master_controller_write"
+       direction="input"
+       role="write"
+       width="1" />
+   <port
+       name="master_controller_writedata"
+       direction="input"
+       role="writedata"
+       width="16" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="" />
+   <property name="synchronousEdges" value="NONE" />
+   <port name="reset_reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="sdram_clk" kind="clock" start="1">
+   <property name="associatedDirectClock" value="" />
+   <property name="clockRate" value="100000000" />
+   <property name="clockRateKnown" value="true" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="sdram_clk_clk" direction="output" role="clk" width="1" />
+  </interface>
+  <interface name="sdram_wire" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port name="sdram_wire_addr" direction="output" role="addr" width="13" />
+   <port name="sdram_wire_ba" direction="output" role="ba" width="2" />
+   <port name="sdram_wire_cas_n" direction="output" role="cas_n" width="1" />
+   <port name="sdram_wire_cke" direction="output" role="cke" width="1" />
+   <port name="sdram_wire_cs_n" direction="output" role="cs_n" width="1" />
+   <port name="sdram_wire_dq" direction="bidir" role="dq" width="16" />
+   <port name="sdram_wire_dqm" direction="output" role="dqm" width="2" />
+   <port name="sdram_wire_ras_n" direction="output" role="ras_n" width="1" />
+   <port name="sdram_wire_we_n" direction="output" role="we_n" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="SDRAMtest:1.0:AUTO_DE10_CLK_CLOCK_DOMAIN=-1,AUTO_DE10_CLK_CLOCK_RATE=-1,AUTO_DE10_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10M08DAF484C8G,AUTO_DEVICE_FAMILY=MAX 10,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1665612840,AUTO_UNIQUE_ID=(Avalon_MM:1.0:)(clock_source:20.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(altera_avalon_new_sdram_controller:20.1:TAC=6.0,TMRD=3,TRCD=15.0,TRFC=55.0,TRP=15.0,TWR=14.0,addressWidth=25,bankWidth=2,casLatency=2,clockRate=100000000,columnWidth=10,componentName=SDRAMtest_new_sdram_controller_0,dataWidth=16,generateSimulationModel=false,initNOPDelay=0.0,initRefreshCommands=8,masteredTristateBridgeSlave=0,model=single_Micron_MT48LC4M32B2_7_chip,numberOfBanks=4,numberOfChipSelects=1,pinsSharedViaTriState=false,powerUpDelay=100.0,refreshPeriod=7.8125,registerDataIn=true,rowWidth=13,size=67108864)(altera_up_avalon_sys_sdram_pll:18.0:AUTO_DEVICE=10M08DAF484C8G,AUTO_DEVICE_SPEEDGRADE=8,CIII_boards=DE0,CIV_boards=DE2-115,CV_boards=DE10-Standard,MAX10_boards=DE10-Lite,board=DE10-Lite,device_family=MAX 10,gui_outclk=50.0,gui_refclk=50.0,other_boards=None,outclk=100.0,refclk=50.0(altera_up_altpll:18.0:DEVICE_FAMILY=MAX 10,OUTCLK0_DIV=1,OUTCLK0_MULT=2,OUTCLK1_DIV=1,OUTCLK1_MULT=2,OUTCLK2_DIV=1,OUTCLK2_MULT=2,PHASE_SHIFT=-3000,audio_clk_freq=12.288,gui_device_family=MAX 10,type=System/SDRAM,video_in=5MP Digital Camera (THDB_D5M),video_out=4.3&quot; LCD (TRDB_LTM))(altera_up_avalon_reset_from_locked_signal:18.0:)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0))(avalon:20.1:arbitrationPriority=1,baseAddress=0x0000,defaultConnection=false)(clock:20.1:)(clock:20.1:)(clock:20.1:)(reset:20.1:)(reset:20.1:)(reset:20.1:)"
+   instancePathKey="SDRAMtest"
+   kind="SDRAMtest"
+   version="1.0"
+   name="SDRAMtest">
+  <parameter name="AUTO_DE10_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1665612840" />
+  <parameter name="AUTO_DEVICE" value="10M08DAF484C8G" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="MAX 10" />
+  <parameter name="AUTO_DE10_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_DE10_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="8" />
+  <generatedFiles>
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/SDRAMtest.vhd"
+       type="VHDL" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/SDRAMtest_new_sdram_controller_0.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/SDRAMtest_sys_sdram_pll_0.v"
+       type="VERILOG" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_up_altpll.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/SDRAMtest_mm_interconnect_0.v"
+       type="VERILOG" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_merlin_master_translator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_merlin_slave_translator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/altera_avalon_new_sdram_controller_hw.tcl" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/clocks/altera_up_avalon_sys_sdram_pll/altera_up_avalon_sys_sdram_pll_hw.tcl" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/clocks/altera_up_altpll/altera_up_altpll_hw.tcl" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/clocks/altera_up_avalon_reset_from_locked_signal/altera_up_avalon_reset_from_locked_signal_hw.tcl" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/merlin/altera_mm_interconnect/altera_mm_interconnect_hw.tcl" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/merlin/altera_merlin_master_translator/altera_merlin_master_translator_hw.tcl" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/merlin/altera_merlin_slave_translator/altera_merlin_slave_translator_hw.tcl" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="SDRAMtest">queue size: 0 starting:SDRAMtest "SDRAMtest"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>4</b> modules, <b>7</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InitialInterconnectTransform</message>
+   <message level="Info">Interconnect is inserted between master Avalon_MM_0.avm_m0 and slave new_sdram_controller_0.s1 because the master has address signal 26 bit wide, but the slave is 25 bit wide.</message>
+   <message level="Debug" culprit="merlin_initial_interconnect_transform"><![CDATA[After transform: <b>3</b> modules, <b>5</b> connections]]></message>
+   <message level="Debug">Transform: TerminalIdAssignmentUpdateTransform</message>
+   <message level="Debug">Transform: DefaultSlaveTransform</message>
+   <message level="Debug">Transform: TranslatorTransform</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug" culprit="merlin_translator_transform"><![CDATA[After transform: <b>5</b> modules, <b>11</b> connections]]></message>
+   <message level="Debug">Transform: IDPadTransform</message>
+   <message level="Debug">Transform: DomainTransform</message>
+   <message level="Debug">Transform merlin_domain_transform not run on matched interfaces Avalon_MM_0.avm_m0 and Avalon_MM_0_avm_m0_translator.avalon_anti_master_0</message>
+   <message level="Debug">Transform merlin_domain_transform not run on matched interfaces Avalon_MM_0_avm_m0_translator.avalon_universal_master_0 and new_sdram_controller_0_s1_translator.avalon_universal_slave_0</message>
+   <message level="Debug">Transform merlin_domain_transform not run on matched interfaces new_sdram_controller_0_s1_translator.avalon_anti_slave_0 and new_sdram_controller_0.s1</message>
+   <message level="Debug">Transform: RouterTransform</message>
+   <message level="Debug">Transform: TrafficLimiterTransform</message>
+   <message level="Debug">Transform: BurstTransform</message>
+   <message level="Debug">Transform: TreeTransform</message>
+   <message level="Debug">Transform: NetworkToSwitchTransform</message>
+   <message level="Debug">Transform: WidthTransform</message>
+   <message level="Debug">Transform: RouterTableTransform</message>
+   <message level="Debug">Transform: ThreadIDMappingTableTransform</message>
+   <message level="Debug">Transform: ClockCrossingTransform</message>
+   <message level="Debug">Transform: PipelineTransform</message>
+   <message level="Debug">Transform: SpotPipelineTransform</message>
+   <message level="Debug">Transform: PerformanceMonitorTransform</message>
+   <message level="Debug">Transform: TrafficLimiterUpdateTransform</message>
+   <message level="Debug">Transform: InsertClockAndResetBridgesTransform</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug" culprit="merlin_clock_and_reset_bridge_transform"><![CDATA[After transform: <b>7</b> modules, <b>17</b> connections]]></message>
+   <message level="Debug">Transform: InterconnectConnectionsTagger</message>
+   <message level="Debug">Transform: HierarchyTransform</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug" culprit="merlin_hierarchy_transform"><![CDATA[After transform: <b>5</b> modules, <b>10</b> connections]]></message>
+   <message level="Debug" culprit="merlin_mm_transform"><![CDATA[After transform: <b>5</b> modules, <b>10</b> connections]]></message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug" culprit="reset_adaptation_transform"><![CDATA[After transform: <b>7</b> modules, <b>14</b> connections]]></message>
+   <message level="Debug" culprit="SDRAMtest"><![CDATA["<b>SDRAMtest</b>" reuses <b>altera_avalon_new_sdram_controller</b> "<b>submodules/SDRAMtest_new_sdram_controller_0</b>"]]></message>
+   <message level="Debug" culprit="SDRAMtest"><![CDATA["<b>SDRAMtest</b>" reuses <b>altera_up_avalon_sys_sdram_pll</b> "<b>submodules/SDRAMtest_sys_sdram_pll_0</b>"]]></message>
+   <message level="Debug" culprit="SDRAMtest"><![CDATA["<b>SDRAMtest</b>" reuses <b>altera_mm_interconnect</b> "<b>submodules/SDRAMtest_mm_interconnect_0</b>"]]></message>
+   <message level="Debug" culprit="SDRAMtest"><![CDATA["<b>SDRAMtest</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
+   <message level="Debug" culprit="SDRAMtest"><![CDATA["<b>SDRAMtest</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
+   <message level="Debug" culprit="SDRAMtest">queue size: 4 starting:altera_avalon_new_sdram_controller "submodules/SDRAMtest_new_sdram_controller_0"</message>
+   <message level="Info" culprit="new_sdram_controller_0">Starting RTL generation for module 'SDRAMtest_new_sdram_controller_0'</message>
+   <message level="Info" culprit="new_sdram_controller_0">  Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=SDRAMtest_new_sdram_controller_0 --dir=C:/Users/Aom92/AppData/Local/Temp/alt9277_4078423863304276927.dir/0008_new_sdram_controller_0_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/Aom92/AppData/Local/Temp/alt9277_4078423863304276927.dir/0008_new_sdram_controller_0_gen//SDRAMtest_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="new_sdram_controller_0">Done RTL generation for module 'SDRAMtest_new_sdram_controller_0'</message>
+   <message level="Info" culprit="new_sdram_controller_0"><![CDATA["<b>SDRAMtest</b>" instantiated <b>altera_avalon_new_sdram_controller</b> "<b>new_sdram_controller_0</b>"]]></message>
+   <message level="Debug" culprit="SDRAMtest">queue size: 3 starting:altera_up_avalon_sys_sdram_pll "submodules/SDRAMtest_sys_sdram_pll_0"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>2</b> modules, <b>1</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="sys_sdram_pll_0"><![CDATA["<b>sys_sdram_pll_0</b>" reuses <b>altera_up_altpll</b> "<b>submodules/altera_up_altpll</b>"]]></message>
+   <message level="Debug" culprit="sys_sdram_pll_0"><![CDATA["<b>sys_sdram_pll_0</b>" reuses <b>altera_up_avalon_reset_from_locked_signal</b> "<b>submodules/altera_up_avalon_reset_from_locked_signal</b>"]]></message>
+   <message level="Info" culprit="sys_sdram_pll_0"><![CDATA["<b>SDRAMtest</b>" instantiated <b>altera_up_avalon_sys_sdram_pll</b> "<b>sys_sdram_pll_0</b>"]]></message>
+   <message level="Debug" culprit="SDRAMtest">queue size: 3 starting:altera_up_altpll "submodules/altera_up_altpll"</message>
+   <message level="Info" culprit="sys_pll"><![CDATA["<b>sys_sdram_pll_0</b>" instantiated <b>altera_up_altpll</b> "<b>sys_pll</b>"]]></message>
+   <message level="Debug" culprit="SDRAMtest">queue size: 2 starting:altera_up_avalon_reset_from_locked_signal "submodules/altera_up_avalon_reset_from_locked_signal"</message>
+   <message level="Info" culprit="reset_from_locked"><![CDATA["<b>sys_sdram_pll_0</b>" instantiated <b>altera_up_avalon_reset_from_locked_signal</b> "<b>reset_from_locked</b>"]]></message>
+   <message level="Debug" culprit="SDRAMtest">queue size: 4 starting:altera_mm_interconnect "submodules/SDRAMtest_mm_interconnect_0"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>4</b> modules, <b>6</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InitialInterconnectTransform</message>
+   <message level="Debug" culprit="merlin_initial_interconnect_transform"><![CDATA[After transform: <b>0</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: TerminalIdAssignmentUpdateTransform</message>
+   <message level="Debug">Transform: DefaultSlaveTransform</message>
+   <message level="Debug">Transform: TranslatorTransform</message>
+   <message level="Debug">No Avalon connections, skipping transform </message>
+   <message level="Debug">Transform: IDPadTransform</message>
+   <message level="Debug">Transform: DomainTransform</message>
+   <message level="Debug">Transform: RouterTransform</message>
+   <message level="Debug">Transform: TrafficLimiterTransform</message>
+   <message level="Debug">Transform: BurstTransform</message>
+   <message level="Debug">Transform: TreeTransform</message>
+   <message level="Debug">Transform: NetworkToSwitchTransform</message>
+   <message level="Debug">Transform: WidthTransform</message>
+   <message level="Debug">Transform: RouterTableTransform</message>
+   <message level="Debug">Transform: ThreadIDMappingTableTransform</message>
+   <message level="Debug">Transform: ClockCrossingTransform</message>
+   <message level="Debug">Transform: PipelineTransform</message>
+   <message level="Debug">Transform: SpotPipelineTransform</message>
+   <message level="Debug">Transform: PerformanceMonitorTransform</message>
+   <message level="Debug">Transform: TrafficLimiterUpdateTransform</message>
+   <message level="Debug">Transform: InsertClockAndResetBridgesTransform</message>
+   <message level="Debug">Transform: InterconnectConnectionsTagger</message>
+   <message level="Debug">Transform: HierarchyTransform</message>
+   <message level="Debug" culprit="merlin_hierarchy_transform"><![CDATA[After transform: <b>4</b> modules, <b>6</b> connections]]></message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="mm_interconnect_0"><![CDATA["<b>mm_interconnect_0</b>" reuses <b>altera_merlin_master_translator</b> "<b>submodules/altera_merlin_master_translator</b>"]]></message>
+   <message level="Debug" culprit="mm_interconnect_0"><![CDATA["<b>mm_interconnect_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"]]></message>
+   <message level="Info" culprit="mm_interconnect_0"><![CDATA["<b>SDRAMtest</b>" instantiated <b>altera_mm_interconnect</b> "<b>mm_interconnect_0</b>"]]></message>
+   <message level="Debug" culprit="SDRAMtest">queue size: 1 starting:altera_merlin_master_translator "submodules/altera_merlin_master_translator"</message>
+   <message level="Info" culprit="Avalon_MM_0_avm_m0_translator"><![CDATA["<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_master_translator</b> "<b>Avalon_MM_0_avm_m0_translator</b>"]]></message>
+   <message level="Debug" culprit="SDRAMtest">queue size: 0 starting:altera_merlin_slave_translator "submodules/altera_merlin_slave_translator"</message>
+   <message level="Info" culprit="new_sdram_controller_0_s1_translator"><![CDATA["<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_slave_translator</b> "<b>new_sdram_controller_0_s1_translator</b>"]]></message>
+   <message level="Debug" culprit="SDRAMtest">queue size: 5 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>SDRAMtest</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_avalon_new_sdram_controller:20.1:TAC=6.0,TMRD=3,TRCD=15.0,TRFC=55.0,TRP=15.0,TWR=14.0,addressWidth=25,bankWidth=2,casLatency=2,clockRate=100000000,columnWidth=10,componentName=SDRAMtest_new_sdram_controller_0,dataWidth=16,generateSimulationModel=false,initNOPDelay=0.0,initRefreshCommands=8,masteredTristateBridgeSlave=0,model=single_Micron_MT48LC4M32B2_7_chip,numberOfBanks=4,numberOfChipSelects=1,pinsSharedViaTriState=false,powerUpDelay=100.0,refreshPeriod=7.8125,registerDataIn=true,rowWidth=13,size=67108864"
+   instancePathKey="SDRAMtest:.:new_sdram_controller_0"
+   kind="altera_avalon_new_sdram_controller"
+   version="20.1"
+   name="SDRAMtest_new_sdram_controller_0">
+  <parameter name="registerDataIn" value="true" />
+  <parameter name="casLatency" value="2" />
+  <parameter name="refreshPeriod" value="7.8125" />
+  <parameter name="masteredTristateBridgeSlave" value="0" />
+  <parameter name="TMRD" value="3" />
+  <parameter name="pinsSharedViaTriState" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="TRP" value="15.0" />
+  <parameter name="numberOfChipSelects" value="1" />
+  <parameter name="columnWidth" value="10" />
+  <parameter name="componentName" value="SDRAMtest_new_sdram_controller_0" />
+  <parameter name="TRFC" value="55.0" />
+  <parameter name="generateSimulationModel" value="false" />
+  <parameter name="dataWidth" value="16" />
+  <parameter name="rowWidth" value="13" />
+  <parameter name="bankWidth" value="2" />
+  <parameter name="powerUpDelay" value="100.0" />
+  <parameter name="TWR" value="14.0" />
+  <parameter name="size" value="67108864" />
+  <parameter name="TAC" value="6.0" />
+  <parameter name="initRefreshCommands" value="8" />
+  <parameter name="TRCD" value="15.0" />
+  <parameter name="initNOPDelay" value="0.0" />
+  <parameter name="addressWidth" value="25" />
+  <parameter name="numberOfBanks" value="4" />
+  <generatedFiles>
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/SDRAMtest_new_sdram_controller_0.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/altera_avalon_new_sdram_controller_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="SDRAMtest" as="new_sdram_controller_0" />
+  <messages>
+   <message level="Debug" culprit="SDRAMtest">queue size: 4 starting:altera_avalon_new_sdram_controller "submodules/SDRAMtest_new_sdram_controller_0"</message>
+   <message level="Info" culprit="new_sdram_controller_0">Starting RTL generation for module 'SDRAMtest_new_sdram_controller_0'</message>
+   <message level="Info" culprit="new_sdram_controller_0">  Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=SDRAMtest_new_sdram_controller_0 --dir=C:/Users/Aom92/AppData/Local/Temp/alt9277_4078423863304276927.dir/0008_new_sdram_controller_0_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/Aom92/AppData/Local/Temp/alt9277_4078423863304276927.dir/0008_new_sdram_controller_0_gen//SDRAMtest_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="new_sdram_controller_0">Done RTL generation for module 'SDRAMtest_new_sdram_controller_0'</message>
+   <message level="Info" culprit="new_sdram_controller_0"><![CDATA["<b>SDRAMtest</b>" instantiated <b>altera_avalon_new_sdram_controller</b> "<b>new_sdram_controller_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_up_avalon_sys_sdram_pll:18.0:AUTO_DEVICE=10M08DAF484C8G,AUTO_DEVICE_SPEEDGRADE=8,CIII_boards=DE0,CIV_boards=DE2-115,CV_boards=DE10-Standard,MAX10_boards=DE10-Lite,board=DE10-Lite,device_family=MAX 10,gui_outclk=50.0,gui_refclk=50.0,other_boards=None,outclk=100.0,refclk=50.0(altera_up_altpll:18.0:DEVICE_FAMILY=MAX 10,OUTCLK0_DIV=1,OUTCLK0_MULT=2,OUTCLK1_DIV=1,OUTCLK1_MULT=2,OUTCLK2_DIV=1,OUTCLK2_MULT=2,PHASE_SHIFT=-3000,audio_clk_freq=12.288,gui_device_family=MAX 10,type=System/SDRAM,video_in=5MP Digital Camera (THDB_D5M),video_out=4.3&quot; LCD (TRDB_LTM))(altera_up_avalon_reset_from_locked_signal:18.0:)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)"
+   instancePathKey="SDRAMtest:.:sys_sdram_pll_0"
+   kind="altera_up_avalon_sys_sdram_pll"
+   version="18.0"
+   name="SDRAMtest_sys_sdram_pll_0">
+  <parameter name="outclk" value="100.0" />
+  <parameter name="other_boards" value="None" />
+  <parameter name="refclk" value="50.0" />
+  <parameter name="device_family" value="MAX 10" />
+  <parameter name="CIV_boards" value="DE2-115" />
+  <parameter name="MAX10_boards" value="DE10-Lite" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="8" />
+  <parameter name="gui_refclk" value="50.0" />
+  <parameter name="AUTO_DEVICE" value="10M08DAF484C8G" />
+  <parameter name="gui_outclk" value="50.0" />
+  <parameter name="CV_boards" value="DE10-Standard" />
+  <parameter name="CIII_boards" value="DE0" />
+  <parameter name="board" value="DE10-Lite" />
+  <generatedFiles>
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/SDRAMtest_sys_sdram_pll_0.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_up_altpll.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/clocks/altera_up_avalon_sys_sdram_pll/altera_up_avalon_sys_sdram_pll_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/clocks/altera_up_altpll/altera_up_altpll_hw.tcl" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/clocks/altera_up_avalon_reset_from_locked_signal/altera_up_avalon_reset_from_locked_signal_hw.tcl" />
+  </childSourceFiles>
+  <instantiator instantiator="SDRAMtest" as="sys_sdram_pll_0" />
+  <messages>
+   <message level="Debug" culprit="SDRAMtest">queue size: 3 starting:altera_up_avalon_sys_sdram_pll "submodules/SDRAMtest_sys_sdram_pll_0"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>2</b> modules, <b>1</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="sys_sdram_pll_0"><![CDATA["<b>sys_sdram_pll_0</b>" reuses <b>altera_up_altpll</b> "<b>submodules/altera_up_altpll</b>"]]></message>
+   <message level="Debug" culprit="sys_sdram_pll_0"><![CDATA["<b>sys_sdram_pll_0</b>" reuses <b>altera_up_avalon_reset_from_locked_signal</b> "<b>submodules/altera_up_avalon_reset_from_locked_signal</b>"]]></message>
+   <message level="Info" culprit="sys_sdram_pll_0"><![CDATA["<b>SDRAMtest</b>" instantiated <b>altera_up_avalon_sys_sdram_pll</b> "<b>sys_sdram_pll_0</b>"]]></message>
+   <message level="Debug" culprit="SDRAMtest">queue size: 3 starting:altera_up_altpll "submodules/altera_up_altpll"</message>
+   <message level="Info" culprit="sys_pll"><![CDATA["<b>sys_sdram_pll_0</b>" instantiated <b>altera_up_altpll</b> "<b>sys_pll</b>"]]></message>
+   <message level="Debug" culprit="SDRAMtest">queue size: 2 starting:altera_up_avalon_reset_from_locked_signal "submodules/altera_up_avalon_reset_from_locked_signal"</message>
+   <message level="Info" culprit="reset_from_locked"><![CDATA["<b>sys_sdram_pll_0</b>" instantiated <b>altera_up_avalon_reset_from_locked_signal</b> "<b>reset_from_locked</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_mm_interconnect:20.1:AUTO_DEVICE=10M08DAF484C8G,AUTO_DEVICE_FAMILY=MAX 10,AUTO_DEVICE_SPEEDGRADE=,COMPOSE_CONTENTS=add_instance {Avalon_MM_0_avm_m0_translator} {altera_merlin_master_translator};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_ADDRESS_W} {26};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_DATA_W} {16};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_BURSTCOUNT_W} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_BYTEENABLE_W} {2};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {UAV_ADDRESS_W} {26};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {UAV_BURSTCOUNT_W} {2};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_READLATENCY} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_WRITE_WAIT} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_READ_WAIT} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_DATA_HOLD} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_SETUP_WAIT} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_READDATA} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_WRITEDATA} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_READ} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_WRITE} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_BEGINBURSTTRANSFER} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_BEGINTRANSFER} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_BYTEENABLE} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_CHIPSELECT} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_ADDRESS} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_BURSTCOUNT} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_DEBUGACCESS} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_CLKEN} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_READDATAVALID} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_WAITREQUEST} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_LOCK} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_READRESPONSE} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_WRITERESPONSE} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_SYMBOLS_PER_WORD} {2};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_ADDRESS_SYMBOLS} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_BURSTCOUNT_SYMBOLS} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_CONSTANT_BURST_BEHAVIOR} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {UAV_CONSTANT_BURST_BEHAVIOR} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_LINEWRAPBURSTS} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_MAX_PENDING_READ_TRANSACTIONS} {64};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_BURSTBOUNDARIES} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_INTERLEAVEBURSTS} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_BITS_PER_SYMBOL} {8};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_ISBIGENDIAN} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_ADDRESSGROUP} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {UAV_ADDRESSGROUP} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_REGISTEROUTGOINGSIGNALS} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_REGISTERINCOMINGSIGNALS} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_ALWAYSBURSTMAXBURST} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {SYNC_RESET} {0};add_instance {new_sdram_controller_0_s1_translator} {altera_merlin_slave_translator};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_ADDRESS_W} {25};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_DATA_W} {16};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {UAV_DATA_W} {16};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_BURSTCOUNT_W} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_BYTEENABLE_W} {2};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {UAV_BYTEENABLE_W} {2};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {UAV_ADDRESS_W} {26};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {UAV_BURSTCOUNT_W} {2};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_READLATENCY} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_SETUP_WAIT} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_WRITE_WAIT} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_READ_WAIT} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_DATA_HOLD} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_TIMING_UNITS} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_READDATA} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_WRITEDATA} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_READ} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_WRITE} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_BEGINBURSTTRANSFER} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_BEGINTRANSFER} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_BYTEENABLE} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_CHIPSELECT} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_ADDRESS} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_BURSTCOUNT} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_READDATAVALID} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_WAITREQUEST} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_WRITEBYTEENABLE} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_LOCK} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_AV_CLKEN} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_UAV_CLKEN} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_OUTPUTENABLE} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_DEBUGACCESS} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_READRESPONSE} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_WRITERESPONSE} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_SYMBOLS_PER_WORD} {2};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_ADDRESS_SYMBOLS} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_BURSTCOUNT_SYMBOLS} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_CONSTANT_BURST_BEHAVIOR} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {UAV_CONSTANT_BURST_BEHAVIOR} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_REQUIRE_UNALIGNED_ADDRESSES} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_LINEWRAPBURSTS} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_MAX_PENDING_READ_TRANSACTIONS} {7};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_MAX_PENDING_WRITE_TRANSACTIONS} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_BURSTBOUNDARIES} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_INTERLEAVEBURSTS} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_BITS_PER_SYMBOL} {8};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_ISBIGENDIAN} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_ADDRESSGROUP} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {UAV_ADDRESSGROUP} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_REGISTEROUTGOINGSIGNALS} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_REGISTERINCOMINGSIGNALS} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_ALWAYSBURSTMAXBURST} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {CHIPSELECT_THROUGH_READLATENCY} {0};add_instance {Avalon_MM_0_reset_reset_bridge} {altera_reset_bridge};set_instance_parameter_value {Avalon_MM_0_reset_reset_bridge} {ACTIVE_LOW_RESET} {0};set_instance_parameter_value {Avalon_MM_0_reset_reset_bridge} {SYNCHRONOUS_EDGES} {deassert};set_instance_parameter_value {Avalon_MM_0_reset_reset_bridge} {NUM_RESET_OUTPUTS} {1};set_instance_parameter_value {Avalon_MM_0_reset_reset_bridge} {USE_RESET_REQUEST} {0};add_instance {sys_sdram_pll_0_sys_clk_clock_bridge} {altera_clock_bridge};set_instance_parameter_value {sys_sdram_pll_0_sys_clk_clock_bridge} {EXPLICIT_CLOCK_RATE} {100000000};set_instance_parameter_value {sys_sdram_pll_0_sys_clk_clock_bridge} {NUM_CLOCK_OUTPUTS} {1};add_connection {Avalon_MM_0_avm_m0_translator.avalon_universal_master_0} {new_sdram_controller_0_s1_translator.avalon_universal_slave_0} {avalon};set_connection_parameter_value {Avalon_MM_0_avm_m0_translator.avalon_universal_master_0/new_sdram_controller_0_s1_translator.avalon_universal_slave_0} {arbitrationPriority} {1};set_connection_parameter_value {Avalon_MM_0_avm_m0_translator.avalon_universal_master_0/new_sdram_controller_0_s1_translator.avalon_universal_slave_0} {baseAddress} {0x0000};set_connection_parameter_value {Avalon_MM_0_avm_m0_translator.avalon_universal_master_0/new_sdram_controller_0_s1_translator.avalon_universal_slave_0} {defaultConnection} {false};add_connection {Avalon_MM_0_reset_reset_bridge.out_reset} {Avalon_MM_0_avm_m0_translator.reset} {reset};add_connection {Avalon_MM_0_reset_reset_bridge.out_reset} {new_sdram_controller_0_s1_translator.reset} {reset};add_connection {sys_sdram_pll_0_sys_clk_clock_bridge.out_clk} {Avalon_MM_0_avm_m0_translator.clk} {clock};add_connection {sys_sdram_pll_0_sys_clk_clock_bridge.out_clk} {new_sdram_controller_0_s1_translator.clk} {clock};add_connection {sys_sdram_pll_0_sys_clk_clock_bridge.out_clk} {Avalon_MM_0_reset_reset_bridge.clk} {clock};add_interface {sys_sdram_pll_0_sys_clk} {clock} {slave};set_interface_property {sys_sdram_pll_0_sys_clk} {EXPORT_OF} {sys_sdram_pll_0_sys_clk_clock_bridge.in_clk};add_interface {Avalon_MM_0_reset_reset_bridge_in_reset} {reset} {slave};set_interface_property {Avalon_MM_0_reset_reset_bridge_in_reset} {EXPORT_OF} {Avalon_MM_0_reset_reset_bridge.in_reset};add_interface {Avalon_MM_0_avm_m0} {avalon} {slave};set_interface_property {Avalon_MM_0_avm_m0} {EXPORT_OF} {Avalon_MM_0_avm_m0_translator.avalon_anti_master_0};add_interface {new_sdram_controller_0_s1} {avalon} {master};set_interface_property {new_sdram_controller_0_s1} {EXPORT_OF} {new_sdram_controller_0_s1_translator.avalon_anti_slave_0};set_module_assignment {interconnect_id.Avalon_MM_0.avm_m0} {0};set_module_assignment {interconnect_id.new_sdram_controller_0.s1} {0};(altera_merlin_master_translator:20.1:AV_ADDRESSGROUP=0,AV_ADDRESS_SYMBOLS=1,AV_ADDRESS_W=26,AV_ALWAYSBURSTMAXBURST=0,AV_BITS_PER_SYMBOL=8,AV_BURSTBOUNDARIES=0,AV_BURSTCOUNT_SYMBOLS=0,AV_BURSTCOUNT_W=1,AV_BYTEENABLE_W=2,AV_CONSTANT_BURST_BEHAVIOR=0,AV_DATA_HOLD=0,AV_DATA_W=16,AV_INTERLEAVEBURSTS=0,AV_ISBIGENDIAN=0,AV_LINEWRAPBURSTS=0,AV_MAX_PENDING_READ_TRANSACTIONS=64,AV_READLATENCY=0,AV_READ_WAIT=1,AV_REGISTERINCOMINGSIGNALS=0,AV_REGISTEROUTGOINGSIGNALS=0,AV_SETUP_WAIT=0,AV_SYMBOLS_PER_WORD=2,AV_WRITE_WAIT=0,SYNC_RESET=0,UAV_ADDRESSGROUP=0,UAV_ADDRESS_W=26,UAV_BURSTCOUNT_W=2,UAV_CONSTANT_BURST_BEHAVIOR=0,USE_ADDRESS=1,USE_BEGINBURSTTRANSFER=0,USE_BEGINTRANSFER=0,USE_BURSTCOUNT=0,USE_BYTEENABLE=0,USE_CHIPSELECT=0,USE_CLKEN=0,USE_DEBUGACCESS=0,USE_LOCK=0,USE_READ=1,USE_READDATA=1,USE_READDATAVALID=0,USE_READRESPONSE=0,USE_WAITREQUEST=1,USE_WRITE=1,USE_WRITEDATA=1,USE_WRITERESPONSE=0)(altera_merlin_slave_translator:20.1:AV_ADDRESSGROUP=0,AV_ADDRESS_SYMBOLS=0,AV_ADDRESS_W=25,AV_ALWAYSBURSTMAXBURST=0,AV_BITS_PER_SYMBOL=8,AV_BURSTBOUNDARIES=0,AV_BURSTCOUNT_SYMBOLS=0,AV_BURSTCOUNT_W=1,AV_BYTEENABLE_W=2,AV_CONSTANT_BURST_BEHAVIOR=0,AV_DATA_HOLD=0,AV_DATA_HOLD_CYCLES=0,AV_DATA_W=16,AV_INTERLEAVEBURSTS=0,AV_ISBIGENDIAN=0,AV_LINEWRAPBURSTS=0,AV_MAX_PENDING_READ_TRANSACTIONS=7,AV_MAX_PENDING_WRITE_TRANSACTIONS=0,AV_READLATENCY=0,AV_READ_WAIT=1,AV_READ_WAIT_CYCLES=1,AV_REGISTERINCOMINGSIGNALS=0,AV_REGISTEROUTGOINGSIGNALS=0,AV_REQUIRE_UNALIGNED_ADDRESSES=0,AV_SETUP_WAIT=0,AV_SETUP_WAIT_CYCLES=0,AV_SYMBOLS_PER_WORD=2,AV_TIMING_UNITS=1,AV_WRITE_WAIT=0,AV_WRITE_WAIT_CYCLES=0,CHIPSELECT_THROUGH_READLATENCY=0,CLOCK_RATE=100000000,UAV_ADDRESSGROUP=0,UAV_ADDRESS_W=26,UAV_BURSTCOUNT_W=2,UAV_BYTEENABLE_W=2,UAV_CONSTANT_BURST_BEHAVIOR=0,UAV_DATA_W=16,USE_ADDRESS=1,USE_AV_CLKEN=0,USE_BEGINBURSTTRANSFER=0,USE_BEGINTRANSFER=0,USE_BURSTCOUNT=0,USE_BYTEENABLE=1,USE_CHIPSELECT=1,USE_DEBUGACCESS=0,USE_LOCK=0,USE_OUTPUTENABLE=0,USE_READ=1,USE_READDATA=1,USE_READDATAVALID=1,USE_READRESPONSE=0,USE_UAV_CLKEN=0,USE_WAITREQUEST=1,USE_WRITE=1,USE_WRITEBYTEENABLE=0,USE_WRITEDATA=1,USE_WRITERESPONSE=0)(altera_reset_bridge:20.1:ACTIVE_LOW_RESET=0,AUTO_CLK_CLOCK_RATE=100000000,NUM_RESET_OUTPUTS=1,SYNCHRONOUS_EDGES=deassert,USE_RESET_REQUEST=0)(altera_clock_bridge:20.1:DERIVED_CLOCK_RATE=0,EXPLICIT_CLOCK_RATE=100000000,NUM_CLOCK_OUTPUTS=1)(avalon:20.1:arbitrationPriority=1,baseAddress=0x0000,defaultConnection=false)(reset:20.1:)(reset:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)"
+   instancePathKey="SDRAMtest:.:mm_interconnect_0"
+   kind="altera_mm_interconnect"
+   version="20.1"
+   name="SDRAMtest_mm_interconnect_0">
+  <parameter name="AUTO_DEVICE" value="10M08DAF484C8G" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="MAX 10" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="" />
+  <parameter
+     name="COMPOSE_CONTENTS"
+     value="add_instance {Avalon_MM_0_avm_m0_translator} {altera_merlin_master_translator};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_ADDRESS_W} {26};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_DATA_W} {16};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_BURSTCOUNT_W} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_BYTEENABLE_W} {2};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {UAV_ADDRESS_W} {26};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {UAV_BURSTCOUNT_W} {2};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_READLATENCY} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_WRITE_WAIT} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_READ_WAIT} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_DATA_HOLD} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_SETUP_WAIT} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_READDATA} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_WRITEDATA} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_READ} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_WRITE} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_BEGINBURSTTRANSFER} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_BEGINTRANSFER} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_BYTEENABLE} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_CHIPSELECT} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_ADDRESS} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_BURSTCOUNT} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_DEBUGACCESS} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_CLKEN} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_READDATAVALID} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_WAITREQUEST} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_LOCK} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_READRESPONSE} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {USE_WRITERESPONSE} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_SYMBOLS_PER_WORD} {2};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_ADDRESS_SYMBOLS} {1};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_BURSTCOUNT_SYMBOLS} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_CONSTANT_BURST_BEHAVIOR} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {UAV_CONSTANT_BURST_BEHAVIOR} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_LINEWRAPBURSTS} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_MAX_PENDING_READ_TRANSACTIONS} {64};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_BURSTBOUNDARIES} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_INTERLEAVEBURSTS} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_BITS_PER_SYMBOL} {8};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_ISBIGENDIAN} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_ADDRESSGROUP} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {UAV_ADDRESSGROUP} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_REGISTEROUTGOINGSIGNALS} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_REGISTERINCOMINGSIGNALS} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {AV_ALWAYSBURSTMAXBURST} {0};set_instance_parameter_value {Avalon_MM_0_avm_m0_translator} {SYNC_RESET} {0};add_instance {new_sdram_controller_0_s1_translator} {altera_merlin_slave_translator};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_ADDRESS_W} {25};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_DATA_W} {16};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {UAV_DATA_W} {16};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_BURSTCOUNT_W} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_BYTEENABLE_W} {2};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {UAV_BYTEENABLE_W} {2};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {UAV_ADDRESS_W} {26};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {UAV_BURSTCOUNT_W} {2};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_READLATENCY} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_SETUP_WAIT} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_WRITE_WAIT} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_READ_WAIT} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_DATA_HOLD} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_TIMING_UNITS} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_READDATA} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_WRITEDATA} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_READ} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_WRITE} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_BEGINBURSTTRANSFER} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_BEGINTRANSFER} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_BYTEENABLE} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_CHIPSELECT} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_ADDRESS} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_BURSTCOUNT} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_READDATAVALID} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_WAITREQUEST} {1};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_WRITEBYTEENABLE} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_LOCK} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_AV_CLKEN} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_UAV_CLKEN} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_OUTPUTENABLE} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_DEBUGACCESS} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_READRESPONSE} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {USE_WRITERESPONSE} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_SYMBOLS_PER_WORD} {2};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_ADDRESS_SYMBOLS} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_BURSTCOUNT_SYMBOLS} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_CONSTANT_BURST_BEHAVIOR} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {UAV_CONSTANT_BURST_BEHAVIOR} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_REQUIRE_UNALIGNED_ADDRESSES} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_LINEWRAPBURSTS} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_MAX_PENDING_READ_TRANSACTIONS} {7};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_MAX_PENDING_WRITE_TRANSACTIONS} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_BURSTBOUNDARIES} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_INTERLEAVEBURSTS} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_BITS_PER_SYMBOL} {8};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_ISBIGENDIAN} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_ADDRESSGROUP} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {UAV_ADDRESSGROUP} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_REGISTEROUTGOINGSIGNALS} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_REGISTERINCOMINGSIGNALS} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {AV_ALWAYSBURSTMAXBURST} {0};set_instance_parameter_value {new_sdram_controller_0_s1_translator} {CHIPSELECT_THROUGH_READLATENCY} {0};add_instance {Avalon_MM_0_reset_reset_bridge} {altera_reset_bridge};set_instance_parameter_value {Avalon_MM_0_reset_reset_bridge} {ACTIVE_LOW_RESET} {0};set_instance_parameter_value {Avalon_MM_0_reset_reset_bridge} {SYNCHRONOUS_EDGES} {deassert};set_instance_parameter_value {Avalon_MM_0_reset_reset_bridge} {NUM_RESET_OUTPUTS} {1};set_instance_parameter_value {Avalon_MM_0_reset_reset_bridge} {USE_RESET_REQUEST} {0};add_instance {sys_sdram_pll_0_sys_clk_clock_bridge} {altera_clock_bridge};set_instance_parameter_value {sys_sdram_pll_0_sys_clk_clock_bridge} {EXPLICIT_CLOCK_RATE} {100000000};set_instance_parameter_value {sys_sdram_pll_0_sys_clk_clock_bridge} {NUM_CLOCK_OUTPUTS} {1};add_connection {Avalon_MM_0_avm_m0_translator.avalon_universal_master_0} {new_sdram_controller_0_s1_translator.avalon_universal_slave_0} {avalon};set_connection_parameter_value {Avalon_MM_0_avm_m0_translator.avalon_universal_master_0/new_sdram_controller_0_s1_translator.avalon_universal_slave_0} {arbitrationPriority} {1};set_connection_parameter_value {Avalon_MM_0_avm_m0_translator.avalon_universal_master_0/new_sdram_controller_0_s1_translator.avalon_universal_slave_0} {baseAddress} {0x0000};set_connection_parameter_value {Avalon_MM_0_avm_m0_translator.avalon_universal_master_0/new_sdram_controller_0_s1_translator.avalon_universal_slave_0} {defaultConnection} {false};add_connection {Avalon_MM_0_reset_reset_bridge.out_reset} {Avalon_MM_0_avm_m0_translator.reset} {reset};add_connection {Avalon_MM_0_reset_reset_bridge.out_reset} {new_sdram_controller_0_s1_translator.reset} {reset};add_connection {sys_sdram_pll_0_sys_clk_clock_bridge.out_clk} {Avalon_MM_0_avm_m0_translator.clk} {clock};add_connection {sys_sdram_pll_0_sys_clk_clock_bridge.out_clk} {new_sdram_controller_0_s1_translator.clk} {clock};add_connection {sys_sdram_pll_0_sys_clk_clock_bridge.out_clk} {Avalon_MM_0_reset_reset_bridge.clk} {clock};add_interface {sys_sdram_pll_0_sys_clk} {clock} {slave};set_interface_property {sys_sdram_pll_0_sys_clk} {EXPORT_OF} {sys_sdram_pll_0_sys_clk_clock_bridge.in_clk};add_interface {Avalon_MM_0_reset_reset_bridge_in_reset} {reset} {slave};set_interface_property {Avalon_MM_0_reset_reset_bridge_in_reset} {EXPORT_OF} {Avalon_MM_0_reset_reset_bridge.in_reset};add_interface {Avalon_MM_0_avm_m0} {avalon} {slave};set_interface_property {Avalon_MM_0_avm_m0} {EXPORT_OF} {Avalon_MM_0_avm_m0_translator.avalon_anti_master_0};add_interface {new_sdram_controller_0_s1} {avalon} {master};set_interface_property {new_sdram_controller_0_s1} {EXPORT_OF} {new_sdram_controller_0_s1_translator.avalon_anti_slave_0};set_module_assignment {interconnect_id.Avalon_MM_0.avm_m0} {0};set_module_assignment {interconnect_id.new_sdram_controller_0.s1} {0};" />
+  <generatedFiles>
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/SDRAMtest_mm_interconnect_0.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_merlin_master_translator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_merlin_slave_translator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/merlin/altera_mm_interconnect/altera_mm_interconnect_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/merlin/altera_merlin_master_translator/altera_merlin_master_translator_hw.tcl" />
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/merlin/altera_merlin_slave_translator/altera_merlin_slave_translator_hw.tcl" />
+  </childSourceFiles>
+  <instantiator instantiator="SDRAMtest" as="mm_interconnect_0" />
+  <messages>
+   <message level="Debug" culprit="SDRAMtest">queue size: 4 starting:altera_mm_interconnect "submodules/SDRAMtest_mm_interconnect_0"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>4</b> modules, <b>6</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InitialInterconnectTransform</message>
+   <message level="Debug" culprit="merlin_initial_interconnect_transform"><![CDATA[After transform: <b>0</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: TerminalIdAssignmentUpdateTransform</message>
+   <message level="Debug">Transform: DefaultSlaveTransform</message>
+   <message level="Debug">Transform: TranslatorTransform</message>
+   <message level="Debug">No Avalon connections, skipping transform </message>
+   <message level="Debug">Transform: IDPadTransform</message>
+   <message level="Debug">Transform: DomainTransform</message>
+   <message level="Debug">Transform: RouterTransform</message>
+   <message level="Debug">Transform: TrafficLimiterTransform</message>
+   <message level="Debug">Transform: BurstTransform</message>
+   <message level="Debug">Transform: TreeTransform</message>
+   <message level="Debug">Transform: NetworkToSwitchTransform</message>
+   <message level="Debug">Transform: WidthTransform</message>
+   <message level="Debug">Transform: RouterTableTransform</message>
+   <message level="Debug">Transform: ThreadIDMappingTableTransform</message>
+   <message level="Debug">Transform: ClockCrossingTransform</message>
+   <message level="Debug">Transform: PipelineTransform</message>
+   <message level="Debug">Transform: SpotPipelineTransform</message>
+   <message level="Debug">Transform: PerformanceMonitorTransform</message>
+   <message level="Debug">Transform: TrafficLimiterUpdateTransform</message>
+   <message level="Debug">Transform: InsertClockAndResetBridgesTransform</message>
+   <message level="Debug">Transform: InterconnectConnectionsTagger</message>
+   <message level="Debug">Transform: HierarchyTransform</message>
+   <message level="Debug" culprit="merlin_hierarchy_transform"><![CDATA[After transform: <b>4</b> modules, <b>6</b> connections]]></message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="mm_interconnect_0"><![CDATA["<b>mm_interconnect_0</b>" reuses <b>altera_merlin_master_translator</b> "<b>submodules/altera_merlin_master_translator</b>"]]></message>
+   <message level="Debug" culprit="mm_interconnect_0"><![CDATA["<b>mm_interconnect_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"]]></message>
+   <message level="Info" culprit="mm_interconnect_0"><![CDATA["<b>SDRAMtest</b>" instantiated <b>altera_mm_interconnect</b> "<b>mm_interconnect_0</b>"]]></message>
+   <message level="Debug" culprit="SDRAMtest">queue size: 1 starting:altera_merlin_master_translator "submodules/altera_merlin_master_translator"</message>
+   <message level="Info" culprit="Avalon_MM_0_avm_m0_translator"><![CDATA["<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_master_translator</b> "<b>Avalon_MM_0_avm_m0_translator</b>"]]></message>
+   <message level="Debug" culprit="SDRAMtest">queue size: 0 starting:altera_merlin_slave_translator "submodules/altera_merlin_slave_translator"</message>
+   <message level="Info" culprit="new_sdram_controller_0_s1_translator"><![CDATA["<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_slave_translator</b> "<b>new_sdram_controller_0_s1_translator</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_reset_controller:20.1:ADAPT_RESET_REQUEST=0,MIN_RST_ASSERTION_TIME=3,NUM_RESET_INPUTS=1,OUTPUT_RESET_SYNC_EDGES=deassert,RESET_REQUEST_PRESENT=0,RESET_REQ_EARLY_DSRT_TIME=1,RESET_REQ_WAIT_TIME=1,SYNC_DEPTH=2,USE_RESET_REQUEST_IN0=0,USE_RESET_REQUEST_IN1=0,USE_RESET_REQUEST_IN10=0,USE_RESET_REQUEST_IN11=0,USE_RESET_REQUEST_IN12=0,USE_RESET_REQUEST_IN13=0,USE_RESET_REQUEST_IN14=0,USE_RESET_REQUEST_IN15=0,USE_RESET_REQUEST_IN2=0,USE_RESET_REQUEST_IN3=0,USE_RESET_REQUEST_IN4=0,USE_RESET_REQUEST_IN5=0,USE_RESET_REQUEST_IN6=0,USE_RESET_REQUEST_IN7=0,USE_RESET_REQUEST_IN8=0,USE_RESET_REQUEST_IN9=0,USE_RESET_REQUEST_INPUT=0"
+   instancePathKey="SDRAMtest:.:rst_controller"
+   kind="altera_reset_controller"
+   version="20.1"
+   name="altera_reset_controller">
+  <generatedFiles>
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="SDRAMtest" as="rst_controller,rst_controller_001" />
+  <messages>
+   <message level="Debug" culprit="SDRAMtest">queue size: 5 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>SDRAMtest</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_up_altpll:18.0:DEVICE_FAMILY=MAX 10,OUTCLK0_DIV=1,OUTCLK0_MULT=2,OUTCLK1_DIV=1,OUTCLK1_MULT=2,OUTCLK2_DIV=1,OUTCLK2_MULT=2,PHASE_SHIFT=-3000,audio_clk_freq=12.288,gui_device_family=MAX 10,type=System/SDRAM,video_in=5MP Digital Camera (THDB_D5M),video_out=4.3&quot; LCD (TRDB_LTM)"
+   instancePathKey="SDRAMtest:.:sys_sdram_pll_0:.:sys_pll"
+   kind="altera_up_altpll"
+   version="18.0"
+   name="altera_up_altpll">
+  <parameter name="OUTCLK0_DIV" value="1" />
+  <parameter name="OUTCLK2_MULT" value="2" />
+  <parameter name="PHASE_SHIFT" value="-3000" />
+  <parameter name="OUTCLK1_DIV" value="1" />
+  <parameter name="OUTCLK0_MULT" value="2" />
+  <parameter name="DEVICE_FAMILY" value="MAX 10" />
+  <parameter name="video_in" value="5MP Digital Camera (THDB_D5M)" />
+  <parameter name="gui_device_family" value="MAX 10" />
+  <parameter name="OUTCLK2_DIV" value="1" />
+  <parameter name="OUTCLK1_MULT" value="2" />
+  <generatedFiles>
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_up_altpll.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/clocks/altera_up_altpll/altera_up_altpll_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="SDRAMtest_sys_sdram_pll_0" as="sys_pll" />
+  <messages>
+   <message level="Debug" culprit="SDRAMtest">queue size: 3 starting:altera_up_altpll "submodules/altera_up_altpll"</message>
+   <message level="Info" culprit="sys_pll"><![CDATA["<b>sys_sdram_pll_0</b>" instantiated <b>altera_up_altpll</b> "<b>sys_pll</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_up_avalon_reset_from_locked_signal:18.0:"
+   instancePathKey="SDRAMtest:.:sys_sdram_pll_0:.:reset_from_locked"
+   kind="altera_up_avalon_reset_from_locked_signal"
+   version="18.0"
+   name="altera_up_avalon_reset_from_locked_signal">
+  <generatedFiles>
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/university_program/clocks/altera_up_avalon_reset_from_locked_signal/altera_up_avalon_reset_from_locked_signal_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="SDRAMtest_sys_sdram_pll_0" as="reset_from_locked" />
+  <messages>
+   <message level="Debug" culprit="SDRAMtest">queue size: 2 starting:altera_up_avalon_reset_from_locked_signal "submodules/altera_up_avalon_reset_from_locked_signal"</message>
+   <message level="Info" culprit="reset_from_locked"><![CDATA["<b>sys_sdram_pll_0</b>" instantiated <b>altera_up_avalon_reset_from_locked_signal</b> "<b>reset_from_locked</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_master_translator:20.1:AV_ADDRESSGROUP=0,AV_ADDRESS_SYMBOLS=1,AV_ADDRESS_W=26,AV_ALWAYSBURSTMAXBURST=0,AV_BITS_PER_SYMBOL=8,AV_BURSTBOUNDARIES=0,AV_BURSTCOUNT_SYMBOLS=0,AV_BURSTCOUNT_W=1,AV_BYTEENABLE_W=2,AV_CONSTANT_BURST_BEHAVIOR=0,AV_DATA_HOLD=0,AV_DATA_W=16,AV_INTERLEAVEBURSTS=0,AV_ISBIGENDIAN=0,AV_LINEWRAPBURSTS=0,AV_MAX_PENDING_READ_TRANSACTIONS=64,AV_READLATENCY=0,AV_READ_WAIT=1,AV_REGISTERINCOMINGSIGNALS=0,AV_REGISTEROUTGOINGSIGNALS=0,AV_SETUP_WAIT=0,AV_SYMBOLS_PER_WORD=2,AV_WRITE_WAIT=0,SYNC_RESET=0,UAV_ADDRESSGROUP=0,UAV_ADDRESS_W=26,UAV_BURSTCOUNT_W=2,UAV_CONSTANT_BURST_BEHAVIOR=0,USE_ADDRESS=1,USE_BEGINBURSTTRANSFER=0,USE_BEGINTRANSFER=0,USE_BURSTCOUNT=0,USE_BYTEENABLE=0,USE_CHIPSELECT=0,USE_CLKEN=0,USE_DEBUGACCESS=0,USE_LOCK=0,USE_READ=1,USE_READDATA=1,USE_READDATAVALID=0,USE_READRESPONSE=0,USE_WAITREQUEST=1,USE_WRITE=1,USE_WRITEDATA=1,USE_WRITERESPONSE=0"
+   instancePathKey="SDRAMtest:.:mm_interconnect_0:.:Avalon_MM_0_avm_m0_translator"
+   kind="altera_merlin_master_translator"
+   version="20.1"
+   name="altera_merlin_master_translator">
+  <parameter name="SYNC_RESET" value="0" />
+  <generatedFiles>
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_merlin_master_translator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/merlin/altera_merlin_master_translator/altera_merlin_master_translator_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="SDRAMtest_mm_interconnect_0"
+     as="Avalon_MM_0_avm_m0_translator" />
+  <messages>
+   <message level="Debug" culprit="SDRAMtest">queue size: 1 starting:altera_merlin_master_translator "submodules/altera_merlin_master_translator"</message>
+   <message level="Info" culprit="Avalon_MM_0_avm_m0_translator"><![CDATA["<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_master_translator</b> "<b>Avalon_MM_0_avm_m0_translator</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_slave_translator:20.1:AV_ADDRESSGROUP=0,AV_ADDRESS_SYMBOLS=0,AV_ADDRESS_W=25,AV_ALWAYSBURSTMAXBURST=0,AV_BITS_PER_SYMBOL=8,AV_BURSTBOUNDARIES=0,AV_BURSTCOUNT_SYMBOLS=0,AV_BURSTCOUNT_W=1,AV_BYTEENABLE_W=2,AV_CONSTANT_BURST_BEHAVIOR=0,AV_DATA_HOLD=0,AV_DATA_HOLD_CYCLES=0,AV_DATA_W=16,AV_INTERLEAVEBURSTS=0,AV_ISBIGENDIAN=0,AV_LINEWRAPBURSTS=0,AV_MAX_PENDING_READ_TRANSACTIONS=7,AV_MAX_PENDING_WRITE_TRANSACTIONS=0,AV_READLATENCY=0,AV_READ_WAIT=1,AV_READ_WAIT_CYCLES=1,AV_REGISTERINCOMINGSIGNALS=0,AV_REGISTEROUTGOINGSIGNALS=0,AV_REQUIRE_UNALIGNED_ADDRESSES=0,AV_SETUP_WAIT=0,AV_SETUP_WAIT_CYCLES=0,AV_SYMBOLS_PER_WORD=2,AV_TIMING_UNITS=1,AV_WRITE_WAIT=0,AV_WRITE_WAIT_CYCLES=0,CHIPSELECT_THROUGH_READLATENCY=0,CLOCK_RATE=100000000,UAV_ADDRESSGROUP=0,UAV_ADDRESS_W=26,UAV_BURSTCOUNT_W=2,UAV_BYTEENABLE_W=2,UAV_CONSTANT_BURST_BEHAVIOR=0,UAV_DATA_W=16,USE_ADDRESS=1,USE_AV_CLKEN=0,USE_BEGINBURSTTRANSFER=0,USE_BEGINTRANSFER=0,USE_BURSTCOUNT=0,USE_BYTEENABLE=1,USE_CHIPSELECT=1,USE_DEBUGACCESS=0,USE_LOCK=0,USE_OUTPUTENABLE=0,USE_READ=1,USE_READDATA=1,USE_READDATAVALID=1,USE_READRESPONSE=0,USE_UAV_CLKEN=0,USE_WAITREQUEST=1,USE_WRITE=1,USE_WRITEBYTEENABLE=0,USE_WRITEDATA=1,USE_WRITERESPONSE=0"
+   instancePathKey="SDRAMtest:.:mm_interconnect_0:.:new_sdram_controller_0_s1_translator"
+   kind="altera_merlin_slave_translator"
+   version="20.1"
+   name="altera_merlin_slave_translator">
+  <generatedFiles>
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/SDRAM_tst2/SDRAMtest/synthesis/submodules/altera_merlin_slave_translator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/merlin/altera_merlin_slave_translator/altera_merlin_slave_translator_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="SDRAMtest_mm_interconnect_0"
+     as="new_sdram_controller_0_s1_translator" />
+  <messages>
+   <message level="Debug" culprit="SDRAMtest">queue size: 0 starting:altera_merlin_slave_translator "submodules/altera_merlin_slave_translator"</message>
+   <message level="Info" culprit="new_sdram_controller_0_s1_translator"><![CDATA["<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_slave_translator</b> "<b>new_sdram_controller_0_s1_translator</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

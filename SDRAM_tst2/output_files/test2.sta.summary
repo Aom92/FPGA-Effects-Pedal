@@ -1,0 +1,173 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'estado_pres.e1'
+Slack : -10.206
+TNS   : -261.071
+
+Type  : Slow 1200mV 85C Model Setup 'SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|SDRAMtest_new_sdram_controller_0_input_efifo_module:the_SDRAMtest_new_sdram_controller_0_input_efifo_module|entries[0]'
+Slack : -9.379
+TNS   : -292.112
+
+Type  : Slow 1200mV 85C Model Setup 'DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : -5.650
+TNS   : -433.118
+
+Type  : Slow 1200mV 85C Model Setup 'DE10CLK'
+Slack : -1.729
+TNS   : -4.223
+
+Type  : Slow 1200mV 85C Model Hold 'DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : -0.005
+TNS   : -0.005
+
+Type  : Slow 1200mV 85C Model Hold 'DE10CLK'
+Slack : 1.006
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|SDRAMtest_new_sdram_controller_0_input_efifo_module:the_SDRAMtest_new_sdram_controller_0_input_efifo_module|entries[0]'
+Slack : 2.839
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'estado_pres.e1'
+Slack : 3.563
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 5.964
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 1.204
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|SDRAMtest_new_sdram_controller_0_input_efifo_module:the_SDRAMtest_new_sdram_controller_0_input_efifo_module|entries[0]'
+Slack : 0.372
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'estado_pres.e1'
+Slack : 0.381
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 4.709
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DE10CLK'
+Slack : 9.703
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'estado_pres.e1'
+Slack : -9.872
+TNS   : -252.186
+
+Type  : Slow 1200mV 0C Model Setup 'SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|SDRAMtest_new_sdram_controller_0_input_efifo_module:the_SDRAMtest_new_sdram_controller_0_input_efifo_module|entries[0]'
+Slack : -9.114
+TNS   : -288.659
+
+Type  : Slow 1200mV 0C Model Setup 'DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : -4.814
+TNS   : -356.786
+
+Type  : Slow 1200mV 0C Model Setup 'DE10CLK'
+Slack : -1.542
+TNS   : -3.719
+
+Type  : Slow 1200mV 0C Model Hold 'DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : -0.289
+TNS   : -0.289
+
+Type  : Slow 1200mV 0C Model Hold 'DE10CLK'
+Slack : 0.916
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|SDRAMtest_new_sdram_controller_0_input_efifo_module:the_SDRAMtest_new_sdram_controller_0_input_efifo_module|entries[0]'
+Slack : 2.785
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'estado_pres.e1'
+Slack : 3.327
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 6.219
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 1.058
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|SDRAMtest_new_sdram_controller_0_input_efifo_module:the_SDRAMtest_new_sdram_controller_0_input_efifo_module|entries[0]'
+Slack : 0.302
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'estado_pres.e1'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 4.690
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DE10CLK'
+Slack : 9.678
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'estado_pres.e1'
+Slack : -4.261
+TNS   : -107.266
+
+Type  : Fast 1200mV 0C Model Setup 'SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|SDRAMtest_new_sdram_controller_0_input_efifo_module:the_SDRAMtest_new_sdram_controller_0_input_efifo_module|entries[0]'
+Slack : -3.893
+TNS   : -120.231
+
+Type  : Fast 1200mV 0C Model Setup 'DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : -2.133
+TNS   : -153.570
+
+Type  : Fast 1200mV 0C Model Setup 'DE10CLK'
+Slack : -0.402
+TNS   : -0.801
+
+Type  : Fast 1200mV 0C Model Hold 'DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : -0.103
+TNS   : -0.103
+
+Type  : Fast 1200mV 0C Model Hold 'DE10CLK'
+Slack : 0.338
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|SDRAMtest_new_sdram_controller_0_input_efifo_module:the_SDRAMtest_new_sdram_controller_0_input_efifo_module|entries[0]'
+Slack : 1.314
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'estado_pres.e1'
+Slack : 2.005
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 8.125
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 0.538
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|SDRAMtest_new_sdram_controller_0_input_efifo_module:the_SDRAMtest_new_sdram_controller_0_input_efifo_module|entries[0]'
+Slack : 0.306
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'estado_pres.e1'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 4.744
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DE10CLK'
+Slack : 9.465
+TNS   : 0.000
+
+------------------------------------------------------------
