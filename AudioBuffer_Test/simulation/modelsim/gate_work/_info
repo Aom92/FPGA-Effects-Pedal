@@ -1,0 +1,64 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/simulation/modelsim
+Eaudiobuffertest
+Z1 w1668789183
+Z2 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 OTUTkBjTeYVegmIWhVi3N0
+Z3 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 C5K^h=:j[4HI?HO^UkN3:2
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 dc5N=DKXMMTVYdUQ@D3FA2
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z9 DPx6 altera 28 altera_primitives_components 0 22 ca:ehlQAg4;_gVV:^8MAg3
+!i122 1
+R0
+Z10 8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/simulation/modelsim/AudioBufferTest.vho
+Z11 F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/simulation/modelsim/AudioBufferTest.vho
+l0
+L37 1
+Vh8O@IiXU7cMd77b8=N39E2
+!s100 el8To_Gml<cD582R=kC@z2
+Z12 OV;C;2020.1;71
+32
+Z13 !s110 1668793897
+!i10b 1
+Z14 !s108 1668793897.000000
+Z15 !s90 -reportprogress|300|-work|work|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/simulation/modelsim/AudioBufferTest.vho|
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/simulation/modelsim/AudioBufferTest.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 15 audiobuffertest 0 22 h8O@IiXU7cMd77b8=N39E2
+!i122 1
+l600
+Z18 L159 8155
+V`fVUQ9UQR:Y;UUf6HROaD3
+Z19 !s100 9zJnIKHYED;B0DG:EK<133
+R12
+32
+R13
+!i10b 1
+R14
+R15
+Z20 !s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/simulation/modelsim/AudioBufferTest.vho|
+!i113 1
+R16
+R17

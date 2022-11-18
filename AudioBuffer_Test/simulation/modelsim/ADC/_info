@@ -1,0 +1,372 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/simulation/modelsim
+Eadc
+Z1 w1667936847
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 10
+R0
+Z5 8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/ADC.vhd
+Z6 F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/ADC.vhd
+l0
+L9 1
+VKe0HE_IdCgT_I2B]cn=Xn1
+!s100 SbaQzCePYE:=7fgGW^UFW2
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1668793425
+!i10b 1
+Z9 !s108 1668793425.000000
+Z10 !s90 -reportprogress|300|-93|-work|ADC|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/ADC.vhd|
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/ADC.vhd|
+!i113 1
+Z11 o-93 -work ADC
+Z12 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+DEx4 work 3 adc 0 22 Ke0HE_IdCgT_I2B]cn=Xn1
+!i122 10
+l150
+L26 245
+VBTk9>BbR4h_a9H5c`Q^=53
+!s100 oJz3j^NMDW:MTRHOA?m_[2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+Z13 !s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/ADC.vhd|
+!i113 1
+R11
+R12
+vADC_altpll_0
+R8
+!i10b 1
+!s100 =>fSfbKBU0bK30g``hTe=0
+Z14 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IfU3mL0zcOfoC>oOUX5I=F0
+Z15 VDg1SIo80bB@j0V0VzS_@n1
+R0
+R1
+Z16 8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/ADC_altpll_0.v
+Z17 F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/ADC_altpll_0.v
+!i122 9
+L0 214 113
+Z18 OV;L;2020.1;71
+r1
+!s85 0
+31
+R9
+Z19 !s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/ADC_altpll_0.v|
+Z20 !s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/ADC_altpll_0.v|
+!i113 1
+Z21 o-vlog01compat -work ADC
+Z22 !s92 -vlog01compat -work ADC +incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules
+Z23 tCvgOpt 0
+n@a@d@c_altpll_0
+vADC_altpll_0_altpll_kr22
+R8
+!i10b 1
+!s100 M5B;zf1SzzAQODhMPjb5<3
+R14
+IgKMm>OG1>@QdC1M]Fbm9=2
+R15
+R0
+R1
+R16
+R17
+!i122 9
+L0 131 78
+R18
+r1
+!s85 0
+31
+R9
+R19
+R20
+!i113 1
+R21
+R22
+R23
+n@a@d@c_altpll_0_altpll_kr22
+vADC_altpll_0_dffpipe_l2c
+R8
+!i10b 1
+!s100 3lCcX=1A5jkNojYIVbOCn1
+R14
+IdGjH^fm_Ya[]2:Dd25L740
+R15
+R0
+R1
+R16
+R17
+!i122 9
+L0 38 56
+R18
+r1
+!s85 0
+31
+R9
+R19
+R20
+!i113 1
+R21
+R22
+R23
+n@a@d@c_altpll_0_dffpipe_l2c
+vADC_altpll_0_stdsync_sv6
+R8
+!i10b 1
+!s100 J_^n6?@?ZEQ3zTWj::NGJ2
+R14
+IPO^FcZHmZ`1]HjZVP`W^m0
+R15
+R0
+R1
+R16
+R17
+!i122 9
+L0 99 22
+R18
+r1
+!s85 0
+31
+R9
+R19
+R20
+!i113 1
+R21
+R22
+R23
+n@a@d@c_altpll_0_stdsync_sv6
+vADC_modular_adc_0
+Z24 !s110 1668793424
+!i10b 1
+!s100 M`kSEj78EIezF5ICBPfli2
+R14
+I?E>nh30CO]eTlC_0RA@aL2
+R15
+R0
+R1
+8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/ADC_modular_adc_0.v
+F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/ADC_modular_adc_0.v
+!i122 2
+L0 9 86
+R18
+r1
+!s85 0
+31
+Z25 !s108 1668793424.000000
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/ADC_modular_adc_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/ADC_modular_adc_0.v|
+!i113 1
+R21
+R22
+R23
+n@a@d@c_modular_adc_0
+valtera_modular_adc_control
+R24
+!i10b 1
+!s100 Qlm>?QLb[a8WBGB1J_;hz2
+R14
+IUiIFCTX6n80>h[47dbWA>0
+R15
+R0
+R1
+8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_modular_adc_control.v
+F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_modular_adc_control.v
+!i122 3
+L0 18 137
+R18
+r1
+!s85 0
+31
+R25
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_modular_adc_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_modular_adc_control.v|
+!i113 1
+R21
+R22
+R23
+valtera_modular_adc_control_avrg_fifo
+R24
+!i10b 1
+!s100 c20GRJo3Zo_>4MDNFH2QI2
+R14
+I?HkgC`08l3PCFM26D=Sn33
+R15
+R0
+R1
+8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v
+F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v
+!i122 4
+L0 53 54
+R18
+r1
+!s85 0
+31
+R25
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v|
+!i113 1
+R21
+R22
+R23
+valtera_modular_adc_control_fsm
+R24
+!i10b 1
+!s100 L<7^e5CWC7909g63U853c1
+R14
+InXaNJlEbcZ?]F=Dj_?Th82
+R15
+R0
+R1
+8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_modular_adc_control_fsm.v
+F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_modular_adc_control_fsm.v
+!i122 5
+L0 18 989
+R18
+r1
+!s85 0
+31
+R25
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_modular_adc_control_fsm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_modular_adc_control_fsm.v|
+!i113 1
+R21
+R22
+R23
+valtera_reset_controller
+R24
+!i10b 1
+!s100 oA9lUzaO95KXSKU3fUHXM0
+R14
+IgAFemTWJR`i]Qbl[VVc7L0
+R15
+R0
+R1
+8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_reset_controller.v
+F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_reset_controller.v
+!i122 0
+L0 42 278
+R18
+r1
+!s85 0
+31
+R25
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_reset_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_reset_controller.v|
+!i113 1
+R21
+R22
+R23
+valtera_reset_synchronizer
+R24
+!i10b 1
+!s100 D^dgdIfBaVUo6:<:oWOdC3
+R14
+I5=Q2]MXGYgFKio==01XUS3
+R15
+R0
+R1
+8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_reset_synchronizer.v
+F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_reset_synchronizer.v
+!i122 1
+L0 24 63
+R18
+r1
+!s85 0
+31
+R25
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_reset_synchronizer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/altera_reset_synchronizer.v|
+!i113 1
+R21
+R22
+R23
+vchsel_code_converter_sw_to_hw
+R24
+!i10b 1
+!s100 L5H2n0B16f^@6l4ZT8P`T0
+R14
+IeHFdC`IlaNeJANf>ccmFP2
+R15
+R0
+R1
+8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/chsel_code_converter_sw_to_hw.v
+F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/chsel_code_converter_sw_to_hw.v
+!i122 6
+L0 32 178
+R18
+r1
+!s85 0
+31
+R25
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/chsel_code_converter_sw_to_hw.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/chsel_code_converter_sw_to_hw.v|
+!i113 1
+R21
+R22
+R23
+vfiftyfivenm_adcblock_primitive_wrapper
+R24
+!i10b 1
+!s100 h2NG@U2G<27;LT?M7D=A`2
+R14
+I6ZP6Fkd_1iLTBX1z8d7=N2
+R15
+R0
+R1
+8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v
+F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v
+!i122 7
+L0 37 207
+R18
+r1
+!s85 0
+31
+R25
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v|
+!i113 1
+R21
+R22
+R23
+vfiftyfivenm_adcblock_top_wrapper
+R8
+!i10b 1
+!s100 Bf][;EfN^G9l@h3WoIKe32
+R14
+IXd;[bCeVlROP8Mo9g2`]<2
+R15
+R0
+R1
+8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v
+F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v
+!i122 8
+L0 31 218
+R18
+r1
+!s85 0
+31
+R25
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/ADC/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v|
+!i113 1
+R21
+R22
+R23

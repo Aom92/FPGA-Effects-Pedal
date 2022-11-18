@@ -1,0 +1,360 @@
+# do AudioBufferTest_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying /home/ar/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {AudioBufferTest.vho}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:44:37 on Nov 18,2022
+# vcom -reportprogress 300 -93 -work work AudioBufferTest.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package fiftyfivenm_atom_pack
+# -- Loading package fiftyfivenm_components
+# -- Compiling entity AudioBufferTest
+# -- Compiling architecture structure of AudioBufferTest
+# End time: 11:44:37 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# stdin: <EOF>
+vsim work.audiobuffertest
+# vsim work.audiobuffertest 
+# Start time: 11:44:59 on Nov 18,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading fiftyfivenm.fiftyfivenm_atom_pack(body)
+# Loading fiftyfivenm.fiftyfivenm_components
+# Loading work.audiobuffertest(structure)
+# Loading fiftyfivenm.fiftyfivenm_io_obuf(behavior)
+# Loading fiftyfivenm.fiftyfivenm_io_ibuf(behavior)
+# Loading fiftyfivenm.fiftyfivenm_clkctrl(vital_clkctrl)
+# Loading fiftyfivenm.fiftyfivenm_ena_reg(behave)
+# Loading fiftyfivenm.fiftyfivenm_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# Loading fiftyfivenm.fiftyfivenm_pllpack(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading fiftyfivenm.fiftyfivenm_pll(vital_pll)
+# Loading fiftyfivenm.fiftyfivenm_mn_cntr(behave)
+# Loading fiftyfivenm.fiftyfivenm_scale_cntr(behave)
+# Loading fiftyfivenm.fiftyfivenm_adcblock(behavior)
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# Loading fiftyfivenm.fiftyfivenm_unvm(behavior)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: Design size of 51926 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+add wave -position end  sim:/audiobuffertest/DE10CLK
+add wave -position end  sim:/audiobuffertest/ADCCLK
+add wave -position end  sim:/audiobuffertest/DE10Reset
+add wave -position end  sim:/audiobuffertest/DRAM_ADDR
+force -freeze sim:/audiobuffertest/DE10CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/audiobuffertest/ADCCLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/audiobuffertest/DE10CLK 1 0, 0 {10 ps} -r 20
+vsim work.audiobuffertest
+# End time: 11:49:54 on Nov 18,2022, Elapsed time: 0:04:55
+# Errors: 0, Warnings: 43
+# vsim work.audiobuffertest 
+# Start time: 11:49:54 on Nov 18,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading fiftyfivenm.fiftyfivenm_atom_pack(body)
+# Loading fiftyfivenm.fiftyfivenm_components
+# Loading work.audiobuffertest(structure)
+# Loading fiftyfivenm.fiftyfivenm_io_obuf(behavior)
+# Loading fiftyfivenm.fiftyfivenm_io_ibuf(behavior)
+# Loading fiftyfivenm.fiftyfivenm_clkctrl(vital_clkctrl)
+# Loading fiftyfivenm.fiftyfivenm_ena_reg(behave)
+# Loading fiftyfivenm.fiftyfivenm_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# Loading fiftyfivenm.fiftyfivenm_pllpack(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading fiftyfivenm.fiftyfivenm_pll(vital_pll)
+# Loading fiftyfivenm.fiftyfivenm_mn_cntr(behave)
+# Loading fiftyfivenm.fiftyfivenm_scale_cntr(behave)
+# Loading fiftyfivenm.fiftyfivenm_adcblock(behavior)
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/<protected>/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# Loading fiftyfivenm.fiftyfivenm_unvm(behavior)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: Design size of 51926 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+add wave -position end  sim:/audiobuffertest/DE10CLK
+add wave -position end  sim:/audiobuffertest/ADCCLK
+add wave -position end  sim:/audiobuffertest/DRAM_ADDR
+vcom -reportprogress 300 -work work /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/simulation/modelsim/AudioBufferTest.vho
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:51:37 on Nov 18,2022
+# vcom -reportprogress 300 -work work /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/simulation/modelsim/AudioBufferTest.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package fiftyfivenm_atom_pack
+# -- Loading package fiftyfivenm_components
+# -- Compiling entity AudioBufferTest
+# -- Compiling architecture structure of AudioBufferTest
+# End time: 11:51:37 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch0" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch1" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch2" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch3" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch4" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch5" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch6" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch7" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch8" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch9" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch10" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch11" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch12" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch13" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch14" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch15" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch16" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /audiobuffertest/\u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance\/inst/<protected>/<protected>/<protected>
+force -freeze sim:/audiobuffertest/DE10CLK 1 0, 0 {25 ps} -r 50
+noforce sim:/audiobuffertest/ADCCLK
+force -freeze sim:/audiobuffertest/ADCCLK 1 0, 0 {50 ps} -r 100
+run
+# ** Warning: Input clock freq. is under VCO range. Fiftyfivenm PLL may lose lock
+#    Time: 150 ps  Iteration: 7  Instance: /audiobuffertest/\DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1\
+# ** Warning:  Input clock freq. is not within VCO range : Fiftyfivenm PLL may not lock. Please use the correct frequency.
+#    Time: 150 ps  Iteration: 7  Instance: /audiobuffertest/\DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1\
+# ** Warning: Input clock freq. is under VCO range. Fiftyfivenm PLL may lose lock
+#    Time: 200 ps  Iteration: 7  Instance: /audiobuffertest/\u1|altpll_0|sd1|pll7\
+# ** Warning:  Input clock freq. is not within VCO range : Fiftyfivenm PLL may not lock. Please use the correct frequency.
+#    Time: 200 ps  Iteration: 7  Instance: /audiobuffertest/\u1|altpll_0|sd1|pll7\
+run
+add wave -position end  sim:/audiobuffertest/DE10Reset
+force -freeze sim:/audiobuffertest/DE10Reset 0 0
+run
+add wave -position end  sim:/audiobuffertest/DRAM_DQ
+add wave -position end  sim:/audiobuffertest/led_out
+run -next
+run
+# End time: 12:02:00 on Nov 18,2022, Elapsed time: 0:12:06
+# Errors: 0, Warnings: 64

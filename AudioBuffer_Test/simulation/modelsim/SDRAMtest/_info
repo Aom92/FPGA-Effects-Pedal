@@ -1,0 +1,303 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/simulation/modelsim
+valtera_merlin_master_translator
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1668793425
+!i10b 1
+!s100 fR3Ff6Pe4h_lQXBchi=m63
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IJzi6WJT_dH:8J7M[cF_V]2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z5 w1667936847
+8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_merlin_master_translator.sv
+F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_merlin_master_translator.sv
+!i122 8
+L0 32 525
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1668793425.000000
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_merlin_master_translator.sv|
+!s90 -reportprogress|300|-sv|-work|SDRAMtest|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_merlin_master_translator.sv|
+!i113 1
+Z8 o-sv -work SDRAMtest
+Z9 !s92 -sv -work SDRAMtest +incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules
+Z10 tCvgOpt 0
+valtera_merlin_slave_translator
+R1
+R2
+!i10b 1
+!s100 n?8_4jLIz<NL:?<dYjeFI3
+R3
+IcFih<^gNESLBAzFOVN:UE1
+R4
+S1
+R0
+R5
+8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_merlin_slave_translator.sv
+F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_merlin_slave_translator.sv
+!i122 7
+L0 35 448
+R6
+r1
+!s85 0
+31
+R7
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_merlin_slave_translator.sv|
+!s90 -reportprogress|300|-sv|-work|SDRAMtest|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_merlin_slave_translator.sv|
+!i113 1
+R8
+R9
+R10
+valtera_reset_controller
+Z11 !s110 1668793424
+!i10b 1
+!s100 oA9lUzaO95KXSKU3fUHXM0
+R3
+IYKgTQR?;YzQT:i8jzaz?P1
+R4
+R0
+R5
+8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_reset_controller.v
+F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_reset_controller.v
+!i122 0
+L0 42 278
+R6
+r1
+!s85 0
+31
+Z12 !s108 1668793424.000000
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_reset_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|SDRAMtest|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_reset_controller.v|
+!i113 1
+Z13 o-vlog01compat -work SDRAMtest
+Z14 !s92 -vlog01compat -work SDRAMtest +incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules
+R10
+valtera_reset_synchronizer
+R11
+!i10b 1
+!s100 D^dgdIfBaVUo6:<:oWOdC3
+R3
+I?[cc4g3^2dmDa1EaK[aIi1
+R4
+R0
+R5
+8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_reset_synchronizer.v
+F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_reset_synchronizer.v
+!i122 1
+L0 24 63
+R6
+r1
+!s85 0
+31
+R12
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_reset_synchronizer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|SDRAMtest|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_reset_synchronizer.v|
+!i113 1
+R13
+R14
+R10
+valtera_up_altpll
+R11
+!i10b 1
+!s100 Qh9XW<jmao=OfhU=18]mT3
+R3
+IW6So[`c6heZTY;T`Hm=4A0
+R4
+R0
+R5
+8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_up_altpll.v
+F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_up_altpll.v
+!i122 5
+L0 29 179
+R6
+r1
+!s85 0
+31
+R12
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_up_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|SDRAMtest|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_up_altpll.v|
+!i113 1
+R13
+R14
+R10
+valtera_up_avalon_reset_from_locked_signal
+R11
+!i10b 1
+!s100 M=9_04l@6_AZV7M5XIfUS3
+R3
+Ig>Y0NO_KGod^Q;9GIl=JD2
+R4
+R0
+R5
+8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v
+F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v
+!i122 4
+L0 28 65
+R6
+r1
+!s85 0
+31
+R12
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v|
+!s90 -reportprogress|300|-vlog01compat|-work|SDRAMtest|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v|
+!i113 1
+R13
+R14
+R10
+Esdramtest
+R5
+Z15 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z16 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z17 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 9
+R0
+Z18 8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/SDRAMtest.vhd
+Z19 F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/SDRAMtest.vhd
+l0
+L9 1
+VYZRd7>^QLNAX0_:_n:eQP1
+!s100 PRBE6P8?j@XdBbS=?VIG=3
+Z20 OV;C;2020.1;71
+31
+R2
+!i10b 1
+R7
+Z21 !s90 -reportprogress|300|-93|-work|SDRAMtest|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/SDRAMtest.vhd|
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/SDRAMtest.vhd|
+!i113 1
+Z22 o-93 -work SDRAMtest
+Z23 tExplicit 1 CvgOpt 0
+Artl
+R15
+R16
+R17
+DEx4 work 9 sdramtest 0 22 YZRd7>^QLNAX0_:_n:eQP1
+!i122 9
+l176
+L33 342
+VOUna0]giXZa<0lAmIO6fK0
+!s100 FL64H:9ehTRI]2g7T36>h3
+R20
+31
+R2
+!i10b 1
+R7
+R21
+Z24 !s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/SDRAMtest.vhd|
+!i113 1
+R22
+R23
+vSDRAMtest_mm_interconnect_0
+R11
+!i10b 1
+!s100 GSUOLAL7O9L9JEmKgRNk60
+R3
+InG^c9:SEkdJfZzWL^jA@k1
+R4
+R0
+R5
+8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/SDRAMtest_mm_interconnect_0.v
+F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/SDRAMtest_mm_interconnect_0.v
+!i122 2
+L0 9 157
+R6
+r1
+!s85 0
+31
+R12
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/SDRAMtest_mm_interconnect_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|SDRAMtest|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/SDRAMtest_mm_interconnect_0.v|
+!i113 1
+R13
+R14
+R10
+n@s@d@r@a@mtest_mm_interconnect_0
+vSDRAMtest_new_sdram_controller_0
+R11
+!i10b 1
+!s100 _[aWo=W?e3RFiJY7AGZz>3
+R3
+I7[:EJH0GWORoPa8NBjDID3
+R4
+R0
+R5
+Z25 8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/SDRAMtest_new_sdram_controller_0.v
+Z26 F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/SDRAMtest_new_sdram_controller_0.v
+!i122 6
+L0 159 563
+R6
+r1
+!s85 0
+31
+R12
+Z27 !s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/SDRAMtest_new_sdram_controller_0.v|
+Z28 !s90 -reportprogress|300|-vlog01compat|-work|SDRAMtest|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/SDRAMtest_new_sdram_controller_0.v|
+!i113 1
+R13
+R14
+R10
+n@s@d@r@a@mtest_new_sdram_controller_0
+vSDRAMtest_new_sdram_controller_0_input_efifo_module
+R11
+!i10b 1
+!s100 546_<Nl:ld]>k<[?[V3@c0
+R3
+ImjHSF0RY8:^G@lYfSQzb?1
+R4
+R0
+R5
+R25
+R26
+!i122 6
+L0 21 128
+R6
+r1
+!s85 0
+31
+R12
+R27
+R28
+!i113 1
+R13
+R14
+R10
+n@s@d@r@a@mtest_new_sdram_controller_0_input_efifo_module
+vSDRAMtest_sys_sdram_pll_0
+R11
+!i10b 1
+!s100 OjmmoeLaojPVjAAKFC>4B3
+R3
+IUghE:VZQcP4mlF6]8U=1B0
+R4
+R0
+R5
+8/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/SDRAMtest_sys_sdram_pll_0.v
+F/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/SDRAMtest_sys_sdram_pll_0.v
+!i122 3
+L0 9 34
+R6
+r1
+!s85 0
+31
+R12
+!s107 /home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/SDRAMtest_sys_sdram_pll_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|SDRAMtest|+incdir+/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules|/home/ar/Desktop/Hugo/DE10_AudioFun/AudioBuffer_Test/SDRAMtest/synthesis/submodules/SDRAMtest_sys_sdram_pll_0.v|
+!i113 1
+R13
+R14
+R10
+n@s@d@r@a@mtest_sys_sdram_pll_0

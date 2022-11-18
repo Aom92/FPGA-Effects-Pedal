@@ -1,0 +1,2145 @@
+$comment
+	File created using the following command:
+		vcd file AudioBufferTest.msim.vcd -direction
+$end
+$date
+	Fri Nov 18 11:41:54 2022
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module audiobuffertest_vhd_vec_tst $end
+$var wire 1 ! ADCCLK $end
+$var wire 1 " addDw $end
+$var wire 1 # addrUp $end
+$var wire 1 $ DE10CLK $end
+$var wire 1 % DE10Reset $end
+$var wire 1 & display0 [7] $end
+$var wire 1 ' display0 [6] $end
+$var wire 1 ( display0 [5] $end
+$var wire 1 ) display0 [4] $end
+$var wire 1 * display0 [3] $end
+$var wire 1 + display0 [2] $end
+$var wire 1 , display0 [1] $end
+$var wire 1 - display0 [0] $end
+$var wire 1 . display1 [7] $end
+$var wire 1 / display1 [6] $end
+$var wire 1 0 display1 [5] $end
+$var wire 1 1 display1 [4] $end
+$var wire 1 2 display1 [3] $end
+$var wire 1 3 display1 [2] $end
+$var wire 1 4 display1 [1] $end
+$var wire 1 5 display1 [0] $end
+$var wire 1 6 display2 [7] $end
+$var wire 1 7 display2 [6] $end
+$var wire 1 8 display2 [5] $end
+$var wire 1 9 display2 [4] $end
+$var wire 1 : display2 [3] $end
+$var wire 1 ; display2 [2] $end
+$var wire 1 < display2 [1] $end
+$var wire 1 = display2 [0] $end
+$var wire 1 > display3 [7] $end
+$var wire 1 ? display3 [6] $end
+$var wire 1 @ display3 [5] $end
+$var wire 1 A display3 [4] $end
+$var wire 1 B display3 [3] $end
+$var wire 1 C display3 [2] $end
+$var wire 1 D display3 [1] $end
+$var wire 1 E display3 [0] $end
+$var wire 1 F DRAM_ADDR [12] $end
+$var wire 1 G DRAM_ADDR [11] $end
+$var wire 1 H DRAM_ADDR [10] $end
+$var wire 1 I DRAM_ADDR [9] $end
+$var wire 1 J DRAM_ADDR [8] $end
+$var wire 1 K DRAM_ADDR [7] $end
+$var wire 1 L DRAM_ADDR [6] $end
+$var wire 1 M DRAM_ADDR [5] $end
+$var wire 1 N DRAM_ADDR [4] $end
+$var wire 1 O DRAM_ADDR [3] $end
+$var wire 1 P DRAM_ADDR [2] $end
+$var wire 1 Q DRAM_ADDR [1] $end
+$var wire 1 R DRAM_ADDR [0] $end
+$var wire 1 S DRAM_BA [1] $end
+$var wire 1 T DRAM_BA [0] $end
+$var wire 1 U DRAM_CAS_N $end
+$var wire 1 V DRAM_CKE $end
+$var wire 1 W DRAM_CLK $end
+$var wire 1 X DRAM_CS_N $end
+$var wire 1 Y DRAM_DQ [15] $end
+$var wire 1 Z DRAM_DQ [14] $end
+$var wire 1 [ DRAM_DQ [13] $end
+$var wire 1 \ DRAM_DQ [12] $end
+$var wire 1 ] DRAM_DQ [11] $end
+$var wire 1 ^ DRAM_DQ [10] $end
+$var wire 1 _ DRAM_DQ [9] $end
+$var wire 1 ` DRAM_DQ [8] $end
+$var wire 1 a DRAM_DQ [7] $end
+$var wire 1 b DRAM_DQ [6] $end
+$var wire 1 c DRAM_DQ [5] $end
+$var wire 1 d DRAM_DQ [4] $end
+$var wire 1 e DRAM_DQ [3] $end
+$var wire 1 f DRAM_DQ [2] $end
+$var wire 1 g DRAM_DQ [1] $end
+$var wire 1 h DRAM_DQ [0] $end
+$var wire 1 i DRAM_DQM [1] $end
+$var wire 1 j DRAM_DQM [0] $end
+$var wire 1 k DRAM_RAS_N $end
+$var wire 1 l DRAM_WE_N $end
+$var wire 1 m led_out [15] $end
+$var wire 1 n led_out [14] $end
+$var wire 1 o led_out [13] $end
+$var wire 1 p led_out [12] $end
+$var wire 1 q led_out [11] $end
+$var wire 1 r led_out [10] $end
+$var wire 1 s led_out [9] $end
+$var wire 1 t led_out [8] $end
+$var wire 1 u led_out [7] $end
+$var wire 1 v led_out [6] $end
+$var wire 1 w led_out [5] $end
+$var wire 1 x led_out [4] $end
+$var wire 1 y led_out [3] $end
+$var wire 1 z led_out [2] $end
+$var wire 1 { led_out [1] $end
+$var wire 1 | led_out [0] $end
+$var wire 1 } RW_switch $end
+
+$scope module i1 $end
+$var wire 1 ~ gnd $end
+$var wire 1 !! vcc $end
+$var wire 1 "! unknown $end
+$var wire 1 #! devoe $end
+$var wire 1 $! devclrn $end
+$var wire 1 %! devpor $end
+$var wire 1 &! ww_devoe $end
+$var wire 1 '! ww_devclrn $end
+$var wire 1 (! ww_devpor $end
+$var wire 1 )! ww_DE10CLK $end
+$var wire 1 *! ww_ADCCLK $end
+$var wire 1 +! ww_RW_switch $end
+$var wire 1 ,! ww_addrUp $end
+$var wire 1 -! ww_addDw $end
+$var wire 1 .! ww_DE10Reset $end
+$var wire 1 /! ww_led_out [15] $end
+$var wire 1 0! ww_led_out [14] $end
+$var wire 1 1! ww_led_out [13] $end
+$var wire 1 2! ww_led_out [12] $end
+$var wire 1 3! ww_led_out [11] $end
+$var wire 1 4! ww_led_out [10] $end
+$var wire 1 5! ww_led_out [9] $end
+$var wire 1 6! ww_led_out [8] $end
+$var wire 1 7! ww_led_out [7] $end
+$var wire 1 8! ww_led_out [6] $end
+$var wire 1 9! ww_led_out [5] $end
+$var wire 1 :! ww_led_out [4] $end
+$var wire 1 ;! ww_led_out [3] $end
+$var wire 1 <! ww_led_out [2] $end
+$var wire 1 =! ww_led_out [1] $end
+$var wire 1 >! ww_led_out [0] $end
+$var wire 1 ?! ww_display0 [7] $end
+$var wire 1 @! ww_display0 [6] $end
+$var wire 1 A! ww_display0 [5] $end
+$var wire 1 B! ww_display0 [4] $end
+$var wire 1 C! ww_display0 [3] $end
+$var wire 1 D! ww_display0 [2] $end
+$var wire 1 E! ww_display0 [1] $end
+$var wire 1 F! ww_display0 [0] $end
+$var wire 1 G! ww_display1 [7] $end
+$var wire 1 H! ww_display1 [6] $end
+$var wire 1 I! ww_display1 [5] $end
+$var wire 1 J! ww_display1 [4] $end
+$var wire 1 K! ww_display1 [3] $end
+$var wire 1 L! ww_display1 [2] $end
+$var wire 1 M! ww_display1 [1] $end
+$var wire 1 N! ww_display1 [0] $end
+$var wire 1 O! ww_display2 [7] $end
+$var wire 1 P! ww_display2 [6] $end
+$var wire 1 Q! ww_display2 [5] $end
+$var wire 1 R! ww_display2 [4] $end
+$var wire 1 S! ww_display2 [3] $end
+$var wire 1 T! ww_display2 [2] $end
+$var wire 1 U! ww_display2 [1] $end
+$var wire 1 V! ww_display2 [0] $end
+$var wire 1 W! ww_display3 [7] $end
+$var wire 1 X! ww_display3 [6] $end
+$var wire 1 Y! ww_display3 [5] $end
+$var wire 1 Z! ww_display3 [4] $end
+$var wire 1 [! ww_display3 [3] $end
+$var wire 1 \! ww_display3 [2] $end
+$var wire 1 ]! ww_display3 [1] $end
+$var wire 1 ^! ww_display3 [0] $end
+$var wire 1 _! ww_DRAM_CLK $end
+$var wire 1 `! ww_DRAM_ADDR [12] $end
+$var wire 1 a! ww_DRAM_ADDR [11] $end
+$var wire 1 b! ww_DRAM_ADDR [10] $end
+$var wire 1 c! ww_DRAM_ADDR [9] $end
+$var wire 1 d! ww_DRAM_ADDR [8] $end
+$var wire 1 e! ww_DRAM_ADDR [7] $end
+$var wire 1 f! ww_DRAM_ADDR [6] $end
+$var wire 1 g! ww_DRAM_ADDR [5] $end
+$var wire 1 h! ww_DRAM_ADDR [4] $end
+$var wire 1 i! ww_DRAM_ADDR [3] $end
+$var wire 1 j! ww_DRAM_ADDR [2] $end
+$var wire 1 k! ww_DRAM_ADDR [1] $end
+$var wire 1 l! ww_DRAM_ADDR [0] $end
+$var wire 1 m! ww_DRAM_BA [1] $end
+$var wire 1 n! ww_DRAM_BA [0] $end
+$var wire 1 o! ww_DRAM_CAS_N $end
+$var wire 1 p! ww_DRAM_CKE $end
+$var wire 1 q! ww_DRAM_CS_N $end
+$var wire 1 r! ww_DRAM_DQM [1] $end
+$var wire 1 s! ww_DRAM_DQM [0] $end
+$var wire 1 t! ww_DRAM_RAS_N $end
+$var wire 1 u! ww_DRAM_WE_N $end
+$var wire 1 v! \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1_INCLK_bus\ [1] $end
+$var wire 1 w! \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1_INCLK_bus\ [0] $end
+$var wire 1 x! \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1_CLK_bus\ [4] $end
+$var wire 1 y! \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1_CLK_bus\ [3] $end
+$var wire 1 z! \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1_CLK_bus\ [2] $end
+$var wire 1 {! \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1_CLK_bus\ [1] $end
+$var wire 1 |! \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1_CLK_bus\ [0] $end
+$var wire 1 }! \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance_CHSEL_bus\ [4] $end
+$var wire 1 ~! \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance_CHSEL_bus\ [3] $end
+$var wire 1 !" \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance_CHSEL_bus\ [2] $end
+$var wire 1 "" \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance_CHSEL_bus\ [1] $end
+$var wire 1 #" \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance_CHSEL_bus\ [0] $end
+$var wire 1 $" \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance_DOUT_bus\ [11] $end
+$var wire 1 %" \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance_DOUT_bus\ [10] $end
+$var wire 1 &" \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance_DOUT_bus\ [9] $end
+$var wire 1 '" \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance_DOUT_bus\ [8] $end
+$var wire 1 (" \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance_DOUT_bus\ [7] $end
+$var wire 1 )" \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance_DOUT_bus\ [6] $end
+$var wire 1 *" \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance_DOUT_bus\ [5] $end
+$var wire 1 +" \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance_DOUT_bus\ [4] $end
+$var wire 1 ," \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance_DOUT_bus\ [3] $end
+$var wire 1 -" \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance_DOUT_bus\ [2] $end
+$var wire 1 ." \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance_DOUT_bus\ [1] $end
+$var wire 1 /" \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance_DOUT_bus\ [0] $end
+$var wire 1 0" \u1|altpll_0|sd1|pll7_INCLK_bus\ [1] $end
+$var wire 1 1" \u1|altpll_0|sd1|pll7_INCLK_bus\ [0] $end
+$var wire 1 2" \u1|altpll_0|sd1|pll7_CLK_bus\ [4] $end
+$var wire 1 3" \u1|altpll_0|sd1|pll7_CLK_bus\ [3] $end
+$var wire 1 4" \u1|altpll_0|sd1|pll7_CLK_bus\ [2] $end
+$var wire 1 5" \u1|altpll_0|sd1|pll7_CLK_bus\ [1] $end
+$var wire 1 6" \u1|altpll_0|sd1|pll7_CLK_bus\ [0] $end
+$var wire 1 7" \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [4] $end
+$var wire 1 8" \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [3] $end
+$var wire 1 9" \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [2] $end
+$var wire 1 :" \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [1] $end
+$var wire 1 ;" \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [0] $end
+$var wire 1 <" \ADCCLK~inputclkctrl_INCLK_bus\ [3] $end
+$var wire 1 =" \ADCCLK~inputclkctrl_INCLK_bus\ [2] $end
+$var wire 1 >" \ADCCLK~inputclkctrl_INCLK_bus\ [1] $end
+$var wire 1 ?" \ADCCLK~inputclkctrl_INCLK_bus\ [0] $end
+$var wire 1 @" \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk[0]~clkctrl_INCLK_bus\ [3] $end
+$var wire 1 A" \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk[0]~clkctrl_INCLK_bus\ [2] $end
+$var wire 1 B" \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk[0]~clkctrl_INCLK_bus\ [1] $end
+$var wire 1 C" \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk[0]~clkctrl_INCLK_bus\ [0] $end
+$var wire 1 D" \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk[1]~clkctrl_INCLK_bus\ [3] $end
+$var wire 1 E" \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk[1]~clkctrl_INCLK_bus\ [2] $end
+$var wire 1 F" \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk[1]~clkctrl_INCLK_bus\ [1] $end
+$var wire 1 G" \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk[1]~clkctrl_INCLK_bus\ [0] $end
+$var wire 1 H" \RW_switch~input_o\ $end
+$var wire 1 I" \addrUp~input_o\ $end
+$var wire 1 J" \addDw~input_o\ $end
+$var wire 1 K" \DRAM_DQ[12]~input_o\ $end
+$var wire 1 L" \DRAM_DQ[13]~input_o\ $end
+$var wire 1 M" \DRAM_DQ[14]~input_o\ $end
+$var wire 1 N" \DRAM_DQ[15]~input_o\ $end
+$var wire 1 O" \~QUARTUS_CREATED_UNVM~~busy\ $end
+$var wire 1 P" \~ALTERA_TMS~~ibuf_o\ $end
+$var wire 1 Q" \~ALTERA_TMS~~padout\ $end
+$var wire 1 R" \~ALTERA_TCK~~ibuf_o\ $end
+$var wire 1 S" \~ALTERA_TCK~~padout\ $end
+$var wire 1 T" \~ALTERA_TDI~~ibuf_o\ $end
+$var wire 1 U" \~ALTERA_TDI~~padout\ $end
+$var wire 1 V" \~ALTERA_TDO~~padout\ $end
+$var wire 1 W" \~ALTERA_CONFIG_SEL~~ibuf_o\ $end
+$var wire 1 X" \~ALTERA_CONFIG_SEL~~padout\ $end
+$var wire 1 Y" \~ALTERA_nCONFIG~~ibuf_o\ $end
+$var wire 1 Z" \~ALTERA_nCONFIG~~padout\ $end
+$var wire 1 [" \~ALTERA_nSTATUS~~ibuf_o\ $end
+$var wire 1 \" \~ALTERA_nSTATUS~~padout\ $end
+$var wire 1 ]" \~ALTERA_CONF_DONE~~ibuf_o\ $end
+$var wire 1 ^" \~ALTERA_CONF_DONE~~padout\ $end
+$var wire 1 _" \~ALTERA_ADC1IN1~~ibuf_o\ $end
+$var wire 1 `" \~ALTERA_ADC1IN1~~padout\ $end
+$var wire 1 a" \~ALTERA_ADC2IN1~~ibuf_o\ $end
+$var wire 1 b" \~ALTERA_ADC2IN1~~padout\ $end
+$var wire 1 c" \~ALTERA_ADC1IN2~~ibuf_o\ $end
+$var wire 1 d" \~ALTERA_ADC1IN2~~padout\ $end
+$var wire 1 e" \~ALTERA_ADC2IN8~~ibuf_o\ $end
+$var wire 1 f" \~ALTERA_ADC2IN8~~padout\ $end
+$var wire 1 g" \~ALTERA_ADC1IN3~~ibuf_o\ $end
+$var wire 1 h" \~ALTERA_ADC1IN3~~padout\ $end
+$var wire 1 i" \~ALTERA_ADC2IN3~~ibuf_o\ $end
+$var wire 1 j" \~ALTERA_ADC2IN3~~padout\ $end
+$var wire 1 k" \~ALTERA_ADC1IN4~~ibuf_o\ $end
+$var wire 1 l" \~ALTERA_ADC1IN4~~padout\ $end
+$var wire 1 m" \~ALTERA_ADC2IN4~~ibuf_o\ $end
+$var wire 1 n" \~ALTERA_ADC2IN4~~padout\ $end
+$var wire 1 o" \~ALTERA_ADC1IN5~~ibuf_o\ $end
+$var wire 1 p" \~ALTERA_ADC1IN5~~padout\ $end
+$var wire 1 q" \~ALTERA_ADC2IN5~~ibuf_o\ $end
+$var wire 1 r" \~ALTERA_ADC2IN5~~padout\ $end
+$var wire 1 s" \~ALTERA_ADC1IN6~~ibuf_o\ $end
+$var wire 1 t" \~ALTERA_ADC1IN6~~padout\ $end
+$var wire 1 u" \~ALTERA_ADC2IN6~~ibuf_o\ $end
+$var wire 1 v" \~ALTERA_ADC2IN6~~padout\ $end
+$var wire 1 w" \~ALTERA_ADC1IN7~~ibuf_o\ $end
+$var wire 1 x" \~ALTERA_ADC1IN7~~padout\ $end
+$var wire 1 y" \~ALTERA_ADC2IN7~~ibuf_o\ $end
+$var wire 1 z" \~ALTERA_ADC2IN7~~padout\ $end
+$var wire 1 {" \~ALTERA_ADC1IN8~~ibuf_o\ $end
+$var wire 1 |" \~ALTERA_ADC1IN8~~padout\ $end
+$var wire 1 }" \~ALTERA_ADC2IN2~~ibuf_o\ $end
+$var wire 1 ~" \~ALTERA_ADC2IN2~~padout\ $end
+$var wire 1 !# \~QUARTUS_CREATED_ADC2~~eoc\ $end
+$var wire 1 "# \~ALTERA_TDO~~obuf_o\ $end
+$var wire 1 ## \ADCCLK~input_o\ $end
+$var wire 1 $# \ADCCLK~inputclkctrl_outclk\ $end
+$var wire 1 %# \u1|modular_adc_0|control_internal|u_control_fsm|int_timer[0]~8_combout\ $end
+$var wire 1 &# \u1|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[1]~feeder_combout\ $end
+$var wire 1 '# \DE10Reset~input_o\ $end
+$var wire 1 (# \u1|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[0]~feeder_combout\ $end
+$var wire 1 )# \u1|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out~q\ $end
+$var wire 1 *# \u1|modular_adc_0|control_internal|u_control_fsm|load_dout~1_combout\ $end
+$var wire 1 +# \u1|modular_adc_0|control_internal|u_control_fsm|ctrl_state.CONV_DLY1~q\ $end
+$var wire 1 ,# \u1|modular_adc_0|control_internal|u_control_fsm|conv_dly1_s_flp~feeder_combout\ $end
+$var wire 1 -# \u1|modular_adc_0|control_internal|u_control_fsm|conv_dly1_s_flp~q\ $end
+$var wire 1 .# \u1|modular_adc_0|control_internal|u_control_fsm|ctrl_state.PUTRESP_DLY1~q\ $end
+$var wire 1 /# \u1|modular_adc_0|control_internal|u_control_fsm|ctrl_state.PUTRESP_DLY2~feeder_combout\ $end
+$var wire 1 0# \u1|modular_adc_0|control_internal|u_control_fsm|ctrl_state.PUTRESP_DLY2~q\ $end
+$var wire 1 1# \u1|modular_adc_0|control_internal|u_control_fsm|ctrl_state.PUTRESP_DLY3~q\ $end
+$var wire 1 2# \u1|modular_adc_0|control_internal|u_control_fsm|int_timer[6]~21\ $end
+$var wire 1 3# \u1|modular_adc_0|control_internal|u_control_fsm|int_timer[7]~22_combout\ $end
+$var wire 1 4# \u1|altpll_0|sd1|wire_pll7_fbout\ $end
+$var wire 1 5# \u1|altpll_0|sd1|wire_pll7_locked\ $end
+$var wire 1 6# \u1|modular_adc_0|control_internal|u_control_fsm|ctrl_state.IDLE~0_combout\ $end
+$var wire 1 7# \u1|modular_adc_0|control_internal|u_control_fsm|ctrl_state.IDLE~q\ $end
+$var wire 1 8# \u1|modular_adc_0|control_internal|u_control_fsm|Selector1~0_combout\ $end
+$var wire 1 9# \u1|modular_adc_0|control_internal|u_control_fsm|ctrl_state.PWRDWN~q\ $end
+$var wire 1 :# \u1|modular_adc_0|control_internal|u_control_fsm|int_timer[3]~24_combout\ $end
+$var wire 1 ;# \u1|modular_adc_0|control_internal|u_control_fsm|Selector3~0_combout\ $end
+$var wire 1 <# \~GND~combout\ $end
+$var wire 1 =# \u1|modular_adc_0|control_internal|u_control_fsm|WideOr12~0_combout\ $end
+$var wire 1 ># \u1|modular_adc_0|control_internal|u_control_fsm|WideOr12~1_combout\ $end
+$var wire 1 ?# \u1|modular_adc_0|control_internal|u_control_fsm|WideOr12~combout\ $end
+$var wire 1 @# \u1|modular_adc_0|control_internal|u_control_fsm|Selector15~3_combout\ $end
+$var wire 1 A# \u1|modular_adc_0|control_internal|u_control_fsm|chsel[0]~2_combout\ $end
+$var wire 1 B# \u1|modular_adc_0|control_internal|adc_inst|decoder|WideOr4~0_combout\ $end
+$var wire 1 C# \u1|modular_adc_0|control_internal|adc_inst|decoder|WideOr2~0_combout\ $end
+$var wire 1 D# \u1|modular_adc_0|control_internal|u_control_fsm|chsel[1]~_wirecell_combout\ $end
+$var wire 1 E# \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|clkout_adccore\ $end
+$var wire 1 F# \u1|modular_adc_0|control_internal|u_control_fsm|u_clk_dft_synchronizer|din_s1~feeder_combout\ $end
+$var wire 1 G# \u1|modular_adc_0|control_internal|u_control_fsm|u_clk_dft_synchronizer|din_s1~q\ $end
+$var wire 1 H# \u1|modular_adc_0|control_internal|u_control_fsm|u_clk_dft_synchronizer|dreg[0]~feeder_combout\ $end
+$var wire 1 I# \u1|modular_adc_0|control_internal|u_control_fsm|clk_dft_synch_dly~feeder_combout\ $end
+$var wire 1 J# \u1|modular_adc_0|control_internal|u_control_fsm|clk_dft_synch_dly~q\ $end
+$var wire 1 K# \u1|modular_adc_0|control_internal|u_control_fsm|Selector3~1_combout\ $end
+$var wire 1 L# \u1|modular_adc_0|control_internal|u_control_fsm|ctrl_state.PWRDWN_DONE~q\ $end
+$var wire 1 M# \u1|modular_adc_0|control_internal|u_control_fsm|Selector4~0_combout\ $end
+$var wire 1 N# \u1|modular_adc_0|control_internal|u_control_fsm|ctrl_state.PWRUP_CH~q\ $end
+$var wire 1 O# \u1|modular_adc_0|control_internal|u_control_fsm|Selector5~0_combout\ $end
+$var wire 1 P# \u1|modular_adc_0|control_internal|u_control_fsm|Selector5~1_combout\ $end
+$var wire 1 Q# \u1|modular_adc_0|control_internal|u_control_fsm|ctrl_state.PWRUP_SOC~q\ $end
+$var wire 1 R# \u1|modular_adc_0|control_internal|u_control_fsm|Selector7~0_combout\ $end
+$var wire 1 S# \u1|modular_adc_0|control_internal|u_control_fsm|ctrl_state.GETCMD~q\ $end
+$var wire 1 T# \u1|modular_adc_0|control_internal|u_control_fsm|arc_to_conv~0_combout\ $end
+$var wire 1 U# \u1|modular_adc_0|control_internal|u_control_fsm|int_timer[0]~9\ $end
+$var wire 1 V# \u1|modular_adc_0|control_internal|u_control_fsm|int_timer[1]~10_combout\ $end
+$var wire 1 W# \u1|modular_adc_0|control_internal|u_control_fsm|int_timer[1]~11\ $end
+$var wire 1 X# \u1|modular_adc_0|control_internal|u_control_fsm|int_timer[2]~12_combout\ $end
+$var wire 1 Y# \u1|modular_adc_0|control_internal|u_control_fsm|int_timer[2]~13\ $end
+$var wire 1 Z# \u1|modular_adc_0|control_internal|u_control_fsm|int_timer[3]~14_combout\ $end
+$var wire 1 [# \u1|modular_adc_0|control_internal|u_control_fsm|int_timer[3]~15\ $end
+$var wire 1 \# \u1|modular_adc_0|control_internal|u_control_fsm|int_timer[4]~16_combout\ $end
+$var wire 1 ]# \u1|modular_adc_0|control_internal|u_control_fsm|int_timer[4]~17\ $end
+$var wire 1 ^# \u1|modular_adc_0|control_internal|u_control_fsm|int_timer[5]~18_combout\ $end
+$var wire 1 _# \u1|modular_adc_0|control_internal|u_control_fsm|int_timer[5]~19\ $end
+$var wire 1 `# \u1|modular_adc_0|control_internal|u_control_fsm|int_timer[6]~20_combout\ $end
+$var wire 1 a# \u1|modular_adc_0|control_internal|u_control_fsm|Selector2~0_combout\ $end
+$var wire 1 b# \u1|modular_adc_0|control_internal|u_control_fsm|ctrl_state.PWRDWN_TSEN~q\ $end
+$var wire 1 c# \u1|modular_adc_0|control_internal|u_control_fsm|Selector18~0_combout\ $end
+$var wire 1 d# \u1|modular_adc_0|control_internal|u_control_fsm|WideOr17~combout\ $end
+$var wire 1 e# \u1|modular_adc_0|control_internal|u_control_fsm|Selector18~1_combout\ $end
+$var wire 1 f# \u1|modular_adc_0|control_internal|u_control_fsm|usr_pwd~q\ $end
+$var wire 1 g# \u1|modular_adc_0|control_internal|u_control_fsm|usr_pwd~_wirecell_combout\ $end
+$var wire 1 h# \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|eoc\ $end
+$var wire 1 i# \u1|modular_adc_0|control_internal|u_control_fsm|u_eoc_synchronizer|din_s1~q\ $end
+$var wire 1 j# \u1|modular_adc_0|control_internal|u_control_fsm|u_eoc_synchronizer|dreg[0]~feeder_combout\ $end
+$var wire 1 k# \u1|modular_adc_0|control_internal|u_control_fsm|eoc_synch_dly~q\ $end
+$var wire 1 l# \u1|modular_adc_0|control_internal|u_control_fsm|Selector9~0_combout\ $end
+$var wire 1 m# \u1|modular_adc_0|control_internal|u_control_fsm|ctrl_state.CONV~q\ $end
+$var wire 1 n# \u1|modular_adc_0|control_internal|u_control_fsm|Selector15~2_combout\ $end
+$var wire 1 o# \u1|modular_adc_0|control_internal|u_control_fsm|Selector17~0_combout\ $end
+$var wire 1 p# \u1|modular_adc_0|control_internal|u_control_fsm|soc~q\ $end
+$var wire 1 q# \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp[0]~feeder_combout\ $end
+$var wire 1 r# \u1|modular_adc_0|control_internal|u_control_fsm|pend~0_combout\ $end
+$var wire 1 s# \u1|modular_adc_0|control_internal|u_control_fsm|pend~q\ $end
+$var wire 1 t# \u1|modular_adc_0|control_internal|u_control_fsm|load_dout~0_combout\ $end
+$var wire 1 u# \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data~0_combout\ $end
+$var wire 1 v# \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data~1_combout\ $end
+$var wire 1 w# \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data~2_combout\ $end
+$var wire 1 x# \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp[3]~feeder_combout\ $end
+$var wire 1 y# \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data~3_combout\ $end
+$var wire 1 z# \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp[4]~feeder_combout\ $end
+$var wire 1 {# \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data~4_combout\ $end
+$var wire 1 |# \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data~5_combout\ $end
+$var wire 1 }# \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp[6]~feeder_combout\ $end
+$var wire 1 ~# \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data~6_combout\ $end
+$var wire 1 !$ \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp[7]~feeder_combout\ $end
+$var wire 1 "$ \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data~7_combout\ $end
+$var wire 1 #$ \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp[8]~feeder_combout\ $end
+$var wire 1 $$ \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data~8_combout\ $end
+$var wire 1 %$ \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data~9_combout\ $end
+$var wire 1 &$ \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp[10]~feeder_combout\ $end
+$var wire 1 '$ \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data~10_combout\ $end
+$var wire 1 ($ \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp[11]~feeder_combout\ $end
+$var wire 1 )$ \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data~11_combout\ $end
+$var wire 1 *$ \DE10CLK~input_o\ $end
+$var wire 1 +$ \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1~FBOUT\ $end
+$var wire 1 ,$ \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk[0]~clkctrl_outclk\ $end
+$var wire 1 -$ \DRAM_DQ[3]~input_o\ $end
+$var wire 1 .$ \DRAM|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[1]~feeder_combout\ $end
+$var wire 1 /$ \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|locked\ $end
+$var wire 1 0$ \DRAM|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[0]~feeder_combout\ $end
+$var wire 1 1$ \DRAM|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out~q\ $end
+$var wire 1 2$ \DRAM_DQ[2]~input_o\ $end
+$var wire 1 3$ \DRAM_DQ[1]~input_o\ $end
+$var wire 1 4$ \DRAM_DQ[0]~input_o\ $end
+$var wire 1 5$ \Mux6~0_combout\ $end
+$var wire 1 6$ \Mux5~0_combout\ $end
+$var wire 1 7$ \Mux4~0_combout\ $end
+$var wire 1 8$ \Mux3~0_combout\ $end
+$var wire 1 9$ \Mux2~0_combout\ $end
+$var wire 1 :$ \Mux1~0_combout\ $end
+$var wire 1 ;$ \Mux0~0_combout\ $end
+$var wire 1 <$ \DRAM_DQ[4]~input_o\ $end
+$var wire 1 =$ \DRAM_DQ[5]~input_o\ $end
+$var wire 1 >$ \DRAM_DQ[7]~input_o\ $end
+$var wire 1 ?$ \DRAM_DQ[6]~input_o\ $end
+$var wire 1 @$ \Mux13~0_combout\ $end
+$var wire 1 A$ \Mux12~0_combout\ $end
+$var wire 1 B$ \Mux11~0_combout\ $end
+$var wire 1 C$ \Mux10~0_combout\ $end
+$var wire 1 D$ \Mux9~0_combout\ $end
+$var wire 1 E$ \Mux8~0_combout\ $end
+$var wire 1 F$ \Mux7~0_combout\ $end
+$var wire 1 G$ \DRAM_DQ[11]~input_o\ $end
+$var wire 1 H$ \DRAM_DQ[8]~input_o\ $end
+$var wire 1 I$ \DRAM_DQ[10]~input_o\ $end
+$var wire 1 J$ \DRAM_DQ[9]~input_o\ $end
+$var wire 1 K$ \Mux20~0_combout\ $end
+$var wire 1 L$ \Mux19~0_combout\ $end
+$var wire 1 M$ \Mux18~0_combout\ $end
+$var wire 1 N$ \Mux17~0_combout\ $end
+$var wire 1 O$ \Mux16~0_combout\ $end
+$var wire 1 P$ \Mux15~0_combout\ $end
+$var wire 1 Q$ \Mux14~0_combout\ $end
+$var wire 1 R$ \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk[1]~clkctrl_outclk\ $end
+$var wire 1 S$ \DRAM|new_sdram_controller_0|Add0~0_combout\ $end
+$var wire 1 T$ \DRAM|new_sdram_controller_0|Add0~1\ $end
+$var wire 1 U$ \DRAM|new_sdram_controller_0|Add0~2_combout\ $end
+$var wire 1 V$ \DRAM|new_sdram_controller_0|refresh_counter~8_combout\ $end
+$var wire 1 W$ \DRAM|new_sdram_controller_0|Add0~3\ $end
+$var wire 1 X$ \DRAM|new_sdram_controller_0|Add0~4_combout\ $end
+$var wire 1 Y$ \DRAM|new_sdram_controller_0|Add0~5\ $end
+$var wire 1 Z$ \DRAM|new_sdram_controller_0|Add0~6_combout\ $end
+$var wire 1 [$ \DRAM|new_sdram_controller_0|Add0~7\ $end
+$var wire 1 \$ \DRAM|new_sdram_controller_0|Add0~8_combout\ $end
+$var wire 1 ]$ \DRAM|new_sdram_controller_0|refresh_counter~6_combout\ $end
+$var wire 1 ^$ \DRAM|new_sdram_controller_0|Add0~9\ $end
+$var wire 1 _$ \DRAM|new_sdram_controller_0|Add0~10_combout\ $end
+$var wire 1 `$ \DRAM|new_sdram_controller_0|refresh_counter~7_combout\ $end
+$var wire 1 a$ \DRAM|new_sdram_controller_0|Add0~11\ $end
+$var wire 1 b$ \DRAM|new_sdram_controller_0|Add0~12_combout\ $end
+$var wire 1 c$ \DRAM|new_sdram_controller_0|refresh_counter~5_combout\ $end
+$var wire 1 d$ \DRAM|new_sdram_controller_0|Add0~13\ $end
+$var wire 1 e$ \DRAM|new_sdram_controller_0|Add0~14_combout\ $end
+$var wire 1 f$ \DRAM|new_sdram_controller_0|refresh_counter~4_combout\ $end
+$var wire 1 g$ \DRAM|new_sdram_controller_0|Add0~15\ $end
+$var wire 1 h$ \DRAM|new_sdram_controller_0|Add0~16_combout\ $end
+$var wire 1 i$ \DRAM|new_sdram_controller_0|refresh_counter[8]~12_combout\ $end
+$var wire 1 j$ \DRAM|new_sdram_controller_0|Add0~17\ $end
+$var wire 1 k$ \DRAM|new_sdram_controller_0|Add0~18_combout\ $end
+$var wire 1 l$ \DRAM|new_sdram_controller_0|refresh_counter[9]~11_combout\ $end
+$var wire 1 m$ \DRAM|new_sdram_controller_0|Equal0~1_combout\ $end
+$var wire 1 n$ \DRAM|new_sdram_controller_0|Equal0~3_combout\ $end
+$var wire 1 o$ \DRAM|new_sdram_controller_0|Add0~19\ $end
+$var wire 1 p$ \DRAM|new_sdram_controller_0|Add0~20_combout\ $end
+$var wire 1 q$ \DRAM|new_sdram_controller_0|refresh_counter~1_combout\ $end
+$var wire 1 r$ \DRAM|new_sdram_controller_0|Add0~21\ $end
+$var wire 1 s$ \DRAM|new_sdram_controller_0|Add0~22_combout\ $end
+$var wire 1 t$ \DRAM|new_sdram_controller_0|refresh_counter~3_combout\ $end
+$var wire 1 u$ \DRAM|new_sdram_controller_0|Add0~23\ $end
+$var wire 1 v$ \DRAM|new_sdram_controller_0|Add0~24_combout\ $end
+$var wire 1 w$ \DRAM|new_sdram_controller_0|refresh_counter~2_combout\ $end
+$var wire 1 x$ \DRAM|new_sdram_controller_0|Add0~25\ $end
+$var wire 1 y$ \DRAM|new_sdram_controller_0|Add0~26_combout\ $end
+$var wire 1 z$ \DRAM|new_sdram_controller_0|refresh_counter~0_combout\ $end
+$var wire 1 {$ \DRAM|new_sdram_controller_0|Equal0~0_combout\ $end
+$var wire 1 |$ \DRAM|new_sdram_controller_0|Equal0~2_combout\ $end
+$var wire 1 }$ \DRAM|new_sdram_controller_0|Equal0~4_combout\ $end
+$var wire 1 ~$ \DRAM|new_sdram_controller_0|Selector8~0_combout\ $end
+$var wire 1 !% \DRAM|new_sdram_controller_0|i_state.001~q\ $end
+$var wire 1 "% \DRAM|new_sdram_controller_0|Selector6~0_combout\ $end
+$var wire 1 #% \DRAM|new_sdram_controller_0|Selector5~0_combout\ $end
+$var wire 1 $% \DRAM|new_sdram_controller_0|Add1~0_combout\ $end
+$var wire 1 %% \DRAM|new_sdram_controller_0|Selector4~0_combout\ $end
+$var wire 1 &% \DRAM|new_sdram_controller_0|Selector16~0_combout\ $end
+$var wire 1 '% \DRAM|new_sdram_controller_0|Selector16~1_combout\ $end
+$var wire 1 (% \DRAM|new_sdram_controller_0|i_next.010~q\ $end
+$var wire 1 )% \DRAM|new_sdram_controller_0|Selector15~1_combout\ $end
+$var wire 1 *% \DRAM|new_sdram_controller_0|Selector15~0_combout\ $end
+$var wire 1 +% \DRAM|new_sdram_controller_0|Selector15~2_combout\ $end
+$var wire 1 ,% \DRAM|new_sdram_controller_0|Selector14~0_combout\ $end
+$var wire 1 -% \DRAM|new_sdram_controller_0|Selector14~1_combout\ $end
+$var wire 1 .% \DRAM|new_sdram_controller_0|Selector9~1_combout\ $end
+$var wire 1 /% \DRAM|new_sdram_controller_0|i_state.010~q\ $end
+$var wire 1 0% \DRAM|new_sdram_controller_0|Selector13~1_combout\ $end
+$var wire 1 1% \DRAM|new_sdram_controller_0|Selector13~0_combout\ $end
+$var wire 1 2% \DRAM|new_sdram_controller_0|Selector18~0_combout\ $end
+$var wire 1 3% \DRAM|new_sdram_controller_0|Selector18~1_combout\ $end
+$var wire 1 4% \DRAM|new_sdram_controller_0|i_next.111~q\ $end
+$var wire 1 5% \DRAM|new_sdram_controller_0|Selector12~0_combout\ $end
+$var wire 1 6% \DRAM|new_sdram_controller_0|i_state.111~q\ $end
+$var wire 1 7% \DRAM|new_sdram_controller_0|Selector13~2_combout\ $end
+$var wire 1 8% \DRAM|new_sdram_controller_0|Selector10~0_combout\ $end
+$var wire 1 9% \DRAM|new_sdram_controller_0|Selector10~1_combout\ $end
+$var wire 1 :% \DRAM|new_sdram_controller_0|i_state.011~q\ $end
+$var wire 1 ;% \DRAM|new_sdram_controller_0|i_next.000~0_combout\ $end
+$var wire 1 <% \DRAM|new_sdram_controller_0|i_next.000~q\ $end
+$var wire 1 =% \DRAM|new_sdram_controller_0|Selector9~0_combout\ $end
+$var wire 1 >% \DRAM|new_sdram_controller_0|Selector7~0_combout\ $end
+$var wire 1 ?% \DRAM|new_sdram_controller_0|i_state.000~q\ $end
+$var wire 1 @% \DRAM|new_sdram_controller_0|WideOr6~combout\ $end
+$var wire 1 A% \DRAM|new_sdram_controller_0|Selector17~0_combout\ $end
+$var wire 1 B% \DRAM|new_sdram_controller_0|i_next.101~q\ $end
+$var wire 1 C% \DRAM|new_sdram_controller_0|i_state.101~0_combout\ $end
+$var wire 1 D% \DRAM|new_sdram_controller_0|i_state.101~q\ $end
+$var wire 1 E% \DRAM|new_sdram_controller_0|init_done~0_combout\ $end
+$var wire 1 F% \DRAM|new_sdram_controller_0|init_done~q\ $end
+$var wire 1 G% \DRAM|new_sdram_controller_0|Selector32~0_combout\ $end
+$var wire 1 H% \DRAM|new_sdram_controller_0|pending~combout\ $end
+$var wire 1 I% \DRAM|new_sdram_controller_0|Selector32~1_combout\ $end
+$var wire 1 J% \DRAM|new_sdram_controller_0|m_state.100000000~q\ $end
+$var wire 1 K% \DRAM|new_sdram_controller_0|Selector29~0_combout\ $end
+$var wire 1 L% \DRAM|new_sdram_controller_0|Selector29~1_combout\ $end
+$var wire 1 M% \DRAM|new_sdram_controller_0|m_state.000100000~q\ $end
+$var wire 1 N% \DRAM|new_sdram_controller_0|Selector31~0_combout\ $end
+$var wire 1 O% \DRAM|new_sdram_controller_0|Selector36~1_combout\ $end
+$var wire 1 P% \DRAM|new_sdram_controller_0|m_count[0]~4_combout\ $end
+$var wire 1 Q% \DRAM|new_sdram_controller_0|m_count[0]~3_combout\ $end
+$var wire 1 R% \DRAM|new_sdram_controller_0|m_count[0]~5_combout\ $end
+$var wire 1 S% \DRAM|new_sdram_controller_0|Selector25~5_combout\ $end
+$var wire 1 T% \DRAM|new_sdram_controller_0|m_state.000000010~q\ $end
+$var wire 1 U% \DRAM|new_sdram_controller_0|Selector38~0_combout\ $end
+$var wire 1 V% \DRAM|new_sdram_controller_0|m_count[1]~0_combout\ $end
+$var wire 1 W% \DRAM|new_sdram_controller_0|m_count[1]~1_combout\ $end
+$var wire 1 X% \DRAM|new_sdram_controller_0|m_count[0]~7_combout\ $end
+$var wire 1 Y% \DRAM|new_sdram_controller_0|m_count[1]~2_combout\ $end
+$var wire 1 Z% \DRAM|new_sdram_controller_0|m_count[1]~6_combout\ $end
+$var wire 1 [% \DRAM|new_sdram_controller_0|Selector37~0_combout\ $end
+$var wire 1 \% \DRAM|new_sdram_controller_0|Selector37~1_combout\ $end
+$var wire 1 ]% \DRAM|new_sdram_controller_0|m_next~17_combout\ $end
+$var wire 1 ^% \DRAM|new_sdram_controller_0|Selector37~2_combout\ $end
+$var wire 1 _% \DRAM|new_sdram_controller_0|Selector36~0_combout\ $end
+$var wire 1 `% \DRAM|new_sdram_controller_0|Selector37~3_combout\ $end
+$var wire 1 a% \DRAM|new_sdram_controller_0|LessThan1~0_combout\ $end
+$var wire 1 b% \DRAM|new_sdram_controller_0|Selector30~0_combout\ $end
+$var wire 1 c% \DRAM|new_sdram_controller_0|m_state.001000000~q\ $end
+$var wire 1 d% \DRAM|new_sdram_controller_0|WideOr8~0_combout\ $end
+$var wire 1 e% \DRAM|new_sdram_controller_0|Selector26~0_combout\ $end
+$var wire 1 f% \DRAM|new_sdram_controller_0|Selector26~1_combout\ $end
+$var wire 1 g% \DRAM|new_sdram_controller_0|m_state.000000100~q\ $end
+$var wire 1 h% \DRAM|new_sdram_controller_0|Selector36~2_combout\ $end
+$var wire 1 i% \DRAM|new_sdram_controller_0|Selector36~3_combout\ $end
+$var wire 1 j% \DRAM|new_sdram_controller_0|Selector36~4_combout\ $end
+$var wire 1 k% \DRAM|new_sdram_controller_0|m_next.010000000~q\ $end
+$var wire 1 l% \DRAM|new_sdram_controller_0|Selector31~1_combout\ $end
+$var wire 1 m% \DRAM|new_sdram_controller_0|m_state.010000000~q\ $end
+$var wire 1 n% \DRAM|new_sdram_controller_0|Selector23~0_combout\ $end
+$var wire 1 o% \DRAM|new_sdram_controller_0|ack_refresh_request~q\ $end
+$var wire 1 p% \DRAM|new_sdram_controller_0|refresh_request~0_combout\ $end
+$var wire 1 q% \DRAM|new_sdram_controller_0|refresh_request~q\ $end
+$var wire 1 r% \DRAM|new_sdram_controller_0|Selector24~0_combout\ $end
+$var wire 1 s% \DRAM|new_sdram_controller_0|Selector24~1_combout\ $end
+$var wire 1 t% \DRAM|new_sdram_controller_0|Selector33~0_combout\ $end
+$var wire 1 u% \DRAM|new_sdram_controller_0|Selector33~1_combout\ $end
+$var wire 1 v% \DRAM|new_sdram_controller_0|Selector33~2_combout\ $end
+$var wire 1 w% \DRAM|new_sdram_controller_0|Selector33~3_combout\ $end
+$var wire 1 x% \DRAM|new_sdram_controller_0|Selector33~4_combout\ $end
+$var wire 1 y% \DRAM|new_sdram_controller_0|m_next.000000001~q\ $end
+$var wire 1 z% \DRAM|new_sdram_controller_0|Selector24~2_combout\ $end
+$var wire 1 {% \DRAM|new_sdram_controller_0|m_state.000000001~q\ $end
+$var wire 1 |% \DRAM|new_sdram_controller_0|Selector25~4_combout\ $end
+$var wire 1 }% \DRAM|new_sdram_controller_0|active_cs_n~0_combout\ $end
+$var wire 1 ~% \DRAM|new_sdram_controller_0|active_cs_n~1_combout\ $end
+$var wire 1 !& \DRAM|new_sdram_controller_0|active_cs_n~q\ $end
+$var wire 1 "& \DRAM|new_sdram_controller_0|the_SDRAMtest_new_sdram_controller_0_input_efifo_module|entries[1]~0_combout\ $end
+$var wire 1 #& \DRAM|new_sdram_controller_0|the_SDRAMtest_new_sdram_controller_0_input_efifo_module|Equal1~0_combout\ $end
+$var wire 1 $& \DRAM|new_sdram_controller_0|Selector41~0_combout\ $end
+$var wire 1 %& \DRAM|new_sdram_controller_0|f_pop~q\ $end
+$var wire 1 && \DRAM|new_sdram_controller_0|the_SDRAMtest_new_sdram_controller_0_input_efifo_module|entries[0]~1_combout\ $end
+$var wire 1 '& \DRAM|new_sdram_controller_0|Selector35~0_combout\ $end
+$var wire 1 (& \DRAM|new_sdram_controller_0|Selector27~0_combout\ $end
+$var wire 1 )& \DRAM|new_sdram_controller_0|Selector34~0_combout\ $end
+$var wire 1 *& \DRAM|new_sdram_controller_0|Selector34~1_combout\ $end
+$var wire 1 +& \DRAM|new_sdram_controller_0|m_next.000001000~q\ $end
+$var wire 1 ,& \DRAM|new_sdram_controller_0|Selector27~1_combout\ $end
+$var wire 1 -& \DRAM|new_sdram_controller_0|m_state.000001000~q\ $end
+$var wire 1 .& \DRAM|new_sdram_controller_0|Selector98~0_combout\ $end
+$var wire 1 /& \DRAM|new_sdram_controller_0|m_addr[1]~2_combout\ $end
+$var wire 1 0& \DRAM|new_sdram_controller_0|m_addr[1]~3_combout\ $end
+$var wire 1 1& \DRAM|new_sdram_controller_0|m_addr[5]~_Duplicate_1_q\ $end
+$var wire 1 2& \DRAM|new_sdram_controller_0|Selector93~0_combout\ $end
+$var wire 1 3& \DRAM|new_sdram_controller_0|Selector93~1_combout\ $end
+$var wire 1 4& \DRAM|new_sdram_controller_0|Selector88~0_combout\ $end
+$var wire 1 5& \DRAM|new_sdram_controller_0|WideOr6~0_combout\ $end
+$var wire 1 6& \DRAM|new_sdram_controller_0|Selector2~0_combout\ $end
+$var wire 1 7& \DRAM|new_sdram_controller_0|Selector21~0_combout\ $end
+$var wire 1 8& \DRAM|new_sdram_controller_0|Selector21~1_combout\ $end
+$var wire 1 9& \DRAM|new_sdram_controller_0|Selector21~2_combout\ $end
+$var wire 1 :& \DRAM|new_sdram_controller_0|Selector19~1_combout\ $end
+$var wire 1 ;& \DRAM|new_sdram_controller_0|Selector19~2_combout\ $end
+$var wire 1 <& \DRAM|new_sdram_controller_0|Selector0~0_combout\ $end
+$var wire 1 =& \DRAM|new_sdram_controller_0|Selector19~0_combout\ $end
+$var wire 1 >& \DRAM|new_sdram_controller_0|Selector19~3_combout\ $end
+$var wire 1 ?& \DRAM|new_sdram_controller_0|Selector1~0_combout\ $end
+$var wire 1 @& \DRAM|new_sdram_controller_0|Selector20~0_combout\ $end
+$var wire 1 A& \DRAM|new_sdram_controller_0|Selector3~0_combout\ $end
+$var wire 1 B& \DRAM|new_sdram_controller_0|Selector22~0_combout\ $end
+$var wire 1 C& \DRAM|new_sdram_controller_0|i_refs\ [2] $end
+$var wire 1 D& \DRAM|new_sdram_controller_0|i_refs\ [1] $end
+$var wire 1 E& \DRAM|new_sdram_controller_0|i_refs\ [0] $end
+$var wire 1 F& \DRAM|new_sdram_controller_0|i_count\ [2] $end
+$var wire 1 G& \DRAM|new_sdram_controller_0|i_count\ [1] $end
+$var wire 1 H& \DRAM|new_sdram_controller_0|i_count\ [0] $end
+$var wire 1 I& \DRAM|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain\ [1] $end
+$var wire 1 J& \DRAM|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain\ [0] $end
+$var wire 1 K& \DRAM|new_sdram_controller_0|m_count\ [2] $end
+$var wire 1 L& \DRAM|new_sdram_controller_0|m_count\ [1] $end
+$var wire 1 M& \DRAM|new_sdram_controller_0|m_count\ [0] $end
+$var wire 1 N& \u1|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain\ [1] $end
+$var wire 1 O& \u1|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain\ [0] $end
+$var wire 1 P& \DRAM|new_sdram_controller_0|refresh_counter\ [13] $end
+$var wire 1 Q& \DRAM|new_sdram_controller_0|refresh_counter\ [12] $end
+$var wire 1 R& \DRAM|new_sdram_controller_0|refresh_counter\ [11] $end
+$var wire 1 S& \DRAM|new_sdram_controller_0|refresh_counter\ [10] $end
+$var wire 1 T& \DRAM|new_sdram_controller_0|refresh_counter\ [9] $end
+$var wire 1 U& \DRAM|new_sdram_controller_0|refresh_counter\ [8] $end
+$var wire 1 V& \DRAM|new_sdram_controller_0|refresh_counter\ [7] $end
+$var wire 1 W& \DRAM|new_sdram_controller_0|refresh_counter\ [6] $end
+$var wire 1 X& \DRAM|new_sdram_controller_0|refresh_counter\ [5] $end
+$var wire 1 Y& \DRAM|new_sdram_controller_0|refresh_counter\ [4] $end
+$var wire 1 Z& \DRAM|new_sdram_controller_0|refresh_counter\ [3] $end
+$var wire 1 [& \DRAM|new_sdram_controller_0|refresh_counter\ [2] $end
+$var wire 1 \& \DRAM|new_sdram_controller_0|refresh_counter\ [1] $end
+$var wire 1 ]& \DRAM|new_sdram_controller_0|refresh_counter\ [0] $end
+$var wire 1 ^& \u1|modular_adc_0|control_internal|u_control_fsm|u_eoc_synchronizer|dreg\ [0] $end
+$var wire 1 _& \DRAM|new_sdram_controller_0|the_SDRAMtest_new_sdram_controller_0_input_efifo_module|entries\ [1] $end
+$var wire 1 `& \DRAM|new_sdram_controller_0|the_SDRAMtest_new_sdram_controller_0_input_efifo_module|entries\ [0] $end
+$var wire 1 a& \DRAM|new_sdram_controller_0|i_cmd\ [3] $end
+$var wire 1 b& \DRAM|new_sdram_controller_0|i_cmd\ [2] $end
+$var wire 1 c& \DRAM|new_sdram_controller_0|i_cmd\ [1] $end
+$var wire 1 d& \DRAM|new_sdram_controller_0|i_cmd\ [0] $end
+$var wire 1 e& \u1|modular_adc_0|control_internal|u_control_fsm|u_clk_dft_synchronizer|dreg\ [0] $end
+$var wire 1 f& \DRAM|new_sdram_controller_0|m_cmd\ [3] $end
+$var wire 1 g& \DRAM|new_sdram_controller_0|m_cmd\ [2] $end
+$var wire 1 h& \DRAM|new_sdram_controller_0|m_cmd\ [1] $end
+$var wire 1 i& \DRAM|new_sdram_controller_0|m_cmd\ [0] $end
+$var wire 1 j& \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp\ [11] $end
+$var wire 1 k& \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp\ [10] $end
+$var wire 1 l& \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp\ [9] $end
+$var wire 1 m& \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp\ [8] $end
+$var wire 1 n& \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp\ [7] $end
+$var wire 1 o& \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp\ [6] $end
+$var wire 1 p& \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp\ [5] $end
+$var wire 1 q& \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp\ [4] $end
+$var wire 1 r& \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp\ [3] $end
+$var wire 1 s& \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp\ [2] $end
+$var wire 1 t& \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp\ [1] $end
+$var wire 1 u& \u1|modular_adc_0|control_internal|u_control_fsm|dout_flp\ [0] $end
+$var wire 1 v& \DRAM|new_sdram_controller_0|m_addr\ [12] $end
+$var wire 1 w& \DRAM|new_sdram_controller_0|m_addr\ [11] $end
+$var wire 1 x& \DRAM|new_sdram_controller_0|m_addr\ [10] $end
+$var wire 1 y& \DRAM|new_sdram_controller_0|m_addr\ [9] $end
+$var wire 1 z& \DRAM|new_sdram_controller_0|m_addr\ [8] $end
+$var wire 1 {& \DRAM|new_sdram_controller_0|m_addr\ [7] $end
+$var wire 1 |& \DRAM|new_sdram_controller_0|m_addr\ [6] $end
+$var wire 1 }& \DRAM|new_sdram_controller_0|m_addr\ [5] $end
+$var wire 1 ~& \DRAM|new_sdram_controller_0|m_addr\ [4] $end
+$var wire 1 !' \DRAM|new_sdram_controller_0|m_addr\ [3] $end
+$var wire 1 "' \DRAM|new_sdram_controller_0|m_addr\ [2] $end
+$var wire 1 #' \DRAM|new_sdram_controller_0|m_addr\ [1] $end
+$var wire 1 $' \DRAM|new_sdram_controller_0|m_addr\ [0] $end
+$var wire 1 %' \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk\ [5] $end
+$var wire 1 &' \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk\ [4] $end
+$var wire 1 '' \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk\ [3] $end
+$var wire 1 (' \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk\ [2] $end
+$var wire 1 )' \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk\ [1] $end
+$var wire 1 *' \DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk\ [0] $end
+$var wire 1 +' \u1|modular_adc_0|control_internal|u_control_fsm|chsel\ [4] $end
+$var wire 1 ,' \u1|modular_adc_0|control_internal|u_control_fsm|chsel\ [3] $end
+$var wire 1 -' \u1|modular_adc_0|control_internal|u_control_fsm|chsel\ [2] $end
+$var wire 1 .' \u1|modular_adc_0|control_internal|u_control_fsm|chsel\ [1] $end
+$var wire 1 /' \u1|modular_adc_0|control_internal|u_control_fsm|chsel\ [0] $end
+$var wire 1 0' \DRAM|new_sdram_controller_0|za_data\ [15] $end
+$var wire 1 1' \DRAM|new_sdram_controller_0|za_data\ [14] $end
+$var wire 1 2' \DRAM|new_sdram_controller_0|za_data\ [13] $end
+$var wire 1 3' \DRAM|new_sdram_controller_0|za_data\ [12] $end
+$var wire 1 4' \DRAM|new_sdram_controller_0|za_data\ [11] $end
+$var wire 1 5' \DRAM|new_sdram_controller_0|za_data\ [10] $end
+$var wire 1 6' \DRAM|new_sdram_controller_0|za_data\ [9] $end
+$var wire 1 7' \DRAM|new_sdram_controller_0|za_data\ [8] $end
+$var wire 1 8' \DRAM|new_sdram_controller_0|za_data\ [7] $end
+$var wire 1 9' \DRAM|new_sdram_controller_0|za_data\ [6] $end
+$var wire 1 :' \DRAM|new_sdram_controller_0|za_data\ [5] $end
+$var wire 1 ;' \DRAM|new_sdram_controller_0|za_data\ [4] $end
+$var wire 1 <' \DRAM|new_sdram_controller_0|za_data\ [3] $end
+$var wire 1 =' \DRAM|new_sdram_controller_0|za_data\ [2] $end
+$var wire 1 >' \DRAM|new_sdram_controller_0|za_data\ [1] $end
+$var wire 1 ?' \DRAM|new_sdram_controller_0|za_data\ [0] $end
+$var wire 1 @' \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|wire_from_adc_dout\ [11] $end
+$var wire 1 A' \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|wire_from_adc_dout\ [10] $end
+$var wire 1 B' \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|wire_from_adc_dout\ [9] $end
+$var wire 1 C' \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|wire_from_adc_dout\ [8] $end
+$var wire 1 D' \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|wire_from_adc_dout\ [7] $end
+$var wire 1 E' \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|wire_from_adc_dout\ [6] $end
+$var wire 1 F' \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|wire_from_adc_dout\ [5] $end
+$var wire 1 G' \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|wire_from_adc_dout\ [4] $end
+$var wire 1 H' \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|wire_from_adc_dout\ [3] $end
+$var wire 1 I' \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|wire_from_adc_dout\ [2] $end
+$var wire 1 J' \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|wire_from_adc_dout\ [1] $end
+$var wire 1 K' \u1|modular_adc_0|control_internal|adc_inst|adcblock_instance|wire_from_adc_dout\ [0] $end
+$var wire 1 L' \u1|altpll_0|sd1|wire_pll7_clk\ [4] $end
+$var wire 1 M' \u1|altpll_0|sd1|wire_pll7_clk\ [3] $end
+$var wire 1 N' \u1|altpll_0|sd1|wire_pll7_clk\ [2] $end
+$var wire 1 O' \u1|altpll_0|sd1|wire_pll7_clk\ [1] $end
+$var wire 1 P' \u1|altpll_0|sd1|wire_pll7_clk\ [0] $end
+$var wire 1 Q' \u1|modular_adc_0|control_internal|u_control_fsm|int_timer\ [7] $end
+$var wire 1 R' \u1|modular_adc_0|control_internal|u_control_fsm|int_timer\ [6] $end
+$var wire 1 S' \u1|modular_adc_0|control_internal|u_control_fsm|int_timer\ [5] $end
+$var wire 1 T' \u1|modular_adc_0|control_internal|u_control_fsm|int_timer\ [4] $end
+$var wire 1 U' \u1|modular_adc_0|control_internal|u_control_fsm|int_timer\ [3] $end
+$var wire 1 V' \u1|modular_adc_0|control_internal|u_control_fsm|int_timer\ [2] $end
+$var wire 1 W' \u1|modular_adc_0|control_internal|u_control_fsm|int_timer\ [1] $end
+$var wire 1 X' \u1|modular_adc_0|control_internal|u_control_fsm|int_timer\ [0] $end
+$var wire 1 Y' \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data\ [11] $end
+$var wire 1 Z' \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data\ [10] $end
+$var wire 1 [' \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data\ [9] $end
+$var wire 1 \' \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data\ [8] $end
+$var wire 1 ]' \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data\ [7] $end
+$var wire 1 ^' \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data\ [6] $end
+$var wire 1 _' \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data\ [5] $end
+$var wire 1 `' \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data\ [4] $end
+$var wire 1 a' \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data\ [3] $end
+$var wire 1 b' \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data\ [2] $end
+$var wire 1 c' \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data\ [1] $end
+$var wire 1 d' \u1|modular_adc_0|control_internal|u_control_fsm|rsp_data\ [0] $end
+$var wire 1 e' \DRAM|new_sdram_controller_0|i_addr\ [12] $end
+$var wire 1 f' \DRAM|new_sdram_controller_0|i_addr\ [11] $end
+$var wire 1 g' \DRAM|new_sdram_controller_0|i_addr\ [10] $end
+$var wire 1 h' \DRAM|new_sdram_controller_0|i_addr\ [9] $end
+$var wire 1 i' \DRAM|new_sdram_controller_0|i_addr\ [8] $end
+$var wire 1 j' \DRAM|new_sdram_controller_0|i_addr\ [7] $end
+$var wire 1 k' \DRAM|new_sdram_controller_0|i_addr\ [6] $end
+$var wire 1 l' \DRAM|new_sdram_controller_0|i_addr\ [5] $end
+$var wire 1 m' \DRAM|new_sdram_controller_0|i_addr\ [4] $end
+$var wire 1 n' \DRAM|new_sdram_controller_0|i_addr\ [3] $end
+$var wire 1 o' \DRAM|new_sdram_controller_0|i_addr\ [2] $end
+$var wire 1 p' \DRAM|new_sdram_controller_0|i_addr\ [1] $end
+$var wire 1 q' \DRAM|new_sdram_controller_0|i_addr\ [0] $end
+$var wire 1 r' \DRAM|new_sdram_controller_0|ALT_INV_Selector22~0_combout\ $end
+$var wire 1 s' \DRAM|new_sdram_controller_0|ALT_INV_Selector20~0_combout\ $end
+$var wire 1 t' \DRAM|new_sdram_controller_0|ALT_INV_Selector19~3_combout\ $end
+$var wire 1 u' \DRAM|new_sdram_controller_0|ALT_INV_Selector21~2_combout\ $end
+$var wire 1 v' \DRAM|rst_controller|alt_rst_sync_uq1|ALT_INV_altera_reset_synchronizer_int_chain_out~q\ $end
+$var wire 1 w' \ALT_INV_Mux14~0_combout\ $end
+$var wire 1 x' \ALT_INV_Mux7~0_combout\ $end
+$var wire 1 y' \ALT_INV_Mux0~0_combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+x"
+x#
+1$
+0%
+1U
+1V
+xW
+1X
+1k
+1l
+0}
+0~
+1!!
+x"!
+1#!
+1$!
+1%!
+1&!
+1'!
+1(!
+1)!
+0*!
+0+!
+x,!
+x-!
+0.!
+x_!
+1o!
+1p!
+1q!
+1t!
+1u!
+0H"
+xI"
+xJ"
+zK"
+zL"
+zM"
+zN"
+zO"
+xP"
+xQ"
+xR"
+xS"
+xT"
+xU"
+xV"
+xW"
+xX"
+xY"
+xZ"
+x["
+x\"
+x]"
+x^"
+x_"
+x`"
+xa"
+xb"
+xc"
+xd"
+xe"
+xf"
+xg"
+xh"
+xi"
+xj"
+xk"
+xl"
+xm"
+xn"
+xo"
+xp"
+xq"
+xr"
+xs"
+xt"
+xu"
+xv"
+xw"
+xx"
+xy"
+xz"
+x{"
+x|"
+x}"
+x~"
+z!#
+x"#
+0##
+0$#
+1%#
+1&#
+0'#
+0(#
+0)#
+0*#
+0+#
+0,#
+0-#
+0.#
+0/#
+00#
+01#
+02#
+03#
+x4#
+05#
+06#
+07#
+08#
+09#
+0:#
+0;#
+0<#
+1=#
+1>#
+0?#
+0@#
+0A#
+1B#
+1C#
+1D#
+xE#
+xF#
+0G#
+0H#
+0I#
+0J#
+0K#
+0L#
+0M#
+0N#
+0O#
+0P#
+0Q#
+0R#
+0S#
+0T#
+0U#
+0V#
+1W#
+0X#
+0Y#
+0Z#
+1[#
+0\#
+0]#
+0^#
+1_#
+0`#
+0a#
+0b#
+1c#
+0d#
+0e#
+0f#
+1g#
+0h#
+0i#
+0j#
+0k#
+0l#
+0m#
+1n#
+0o#
+0p#
+0q#
+0r#
+0s#
+0t#
+0u#
+0v#
+0w#
+0x#
+0y#
+0z#
+0{#
+0|#
+0}#
+0~#
+0!$
+0"$
+0#$
+0$$
+0%$
+0&$
+0'$
+0($
+0)$
+1*$
+x+$
+x,$
+z-$
+1.$
+0/$
+00$
+01$
+z2$
+z3$
+z4$
+05$
+06$
+07$
+08$
+09$
+0:$
+0;$
+z<$
+z=$
+z>$
+z?$
+0@$
+0A$
+0B$
+0C$
+0D$
+0E$
+0F$
+zG$
+zH$
+zI$
+zJ$
+0K$
+0L$
+0M$
+0N$
+0O$
+0P$
+0Q$
+xR$
+1S$
+0T$
+1U$
+1V$
+1W$
+1X$
+0Y$
+1Z$
+1[$
+0\$
+1]$
+1^$
+0_$
+0`$
+0a$
+0b$
+0c$
+1d$
+0e$
+0f$
+0g$
+1h$
+0i$
+1j$
+1k$
+0l$
+0m$
+1n$
+0o$
+1p$
+0q$
+1r$
+0s$
+0t$
+0u$
+0v$
+0w$
+1x$
+1y$
+0z$
+0{$
+0|$
+0}$
+0~$
+0!%
+0"%
+0#%
+0$%
+0%%
+0&%
+0'%
+0(%
+0)%
+0*%
+0+%
+0,%
+0-%
+0.%
+0/%
+00%
+01%
+02%
+03%
+04%
+05%
+06%
+07%
+08%
+09%
+0:%
+0;%
+0<%
+0=%
+0>%
+0?%
+1@%
+0A%
+0B%
+0C%
+0D%
+0E%
+0F%
+1G%
+0H%
+0I%
+0J%
+0K%
+0L%
+0M%
+0N%
+0O%
+1P%
+1Q%
+1R%
+0S%
+0T%
+0U%
+0V%
+0W%
+0X%
+0Y%
+0Z%
+0[%
+0\%
+1]%
+0^%
+0_%
+0`%
+0a%
+0b%
+0c%
+1d%
+1e%
+0f%
+0g%
+0h%
+0i%
+0j%
+0k%
+0l%
+0m%
+0n%
+0o%
+0p%
+0q%
+0r%
+0s%
+1t%
+0u%
+1v%
+1w%
+0x%
+0y%
+0z%
+0{%
+0|%
+0}%
+0~%
+0!&
+0"&
+0#&
+0$&
+0%&
+1&&
+0'&
+1(&
+0)&
+0*&
+0+&
+0,&
+0-&
+1.&
+1/&
+10&
+01&
+12&
+13&
+14&
+05&
+06&
+17&
+18&
+09&
+0:&
+0;&
+0<&
+1=&
+0>&
+0?&
+0@&
+0A&
+0B&
+1r'
+1s'
+1t'
+1u'
+1v'
+1w'
+1x'
+1y'
+zY
+zZ
+z[
+z\
+z]
+z^
+z_
+z`
+za
+zb
+zc
+zd
+ze
+zf
+zg
+zh
+0/!
+00!
+01!
+02!
+03!
+04!
+05!
+06!
+07!
+08!
+09!
+0:!
+0;!
+0<!
+0=!
+0>!
+1?!
+0@!
+0A!
+0B!
+0C!
+0D!
+0E!
+1F!
+1G!
+0H!
+0I!
+0J!
+0K!
+0L!
+0M!
+1N!
+1O!
+0P!
+0Q!
+0R!
+0S!
+0T!
+0U!
+1V!
+0W!
+0X!
+0Y!
+0Z!
+0[!
+0\!
+0]!
+0^!
+0`!
+0a!
+0b!
+0c!
+0d!
+0e!
+0f!
+0g!
+0h!
+0i!
+0j!
+0k!
+0l!
+0m!
+0n!
+0r!
+0s!
+xx!
+xy!
+xz!
+x{!
+x|!
+0$"
+0%"
+0&"
+0'"
+0("
+0)"
+0*"
+0+"
+0,"
+0-"
+0."
+0/"
+x2"
+x3"
+x4"
+x5"
+x6"
+0C&
+0D&
+0E&
+0F&
+0G&
+0H&
+0I&
+0J&
+0K&
+0L&
+0M&
+0N&
+0O&
+0P&
+0Q&
+0R&
+0S&
+0T&
+0U&
+0V&
+0W&
+0X&
+0Y&
+0Z&
+0[&
+0\&
+0]&
+0^&
+0_&
+0`&
+0a&
+0b&
+0c&
+0d&
+0e&
+1f&
+1g&
+1h&
+1i&
+0j&
+0k&
+0l&
+0m&
+0n&
+0o&
+0p&
+0q&
+0r&
+0s&
+0t&
+0u&
+0v&
+0w&
+0x&
+0y&
+0z&
+0{&
+0|&
+0}&
+0~&
+0!'
+0"'
+0#'
+0$'
+x%'
+x&'
+x''
+x('
+x)'
+x*'
+x+'
+x,'
+x-'
+0.'
+0/'
+x0'
+x1'
+x2'
+x3'
+04'
+05'
+06'
+07'
+08'
+09'
+0:'
+0;'
+0<'
+0='
+0>'
+0?'
+0@'
+0A'
+0B'
+0C'
+0D'
+0E'
+0F'
+0G'
+0H'
+0I'
+0J'
+0K'
+xL'
+xM'
+xN'
+xO'
+xP'
+0Q'
+0R'
+0S'
+0T'
+0U'
+0V'
+0W'
+0X'
+0Y'
+0Z'
+0['
+0\'
+0]'
+0^'
+0_'
+0`'
+0a'
+0b'
+0c'
+0d'
+0e'
+xf'
+xg'
+xh'
+xi'
+xj'
+xk'
+xl'
+xm'
+xn'
+xo'
+xp'
+xq'
+1<"
+1="
+1>"
+0?"
+00"
+01"
+1}!
+1~!
+1!"
+1""
+1#"
+0v!
+1w!
+1@"
+1A"
+1B"
+xC"
+1D"
+1E"
+1F"
+xG"
+07"
+08"
+09"
+0:"
+0;"
+1&
+0'
+0(
+0)
+0*
+0+
+0,
+1-
+1.
+0/
+00
+01
+02
+03
+04
+15
+16
+07
+08
+09
+0:
+0;
+0<
+1=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0i
+0j
+0m
+0n
+0o
+0p
+0q
+0r
+0s
+0t
+0u
+0v
+0w
+0x
+0y
+0z
+0{
+0|
+$end
+#1251
+14#
+#4001
+1+$
+#14001
+0+$
+#20000
+0$
+0)!
+0*$
+0w!
+#24001
+1+$
+#34001
+0+$
+#44001
+1+$
+#50000
+1!
+1*!
+1##
+1?"
+11"
+1$#
+#51251
+04#
+#54001
+0+$
+#64001
+1+$
+#70000
+1$
+1)!
+1*$
+1w!
+#74001
+0+$
+#84001
+1+$
+#94001
+0+$
+#100000
+0!
+0*!
+0##
+0?"
+01"
+0$#
+#101251
+14#
+#104001
+1+$
+#114001
+0+$
+#120000
+0$
+0)!
+0*$
+0w!
+#124001
+1+$
+#134001
+0+$
+#144001
+1+$
+#150000
+1!
+1*!
+1##
+1?"
+11"
+1$#
+#151251
+04#
+#154001
+0+$
+#164001
+1+$
+#170000
+1$
+1)!
+1*$
+1w!
+#174001
+0+$
+#184001
+1+$
+#194001
+0+$
+#200000
+0!
+0*!
+0##
+0?"
+01"
+0$#
+#201251
+14#
+#204001
+1+$
+#214001
+0+$
+#220000
+0$
+0)!
+0*$
+0w!
+#224001
+1+$
+#234001
+0+$
+#244001
+1+$
+#250000
+1!
+1*!
+1##
+1?"
+11"
+1$#
+#251251
+04#
+#254001
+0+$
+#264001
+1+$
+#270000
+1$
+1)!
+1*$
+1w!
+#274001
+0+$
+#284001
+1+$
+#294001
+0+$
+#300000
+0!
+0*!
+0##
+0?"
+01"
+0$#
+#301251
+14#
+#304001
+1+$
+#314001
+0+$
+#320000
+0$
+0)!
+0*$
+0w!
+#324001
+1+$
+#334001
+0+$
+#344001
+1+$
+#350000
+1!
+1*!
+1##
+1?"
+11"
+1$#
+#354001
+0+$
+#364001
+1+$
+#370000
+1$
+1)!
+1*$
+1w!
+#374001
+0+$
+#375625
+04#
+#384001
+1+$
+#394001
+0+$
+#400000
+0!
+0*!
+0##
+0?"
+01"
+0$#
+#404001
+1+$
+#414001
+0+$
+#420000
+0$
+0)!
+0*$
+0w!
+#424001
+1+$
+#434001
+0+$
+#444001
+1+$
+#450000
+1!
+1*!
+1##
+14#
+1?"
+11"
+15#
+02"
+03"
+04"
+05"
+06"
+0L'
+0M'
+0N'
+0O'
+0P'
+16#
+18#
+1$#
+1?#
+#454001
+0+$
+#464001
+1+$
+#470000
+1$
+1)!
+1*$
+1w!
+#474001
+0+$
+#484001
+1+$
+#494001
+0+$
+#500000
+0!
+0*!
+0##
+04#
+0?"
+01"
+0$#
+#504001
+1+$
+#514001
+0+$
+#520000
+0$
+0)!
+0*$
+0w!
+#524001
+1+$
+#534001
+0+$
+#544001
+1+$
+#550000
+1!
+1*!
+1##
+14#
+1?"
+11"
+12"
+13"
+14"
+15"
+16"
+1L'
+1M'
+1N'
+1O'
+1P'
+1$#
+#554001
+0+$
+#564001
+1+$
+#570000
+1$
+1)!
+1*$
+1w!
+#574001
+0+$
+#584001
+1+$
+#594001
+0+$
+#600000
+0!
+0*!
+0##
+04#
+0?"
+01"
+0$#
+#604001
+1+$
+#614001
+0+$
+#620000
+0$
+0)!
+0*$
+0w!
+#624001
+1+$
+#634001
+0+$
+#644001
+1+$
+#650000
+1!
+1*!
+1##
+14#
+1?"
+11"
+1$#
+#654001
+0+$
+#664001
+1+$
+#670000
+1$
+1)!
+1*$
+1w!
+#674001
+0+$
+#684001
+1+$
+#694001
+0+$
+#700000
+0!
+0*!
+0##
+04#
+0?"
+01"
+0$#
+#704001
+1+$
+#714001
+0+$
+#720000
+0$
+0)!
+0*$
+0w!
+#724001
+1+$
+#734001
+0+$
+#744001
+1+$
+#750000
+1!
+1*!
+1##
+14#
+1?"
+11"
+1$#
+#754001
+0+$
+#764001
+1+$
+#770000
+1$
+1)!
+1*$
+1w!
+#774001
+0+$
+#784001
+1+$
+#794001
+0+$
+#800000
+0!
+0*!
+0##
+04#
+0?"
+01"
+02"
+03"
+04"
+05"
+06"
+0L'
+0M'
+0N'
+0O'
+0P'
+0$#
+#804001
+1+$
+#814001
+0+$
+#820000
+0$
+0)!
+0*$
+0w!
+#824001
+1+$
+#834001
+0+$
+#844001
+1+$
+#850000
+1!
+1*!
+1##
+14#
+1?"
+11"
+1$#
+#854001
+0+$
+#864001
+1+$
+#870000
+1$
+1)!
+1*$
+1w!
+#874001
+0+$
+#884001
+1+$
+#894001
+0+$
+#900000
+0!
+0*!
+0##
+04#
+0?"
+01"
+0$#
+#904001
+1+$
+#914001
+0+$
+#920000
+0$
+0)!
+0*$
+0w!
+#924001
+1+$
+#934001
+0+$
+#944001
+1+$
+#950000
+1!
+1*!
+1##
+14#
+1?"
+11"
+1$#
+#954001
+0+$
+#964001
+1+$
+#970000
+1$
+1)!
+1*$
+1w!
+#974001
+0+$
+#984001
+1+$
+#994001
+0+$
+#1000000
+04#
+#1004001
+1+$
+#1014001
+0+$
+#1024001
+1+$
+#1034001
+0+$
+#1044001
+1+$
+#1050000
+14#
+12"
+13"
+14"
+15"
+16"
+1L'
+1M'
+1N'
+1O'
+1P'
+#1054001
+0+$
+#1064001
+1+$
+#1074001
+0+$
+#1084001
+1+$
+#1094001
+0+$
+#1100000
+04#
+#1104001
+1+$
+#1114001
+0+$
+#1124001
+1+$
+#1134001
+0+$
+#1144001
+1+$
+#1150000
+14#
+05#
+x2"
+x3"
+x4"
+x5"
+x6"
+xL'
+xM'
+xN'
+xO'
+xP'
+06#
+08#
+04#
+0?#
+#1154001
+0+$
+#1164001
+1+$
+#1174001
+0+$
+#1184001
+1+$
+#1194001
+0+$
+#1204001
+1+$
+#1214001
+0+$
+#1224001
+1+$
+#1234001
+0+$
+#1244001
+1+$
+#1254001
+0+$
+#1264001
+1+$
+#1274001
+0+$
+#1284001
+1+$
+#1294001
+0+$
+#1304001
+1+$
+#1314001
+0+$
+#1324001
+1+$
+#1334001
+0+$
+#1344001
+1+$
+#1354001
+0+$
+#1364001
+1+$
+#1374001
+0+$
+#1384001
+1+$
+#1394001
+0+$
+#1404001
+1+$
+#1414001
+0+$
+#1424001
+1+$
+#1434001
+0+$
+#1444001
+1+$
+#1454001
+0+$
+#1464001
+1+$
+#1474001
+0+$
+#1484001
+1+$
+#1486001
+0+$
+#1000000
