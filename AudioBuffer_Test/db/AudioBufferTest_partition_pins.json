@@ -188,14 +188,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_BA[0]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_BA[1]",
-					"strict" : false
-				},
-				{
 					"name" : "DRAM_CAS_N",
 					"strict" : false
 				},
@@ -260,27 +252,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_DQ[12]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[13]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[14]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[15]",
-					"strict" : false
-				},
-				{
 					"name" : "ADCCLK",
-					"strict" : false
-				},
-				{
-					"name" : "DE10CLK",
 					"strict" : false
 				},
 				{

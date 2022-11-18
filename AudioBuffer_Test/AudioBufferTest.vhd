@@ -165,6 +165,7 @@ begin
 
 	  
 
+
 -- Transiciones de estados.
 	process (DE10cLK, DE10Reset)
 	begin
@@ -175,10 +176,15 @@ begin
 		end if;
 	end process;
 	
+
+-- Proceso para detectar cuando la memoria se haya llenado. 
 	retardo : process(DE10CLK,  memaddress, RW_request )
 	begin
-		IF rising_edge(DE10CLK) THEN  
-			IF (memaddress > X"3FFFFFF" ) THEN
+		IF rising_edge(DE10CLK) THEN						  
+			
+			-- Cuando el contador < addressCounter > llega a su valor maximo la señal 
+			-- BufferFull se activa y por lo tanto cambiamos de escribir a leer.
+			IF (BufferFull = '1' ) THEN							
 				
 				RW_request <= not RW_request;
 		
@@ -198,17 +204,17 @@ begin
 	end process; 
 	  
 	  
-	fsm : process(estado_pres, RW_request, DE10Reset, waitrequest, adc_valid, adc_rdata, addressCounter )	
+	fsm : process(estado_pres, RW_request, DE10Reset, waitrequest, adc_valid, adc_rdata, addressCounter, dataIN )	
 	
 	-- Salidas definidas en este proceso:
 	--		memaddress, addressCounter, dataIN,readrequest, writerequest
 
 	begin 
-	
+	reset_n <= '1';
 		case estado_pres is 
 			when e1 =>
 				--inicial
-				reset_n <= '1';
+				
 
 				if (RW_request = '1') then
 					estado_sig <= e2;
@@ -222,7 +228,12 @@ begin
 					memaddress <= addressCounter;
 				end if;
 
-				writerequest <= '0';
+				writerequest  <= '0';
+				--addressCounter<= "--------------------------";
+				dataIN		  <= "----------------";
+				readrequest	  <= 'Z';
+				writerequest  <= 'Z';
+				memaddress    <= "--------------------------";
 				
 					
 			when e2 =>
@@ -237,6 +248,12 @@ begin
 				end if;
 				
 				estado_sig <= e4;
+
+				writerequest  <= '0';
+				--addressCounter<= "--------------------------";
+				dataIN		  <= "----------------";
+				memaddress    <= "--------------------------";
+				writerequest  <= 'Z';
 			
 			when e3 =>
 			-- Escritura		
@@ -254,7 +271,14 @@ begin
 				end if;				
 				--dataIN <= X"0000";
 				estado_sig <= e4;
-		
+				
+				memaddress    <= "--------------------------";
+				--addressCounter<= "--------------------------";
+				dataIN		  <= "----------------";
+				readrequest	  <= 'Z';
+				writerequest  <= 'Z';
+
+
 			when e4 =>
 				if ( addressCounter >= X"3FFFFFF") then
 					--addressCounter := "00000000000000000000000000";	
@@ -263,7 +287,13 @@ begin
 					--addressCounter := addressCounter + 1;   
 				end if;		
 					estado_sig <= e1;
-					
+				
+				memaddress    <= "--------------------------";
+				--addressCounter<= "--------------------------";
+				dataIN		  <= "----------------";
+				readrequest	  <= 'Z';
+				writerequest  <= 'Z';
+				
 		end case;
 		
 	end process;
