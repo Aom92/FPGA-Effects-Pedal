@@ -110,7 +110,30 @@ component ADC is
         );
     end component SDRAMtest;
  
+	-- Funciones
 
+	function SDRAM_write(Address : std_logic_vector(25 downto 0); Data : std_logic_vector(15 downto 0)) 
+		return boolean is 
+		variable finishWrite : boolean;
+	begin
+		memaddress <= Address;
+		dataIN <= Data;
+		writerequest <= '1';
+
+		finishWrite := true;
+	end function; 
+
+
+	function SDRAM_read(Address : std_logic_vector(25 downto 0 ); Data : std_logic_vector(15 downto 0))
+		return boolean is
+		variable finishRead : boolean;
+	begin
+		memaddress <= Address;
+		dataIN <= Data;
+		readrequest <= '1';
+
+		finishRead := true;
+	end function;
 
 begin
 	
@@ -161,11 +184,7 @@ begin
 	  );
 
 	  
-	  
-
-	  
-
-
+	
 -- Transiciones de estados.
 	process (DE10cLK, DE10Reset)
 	begin
@@ -176,7 +195,7 @@ begin
 		end if;
 	end process;
 	
-
+	
 -- Proceso para detectar cuando la memoria se haya llenado. 
 	retardo : process(DE10CLK,  memaddress, RW_request )
 	begin
@@ -187,8 +206,19 @@ begin
 			IF (BufferFull = '1' ) THEN							
 				
 				RW_request <= not RW_request;
-		
+
+				sal_disp0 <= dataOUT(3 downto 0);
+				sal_disp1 <= dataOUT(7 downto 4);
+				sal_disp2 <= dataOUT(11 downto 8);
+
+			else
+
+				sal_disp0 <= "----";
+				sal_disp1 <= "----";
+				sal_disp2 <= "----";
+
 			end if;
+
 		END IF; 
 	
 	end process;
@@ -301,11 +331,9 @@ begin
 
 	led_out <=  "0000" & adc_rdata;
 	-- Salidas hacia los displays 7 segmentos
-	sal_disp0 <= dataOUT(3 downto 0);
-	sal_disp1 <= dataOUT(7 downto 4);
-	sal_disp2 <= dataOUT(11 downto 8);
 	
-	BufferFull <= '1' when addressCounter = X"3FFFFFF" else '0';
+	
+	BufferFull <= '1' when memaddress = X"3FFFFFF" else '0';
 
 -- Decodificadores para los displays 7 segmentos.
 with sal_disp0 select

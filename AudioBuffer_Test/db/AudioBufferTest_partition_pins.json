@@ -256,6 +256,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "DE10CLK",
+					"strict" : false
+				},
+				{
 					"name" : "DE10Reset",
 					"strict" : false
 				}
