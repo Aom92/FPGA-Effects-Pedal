@@ -53,7 +53,7 @@ signal dataIN, dataOUT : std_logic_vector(15 downto 0 );
 signal RW_request : std_logic := '0';
 
 --	 display 
-signal sal_disp0, sal_disp1, sal_disp2 : std_logic_vector(3 downto 0) := (others => '0');
+signal sal_disp0, sal_disp1, sal_disp2,sal_disp3 : std_logic_vector(3 downto 0) := (others => '0');
 
 -- Declaracion de tipos --
 
@@ -65,7 +65,7 @@ signal estado_sig  : estado_type;
 -- LOGIC
 
 signal addressCounter : std_logic_vector(25 downto 0) := "00000000000000000000000000";
-signal BufferFull : std_logic;
+signal BufferFull : std_logic := '1';
 
 	
 -- Componentes
@@ -111,16 +111,17 @@ component ADC is
     end component SDRAMtest;
  
 	-- Funciones
-
 	function SDRAM_write(Address : std_logic_vector(25 downto 0); Data : std_logic_vector(15 downto 0)) 
 		return boolean is 
 		variable finishWrite : boolean;
 	begin
 		memaddress <= Address;
 		dataIN <= Data;
+		readrequest <= '0';
 		writerequest <= '1';
-
 		finishWrite := true;
+		writerequest <= '0' after 10 ns;
+		return finishWrite ;
 	end function; 
 
 
@@ -129,10 +130,12 @@ component ADC is
 		variable finishRead : boolean;
 	begin
 		memaddress <= Address;
-		dataIN <= Data;
+		
+		writerequest <= '0';
 		readrequest <= '1';
 
 		finishRead := true;
+		return finishRead;
 	end function;
 
 begin
@@ -194,10 +197,45 @@ begin
 			estado_pres <= estado_sig;
 		end if;
 	end process;
-	
-	
+
+
+	bufferFullProc : process(ADCCLK, memaddress)
+  begin
+	if rising_edge (ADCCLK) then
+
+		if (memaddress = X"3FFFFFF") then
+		
+			BufferFull <= not BufferFull;
+			
+		end if;
+
+	end if;
+  end process;
+
+-- Proceso contador de memoria, que se activa cada que hay una lectura valida del ADC.
+	contadorMemoria : process (DE10CLK)
+	begin
+		IF rising_edge(DE10CLK) then
+
+			if adc_ready = '1' then
+				addressCounter <= addressCounter + 1;
+			elsif (BufferFull = '1') then
+				--addressCounter <= "00000000000000000000000000";
+			else
+				addressCounter <= addressCounter + 0;
+			end if;
+				
+
+
+			
+			
+		END IF;
+	end process; 
+
+
 -- Proceso para detectar cuando la memoria se haya llenado. 
 	retardo : process(DE10CLK,  memaddress, RW_request )
+	variable fread : boolean;
 	begin
 		IF rising_edge(DE10CLK) THEN						  
 			
@@ -205,17 +243,20 @@ begin
 			-- BufferFull se activa y por lo tanto cambiamos de escribir a leer.
 			IF (BufferFull = '1' ) THEN							
 				
-				RW_request <= not RW_request;
+				--RW_request <= not RW_request;
 
-				sal_disp0 <= dataOUT(3 downto 0);
-				sal_disp1 <= dataOUT(7 downto 4);
-				sal_disp2 <= dataOUT(11 downto 8);
+				
+				fread := SDRAM_read(addressCounter, X"0" & adc_rdata);
+
+					
+				
+
 
 			else
+					
 
-				sal_disp0 <= "----";
-				sal_disp1 <= "----";
-				sal_disp2 <= "----";
+				
+				fread := SDRAM_write(addressCounter	, X"0" & adc_rdata);
 
 			end if;
 
@@ -224,116 +265,117 @@ begin
 	end process;
 
 
-	contadorMemoria : process (DE10CLK)
-	begin
-		IF rising_edge(DE10CLK) then
-			
-			addressCounter <= addressCounter + 1;
 
-		END IF;
-	end process; 
 	  
 	  
-	fsm : process(estado_pres, RW_request, DE10Reset, waitrequest, adc_valid, adc_rdata, addressCounter, dataIN )	
-	
-	-- Salidas definidas en este proceso:
-	--		memaddress, addressCounter, dataIN,readrequest, writerequest
-
-	begin 
-	reset_n <= '1';
-		case estado_pres is 
-			when e1 =>
-				--inicial
-				
-
-				if (RW_request = '1') then
-					estado_sig <= e2;
-				else 
-					estado_sig <= e3;
-				end if;
-				
-				if (DE10Reset = '1') then
-					memaddress <= "00000000000000000000000000";
-				elsif DE10Reset = '0' then 
-					memaddress <= addressCounter;
-				end if;
-
-				writerequest  <= '0';
-				--addressCounter<= "--------------------------";
-				dataIN		  <= "----------------";
-				readrequest	  <= 'Z';
-				writerequest  <= 'Z';
-				memaddress    <= "--------------------------";
-				
-					
-			when e2 =>
-			-- Lectura
-				if ( waitrequest = '0' ) then
-					readrequest <= '1';
-					--sal_disp0 <= dataOUT(3 downto 0);
-					--sal_disp1 <= dataOUT(7 downto 4);
-					--sal_disp2 <= dataOUT(11 downto 8);
-				else
-					readrequest <= '0';
-				end if;
-				
-				estado_sig <= e4;
-
-				writerequest  <= '0';
-				--addressCounter<= "--------------------------";
-				dataIN		  <= "----------------";
-				memaddress    <= "--------------------------";
-				writerequest  <= 'Z';
-			
-			when e3 =>
-			-- Escritura		
-				if (adc_valid = '1'and waitrequest = '0') then
-		
-					writerequest <= '1';
-					
-					dataIN <= X"0" & adc_rdata; 
-					--addressCounter := addressCounter + 1;
-				
-				else
-					writerequest <= '0';
-					dataIN <= dataIN;
-					--addressCounter := addressCounter + 0;
-				end if;				
-				--dataIN <= X"0000";
-				estado_sig <= e4;
-				
-				memaddress    <= "--------------------------";
-				--addressCounter<= "--------------------------";
-				dataIN		  <= "----------------";
-				readrequest	  <= 'Z';
-				writerequest  <= 'Z';
-
-
-			when e4 =>
-				if ( addressCounter >= X"3FFFFFF") then
-					--addressCounter := "00000000000000000000000000";	
-				else	
-					-- CHECK BEHAVIOR, MAY SKIP EVERY OTHER MEMORY ADDRESS WHEN WRRITTING INTO MEMORY.
-					--addressCounter := addressCounter + 1;   
-				end if;		
-					estado_sig <= e1;
-				
-				memaddress    <= "--------------------------";
-				--addressCounter<= "--------------------------";
-				dataIN		  <= "----------------";
-				readrequest	  <= 'Z';
-				writerequest  <= 'Z';
-				
-		end case;
-		
-	end process;
+--	fsm : process(estado_pres, RW_request, DE10Reset, waitrequest, adc_valid, adc_rdata, addressCounter, dataIN )	
+--	
+--	-- Salidas definidas en este proceso:
+--	--		memaddress, addressCounter, dataIN,readrequest, writerequest
+--
+--	begin 
+--	reset_n <= '1';
+--		case estado_pres is 
+--			when e1 =>
+--				--inicial
+--				
+--
+--				if (RW_request = '1') then
+--					estado_sig <= e2;
+--				else 
+--					estado_sig <= e3;
+--				end if;
+--				
+--				if (DE10Reset = '1') then
+--					--memaddress <= "00000000000000000000000000";
+--				elsif DE10Reset = '0' then 
+--					--memaddress <= addressCounter;
+--				end if;
+--
+--				writerequest  <= '0';
+--				--addressCounter<= "--------------------------";
+--				--dataIN		  <= "----------------";
+--				--readrequest	  <= 'Z';
+--				writerequest  <= 'Z';
+--				--memaddress    <= "--------------------------";
+--				
+--					
+--			when e2 =>
+--			-- Lectura
+--				if ( waitrequest = '0' ) then
+--					--readrequest <= '1';
+--					--sal_disp0 <= dataOUT(3 downto 0);
+--					--sal_disp1 <= dataOUT(7 downto 4);
+--					--sal_disp2 <= dataOUT(11 downto 8);
+--				else
+--					--readrequest <= '0';
+--				end if;
+--				
+--				estado_sig <= e4;
+--
+--				writerequest  <= '0';
+--				--addressCounter<= "--------------------------";
+--				--dataIN		  <= "----------------";
+--				--memaddress    <= "--------------------------";
+--				writerequest  <= 'Z';
+--			
+--			when e3 =>
+--			-- Escritura		
+--				if (adc_valid = '1'and waitrequest = '0') then
+--		
+--					writerequest <= '1';
+--					
+--					--dataIN <= X"0" & adc_rdata; 
+--					--addressCounter := addressCounter + 1;
+--				
+--				else
+--					writerequest <= '0';
+--					dataIN <= dataIN;
+--					--addressCounter := addressCounter + 0;
+--				end if;				
+--				--dataIN <= X"0000";
+--				estado_sig <= e4;
+--				
+--				--memaddress    <= "--------------------------";
+--				--addressCounter<= "--------------------------";
+--				--dataIN		  <= "----------------";
+--				--readrequest	  <= 'Z';
+--				writerequest  <= 'Z';
+--
+--
+--			when e4 =>
+--				if ( addressCounter >= X"3FFFFFF") then
+--					--addressCounter := "00000000000000000000000000";	
+--				else	
+--					-- CHECK BEHAVIOR, MAY SKIP EVERY OTHER MEMORY ADDRESS WHEN WRRITTING INTO MEMORY.
+--					--addressCounter := addressCounter + 1;   
+--				end if;		
+--					estado_sig <= e1;
+--				
+--				--memaddress    <= "--------------------------";
+--				--addressCounter<= "--------------------------";
+--				--dataIN		  <= "----------------";
+--				--readrequest	  <= 'Z';
+--				writerequest  <= 'Z';
+--				
+--		end case;
+--		
+--	end process;
 
 
 	led_out <=  "0000" & adc_rdata;
 	-- Salidas hacia los displays 7 segmentos
-	
-	
-	BufferFull <= '1' when memaddress = X"3FFFFFF" else '0';
+	--BufferFull <= not BufferFull when memaddress = X"3FFFFFF";
+
+	sal_disp0 <= dataOUT(3 downto 0);
+	sal_disp1 <= dataOUT(7 downto 4);
+	sal_disp2 <= dataOUT(11 downto 8);
+	sal_disp3 <= dataOUT(15 downto 12);
+
+	--sal_disp0 <= adc_rdata(3 downto 0);
+	--sal_disp1 <= adc_rdata(7 downto 4);
+	--sal_disp2 <= adc_rdata(11 downto 8);
+	--sal_disp3 <= adc_rdata(15 downto 12);
 
 -- Decodificadores para los displays 7 segmentos.
 with sal_disp0 select
@@ -394,6 +436,24 @@ with sal_disp2 select
 						X"1D" when X"f",
 						X"FF" when others;
 
+with sal_disp3 select
+		display3 <= X"81" when X"0",
+						X"F3" when X"1",
+						X"49" when X"2",
+						X"61" when X"3",
+						X"33" when X"4",
+						X"25" when X"5",
+						X"05" when X"6",
+						X"F1" when X"7",
+						X"01" when X"8",
+						X"21" when X"9",
+						X"11" when X"a",
+						X"07" when X"b",
+						X"8D" when X"c",
+						X"43" when X"d",
+						X"0D" when X"e",
+						X"1D" when X"f",
+						X"FF" when others;
 
 
 
