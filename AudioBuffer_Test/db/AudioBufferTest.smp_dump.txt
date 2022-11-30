@@ -1,11 +1,4 @@
 
-State Machine - |AudioBufferTest|estado_pres
-Name estado_pres.e4 estado_pres.e3 estado_pres.e2 estado_pres.e1 
-estado_pres.e1 0 0 0 0 
-estado_pres.e2 0 0 1 1 
-estado_pres.e3 0 1 0 1 
-estado_pres.e4 1 0 0 1 
-
 State Machine - |AudioBufferTest|SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|m_next
 Name m_next.010000000 m_next.000010000 m_next.000001000 m_next.000000001 
 m_next.000000001 0 0 0 0 

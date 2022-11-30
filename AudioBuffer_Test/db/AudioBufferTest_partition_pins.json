@@ -136,10 +136,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "display3[1]",
-					"strict" : false
-				},
-				{
 					"name" : "display3[2]",
 					"strict" : false
 				},
@@ -149,14 +145,6 @@
 				},
 				{
 					"name" : "display3[4]",
-					"strict" : false
-				},
-				{
-					"name" : "display3[5]",
-					"strict" : false
-				},
-				{
-					"name" : "display3[6]",
 					"strict" : false
 				},
 				{
