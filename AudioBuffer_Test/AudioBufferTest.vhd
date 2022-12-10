@@ -202,7 +202,7 @@ begin
   begin
 	if rising_edge (DE10CLK) then
 
-		if (memaddress = X"1FFFFFF") then --La dirección maxima es 1FFFFFF ?
+		if (memaddress = X"1FFFFFF") then --La dirección maxima es 1FFFFFF ? probemos con 2**16 muestras. 
 		
 			BufferFull <= not BufferFull;
 			
@@ -218,6 +218,8 @@ begin
 
 			if adc_valid = '1' then
 				addressCounter <= addressCounter + 1;
+
+				--anidar el if
 			elsif (BufferFull = '1') then
 				if addressCounter = X"FFFF" then
 					addressCounter <= "00000000000000000000000000";
