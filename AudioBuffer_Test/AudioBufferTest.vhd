@@ -195,14 +195,24 @@ begin
 	led_out <=  "0000" & adc_rdata;
 	-- Salidas hacia los displays 7 segmentos
 	--BufferFull <= not BufferFull when memaddress = X"3FFFFFF";
-	sal_disp3 <= X"0" when BufferFull = '1' else X"F";	  
+	sal_disp3 <= X"F" when BufferFull = '1' else X"0";	  
 	
 
-	bufferFullProc : process(DE10CLK)
+	bufferFullProc : process(ADCCLK)
   begin
-	if rising_edge (DE10CLK) then
+	if rising_edge (ADCCLK) then
+		
+		-- La Lógica de las muestras es que:
+		-- Tenemos 64 MB de RAM, la cual tiene una organización de 32M x 16. Lo cual significa que tenemos:
+		--		32M (33 554 432) localidades de memoria, cada una de 16 bits (2 bytes).
+		-- 		32M x 2 bytes = 64 MB de memoria. 
+		-- Con una tasa de muestreo de 50 kHz, estamos guardando aprox. 50k muestras de 2 bytes cada segundo.
+		-- Si contamos con espacio para guardar 32M de muestras nos tomaria: 	(32 K**K) / (50k/s) = 671.08 segundos escribir en toda la memoria.
+		-- Esto nos da un total de 11.18 minutos de grabación de audio.
+		-- Entonces, si se busca un "delay" de 3 segundos debemos guardar: 50k * 3 = 150k muestras solamente.
+		-- siguiendo esta logica, con 2**16 muestras guardamos 1.31 minutos de audio.
 
-		if (memaddress = X"1FFFFFF") then --La dirección maxima es 1FFFFFF ? probemos con 2**16 muestras. 
+		if (memaddress > X"B71B0") then --0x249F0 = 150k, grabamos 150k muestras equivale a 3 segundos aprox. según la explicacion anterior. 
 		
 			BufferFull <= not BufferFull;
 			
@@ -219,17 +229,17 @@ begin
 			if adc_valid = '1' then
 				addressCounter <= addressCounter + 1;
 
-				--anidar el if
-			elsif (BufferFull = '1') then
-				if addressCounter = X"FFFF" then
+				if BufferFull = '1' then
+				  --addressCounter <= "00000000000000000000000000";
+				end if;
+				-- Revisar (?) : Convertir en constante el valor maximo que almacena
+				if addressCounter > X"B71B0" then --
 					addressCounter <= "00000000000000000000000000";
 				end if;
-				--addressCounter <= "00000000000000000000000000";
 			else
 				addressCounter <= addressCounter + 0;
 			end if;
-				
-			
+
 		END IF;
 	end process; 
 
@@ -249,9 +259,9 @@ begin
 					sal_disp2 <= dataIN(11 downto 8);
 			elsif (BufferFull = '1' and adc_valid = '1') then
 				fread := SDRAM_read(addressCounter);
-				sal_disp0 <= dataOUT(3 downto 0);
-				sal_disp1 <= dataOUT(7 downto 4);
-				sal_disp2 <= dataOUT(11 downto 8);
+					sal_disp0 <= dataOUT(3 downto 0);
+					sal_disp1 <= dataOUT(7 downto 4);
+					sal_disp2 <= dataOUT(11 downto 8);
 			
 
 			end if;
