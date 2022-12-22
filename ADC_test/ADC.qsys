@@ -6,9 +6,17 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
+   element AvalonBridge
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
    element altpll_0
    {
       datum _sortIndex
@@ -33,6 +41,14 @@
          type = "int";
       }
    }
+   element modular_adc_0.sequencer_csr
+   {
+      datum baseAddress
+      {
+         value = "512";
+         type = "String";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -47,18 +63,14 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="ADCtst.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
  <parameter name="timeStamp" value="0" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
- <interface
-   name="adc_command"
-   internal="modular_adc_0.command"
-   type="avalon_streaming"
-   dir="end" />
+ <interface name="adc_command" internal="modular_adc_0.command" />
  <interface
    name="adc_response"
    internal="modular_adc_0.response"
@@ -66,6 +78,20 @@
    dir="start" />
  <interface name="clk_adc" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
+ <module
+   name="AvalonBridge"
+   kind="altera_jtag_avalon_master"
+   version="20.1"
+   enabled="1">
+  <parameter name="AUTO_DEVICE" value="10M50DAF484C7G" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="MAX 10" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <parameter name="COMPONENT_CLOCK" value="0" />
+  <parameter name="FAST_VER" value="0" />
+  <parameter name="FIFO_DEPTHS" value="2" />
+  <parameter name="PLI_PORT" value="50000" />
+  <parameter name="USE_PLI" value="0" />
+ </module>
  <module name="altpll_0" kind="altpll" version="20.1" enabled="1">
   <parameter name="AUTO_DEVICE_FAMILY" value="MAX 10" />
   <parameter name="AUTO_INCLK_INTERFACE_CLOCK_RATE" value="50000000" />
@@ -246,9 +272,9 @@
    enabled="1">
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
   <parameter name="CLOCK_FREQ" value="50000000" />
-  <parameter name="CORE_VAR" value="3" />
+  <parameter name="CORE_VAR" value="2" />
   <parameter name="DEVICE_PART" value="10M50DAF484C7G" />
-  <parameter name="ENABLE_DEBUG" value="0" />
+  <parameter name="ENABLE_DEBUG" value="1" />
   <parameter name="FAMILY" value="MAX 10" />
   <parameter name="MONITOR_COUNT_WIDTH" value="12" />
   <parameter name="clkdiv" value="1" />
@@ -297,7 +323,7 @@
   <parameter name="refsel" value="1" />
   <parameter name="sample_rate" value="6" />
   <parameter name="seq_order_length" value="1" />
-  <parameter name="seq_order_slot_1" value="30" />
+  <parameter name="seq_order_slot_1" value="1" />
   <parameter name="seq_order_slot_10" value="30" />
   <parameter name="seq_order_slot_11" value="30" />
   <parameter name="seq_order_slot_12" value="30" />
@@ -416,7 +442,7 @@
   <parameter name="tsd_max" value="125" />
   <parameter name="tsd_min" value="0" />
   <parameter name="use_ch0" value="false" />
-  <parameter name="use_ch1" value="false" />
+  <parameter name="use_ch1" value="true" />
   <parameter name="use_ch10" value="false" />
   <parameter name="use_ch11" value="false" />
   <parameter name="use_ch12" value="false" />
@@ -435,10 +461,24 @@
   <parameter name="use_tsd" value="true" />
  </module>
  <connection
+   kind="avalon"
+   version="20.1"
+   start="AvalonBridge.master"
+   end="modular_adc_0.sequencer_csr">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0200" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
    kind="clock"
    version="20.1"
    start="altpll_0.c0"
    end="modular_adc_0.adc_pll_clock" />
+ <connection
+   kind="clock"
+   version="20.1"
+   start="altpll_0.c0"
+   end="AvalonBridge.clk" />
  <connection
    kind="clock"
    version="20.1"
@@ -464,12 +504,22 @@
    kind="reset"
    version="20.1"
    start="clk_0.clk_reset"
+   end="AvalonBridge.clk_reset" />
+ <connection
+   kind="reset"
+   version="20.1"
+   start="clk_0.clk_reset"
    end="altpll_0.inclk_interface_reset" />
  <connection
    kind="reset"
    version="20.1"
    start="clk_0.clk_reset"
    end="modular_adc_0.reset_sink" />
+ <connection
+   kind="reset"
+   version="20.1"
+   start="AvalonBridge.master_reset"
+   end="altpll_0.inclk_interface_reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
