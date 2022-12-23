@@ -8,11 +8,12 @@ port(
 
 			-- CONEXIONES GENERALES DE LA FPGA -- 
 			DE10CLK, ADCCLK : in std_logic; -- RELOJES
-			RW_switch : in std_logic;
-			addrUp, addDw : in std_logic;
 			DE10Reset : in std_logic;
 			led_out : out std_logic_vector(15 downto 0);
 			display0, display1, display2, display3 : out std_logic_vector (7 downto 0);
+
+			--CONEXIONES PARA DAC
+			Audio_Out : out std_logic_vector(11 downto 0);
 			
 			-- CONEXIONES A LA RAM --
 			DRAM_CLK : out std_logic;
@@ -36,6 +37,7 @@ architecture test of AudioBufferTest is
 
 --  ADC
 signal adc_valid, adc_sop, adc_eop,adc_ready,adc_csop, adc_ceop : std_logic;
+signal adc_rempty : std_logic_vector(0 downto 0 );
 signal adc_rchannel : std_logic_vector(4 downto 0);
 signal adc_rdata : std_logic_vector(11 downto 0);
 signal adc_cvalid : std_logic;
@@ -70,21 +72,17 @@ signal BufferFull : std_logic := '0';
 	
 -- Componentes
 component ADC is
-	  port (
-			clk_adc_clk                : in  std_logic                     := 'X';             -- clk
-			reset_reset_n              : in  std_logic                     := 'X';             -- reset_n
-			adc_command_valid          : in  std_logic                     := 'X';             -- valid
-			adc_command_channel        : in  std_logic_vector(4 downto 0)  := (others => 'X'); -- channel
-			adc_command_startofpacket  : in  std_logic                     := 'X';             -- startofpacket
-			adc_command_endofpacket    : in  std_logic                     := 'X';             -- endofpacket
-			adc_command_ready          : out std_logic;                                        -- ready
-			adc_response_valid         : out std_logic;                                        -- valid
-			adc_response_channel       : out std_logic_vector(4 downto 0);                     -- channel
-			adc_response_data          : out std_logic_vector(11 downto 0);                    -- data
-			adc_response_startofpacket : out std_logic;                                        -- startofpacket
-			adc_response_endofpacket   : out std_logic                                         -- endofpacket
-	  );
- end component ADC;	
+        port (
+           	adc_response_valid         : out std_logic;                            -- valid
+           	adc_response_startofpacket : out std_logic;                            -- startofpacket
+           	adc_response_endofpacket   : out std_logic;                            -- endofpacket
+           	adc_response_empty         : out std_logic_vector(0 downto 0);         -- empty
+           	adc_response_channel       : out std_logic_vector(4 downto 0);         -- channel
+           	adc_response_data          : out std_logic_vector(11 downto 0);        -- data
+            clk_adc_clk                : in  std_logic                     := 'X'; -- clk
+            reset_reset_n              : in  std_logic                     := 'X'  -- reset_n
+        );
+    end component ADC;	
 
  component SDRAMtest is
         port (
@@ -143,26 +141,42 @@ component ADC is
 begin
 	
 	-- Instancias de componenetes. 
-	
-	u1 : component ADC
+	--# INSTANCIA NUEVA DEL CONVERTIDOR A/D. AHORA UTILIZA EL MODULO ADC CON SECUENCIADOR E INTERFAZ AVALON MM.
+	-- Ventajas: Requerimos menor cantidad de señales. Permite ver la señal desde el System Console. 
+	-- Desventaja: Aumenta el tiempo de Compilacion al triple ( 30 segundos a 1 minuto con 55 segundos)
+	u0 : component ADC
         port map (
-            ADCCLK                ,    --clk_adc.clk
-            DE10RESET              ,      --reset.reset_n
-            adc_cvalid          ,     -- adc_command.valid
-            adc_cchannel        ,     --.channel
-            adc_csop  ,  --             .startofpacket
-            adc_ceop    ,    --         .endofpacket
-            adc_ready         ,       --.ready
-            adc_valid      ,         -- adc_response.valid
-            adc_rchannel     ,       --.channel
-            adc_rdata        ,       --.data
-            adc_sop,  --             	.startofpacket
-            adc_eop     --             .endofpacket
-        );  
-		adc_cvalid <= '1';
-		adc_cchannel <= "00001"; -- ??? ESto esta raro, no se cual sea la dedicated analog input pin, usando el canal "1" corresponde al pin 0 de la fpga
-		adc_csop <= '1';
-		adc_ceop <= '1';
+            adc_valid,
+			adc_sop,
+			adc_eop,
+			adc_rempty,
+			adc_rchannel,
+			adc_rdata,
+			ADCCLK,
+			DE10RESET
+        );
+
+	-- # INSTANCIA ANTERIOR DEL CONVERTIDOR A/D. UTILIZANDO UNICAMENTE EL MODULO:  ADC CORE 
+	--u1 : component ADC
+    --    port map (
+    --        ADCCLK                ,    --clk_adc.clk
+    --        DE10RESET              ,      --reset.reset_n
+    --        adc_cvalid          ,     -- adc_command.valid
+    --        adc_cchannel        ,     --.channel
+    --        adc_csop  ,  --             .startofpacket
+    --        adc_ceop    ,    --         .endofpacket
+    --        adc_ready         ,       --.ready
+    --        adc_valid      ,         -- adc_response.valid
+    --        adc_rchannel     ,       --.channel
+    --        adc_rdata        ,       --.data
+    --        adc_sop,  --             	.startofpacket
+    --        adc_eop     --             .endofpacket
+    --    );  
+	--	adc_cvalid <= '1';
+	--	adc_cchannel <= "00001"; -- ??? ESto esta raro, no se cual sea la dedicated analog input pin, usando el canal "1" corresponde al pin 0 de la fpga
+	--							 -- !!! La DE10-Lite no cuenta con el canal 0 dedicado a lecturas analogicas, por tanto se comienza desde el canal 1.
+	--	adc_csop <= '1';
+	--	adc_ceop <= '1';
 	
 	
 	DRAM : component SDRAMtest
@@ -262,7 +276,7 @@ begin
 					sal_disp0 <= dataOUT(3 downto 0);
 					sal_disp1 <= dataOUT(7 downto 4);
 					sal_disp2 <= dataOUT(11 downto 8);
-			
+					Audio_Out <= dataOUT(11 downto 0);
 
 			end if;
 

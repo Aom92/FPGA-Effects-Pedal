@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C7G
-set_global_assignment -name TOP_LEVEL_ENTITY AudioBufferTest
+set_global_assignment -name TOP_LEVEL_ENTITY AudioBufferWout
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:23:01  OCTOBER 26, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -54,14 +54,8 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name QIP_FILE SDRAMtest/synthesis/SDRAMtest.qip
-set_global_assignment -name QIP_FILE ADC/synthesis/ADC.qip
-set_global_assignment -name VHDL_FILE AudioBufferTest.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_N5 -to ADCCLK
 set_location_assignment PIN_P11 -to DE10CLK
 set_location_assignment PIN_C10 -to DE10Reset
@@ -146,5 +140,14 @@ set_location_assignment PIN_J21 -to DRAM_DQM[1]
 set_location_assignment PIN_V22 -to DRAM_DQM[0]
 set_location_assignment PIN_U22 -to DRAM_RAS_N
 set_location_assignment PIN_V20 -to DRAM_WE_N
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AB7 -to DAC_OUT
+set_global_assignment -name QIP_FILE ADC/synthesis/ADC.qip
+set_global_assignment -name VHDL_FILE pwm.vhd
+set_global_assignment -name QIP_FILE SDRAMtest/synthesis/SDRAMtest.qip
+set_global_assignment -name VHDL_FILE AudioBufferTest.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
+set_global_assignment -name BDF_FILE AudioBufferWout.bdf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

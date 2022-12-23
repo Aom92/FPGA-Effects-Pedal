@@ -1,12 +1,12 @@
 
-State Machine - |AudioBufferTest|SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|m_next
+State Machine - |AudioBufferWout|AudioBufferTest:inst|SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|m_next
 Name m_next.010000000 m_next.000010000 m_next.000001000 m_next.000000001 
 m_next.000000001 0 0 0 0 
 m_next.000001000 0 0 1 1 
 m_next.000010000 0 1 0 1 
 m_next.010000000 1 0 0 1 
 
-State Machine - |AudioBufferTest|SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|m_state
+State Machine - |AudioBufferWout|AudioBufferTest:inst|SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|m_state
 Name m_state.100000000 m_state.010000000 m_state.001000000 m_state.000100000 m_state.000010000 m_state.000001000 m_state.000000100 m_state.000000010 m_state.000000001 
 m_state.000000001 0 0 0 0 0 0 0 0 0 
 m_state.000000010 0 0 0 0 0 0 0 1 1 
@@ -18,14 +18,14 @@ m_state.001000000 0 0 1 0 0 0 0 0 1
 m_state.010000000 0 1 0 0 0 0 0 0 1 
 m_state.100000000 1 0 0 0 0 0 0 0 1 
 
-State Machine - |AudioBufferTest|SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|i_next
+State Machine - |AudioBufferWout|AudioBufferTest:inst|SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|i_next
 Name i_next.111 i_next.101 i_next.010 i_next.000 
 i_next.000 0 0 0 0 
 i_next.010 0 0 1 1 
 i_next.101 0 1 0 1 
 i_next.111 1 0 0 1 
 
-State Machine - |AudioBufferTest|SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|i_state
+State Machine - |AudioBufferWout|AudioBufferTest:inst|SDRAMtest:DRAM|SDRAMtest_new_sdram_controller_0:new_sdram_controller_0|i_state
 Name i_state.111 i_state.101 i_state.011 i_state.010 i_state.001 i_state.000 
 i_state.000 0 0 0 0 0 0 
 i_state.001 0 0 0 0 1 1 
@@ -34,7 +34,17 @@ i_state.011 0 0 1 0 0 1
 i_state.101 0 1 0 0 0 1 
 i_state.111 1 0 0 0 0 1 
 
-State Machine - |AudioBufferTest|ADC:u1|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state
+State Machine - |AudioBufferWout|AudioBufferTest:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|state
+Name state.ST_CI_WAIT_BEAT0_REM state.ST_CI_WAIT_CAPTURE_READY state.ST_CI_WAIT_WA_DATA state.ST_CI_TS state.ST_CI_HDR state.ST_CI_WAIT_1ST_ADC state.ST_CI_IDLE 
+state.ST_CI_IDLE 0 0 0 0 0 0 0 
+state.ST_CI_WAIT_1ST_ADC 0 0 0 0 0 1 1 
+state.ST_CI_HDR 0 0 0 0 1 0 1 
+state.ST_CI_TS 0 0 0 1 0 0 1 
+state.ST_CI_WAIT_WA_DATA 0 0 1 0 0 0 1 
+state.ST_CI_WAIT_CAPTURE_READY 0 1 0 0 0 0 1 
+state.ST_CI_WAIT_BEAT0_REM 1 0 0 0 0 0 1 
+
+State Machine - |AudioBufferWout|AudioBufferTest:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state
 Name ctrl_state.SYNC1 ctrl_state.AVRG_CNT ctrl_state.PUTRESP_PEND ctrl_state.WAIT_PEND_DLY1 ctrl_state.WAIT_PEND ctrl_state.PUTRESP_DLY3 ctrl_state.PUTRESP_DLY2 ctrl_state.PUTRESP_DLY1 ctrl_state.PUTRESP ctrl_state.CONV_DLY1 ctrl_state.CONV ctrl_state.PRE_CONV ctrl_state.GETCMD_W ctrl_state.GETCMD ctrl_state.WAIT ctrl_state.PWRUP_SOC ctrl_state.PWRUP_CH ctrl_state.PWRDWN_DONE ctrl_state.PWRDWN_TSEN ctrl_state.PWRDWN ctrl_state.IDLE 
 ctrl_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 ctrl_state.PWRDWN 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
@@ -57,3 +67,35 @@ ctrl_state.WAIT_PEND_DLY1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
 ctrl_state.PUTRESP_PEND 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 ctrl_state.AVRG_CNT 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 ctrl_state.SYNC1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |AudioBufferWout|AudioBufferTest:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_packets_to_master:transacto|packets_to_master:p2m|state
+Name state.READ_SEND_WAIT state.READ_SEND_ISSUE state.READ_DATA_WAIT state.READ_CMD_WAIT state.READ_ASSERT state.RETURN_PACKET state.WRITE_WAIT state.GET_WRITE_DATA state.GET_ADDR4 state.GET_ADDR3 state.GET_ADDR2 state.GET_ADDR1 state.GET_SIZE2 state.GET_SIZE1 state.GET_EXTRA state.0000 
+state.0000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.GET_EXTRA 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.GET_SIZE1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.GET_SIZE2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.GET_ADDR1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.GET_ADDR2 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.GET_ADDR3 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.GET_ADDR4 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.GET_WRITE_DATA 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.WRITE_WAIT 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.RETURN_PACKET 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.READ_ASSERT 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_CMD_WAIT 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_DATA_WAIT 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_SEND_ISSUE 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_SEND_WAIT 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |AudioBufferWout|AudioBufferTest:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|read_state
+Name read_state.ST_HEADER read_state.ST_READ_DATA read_state.ST_PADDED 
+read_state.ST_HEADER 0 0 0 
+read_state.ST_PADDED 1 0 1 
+read_state.ST_READ_DATA 1 1 0 
+
+State Machine - |AudioBufferWout|AudioBufferTest:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|write_state
+Name write_state.ST_WRITE_DATA write_state.ST_HEADER_2 write_state.ST_HEADER_1 write_state.ST_BYPASS 
+write_state.ST_BYPASS 0 0 0 0 
+write_state.ST_HEADER_1 0 0 1 1 
+write_state.ST_HEADER_2 0 1 0 1 
+write_state.ST_WRITE_DATA 1 0 0 1 
