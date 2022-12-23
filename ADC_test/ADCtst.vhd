@@ -13,6 +13,7 @@ entity ADCtst is
 
 		-- Output ports
 		leds : out unsigned(11 downto 0);
+		adc_out : out std_logic_vector(11 downto 0);
 		display0, display1, display2 : out std_logic_vector (7 downto 0)
 
 	);
@@ -80,6 +81,10 @@ begin
 				sal_disp0 <= adc_rdata(3 downto 0);
 				sal_disp1 <= adc_rdata(7 downto 4);
 				sal_disp2 <= adc_rdata(11 downto 8);
+
+				adc_out <= adc_rdata;
+
+
 			end if;
 		
 		end if;

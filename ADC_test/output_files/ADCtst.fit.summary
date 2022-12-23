@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Dec 22 14:13:37 2022
+Fitter Status : Successful - Fri Dec 23 12:53:03 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : ADCtst
-Top-level Entity Name : ADCtst
+Top-level Entity Name : DAC_test
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 4,740 / 49,760 ( 10 % )
-    Total combinational functions : 3,642 / 49,760 ( 7 % )
-    Dedicated logic registers : 3,239 / 49,760 ( 7 % )
-Total registers : 3239
-Total pins : 39 / 360 ( 11 % )
+Total logic elements : 4,746 / 49,760 ( 10 % )
+    Total combinational functions : 3,653 / 49,760 ( 7 % )
+    Dedicated logic registers : 3,252 / 49,760 ( 7 % )
+Total registers : 3252
+Total pins : 40 / 360 ( 11 % )
 Total virtual pins : 0
 Total memory bits : 270,176 / 1,677,312 ( 16 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

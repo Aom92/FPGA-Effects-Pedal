@@ -1,4 +1,89 @@
-|ADCtst
+|DAC_test
+DAC_OUT <= PWM:inst1.S
+CLK => PWM:inst1.Reloj
+CLK => ADCtst:inst.CLK
+ADCLK => ADCtst:inst.ADCLK
+RESET => ADCtst:inst.RESET
+display0[0] <= ADCtst:inst.display0[0]
+display0[1] <= ADCtst:inst.display0[1]
+display0[2] <= ADCtst:inst.display0[2]
+display0[3] <= ADCtst:inst.display0[3]
+display0[4] <= ADCtst:inst.display0[4]
+display0[5] <= ADCtst:inst.display0[5]
+display0[6] <= ADCtst:inst.display0[6]
+display0[7] <= ADCtst:inst.display0[7]
+display1[0] <= ADCtst:inst.display1[0]
+display1[1] <= ADCtst:inst.display1[1]
+display1[2] <= ADCtst:inst.display1[2]
+display1[3] <= ADCtst:inst.display1[3]
+display1[4] <= ADCtst:inst.display1[4]
+display1[5] <= ADCtst:inst.display1[5]
+display1[6] <= ADCtst:inst.display1[6]
+display1[7] <= ADCtst:inst.display1[7]
+display2[0] <= ADCtst:inst.display2[0]
+display2[1] <= ADCtst:inst.display2[1]
+display2[2] <= ADCtst:inst.display2[2]
+display2[3] <= ADCtst:inst.display2[3]
+display2[4] <= ADCtst:inst.display2[4]
+display2[5] <= ADCtst:inst.display2[5]
+display2[6] <= ADCtst:inst.display2[6]
+display2[7] <= ADCtst:inst.display2[7]
+leds[0] <= ADCtst:inst.leds[0]
+leds[1] <= ADCtst:inst.leds[1]
+leds[2] <= ADCtst:inst.leds[2]
+leds[3] <= ADCtst:inst.leds[3]
+leds[4] <= ADCtst:inst.leds[4]
+leds[5] <= ADCtst:inst.leds[5]
+leds[6] <= ADCtst:inst.leds[6]
+leds[7] <= ADCtst:inst.leds[7]
+leds[8] <= ADCtst:inst.leds[8]
+leds[9] <= ADCtst:inst.leds[9]
+leds[10] <= ADCtst:inst.leds[10]
+leds[11] <= ADCtst:inst.leds[11]
+
+
+|DAC_test|PWM:inst1
+Reloj => PWM_Acumulador[0].CLK
+Reloj => PWM_Acumulador[1].CLK
+Reloj => PWM_Acumulador[2].CLK
+Reloj => PWM_Acumulador[3].CLK
+Reloj => PWM_Acumulador[4].CLK
+Reloj => PWM_Acumulador[5].CLK
+Reloj => PWM_Acumulador[6].CLK
+Reloj => PWM_Acumulador[7].CLK
+Reloj => PWM_Acumulador[8].CLK
+Reloj => PWM_Acumulador[9].CLK
+Reloj => PWM_Acumulador[10].CLK
+Reloj => PWM_Acumulador[11].CLK
+Reloj => PWM_Acumulador[12].CLK
+D[0] => Add0.IN12
+D[1] => Add0.IN11
+D[2] => Add0.IN10
+D[3] => Add0.IN9
+D[4] => Add0.IN8
+D[5] => Add0.IN7
+D[6] => Add0.IN6
+D[7] => Add0.IN5
+D[8] => Add0.IN4
+D[9] => Add0.IN3
+D[10] => Add0.IN2
+D[11] => Add0.IN1
+S <= PWM_Acumulador[12].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DAC_test|ADCtst:inst
+CLK => adc_out[0]~reg0.CLK
+CLK => adc_out[1]~reg0.CLK
+CLK => adc_out[2]~reg0.CLK
+CLK => adc_out[3]~reg0.CLK
+CLK => adc_out[4]~reg0.CLK
+CLK => adc_out[5]~reg0.CLK
+CLK => adc_out[6]~reg0.CLK
+CLK => adc_out[7]~reg0.CLK
+CLK => adc_out[8]~reg0.CLK
+CLK => adc_out[9]~reg0.CLK
+CLK => adc_out[10]~reg0.CLK
+CLK => adc_out[11]~reg0.CLK
 CLK => sal_disp2[0].CLK
 CLK => sal_disp2[1].CLK
 CLK => sal_disp2[2].CLK
@@ -37,6 +122,18 @@ leds[8] <= leds[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 leds[9] <= leds[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 leds[10] <= leds[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 leds[11] <= leds[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+adc_out[0] <= adc_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+adc_out[1] <= adc_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+adc_out[2] <= adc_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+adc_out[3] <= adc_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+adc_out[4] <= adc_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+adc_out[5] <= adc_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+adc_out[6] <= adc_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+adc_out[7] <= adc_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+adc_out[8] <= adc_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+adc_out[9] <= adc_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+adc_out[10] <= adc_out[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+adc_out[11] <= adc_out[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 display0[0] <= <VCC>
 display0[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
 display0[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
@@ -63,7 +160,7 @@ display2[6] <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
 display2[7] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0
+|DAC_test|ADCtst:inst|ADC:u0
 adc_response_valid <= ADC_modular_adc_0:modular_adc_0.response_valid
 adc_response_startofpacket <= ADC_modular_adc_0:modular_adc_0.response_startofpacket
 adc_response_endofpacket <= ADC_modular_adc_0:modular_adc_0.response_endofpacket
@@ -96,7 +193,7 @@ reset_reset_n => adc_rst_controller_001:rst_controller_001.reset_in0
 reset_reset_n => adc_rst_controller_001:rst_controller_002.reset_in0
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge
 clk_clk => clk_clk.IN9
 clk_reset_reset => clk_reset_reset.IN1
 master_address[0] <= altera_avalon_packets_to_master:transacto.address
@@ -206,7 +303,7 @@ master_byteenable[3] <= altera_avalon_packets_to_master:transacto.byteenable
 master_reset_reset <= altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master.resetrequest
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master
 jtag_tck => ~NO_FANOUT~
 jtag_tms => ~NO_FANOUT~
 jtag_tdi => ~NO_FANOUT~
@@ -267,7 +364,7 @@ mgmt_channel[0] <= altera_jtag_dc_streaming:normal.jtag_dc_streaming.mgmt_channe
 mgmt_data <= altera_jtag_dc_streaming:normal.jtag_dc_streaming.mgmt_data
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_sld_node:node
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_sld_node:node
 ir_out[0] => ir_out[0].IN1
 ir_out[1] => ir_out[1].IN1
 ir_out[2] => ir_out[2].IN1
@@ -287,7 +384,7 @@ virtual_state_udr <= sld_virtual_jtag_basic:sld_virtual_jtag_component.virtual_s
 virtual_state_uir <= sld_virtual_jtag_basic:sld_virtual_jtag_component.virtual_state_uir
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component
 tck <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_tck
 tdi <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_tdi
 ir_in[0] <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_ir_in
@@ -324,7 +421,7 @@ jtag_state_e2ir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_sta
 jtag_state_uir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_uir
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst
 usr_tck <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_tck
 usr_tdi <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_tdi
 usr_ir_in[0] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_ir_in
@@ -390,7 +487,7 @@ ir_out[1] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.ir_out
 ir_out[2] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.ir_out
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter
 raw_tck => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tck
 raw_tms => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tms
 tdi => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.tdi
@@ -453,7 +550,7 @@ adapted_ir_out[1] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_im
 adapted_ir_out[2] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ir_out[2]
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
 raw_tck => adapted_tck.DATAIN
 raw_tms => adapted_tms.DATAIN
 tdi => adapted_tdi.DATAIN
@@ -516,7 +613,7 @@ adapted_ir_out[1] => ir_out[1].DATAIN
 adapted_ir_out[2] => ir_out[2].DATAIN
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming
 tck => tck.IN4
 tdi => tdi.IN1
 tdo <= altera_jtag_streaming:jtag_streaming.tdo
@@ -554,7 +651,7 @@ mgmt_channel[0] <= altera_jtag_streaming:jtag_streaming.mgmt_channel
 mgmt_data <= altera_jtag_streaming:jtag_streaming.mgmt_data
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_std_synchronizer:synchronizer
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_std_synchronizer:synchronizer
 clk => dreg[0].CLK
 clk => dreg[1].CLK
 clk => din_s1.CLK
@@ -565,7 +662,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming
 tck => tck.IN3
 tdi => read_data_length.DATAB
 tdi => write_data_length.DATAB
@@ -905,7 +1002,7 @@ mgmt_channel[0] <= mgmt_channel[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 mgmt_data <= mgmt_data~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_std_synchronizer:clock_sensor_synchronizer
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_std_synchronizer:clock_sensor_synchronizer
 clk => dreg[0].CLK
 clk => dreg[1].CLK
 clk => din_s1.CLK
@@ -916,7 +1013,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_std_synchronizer:reset_to_sample_synchronizer
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_std_synchronizer:reset_to_sample_synchronizer
 clk => dreg[0].CLK
 clk => dreg[1].CLK
 clk => din_s1.CLK
@@ -927,7 +1024,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_std_synchronizer:clock_to_sample_div2_synchronizer
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_std_synchronizer:clock_to_sample_div2_synchronizer
 clk => dreg[0].CLK
 clk => dreg[1].CLK
 clk => din_s1.CLK
@@ -938,7 +1035,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_std_synchronizer:clock_sense_reset_n_synchronizer
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_std_synchronizer:clock_sense_reset_n_synchronizer
 clk => dreg[0].CLK
 clk => dreg[1].CLK
 clk => dreg[2].CLK
@@ -959,7 +1056,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_avalon_st_idle_remover:idle_remover
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_avalon_st_idle_remover:idle_remover
 clk => received_esc.CLK
 reset_n => received_esc.ACLR
 in_ready <= out_ready.DB_MAX_OUTPUT_PORT_TYPE
@@ -1003,7 +1100,7 @@ out_data[6] <= in_data[6].DB_MAX_OUTPUT_PORT_TYPE
 out_data[7] <= in_data[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_avalon_st_idle_inserter:idle_inserter
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_avalon_st_idle_inserter:idle_inserter
 clk => received_esc.CLK
 reset_n => received_esc.ACLR
 in_ready <= in_ready.DB_MAX_OUTPUT_PORT_TYPE
@@ -1063,7 +1160,7 @@ out_data[6] <= out_data.DB_MAX_OUTPUT_PORT_TYPE
 out_data[7] <= out_data.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_avalon_st_clock_crosser:sink_crosser
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_avalon_st_clock_crosser:sink_crosser
 in_clk => in_clk.IN1
 in_reset => in_data_toggle.ACLR
 in_reset => in_data_buffer[0].ACLR
@@ -1099,7 +1196,7 @@ out_data[6] <= altera_avalon_st_pipeline_base:output_stage.out_data
 out_data[7] <= altera_avalon_st_pipeline_base:output_stage.out_data
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_avalon_st_clock_crosser:sink_crosser|altera_std_synchronizer_nocut:in_to_out_synchronizer
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_avalon_st_clock_crosser:sink_crosser|altera_std_synchronizer_nocut:in_to_out_synchronizer
 clk => dreg[0].CLK
 clk => dreg[1].CLK
 clk => din_s1.CLK
@@ -1110,7 +1207,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_avalon_st_clock_crosser:sink_crosser|altera_std_synchronizer_nocut:out_to_in_synchronizer
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_avalon_st_clock_crosser:sink_crosser|altera_std_synchronizer_nocut:out_to_in_synchronizer
 clk => dreg[0].CLK
 clk => dreg[1].CLK
 clk => dreg[2].CLK
@@ -1131,7 +1228,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_avalon_st_clock_crosser:sink_crosser|altera_avalon_st_pipeline_base:output_stage
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_avalon_st_clock_crosser:sink_crosser|altera_avalon_st_pipeline_base:output_stage
 clk => full1.CLK
 clk => full0.CLK
 clk => data1[0].CLK
@@ -1203,7 +1300,7 @@ out_data[6] <= data1[6].DB_MAX_OUTPUT_PORT_TYPE
 out_data[7] <= data1[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_src_crosser:source_crosser
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_src_crosser:source_crosser
 sink_clk => sink_data_buffer[0].CLK
 sink_clk => sink_data_buffer[1].CLK
 sink_clk => sink_data_buffer[2].CLK
@@ -1252,7 +1349,7 @@ src_data[6] <= src_data[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 src_data[7] <= src_data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_src_crosser:source_crosser|altera_jtag_control_signal_crosser:crosser
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_src_crosser:source_crosser|altera_jtag_control_signal_crosser:crosser
 clk => clk.IN1
 reset_n => reset_n.IN1
 async_control_signal => async_control_signal.IN1
@@ -1260,7 +1357,7 @@ sense_pos_edge => sync_control_signal.OUTPUTSELECT
 sync_control_signal <= sync_control_signal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_src_crosser:source_crosser|altera_jtag_control_signal_crosser:crosser|altera_std_synchronizer:synchronizer
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_src_crosser:source_crosser|altera_jtag_control_signal_crosser:crosser|altera_std_synchronizer:synchronizer
 clk => dreg[0].CLK
 clk => dreg[1].CLK
 clk => dreg[2].CLK
@@ -1281,7 +1378,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|ADC_AvalonBridge_timing_adt:timing_adt
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|ADC_AvalonBridge_timing_adt:timing_adt
 in_valid => out_valid.DATAIN
 in_data[0] => out_data[0].DATAIN
 in_data[1] => out_data[1].DATAIN
@@ -1305,7 +1402,7 @@ clk => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_sc_fifo:fifo
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_sc_fifo:fifo
 clk => mem.we_a.CLK
 clk => mem.waddr_a[5].CLK
 clk => mem.waddr_a[4].CLK
@@ -1584,7 +1681,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_bytes_to_packets:b2p
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_bytes_to_packets:b2p
 clk => out_channel[0]~reg0.CLK
 clk => out_channel[1]~reg0.CLK
 clk => out_channel[2]~reg0.CLK
@@ -1694,7 +1791,7 @@ in_data[7] => Equal3.IN6
 in_data[7] => always0.IN1
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_packets_to_bytes:p2b
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_st_packets_to_bytes:p2b
 clk => stored_channel[0].CLK
 clk => stored_channel[1].CLK
 clk => stored_channel[2].CLK
@@ -1863,7 +1960,7 @@ out_data[6] <= out_data[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out_data[7] <= out_data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_packets_to_master:transacto
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_packets_to_master:transacto
 clk => clk.IN1
 reset_n => reset_n.IN1
 in_ready <= packets_to_master:p2m.in_ready
@@ -1996,7 +2093,7 @@ waitrequest => waitrequest.IN1
 readdatavalid => readdatavalid.IN1
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_packets_to_master:transacto|packets_to_master:p2m
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_avalon_packets_to_master:transacto|packets_to_master:p2m
 clk => unshifted_byteenable[0].CLK
 clk => unshifted_byteenable[1].CLK
 clk => unshifted_byteenable[2].CLK
@@ -2662,7 +2759,7 @@ readdatavalid => state.OUTPUTSELECT
 readdatavalid => state.OUTPUTSELECT
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|ADC_AvalonBridge_b2p_adapter:b2p_adapter
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|ADC_AvalonBridge_b2p_adapter:b2p_adapter
 in_ready <= out_ready.DB_MAX_OUTPUT_PORT_TYPE
 in_valid => out_valid.DATAA
 in_data[0] => out_data[0].DATAIN
@@ -2699,7 +2796,7 @@ clk => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|ADC_AvalonBridge_p2b_adapter:p2b_adapter
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|ADC_AvalonBridge_p2b_adapter:p2b_adapter
 in_ready <= out_ready.DB_MAX_OUTPUT_PORT_TYPE
 in_valid => out_valid.DATAIN
 in_data[0] => out_data[0].DATAIN
@@ -2736,7 +2833,7 @@ clk => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_reset_controller:rst_controller
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_reset_controller:rst_controller
 reset_in0 => merged_reset.IN0
 reset_in1 => merged_reset.IN1
 reset_in2 => merged_reset.IN1
@@ -2774,7 +2871,7 @@ reset_out <= altera_reset_synchronizer:alt_rst_sync_uq1.reset_out
 reset_req <= altera_reset_synchronizer:alt_rst_req_sync_uq1.reset_out
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain_out.PRESET
 reset_in => altera_reset_synchronizer_int_chain[0].PRESET
 reset_in => altera_reset_synchronizer_int_chain[1].PRESET
@@ -2784,7 +2881,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
+|DAC_test|ADCtst:inst|ADC:u0|ADC_AvalonBridge:avalonbridge|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain[1].DATAIN
 clk => altera_reset_synchronizer_int_chain_out.CLK
 clk => altera_reset_synchronizer_int_chain[0].CLK
@@ -2792,7 +2889,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_altpll_0:altpll_0
+|DAC_test|ADCtst:inst|ADC:u0|ADC_altpll_0:altpll_0
 address[0] => w_select_control.IN0
 address[0] => w_select_status.IN0
 address[1] => w_select_status.IN1
@@ -2889,14 +2986,14 @@ writedata[30] => ~NO_FANOUT~
 writedata[31] => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|ADC_altpll_0:altpll_0|ADC_altpll_0_stdsync_sv6:stdsync2
+|DAC_test|ADCtst:inst|ADC:u0|ADC_altpll_0:altpll_0|ADC_altpll_0_stdsync_sv6:stdsync2
 clk => clk.IN1
 din => din.IN1
 dout <= ADC_altpll_0_dffpipe_l2c:dffpipe3.q
 reset_n => reset_n.IN1
 
 
-|ADCtst|ADC:u0|ADC_altpll_0:altpll_0|ADC_altpll_0_stdsync_sv6:stdsync2|ADC_altpll_0_dffpipe_l2c:dffpipe3
+|DAC_test|ADCtst:inst|ADC:u0|ADC_altpll_0:altpll_0|ADC_altpll_0_stdsync_sv6:stdsync2|ADC_altpll_0_dffpipe_l2c:dffpipe3
 clock => dffe6a[0].CLK
 clock => dffe5a[0].CLK
 clock => dffe4a[0].CLK
@@ -2907,7 +3004,7 @@ d[0] => dffe4a[0].DATAIN
 q[0] <= dffe6a[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_altpll_0:altpll_0|ADC_altpll_0_altpll_kr22:sd1
+|DAC_test|ADCtst:inst|ADC:u0|ADC_altpll_0:altpll_0|ADC_altpll_0_altpll_kr22:sd1
 areset => pll_lock_sync.ACLR
 areset => pll7.ARESET
 clk[0] <= pll7.CLK
@@ -2920,7 +3017,7 @@ inclk[1] => pll7.CLK1
 locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0
 clock_clk => clock_clk.IN6
 reset_sink_reset_n => reset_sink_reset_n.IN2
 adc_pll_clock_clk => adc_pll_clock_clk.IN1
@@ -3015,7 +3112,7 @@ response_data[10] <= altera_avalon_st_splitter:st_splitter_internal.out0_data
 response_data[11] <= altera_avalon_st_splitter:st_splitter_internal.out0_data
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal
 clk => clk.IN1
 rst_n => rst_n.IN1
 clk_in_pll_c0 => clk_in_pll_c0.IN1
@@ -3053,7 +3150,7 @@ rsp_eop <= altera_modular_adc_control_fsm:u_control_fsm.rsp_eop
 sync_valid <= altera_modular_adc_control_fsm:u_control_fsm.sync_valid
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm
 clk => clk.IN3
 rst_n => rst_n.IN2
 clk_in_pll_locked => Selector1.IN5
@@ -3138,7 +3235,7 @@ tsen <= tsen~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sync_valid <= sync_valid.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_clk_dft_synchronizer
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_clk_dft_synchronizer
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -3147,7 +3244,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_eoc_synchronizer
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_eoc_synchronizer
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -3156,7 +3253,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo
 clock => clock.IN1
 data[0] => data[0].IN1
 data[1] => data[1].IN1
@@ -3189,7 +3286,7 @@ q[10] <= scfifo:scfifo_component.q
 q[11] <= scfifo:scfifo_component.q
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component
 data[0] => scfifo_ds61:auto_generated.data[0]
 data[1] => scfifo_ds61:auto_generated.data[1]
 data[2] => scfifo_ds61:auto_generated.data[2]
@@ -3233,7 +3330,7 @@ usedw[4] <= <GND>
 usedw[5] <= <GND>
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated
 clock => a_dpfifo_3o41:dpfifo.clock
 data[0] => a_dpfifo_3o41:dpfifo.data[0]
 data[1] => a_dpfifo_3o41:dpfifo.data[1]
@@ -3266,7 +3363,7 @@ sclr => a_dpfifo_3o41:dpfifo.sclr
 wrreq => a_dpfifo_3o41:dpfifo.wreq
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo
 clock => a_fefifo_c6e:fifo_state.clock
 clock => altsyncram_rqn1:FIFOram.clock0
 clock => altsyncram_rqn1:FIFOram.clock1
@@ -3309,7 +3406,7 @@ wreq => a_fefifo_c6e:fifo_state.wreq
 wreq => valid_wreq.IN0
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|a_fefifo_c6e:fifo_state
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|a_fefifo_c6e:fifo_state
 aclr => b_full.IN0
 aclr => b_non_empty.IN0
 aclr => cntr_337:count_usedw.aclr
@@ -3334,7 +3431,7 @@ wreq => _.IN0
 wreq => valid_wreq.IN0
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|a_fefifo_c6e:fifo_state|cntr_337:count_usedw
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|a_fefifo_c6e:fifo_state|cntr_337:count_usedw
 aclr => counter_reg_bit[5].IN0
 clock => counter_reg_bit[5].CLK
 clock => counter_reg_bit[4].CLK
@@ -3360,7 +3457,7 @@ updown => counter_comb_bita4.DATAB
 updown => counter_comb_bita5.DATAB
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -3591,7 +3688,7 @@ wren_a => ram_block1a11.PORTAWE
 wren_a => ram_block1a11.ENA0
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|cntr_n2b:rd_ptr_count
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|cntr_n2b:rd_ptr_count
 aclr => counter_reg_bit[5].IN0
 clock => counter_reg_bit[5].CLK
 clock => counter_reg_bit[4].CLK
@@ -3611,7 +3708,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|cntr_n2b:wr_ptr
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|cntr_n2b:wr_ptr
 aclr => counter_reg_bit[5].IN0
 clock => counter_reg_bit[5].CLK
 clock => counter_reg_bit[4].CLK
@@ -3631,7 +3728,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst
 chsel[0] => chsel[0].IN1
 chsel[1] => chsel[1].IN1
 chsel[2] => chsel[2].IN1
@@ -3657,7 +3754,7 @@ clkout_adccore <= fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance.clkou
 clkin_from_pll_c0 => clkin_from_pll_c0.IN1
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst|chsel_code_converter_sw_to_hw:decoder
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst|chsel_code_converter_sw_to_hw:decoder
 chsel_from_sw[0] => Decoder0.IN4
 chsel_from_sw[1] => Decoder0.IN3
 chsel_from_sw[2] => Decoder0.IN2
@@ -3670,7 +3767,7 @@ chsel_to_hw[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 chsel_to_hw[4] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst|fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst|fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance
 chsel[0] => primitive_instance.I_CHSEL
 chsel[1] => primitive_instance.I_CHSEL1
 chsel[2] => primitive_instance.I_CHSEL2
@@ -3696,7 +3793,7 @@ clkout_adccore <= primitive_instance.O_CLK_DFT
 clkin_from_pll_c0 => primitive_instance.I_CLKIN_FROM_PLL_C0
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal
 clk_clk => clk_clk.IN3
 reset_reset => reset_reset.IN1
 adc_data_channel[0] => adc_data_channel[0].IN1
@@ -3721,7 +3818,7 @@ adc_data_startofpacket => adc_data_startofpacket.IN1
 adc_data_valid => adc_data_valid.IN1
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core
 adc_channel[0] => adc_channel[0].IN1
 adc_channel[1] => adc_channel[1].IN1
 adc_channel[2] => adc_channel[2].IN1
@@ -3872,7 +3969,7 @@ clk => clk.IN1
 reset => reset.IN1
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface
 capture_data[0] <= capture_data[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 capture_data[1] <= capture_data[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 capture_data[2] <= capture_data[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -4011,7 +4108,7 @@ clk => clk.IN3
 reset => reset.IN3
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_issp:issp
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_issp:issp
 issp_write <= issp_write~reg0.DB_MAX_OUTPUT_PORT_TYPE
 issp_write_enable <= issp_write_enable~reg0.DB_MAX_OUTPUT_PORT_TYPE
 issp_write_run <= issp_write_run~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -4095,7 +4192,7 @@ reset => issp_write_run~reg0.ENA
 reset => issp_write_enable~reg0.ENA
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_issp:issp|altsource_probe:issp_0
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_issp:issp|altsource_probe:issp_0
 probe[0] => probe[0].IN1
 probe[1] => probe[1].IN1
 probe[2] => probe[2].IN1
@@ -4160,7 +4257,7 @@ ir_out[3] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.ir_out
 tdo <= sld_jtag_endpoint_adapter:jtag_signal_adapter.tdo
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_issp:issp|altsource_probe:issp_0|sld_jtag_endpoint_adapter:jtag_signal_adapter
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_issp:issp|altsource_probe:issp_0|sld_jtag_endpoint_adapter:jtag_signal_adapter
 raw_tck => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tck
 raw_tms => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tms
 tdi => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.tdi
@@ -4227,7 +4324,7 @@ adapted_ir_out[2] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_im
 adapted_ir_out[3] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ir_out[3]
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_issp:issp|altsource_probe:issp_0|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_issp:issp|altsource_probe:issp_0|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
 raw_tck => adapted_tck.DATAIN
 raw_tms => adapted_tms.DATAIN
 tdi => adapted_tdi.DATAIN
@@ -4294,7 +4391,7 @@ adapted_ir_out[2] => ir_out[2].DATAIN
 adapted_ir_out[3] => ir_out[3].DATAIN
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_issp:issp|altsource_probe:issp_0|altsource_probe_body:altsource_probe_body_inst
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_issp:issp|altsource_probe:issp_0|altsource_probe_body:altsource_probe_body_inst
 probe[0] => altsource_probe_impl:wider_source_gen:wider_source_inst.probe[0]
 probe[1] => altsource_probe_impl:wider_source_gen:wider_source_inst.probe[1]
 probe[2] => altsource_probe_impl:wider_source_gen:wider_source_inst.probe[2]
@@ -4363,7 +4460,7 @@ ir_out[3] <= <GND>
 tdo <= altsource_probe_impl:wider_source_gen:wider_source_inst.tdo
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_issp:issp|altsource_probe:issp_0|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_issp:issp|altsource_probe:issp_0|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst
 probe[0] => shift_reg.DATAB
 probe[1] => shift_reg.DATAB
 probe[2] => shift_reg.DATAB
@@ -4682,7 +4779,7 @@ vjtag_ir_in[3] => process_1.IN1
 tdo <= tdo.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_issp:issp|altsource_probe:issp_0|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\instance_id_gen:rom_info_inst
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_issp:issp|altsource_probe:issp_0|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\instance_id_gen:rom_info_inst
 ROM_DATA[0] => Mux3.IN66
 ROM_DATA[1] => Mux2.IN66
 ROM_DATA[2] => Mux1.IN66
@@ -4765,7 +4862,7 @@ TDI => WORD_SR.DATAA
 TDO <= WORD_SR[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_timestamp_manager:timestamp_manager
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_timestamp_manager:timestamp_manager
 captured_timestamp[0] <= captured_timestamp[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 captured_timestamp[1] <= captured_timestamp[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 captured_timestamp[2] <= captured_timestamp[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -5016,7 +5113,7 @@ reset => d1_enabled.ACLR
 reset => armed.ACLR
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_wa_inst:format_adapter
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_wa_inst:format_adapter
 clk => altera_trace_adc_monitor_wa:altera_trace_adc_monitor_wa_inst.clk
 reset => altera_trace_adc_monitor_wa:altera_trace_adc_monitor_wa_inst.reset
 sync_reset => altera_trace_adc_monitor_wa:altera_trace_adc_monitor_wa_inst.sync_reset
@@ -5046,7 +5143,7 @@ out_data[7] <= altera_trace_adc_monitor_wa:altera_trace_adc_monitor_wa_inst.out_
 out_ready => altera_trace_adc_monitor_wa:altera_trace_adc_monitor_wa_inst.out_ready
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_wa_inst:format_adapter|altera_trace_adc_monitor_wa:altera_trace_adc_monitor_wa_inst
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_adc_monitor_core:core|altera_trace_adc_monitor_capture_interface:capture_interface|altera_trace_adc_monitor_wa_inst:format_adapter|altera_trace_adc_monitor_wa:altera_trace_adc_monitor_wa_inst
 in_valid => in_count.OUTPUTSELECT
 in_valid => valid.DATAA
 in_valid => always4.IN1
@@ -5157,7 +5254,7 @@ reset => out_count[1].ACLR
 reset => in_count.ACLR
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_monitor_endpoint_wrapper:trace_endpoint
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_monitor_endpoint_wrapper:trace_endpoint
 clk => clk.IN1
 reset <= altera_trace_monitor_endpoint:inst.reset
 capture_ready <= altera_trace_monitor_endpoint:inst.capture_ready
@@ -5249,7 +5346,7 @@ control_readdata[31] => control_readdata[31].IN1
 control_readdatavalid => control_readdatavalid.IN1
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_monitor_endpoint_wrapper:trace_endpoint|altera_trace_monitor_endpoint:inst
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_monitor_endpoint_wrapper:trace_endpoint|altera_trace_monitor_endpoint:inst
 clk => altera_fabric_endpoint:ep.send[0]
 reset <= altera_fabric_endpoint:ep.receive[0]
 capture_ready <= altera_fabric_endpoint:ep.receive[1]
@@ -5340,7 +5437,7 @@ control_readdata[31] => altera_fabric_endpoint:ep.send[43]
 control_readdatavalid => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_monitor_endpoint_wrapper:trace_endpoint|altera_trace_monitor_endpoint:inst|altera_fabric_endpoint:ep
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_trace_monitor_endpoint_wrapper:trace_endpoint|altera_trace_monitor_endpoint:inst|altera_fabric_endpoint:ep
 send[0] => fabric_send[0].DATAIN
 send[1] => fabric_send[1].DATAIN
 send[2] => fabric_send[2].DATAIN
@@ -5513,7 +5610,7 @@ fabric_receive[39] => receive[39].DATAIN
 fabric_receive[40] => receive[40].DATAIN
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_reset_controller:rst_controller
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_reset_controller:rst_controller
 reset_in0 => merged_reset.IN0
 reset_in1 => merged_reset.IN1
 reset_in2 => merged_reset.IN1
@@ -5551,7 +5648,7 @@ reset_out <= altera_reset_synchronizer:alt_rst_sync_uq1.reset_out
 reset_req <= altera_reset_synchronizer:alt_rst_req_sync_uq1.reset_out
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain_out.PRESET
 reset_in => altera_reset_synchronizer_int_chain[0].PRESET
 reset_in => altera_reset_synchronizer_int_chain[1].PRESET
@@ -5561,7 +5658,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_adc_monitor_internal:adc_monitor_internal|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain[1].DATAIN
 clk => altera_reset_synchronizer_int_chain_out.CLK
 clk => altera_reset_synchronizer_int_chain[0].CLK
@@ -5569,7 +5666,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_sequencer:sequencer_internal
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_sequencer:sequencer_internal
 clk => clk.IN2
 rst_n => rst_n.IN2
 addr => addr.IN1
@@ -5659,7 +5756,7 @@ cmd_sop_2 <= <GND>
 cmd_eop_2 <= <GND>
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_sequencer:sequencer_internal|altera_modular_adc_sequencer_csr:u_seq_csr
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_sequencer:sequencer_internal|altera_modular_adc_sequencer_csr:u_seq_csr
 clk => readdata[0]~reg0.CLK
 clk => readdata[1]~reg0.CLK
 clk => readdata[2]~reg0.CLK
@@ -5812,7 +5909,7 @@ single_mode <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
 recab_mode <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_sequencer:sequencer_internal|altera_modular_adc_sequencer_ctrl:u_seq_ctrl
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_modular_adc_sequencer:sequencer_internal|altera_modular_adc_sequencer_ctrl:u_seq_ctrl
 clk => cmd_eop~reg0.CLK
 clk => cmd_sop~reg0.CLK
 clk => cmd_channel[0]~reg0.CLK
@@ -5868,7 +5965,7 @@ cmd_eop <= cmd_eop~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr_run <= clr_run.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_avalon_st_splitter:st_splitter_internal
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|altera_avalon_st_splitter:st_splitter_internal
 in0_ready <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 in0_valid => out15_valid.DATAIN
 in0_valid => out0_valid.DATAIN
@@ -6300,7 +6397,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_avalon_st_adapter:avalon_st_adapter
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_avalon_st_adapter:avalon_st_adapter
 in_clk_0_clk => in_clk_0_clk.IN3
 in_rst_0_reset => _.IN1
 in_rst_0_reset => _.IN1
@@ -6348,7 +6445,7 @@ out_0_channel[3] <= ADC_modular_adc_0_avalon_st_adapter_timing_adapter_1:timing_
 out_0_channel[4] <= ADC_modular_adc_0_avalon_st_adapter_timing_adapter_1:timing_adapter_1.out_channel
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_avalon_st_adapter:avalon_st_adapter|ADC_modular_adc_0_avalon_st_adapter_data_format_adapter_0:data_format_adapter_0
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_avalon_st_adapter:avalon_st_adapter|ADC_modular_adc_0_avalon_st_adapter_data_format_adapter_0:data_format_adapter_0
 in_ready <= out_ready.DB_MAX_OUTPUT_PORT_TYPE
 in_valid => out_valid.DATAIN
 in_data[0] => out_data[0].DATAIN
@@ -6396,7 +6493,7 @@ clk => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_avalon_st_adapter:avalon_st_adapter|ADC_modular_adc_0_avalon_st_adapter_timing_adapter_0:timing_adapter_0
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_avalon_st_adapter:avalon_st_adapter|ADC_modular_adc_0_avalon_st_adapter_timing_adapter_0:timing_adapter_0
 in_valid => out_valid.DATAIN
 in_data[0] => out_data[0].DATAIN
 in_data[1] => out_data[1].DATAIN
@@ -6442,7 +6539,7 @@ clk => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_avalon_st_adapter:avalon_st_adapter|ADC_modular_adc_0_avalon_st_adapter_timing_adapter_1:timing_adapter_1
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_avalon_st_adapter:avalon_st_adapter|ADC_modular_adc_0_avalon_st_adapter_timing_adapter_1:timing_adapter_1
 in_ready <= <VCC>
 in_valid => out_valid.DATAIN
 in_data[0] => out_data[0].DATAIN
@@ -6490,7 +6587,7 @@ clk => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_avalon_st_adapter_001:avalon_st_adapter_001
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_avalon_st_adapter_001:avalon_st_adapter_001
 in_clk_0_clk => in_clk_0_clk.IN3
 in_rst_0_reset => _.IN1
 in_rst_0_reset => _.IN1
@@ -6538,7 +6635,7 @@ out_0_channel[3] <= ADC_modular_adc_0_avalon_st_adapter_001_timing_adapter_1:tim
 out_0_channel[4] <= ADC_modular_adc_0_avalon_st_adapter_001_timing_adapter_1:timing_adapter_1.out_channel
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_avalon_st_adapter_001:avalon_st_adapter_001|ADC_modular_adc_0_avalon_st_adapter_001_data_format_adapter_0:data_format_adapter_0
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_avalon_st_adapter_001:avalon_st_adapter_001|ADC_modular_adc_0_avalon_st_adapter_001_data_format_adapter_0:data_format_adapter_0
 in_ready <= out_ready.DB_MAX_OUTPUT_PORT_TYPE
 in_valid => out_valid.DATAIN
 in_data[0] => out_data[0].DATAIN
@@ -6586,7 +6683,7 @@ clk => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_avalon_st_adapter_001:avalon_st_adapter_001|ADC_modular_adc_0_avalon_st_adapter_001_timing_adapter_0:timing_adapter_0
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_avalon_st_adapter_001:avalon_st_adapter_001|ADC_modular_adc_0_avalon_st_adapter_001_timing_adapter_0:timing_adapter_0
 in_valid => out_valid.DATAIN
 in_data[0] => out_data[0].DATAIN
 in_data[1] => out_data[1].DATAIN
@@ -6634,7 +6731,7 @@ clk => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_avalon_st_adapter_001:avalon_st_adapter_001|ADC_modular_adc_0_avalon_st_adapter_001_timing_adapter_1:timing_adapter_1
+|DAC_test|ADCtst:inst|ADC:u0|ADC_modular_adc_0:modular_adc_0|ADC_modular_adc_0_avalon_st_adapter_001:avalon_st_adapter_001|ADC_modular_adc_0_avalon_st_adapter_001_timing_adapter_1:timing_adapter_1
 in_ready <= <VCC>
 in_valid => out_valid.DATAIN
 in_data[0] => out_data[0].DATAIN
@@ -6680,7 +6777,7 @@ clk => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0
 altpll_0_c0_clk => altpll_0_c0_clk.IN7
 clk_0_clk_clk => clk_0_clk_clk.IN10
 AvalonBridge_clk_reset_reset_bridge_in_reset_reset => ~NO_FANOUT~
@@ -6859,7 +6956,7 @@ modular_adc_0_sequencer_csr_writedata[30] <= altera_merlin_slave_translator:modu
 modular_adc_0_sequencer_csr_writedata[31] <= altera_merlin_slave_translator:modular_adc_0_sequencer_csr_translator.av_writedata
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_merlin_master_translator:avalonbridge_master_translator
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_merlin_master_translator:avalonbridge_master_translator
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 uav_write <= av_write.DB_MAX_OUTPUT_PORT_TYPE
@@ -7091,7 +7188,7 @@ av_response[1] <= <GND>
 av_writeresponsevalid <= <GND>
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:modular_adc_0_sequencer_csr_translator
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:modular_adc_0_sequencer_csr_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -7327,7 +7424,7 @@ av_response[1] => ~NO_FANOUT~
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_merlin_master_agent:avalonbridge_master_agent
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_merlin_master_agent:avalonbridge_master_agent
 clk => hold_waitrequest.CLK
 reset => hold_waitrequest.PRESET
 av_address[0] => ~NO_FANOUT~
@@ -7660,7 +7757,7 @@ rp_endofpacket => ~NO_FANOUT~
 rp_ready <= <VCC>
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:modular_adc_0_sequencer_csr_agent
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:modular_adc_0_sequencer_csr_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -8336,7 +8433,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:modular_adc_0_sequencer_csr_agent|altera_merlin_burst_uncompressor:uncompressor
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:modular_adc_0_sequencer_csr_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -8708,7 +8805,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:modular_adc_0_sequencer_csr_agent_rsp_fifo
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:modular_adc_0_sequencer_csr_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -9521,7 +9618,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:modular_adc_0_sequencer_csr_agent_rdata_fifo
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:modular_adc_0_sequencer_csr_agent_rdata_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -9948,7 +10045,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_router:router
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_router:router
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -10166,14 +10263,14 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_router:router|ADC_mm_interconnect_0_router_default_decode:the_default_decode
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_router:router|ADC_mm_interconnect_0_router_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_wr_channel[0] <= <GND>
 default_rd_channel[0] <= <GND>
 default_src_channel[0] <= <VCC>
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_router_001:router_001
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_router_001:router_001
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -10392,14 +10489,14 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_router_001:router_001|ADC_mm_interconnect_0_router_001_default_decode:the_default_decode
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_router_001:router_001|ADC_mm_interconnect_0_router_001_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_wr_channel[0] <= <GND>
 default_rd_channel[0] <= <GND>
 default_src_channel[0] <= <VCC>
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_cmd_demux:cmd_demux
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_cmd_demux:cmd_demux
 sink_valid[0] => src0_valid.IN0
 sink_data[0] => src0_data[0].DATAIN
 sink_data[1] => src0_data[1].DATAIN
@@ -10619,7 +10716,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_cmd_mux:cmd_mux
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_cmd_mux:cmd_mux
 sink0_valid => src_valid.DATAIN
 sink0_data[0] => src_data[0].DATAIN
 sink0_data[1] => src_data[1].DATAIN
@@ -10838,7 +10935,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_rsp_demux:rsp_demux
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_rsp_demux:rsp_demux
 sink_valid[0] => src0_valid.IN0
 sink_data[0] => src0_data[0].DATAIN
 sink_data[1] => src0_data[1].DATAIN
@@ -11058,7 +11155,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_rsp_mux:rsp_mux
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_rsp_mux:rsp_mux
 sink0_valid => src_valid.DATAIN
 sink0_data[0] => src_data[0].DATAIN
 sink0_data[1] => src_data[1].DATAIN
@@ -11277,7 +11374,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_st_handshake_clock_crosser:crosser
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_st_handshake_clock_crosser:crosser
 in_clk => in_clk.IN1
 in_reset => in_reset.IN1
 out_clk => out_clk.IN1
@@ -11502,7 +11599,7 @@ out_endofpacket <= altera_avalon_st_clock_crosser:clock_xer.out_data
 out_empty[0] <= <GND>
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_st_handshake_clock_crosser:crosser|altera_avalon_st_clock_crosser:clock_xer
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_st_handshake_clock_crosser:crosser|altera_avalon_st_clock_crosser:clock_xer
 in_clk => in_clk.IN1
 in_reset => in_data_toggle.ACLR
 in_reset => in_data_buffer[0].ACLR
@@ -11935,7 +12032,7 @@ out_data[103] <= out_data_buffer[103].DB_MAX_OUTPUT_PORT_TYPE
 out_data[104] <= out_data_buffer[104].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_st_handshake_clock_crosser:crosser|altera_avalon_st_clock_crosser:clock_xer|altera_std_synchronizer_nocut:in_to_out_synchronizer
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_st_handshake_clock_crosser:crosser|altera_avalon_st_clock_crosser:clock_xer|altera_std_synchronizer_nocut:in_to_out_synchronizer
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -11944,7 +12041,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_st_handshake_clock_crosser:crosser|altera_avalon_st_clock_crosser:clock_xer|altera_std_synchronizer_nocut:out_to_in_synchronizer
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_st_handshake_clock_crosser:crosser|altera_avalon_st_clock_crosser:clock_xer|altera_std_synchronizer_nocut:out_to_in_synchronizer
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -11953,7 +12050,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_st_handshake_clock_crosser:crosser_001
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_st_handshake_clock_crosser:crosser_001
 in_clk => in_clk.IN1
 in_reset => in_reset.IN1
 out_clk => out_clk.IN1
@@ -12178,7 +12275,7 @@ out_endofpacket <= altera_avalon_st_clock_crosser:clock_xer.out_data
 out_empty[0] <= <GND>
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_st_handshake_clock_crosser:crosser_001|altera_avalon_st_clock_crosser:clock_xer
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_st_handshake_clock_crosser:crosser_001|altera_avalon_st_clock_crosser:clock_xer
 in_clk => in_clk.IN1
 in_reset => in_data_toggle.ACLR
 in_reset => in_data_buffer[0].ACLR
@@ -12611,7 +12708,7 @@ out_data[103] <= out_data_buffer[103].DB_MAX_OUTPUT_PORT_TYPE
 out_data[104] <= out_data_buffer[104].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_st_handshake_clock_crosser:crosser_001|altera_avalon_st_clock_crosser:clock_xer|altera_std_synchronizer_nocut:in_to_out_synchronizer
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_st_handshake_clock_crosser:crosser_001|altera_avalon_st_clock_crosser:clock_xer|altera_std_synchronizer_nocut:in_to_out_synchronizer
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -12620,7 +12717,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_st_handshake_clock_crosser:crosser_001|altera_avalon_st_clock_crosser:clock_xer|altera_std_synchronizer_nocut:out_to_in_synchronizer
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|altera_avalon_st_handshake_clock_crosser:crosser_001|altera_avalon_st_clock_crosser:clock_xer|altera_std_synchronizer_nocut:out_to_in_synchronizer
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -12629,7 +12726,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter
 in_clk_0_clk => in_clk_0_clk.IN1
 in_rst_0_reset => _.IN1
 in_0_data[0] => in_0_data[0].IN1
@@ -12707,7 +12804,7 @@ out_0_ready => out_0_ready.IN1
 out_0_error[0] <= ADC_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0.out_error
 
 
-|ADCtst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter|ADC_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0
+|DAC_test|ADCtst:inst|ADC:u0|ADC_mm_interconnect_0:mm_interconnect_0|ADC_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter|ADC_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0
 in_ready <= out_ready.DB_MAX_OUTPUT_PORT_TYPE
 in_valid => out_valid.DATAIN
 in_data[0] => out_data[0].DATAIN
@@ -12785,7 +12882,7 @@ clk => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|adc_rst_controller:rst_controller
+|DAC_test|ADCtst:inst|ADC:u0|adc_rst_controller:rst_controller
 reset_in0 => altera_reset_controller:rst_controller.reset_in0
 reset_in1 => altera_reset_controller:rst_controller.reset_in1
 clk => altera_reset_controller:rst_controller.clk
@@ -12823,7 +12920,7 @@ reset_req_in8 => ~NO_FANOUT~
 reset_req_in9 => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|adc_rst_controller:rst_controller|altera_reset_controller:rst_controller
+|DAC_test|ADCtst:inst|ADC:u0|adc_rst_controller:rst_controller|altera_reset_controller:rst_controller
 reset_in0 => merged_reset.IN0
 reset_in1 => merged_reset.IN1
 reset_in2 => merged_reset.IN1
@@ -12861,7 +12958,7 @@ reset_out <= altera_reset_synchronizer:alt_rst_sync_uq1.reset_out
 reset_req <= altera_reset_synchronizer:alt_rst_req_sync_uq1.reset_out
 
 
-|ADCtst|ADC:u0|adc_rst_controller:rst_controller|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
+|DAC_test|ADCtst:inst|ADC:u0|adc_rst_controller:rst_controller|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain_out.PRESET
 reset_in => altera_reset_synchronizer_int_chain[0].PRESET
 reset_in => altera_reset_synchronizer_int_chain[1].PRESET
@@ -12871,7 +12968,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|adc_rst_controller:rst_controller|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
+|DAC_test|ADCtst:inst|ADC:u0|adc_rst_controller:rst_controller|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain[1].DATAIN
 clk => altera_reset_synchronizer_int_chain_out.CLK
 clk => altera_reset_synchronizer_int_chain[0].CLK
@@ -12879,7 +12976,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|adc_rst_controller_001:rst_controller_001
+|DAC_test|ADCtst:inst|ADC:u0|adc_rst_controller_001:rst_controller_001
 reset_in0 => altera_reset_controller:rst_controller_001.reset_in0
 clk => altera_reset_controller:rst_controller_001.clk
 reset_out <= altera_reset_controller:rst_controller_001.reset_out
@@ -12917,7 +13014,7 @@ reset_req_in8 => ~NO_FANOUT~
 reset_req_in9 => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|adc_rst_controller_001:rst_controller_001|altera_reset_controller:rst_controller_001
+|DAC_test|ADCtst:inst|ADC:u0|adc_rst_controller_001:rst_controller_001|altera_reset_controller:rst_controller_001
 reset_in0 => merged_reset.IN0
 reset_in1 => merged_reset.IN1
 reset_in2 => merged_reset.IN1
@@ -12955,7 +13052,7 @@ reset_out <= altera_reset_synchronizer:alt_rst_sync_uq1.reset_out
 reset_req <= altera_reset_synchronizer:alt_rst_req_sync_uq1.reset_out
 
 
-|ADCtst|ADC:u0|adc_rst_controller_001:rst_controller_001|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_sync_uq1
+|DAC_test|ADCtst:inst|ADC:u0|adc_rst_controller_001:rst_controller_001|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain_out.PRESET
 reset_in => altera_reset_synchronizer_int_chain[0].PRESET
 reset_in => altera_reset_synchronizer_int_chain[1].PRESET
@@ -12965,7 +13062,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|adc_rst_controller_001:rst_controller_001|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_req_sync_uq1
+|DAC_test|ADCtst:inst|ADC:u0|adc_rst_controller_001:rst_controller_001|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_req_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain[1].DATAIN
 clk => altera_reset_synchronizer_int_chain_out.CLK
 clk => altera_reset_synchronizer_int_chain[0].CLK
@@ -12973,7 +13070,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|adc_rst_controller_001:rst_controller_002
+|DAC_test|ADCtst:inst|ADC:u0|adc_rst_controller_001:rst_controller_002
 reset_in0 => altera_reset_controller:rst_controller_001.reset_in0
 clk => altera_reset_controller:rst_controller_001.clk
 reset_out <= altera_reset_controller:rst_controller_001.reset_out
@@ -13011,7 +13108,7 @@ reset_req_in8 => ~NO_FANOUT~
 reset_req_in9 => ~NO_FANOUT~
 
 
-|ADCtst|ADC:u0|adc_rst_controller_001:rst_controller_002|altera_reset_controller:rst_controller_001
+|DAC_test|ADCtst:inst|ADC:u0|adc_rst_controller_001:rst_controller_002|altera_reset_controller:rst_controller_001
 reset_in0 => merged_reset.IN0
 reset_in1 => merged_reset.IN1
 reset_in2 => merged_reset.IN1
@@ -13049,7 +13146,7 @@ reset_out <= altera_reset_synchronizer:alt_rst_sync_uq1.reset_out
 reset_req <= altera_reset_synchronizer:alt_rst_req_sync_uq1.reset_out
 
 
-|ADCtst|ADC:u0|adc_rst_controller_001:rst_controller_002|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_sync_uq1
+|DAC_test|ADCtst:inst|ADC:u0|adc_rst_controller_001:rst_controller_002|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain_out.PRESET
 reset_in => altera_reset_synchronizer_int_chain[0].PRESET
 reset_in => altera_reset_synchronizer_int_chain[1].PRESET
@@ -13059,7 +13156,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ADCtst|ADC:u0|adc_rst_controller_001:rst_controller_002|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_req_sync_uq1
+|DAC_test|ADCtst:inst|ADC:u0|adc_rst_controller_001:rst_controller_002|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_req_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain[1].DATAIN
 clk => altera_reset_synchronizer_int_chain_out.CLK
 clk => altera_reset_synchronizer_int_chain[0].CLK

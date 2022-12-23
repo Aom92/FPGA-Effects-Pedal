@@ -81,8 +81,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :      
 leds[0]                      : A9        : output : 2.5 V             :         : 7         : Y              
 leds[1]                      : A10       : output : 2.5 V             :         : 7         : Y              
 leds[7]                      : A11       : output : 2.5 V             :         : 7         : Y              
-leds[10]                     : A12       : output : 2.5 V             :         : 7         : N              
-leds[11]                     : A13       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A15       :        :                   :         : 7         :                
 display1[0]                  : A16       : output : 2.5 V             :         : 7         : Y              
@@ -120,7 +120,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AB3       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB4       :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB5       :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB6       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB7       :        :                   :         : 3         :                
+DAC_OUT                      : AB7       : output : 2.5 V             :         : 3         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB8       :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB9       :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB10      :        :                   :         : 4         :                
@@ -149,7 +149,7 @@ leds[2]                      : B10       : output : 2.5 V             :         
 leds[8]                      : B11       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : B12       :        :                   :         : 7         :                
 GND                          : B13       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B14       :        :                   :         : 7         :                
+leds[10]                     : B14       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : B15       :        :                   :         : 7         :                
 display1[4]                  : B16       : output : 2.5 V             :         : 7         : Y              
 display1[7]                  : B17       : output : 2.5 V             :         : 7         : Y              
@@ -191,7 +191,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : D8        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D10       :        :                   :         : 8         :                
 GND                          : D11       : gnd    :                   :         :           :                
-leds[9]                      : D12       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D12       :        :                   :         : 7         :                
 leds[3]                      : D13       : output : 2.5 V             :         : 7         : Y              
 leds[6]                      : D14       : output : 2.5 V             :         : 7         : Y              
 display0[0]                  : D15       : output : 2.5 V             :         : 7         : Y              
@@ -213,8 +213,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : E9        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E11       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E12       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E13       :        :                   :         : 7         :                
+leds[11]                     : E12       : output : 2.5 V             :         : 7         : N              
+leds[9]                      : E13       : output : 2.5 V             :         : 7         : N              
 leds[5]                      : E14       : output : 2.5 V             :         : 7         : Y              
 display0[2]                  : E15       : output : 2.5 V             :         : 7         : Y              
 display0[5]                  : E16       : output : 2.5 V             :         : 7         : Y              
