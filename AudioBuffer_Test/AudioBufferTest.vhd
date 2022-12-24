@@ -240,7 +240,7 @@ begin
 	begin
 		IF rising_edge(DE10CLK) then
 
-			if adc_valid = '1' then
+			if (adc_valid = '1' and adc_rchannel = "00001") then
 				addressCounter <= addressCounter + 1;
 
 				if BufferFull = '1' then
@@ -265,18 +265,18 @@ begin
 			
 			-- Cuando el contador < addressCounter > llega a su valor maximo la señal 
 			-- BufferFull se activa y por lo tanto cambiamos de escribir a leer.
-			IF (BufferFull = '0' and adc_valid = '1') THEN							
-				fread := SDRAM_write(addressCounter	, X"0" & adc_rdata);
+			IF (BufferFull = '0' and adc_valid = '1' and adc_rchannel = "00001") THEN							
+				fread := SDRAM_write(addressCounter	, X"0" & adc_rdata  );
 
 					sal_disp0 <= dataIN(3 downto 0);
 					sal_disp1 <= dataIN(7 downto 4);
 					sal_disp2 <= dataIN(11 downto 8);
-			elsif (BufferFull = '1' and adc_valid = '1') then
-				fread := SDRAM_read(addressCounter);
+			elsif (BufferFull = '1' and adc_valid = '1' and adc_rchannel = "00001") then
+					fread := SDRAM_read(addressCounter);
 					sal_disp0 <= dataOUT(3 downto 0);
 					sal_disp1 <= dataOUT(7 downto 4);
 					sal_disp2 <= dataOUT(11 downto 8);
-					Audio_Out <= dataOUT(11 downto 0);
+					Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
 
 			end if;
 

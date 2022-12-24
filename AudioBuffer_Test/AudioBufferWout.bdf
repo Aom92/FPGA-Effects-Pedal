@@ -345,6 +345,35 @@ https://fpgasoftware.intel.com/eula.
 	(annotation_block (location)(rect 976 384 1040 408))
 )
 (symbol
+	(rect 792 104 928 184)
+	(text "PWM" (rect 5 0 30 12)(font "Arial" ))
+	(text "inst1" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Reloj" (rect 0 0 24 12)(font "Arial" ))
+		(text "Reloj" (rect 21 27 45 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "D[11..0]" (rect 0 0 40 12)(font "Arial" ))
+		(text "D[11..0]" (rect 21 43 61 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 136 32)
+		(output)
+		(text "S" (rect 0 0 7 12)(font "Arial" ))
+		(text "S" (rect 110 27 117 39)(font "Arial" ))
+		(line (pt 136 32)(pt 120 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 120 64))
+	)
+)
+(symbol
 	(rect 288 120 528 424)
 	(text "AudioBufferTest" (rect 5 0 85 12)(font "Arial" ))
 	(text "inst" (rect 8 288 25 300)(font "Arial" ))
@@ -483,35 +512,6 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(drawing
 		(rectangle (rect 16 16 224 288))
-	)
-)
-(symbol
-	(rect 792 104 928 184)
-	(text "PWM" (rect 5 0 30 12)(font "Arial" ))
-	(text "inst1" (rect 8 64 31 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "Reloj" (rect 0 0 24 12)(font "Arial" ))
-		(text "Reloj" (rect 21 27 45 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "D[11..0]" (rect 0 0 40 12)(font "Arial" ))
-		(text "D[11..0]" (rect 21 43 61 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 136 32)
-		(output)
-		(text "S" (rect 0 0 7 12)(font "Arial" ))
-		(text "S" (rect 110 27 115 39)(font "Arial" ))
-		(line (pt 136 32)(pt 120 32))
-	)
-	(drawing
-		(rectangle (rect 16 16 120 64))
 	)
 )
 (connector

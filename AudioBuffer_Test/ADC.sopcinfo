@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="ADC" kind="ADC" version="1.0" fabric="QSYS">
  <!-- Format version 20.1 720 (Future versions may contain additional information.) -->
- <!-- 2022.12.23.14:29:48 -->
+ <!-- 2022.12.24.11:56:50 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1671827388</value>
+  <value>1671904610</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -2931,7 +2931,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.CSD_LENGTH</name>
-   <value>1</value>
+   <value>2</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.CSD_SLOT_0</name>
@@ -2939,7 +2939,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.CSD_SLOT_1</name>
-   <value>CH0</value>
+   <value>CH2</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.CSD_SLOT_10</name>
@@ -3247,7 +3247,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.USE_CH2</name>
-   <value>0</value>
+   <value>1</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.USE_CH3</name>
@@ -3307,7 +3307,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.altr,adc-slot-count</name>
-   <value>1</value>
+   <value>2</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -3679,7 +3679,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="use_ch2">
    <type>boolean</type>
-   <value>false</value>
+   <value>true</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -4415,7 +4415,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="seq_order_length">
    <type>int</type>
-   <value>1</value>
+   <value>2</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -4431,10 +4431,10 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="seq_order_slot_2">
    <type>int</type>
-   <value>30</value>
+   <value>2</value>
    <derived>false</derived>
    <enabled>true</enabled>
-   <visible>false</visible>
+   <visible>true</visible>
    <valid>true</valid>
   </parameter>
   <parameter name="seq_order_slot_3">
@@ -5764,7 +5764,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="SEQUENCE">
    <type>java.lang.String</type>
-   <value>1</value>
+   <value>1 2</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -6660,7 +6660,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="SEQUENCE">
    <type>java.lang.String</type>
-   <value>1</value>
+   <value>1 2</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -7316,7 +7316,7 @@ parameters are a RESULT of the module parameters. -->
    </assignment>
    <assignment>
     <name>debug.param.adc_control_0_sequence</name>
-    <value>1</value>
+    <value>1 2</value>
    </assignment>
    <assignment>
     <name>debug.param.adc_control_count</name>

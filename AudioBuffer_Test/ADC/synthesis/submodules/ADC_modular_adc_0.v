@@ -80,7 +80,7 @@ module ADC_modular_adc_0 #(
 		.refsel                          (1),
 		.device_partname_fivechar_prefix ("10M50"),
 		.is_this_first_or_second_adc     (1),
-		.analog_input_pin_mask           (1),
+		.analog_input_pin_mask           (3),
 		.dual_adc_mode                   (0),
 		.enable_usr_sim                  (0),
 		.reference_voltage_sim           (49648),
@@ -139,9 +139,9 @@ module ADC_modular_adc_0 #(
 
 	altera_modular_adc_sequencer #(
 		.DUAL_ADC_MODE    (0),
-		.CSD_LENGTH       (1),
+		.CSD_LENGTH       (2),
 		.CSD_SLOT_0       (5'b00001),
-		.CSD_SLOT_1       (5'b00000),
+		.CSD_SLOT_1       (5'b00010),
 		.CSD_SLOT_2       (5'b00000),
 		.CSD_SLOT_3       (5'b00000),
 		.CSD_SLOT_4       (5'b00000),
