@@ -11,7 +11,6 @@ end PWM;
 
 architecture Behavioral of PWM is
 signal PWM_Acumulador : std_logic_vector(12 downto 0);
-signal Cuenta : integer range 0 to 4095 := 0; 
 begin 
 	process (Reloj)	
 	begin	
@@ -20,14 +19,7 @@ begin
 		PWM_Acumulador <= ( "0" & PWM_Acumulador(11 downto 0) ) + ( "0" & D  ) ;
 		
 		end if;
-		--if rising_edge(reloj) then 
-		--	Cuenta <= (Cuenta + 1) mod 4096;
-		--	if Cuenta < D then
-		--		S <= '1';
-		--	else
-		--		S <= '0';
-		--	end if;
-		--end if;
+		
 	end process;
 	S <= PWM_Acumulador(12);
 	

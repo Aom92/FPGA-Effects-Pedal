@@ -13,7 +13,7 @@ port(
 			display0, display1, display2, display3 : out std_logic_vector (7 downto 0);
 
 			--CONEXIONES PARA DAC
-			Audio_Out : out std_logic_vector(11 downto 0);
+			Audio_Out : out std_logic_vector(15 downto 0);
 			
 			-- CONEXIONES A LA RAM --
 			DRAM_CLK : out std_logic;
@@ -276,8 +276,8 @@ begin
 					sal_disp0 <= dataOUT(3 downto 0);
 					sal_disp1 <= dataOUT(7 downto 4);
 					sal_disp2 <= dataOUT(11 downto 8);
-					Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
-
+					--Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
+					Audio_Out <= dataOUT;
 			end if;
 
 		END IF; 
