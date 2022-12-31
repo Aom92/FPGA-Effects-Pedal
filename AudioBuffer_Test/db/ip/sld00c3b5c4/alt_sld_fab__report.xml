@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2022.12.25.01:02:50"
+ date="2022.12.31.15:00:27"
  outputDirectory="C:/Users/Aom92/Desktop/Servicio Social/DE10_AudioFun/AudioBuffer_Test/db/ip/sld00c3b5c4/">
  <perimeter>
   <parameter
@@ -850,9 +850,9 @@
    <message level="Progress" culprit="current"></message>
    <message level="Info" culprit="avalon_st_adapter">Inserting data_format_adapter: data_format_adapter_0</message>
    <message level="Debug" culprit="avalon_st_adapter.clk_bridge_0">Timing: ELA:1/0.001s</message>
-   <message level="Debug" culprit="avalon_st_adapter.rst_bridge_0">Timing: ELA:2/0.000s/0.001s</message>
+   <message level="Debug" culprit="avalon_st_adapter.rst_bridge_0">Timing: ELA:2/0.001s/0.001s</message>
    <message level="Debug" culprit="avalon_st_adapter.data_format_adapter_0">Timing: ELA:1/0.007s</message>
-   <message level="Debug" culprit="avalon_st_adapter">Timing: COM:2/0.022s/0.026s</message>
+   <message level="Debug" culprit="avalon_st_adapter">Timing: COM:2/0.016s/0.018s</message>
    <message
        level="Debug"
        culprit="com_altera_sopcmodel_transforms_avalonst_AvalonStreamingTransform"><![CDATA[After transform: <b>28</b> modules, <b>79</b> connections]]></message>
@@ -904,7 +904,7 @@
    <message level="Info" culprit="capture_width"><![CDATA["<b>trfabric</b>" instantiated <b>data_format_adapter</b> "<b>capture_width</b>"]]></message>
    <message level="Debug" culprit="alt_sld_fab">queue size: 31 starting:altera_avalon_onchip_memory2 "submodules/alt_sld_fab_alt_sld_fab_trfabric_mem"</message>
    <message level="Info" culprit="mem">Starting RTL generation for module 'alt_sld_fab_alt_sld_fab_trfabric_mem'</message>
-   <message level="Info" culprit="mem">  Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=alt_sld_fab_alt_sld_fab_trfabric_mem --dir=C:/Users/Aom92/AppData/Local/Temp/alt9351_3466195787235891533.dir/0017_mem_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/Aom92/AppData/Local/Temp/alt9351_3466195787235891533.dir/0017_mem_gen//alt_sld_fab_alt_sld_fab_trfabric_mem_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="mem">  Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=alt_sld_fab_alt_sld_fab_trfabric_mem --dir=C:/Users/Aom92/AppData/Local/Temp/alt9357_2993928448760413016.dir/0017_mem_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/Aom92/AppData/Local/Temp/alt9357_2993928448760413016.dir/0017_mem_gen//alt_sld_fab_alt_sld_fab_trfabric_mem_component_configuration.pl  --do_build_sim=0  ]</message>
    <message level="Info" culprit="mem">Done RTL generation for module 'alt_sld_fab_alt_sld_fab_trfabric_mem'</message>
    <message level="Info" culprit="mem"><![CDATA["<b>trfabric</b>" instantiated <b>altera_avalon_onchip_memory2</b> "<b>mem</b>"]]></message>
    <message level="Debug" culprit="alt_sld_fab">queue size: 29 starting:altera_trace_channel_mapper "submodules/alt_sld_fab_alt_sld_fab_trfabric_capture_remap"</message>
@@ -1031,25 +1031,25 @@
    <message level="Progress" culprit="max"></message>
    <message level="Progress" culprit="current"></message>
    <message level="Info" culprit="avalon_st_adapter">Inserting error_adapter: error_adapter_0</message>
-   <message level="Debug" culprit="avalon_st_adapter.clk_bridge_0">Timing: ELA:1/0.001s</message>
-   <message level="Debug" culprit="avalon_st_adapter.rst_bridge_0">Timing: ELA:2/0.000s/0.000s</message>
-   <message level="Debug" culprit="avalon_st_adapter.error_adapter_0">Timing: ELA:1/0.006s</message>
-   <message level="Debug" culprit="avalon_st_adapter">Timing: COM:3/0.020s/0.037s</message>
+   <message level="Debug" culprit="avalon_st_adapter.clk_bridge_0">Timing: ELA:1/0.000s</message>
+   <message level="Debug" culprit="avalon_st_adapter.rst_bridge_0">Timing: ELA:2/0.000s/0.001s</message>
+   <message level="Debug" culprit="avalon_st_adapter.error_adapter_0">Timing: ELA:1/0.007s</message>
+   <message level="Debug" culprit="avalon_st_adapter">Timing: COM:3/0.022s/0.037s</message>
    <message level="Progress" culprit="min"></message>
    <message level="Progress" culprit="max"></message>
    <message level="Progress" culprit="current"></message>
    <message level="Info" culprit="avalon_st_adapter_001">Inserting error_adapter: error_adapter_0</message>
-   <message level="Debug" culprit="avalon_st_adapter_001.clk_bridge_0">Timing: ELA:1/0.000s</message>
+   <message level="Debug" culprit="avalon_st_adapter_001.clk_bridge_0">Timing: ELA:1/0.001s</message>
    <message level="Debug" culprit="avalon_st_adapter_001.rst_bridge_0">Timing: ELA:2/0.000s/0.001s</message>
-   <message level="Debug" culprit="avalon_st_adapter_001.error_adapter_0">Timing: ELA:1/0.006s</message>
-   <message level="Debug" culprit="avalon_st_adapter_001">Timing: COM:3/0.015s/0.023s</message>
+   <message level="Debug" culprit="avalon_st_adapter_001.error_adapter_0">Timing: ELA:1/0.007s</message>
+   <message level="Debug" culprit="avalon_st_adapter_001">Timing: COM:3/0.014s/0.020s</message>
    <message level="Progress" culprit="min"></message>
    <message level="Progress" culprit="max"></message>
    <message level="Progress" culprit="current"></message>
    <message level="Info" culprit="avalon_st_adapter_002">Inserting error_adapter: error_adapter_0</message>
    <message level="Debug" culprit="avalon_st_adapter_002.clk_bridge_0">Timing: ELA:1/0.000s</message>
-   <message level="Debug" culprit="avalon_st_adapter_002.rst_bridge_0">Timing: ELA:2/0.001s/0.001s</message>
-   <message level="Debug" culprit="avalon_st_adapter_002.error_adapter_0">Timing: ELA:1/0.006s</message>
+   <message level="Debug" culprit="avalon_st_adapter_002.rst_bridge_0">Timing: ELA:2/0.000s/0.000s</message>
+   <message level="Debug" culprit="avalon_st_adapter_002.error_adapter_0">Timing: ELA:1/0.008s</message>
    <message level="Debug" culprit="avalon_st_adapter_002">Timing: COM:3/0.012s/0.013s</message>
    <message
        level="Debug"
@@ -2136,9 +2136,9 @@
    <message level="Progress" culprit="current"></message>
    <message level="Info" culprit="avalon_st_adapter">Inserting data_format_adapter: data_format_adapter_0</message>
    <message level="Debug" culprit="avalon_st_adapter.clk_bridge_0">Timing: ELA:1/0.001s</message>
-   <message level="Debug" culprit="avalon_st_adapter.rst_bridge_0">Timing: ELA:2/0.000s/0.001s</message>
+   <message level="Debug" culprit="avalon_st_adapter.rst_bridge_0">Timing: ELA:2/0.001s/0.001s</message>
    <message level="Debug" culprit="avalon_st_adapter.data_format_adapter_0">Timing: ELA:1/0.007s</message>
-   <message level="Debug" culprit="avalon_st_adapter">Timing: COM:2/0.022s/0.026s</message>
+   <message level="Debug" culprit="avalon_st_adapter">Timing: COM:2/0.016s/0.018s</message>
    <message
        level="Debug"
        culprit="com_altera_sopcmodel_transforms_avalonst_AvalonStreamingTransform"><![CDATA[After transform: <b>28</b> modules, <b>79</b> connections]]></message>
@@ -2190,7 +2190,7 @@
    <message level="Info" culprit="capture_width"><![CDATA["<b>trfabric</b>" instantiated <b>data_format_adapter</b> "<b>capture_width</b>"]]></message>
    <message level="Debug" culprit="alt_sld_fab">queue size: 31 starting:altera_avalon_onchip_memory2 "submodules/alt_sld_fab_alt_sld_fab_trfabric_mem"</message>
    <message level="Info" culprit="mem">Starting RTL generation for module 'alt_sld_fab_alt_sld_fab_trfabric_mem'</message>
-   <message level="Info" culprit="mem">  Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=alt_sld_fab_alt_sld_fab_trfabric_mem --dir=C:/Users/Aom92/AppData/Local/Temp/alt9351_3466195787235891533.dir/0017_mem_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/Aom92/AppData/Local/Temp/alt9351_3466195787235891533.dir/0017_mem_gen//alt_sld_fab_alt_sld_fab_trfabric_mem_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="mem">  Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=alt_sld_fab_alt_sld_fab_trfabric_mem --dir=C:/Users/Aom92/AppData/Local/Temp/alt9357_2993928448760413016.dir/0017_mem_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/Aom92/AppData/Local/Temp/alt9357_2993928448760413016.dir/0017_mem_gen//alt_sld_fab_alt_sld_fab_trfabric_mem_component_configuration.pl  --do_build_sim=0  ]</message>
    <message level="Info" culprit="mem">Done RTL generation for module 'alt_sld_fab_alt_sld_fab_trfabric_mem'</message>
    <message level="Info" culprit="mem"><![CDATA["<b>trfabric</b>" instantiated <b>altera_avalon_onchip_memory2</b> "<b>mem</b>"]]></message>
    <message level="Debug" culprit="alt_sld_fab">queue size: 29 starting:altera_trace_channel_mapper "submodules/alt_sld_fab_alt_sld_fab_trfabric_capture_remap"</message>
@@ -2317,25 +2317,25 @@
    <message level="Progress" culprit="max"></message>
    <message level="Progress" culprit="current"></message>
    <message level="Info" culprit="avalon_st_adapter">Inserting error_adapter: error_adapter_0</message>
-   <message level="Debug" culprit="avalon_st_adapter.clk_bridge_0">Timing: ELA:1/0.001s</message>
-   <message level="Debug" culprit="avalon_st_adapter.rst_bridge_0">Timing: ELA:2/0.000s/0.000s</message>
-   <message level="Debug" culprit="avalon_st_adapter.error_adapter_0">Timing: ELA:1/0.006s</message>
-   <message level="Debug" culprit="avalon_st_adapter">Timing: COM:3/0.020s/0.037s</message>
+   <message level="Debug" culprit="avalon_st_adapter.clk_bridge_0">Timing: ELA:1/0.000s</message>
+   <message level="Debug" culprit="avalon_st_adapter.rst_bridge_0">Timing: ELA:2/0.000s/0.001s</message>
+   <message level="Debug" culprit="avalon_st_adapter.error_adapter_0">Timing: ELA:1/0.007s</message>
+   <message level="Debug" culprit="avalon_st_adapter">Timing: COM:3/0.022s/0.037s</message>
    <message level="Progress" culprit="min"></message>
    <message level="Progress" culprit="max"></message>
    <message level="Progress" culprit="current"></message>
    <message level="Info" culprit="avalon_st_adapter_001">Inserting error_adapter: error_adapter_0</message>
-   <message level="Debug" culprit="avalon_st_adapter_001.clk_bridge_0">Timing: ELA:1/0.000s</message>
+   <message level="Debug" culprit="avalon_st_adapter_001.clk_bridge_0">Timing: ELA:1/0.001s</message>
    <message level="Debug" culprit="avalon_st_adapter_001.rst_bridge_0">Timing: ELA:2/0.000s/0.001s</message>
-   <message level="Debug" culprit="avalon_st_adapter_001.error_adapter_0">Timing: ELA:1/0.006s</message>
-   <message level="Debug" culprit="avalon_st_adapter_001">Timing: COM:3/0.015s/0.023s</message>
+   <message level="Debug" culprit="avalon_st_adapter_001.error_adapter_0">Timing: ELA:1/0.007s</message>
+   <message level="Debug" culprit="avalon_st_adapter_001">Timing: COM:3/0.014s/0.020s</message>
    <message level="Progress" culprit="min"></message>
    <message level="Progress" culprit="max"></message>
    <message level="Progress" culprit="current"></message>
    <message level="Info" culprit="avalon_st_adapter_002">Inserting error_adapter: error_adapter_0</message>
    <message level="Debug" culprit="avalon_st_adapter_002.clk_bridge_0">Timing: ELA:1/0.000s</message>
-   <message level="Debug" culprit="avalon_st_adapter_002.rst_bridge_0">Timing: ELA:2/0.001s/0.001s</message>
-   <message level="Debug" culprit="avalon_st_adapter_002.error_adapter_0">Timing: ELA:1/0.006s</message>
+   <message level="Debug" culprit="avalon_st_adapter_002.rst_bridge_0">Timing: ELA:2/0.000s/0.000s</message>
+   <message level="Debug" culprit="avalon_st_adapter_002.error_adapter_0">Timing: ELA:1/0.008s</message>
    <message level="Debug" culprit="avalon_st_adapter_002">Timing: COM:3/0.012s/0.013s</message>
    <message
        level="Debug"
@@ -3240,9 +3240,9 @@
    <message level="Progress" culprit="current"></message>
    <message level="Info" culprit="avalon_st_adapter">Inserting data_format_adapter: data_format_adapter_0</message>
    <message level="Debug" culprit="avalon_st_adapter.clk_bridge_0">Timing: ELA:1/0.001s</message>
-   <message level="Debug" culprit="avalon_st_adapter.rst_bridge_0">Timing: ELA:2/0.000s/0.001s</message>
+   <message level="Debug" culprit="avalon_st_adapter.rst_bridge_0">Timing: ELA:2/0.001s/0.001s</message>
    <message level="Debug" culprit="avalon_st_adapter.data_format_adapter_0">Timing: ELA:1/0.007s</message>
-   <message level="Debug" culprit="avalon_st_adapter">Timing: COM:2/0.022s/0.026s</message>
+   <message level="Debug" culprit="avalon_st_adapter">Timing: COM:2/0.016s/0.018s</message>
    <message
        level="Debug"
        culprit="com_altera_sopcmodel_transforms_avalonst_AvalonStreamingTransform"><![CDATA[After transform: <b>28</b> modules, <b>79</b> connections]]></message>
@@ -3294,7 +3294,7 @@
    <message level="Info" culprit="capture_width"><![CDATA["<b>trfabric</b>" instantiated <b>data_format_adapter</b> "<b>capture_width</b>"]]></message>
    <message level="Debug" culprit="alt_sld_fab">queue size: 31 starting:altera_avalon_onchip_memory2 "submodules/alt_sld_fab_alt_sld_fab_trfabric_mem"</message>
    <message level="Info" culprit="mem">Starting RTL generation for module 'alt_sld_fab_alt_sld_fab_trfabric_mem'</message>
-   <message level="Info" culprit="mem">  Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=alt_sld_fab_alt_sld_fab_trfabric_mem --dir=C:/Users/Aom92/AppData/Local/Temp/alt9351_3466195787235891533.dir/0017_mem_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/Aom92/AppData/Local/Temp/alt9351_3466195787235891533.dir/0017_mem_gen//alt_sld_fab_alt_sld_fab_trfabric_mem_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="mem">  Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=alt_sld_fab_alt_sld_fab_trfabric_mem --dir=C:/Users/Aom92/AppData/Local/Temp/alt9357_2993928448760413016.dir/0017_mem_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/Aom92/AppData/Local/Temp/alt9357_2993928448760413016.dir/0017_mem_gen//alt_sld_fab_alt_sld_fab_trfabric_mem_component_configuration.pl  --do_build_sim=0  ]</message>
    <message level="Info" culprit="mem">Done RTL generation for module 'alt_sld_fab_alt_sld_fab_trfabric_mem'</message>
    <message level="Info" culprit="mem"><![CDATA["<b>trfabric</b>" instantiated <b>altera_avalon_onchip_memory2</b> "<b>mem</b>"]]></message>
    <message level="Debug" culprit="alt_sld_fab">queue size: 29 starting:altera_trace_channel_mapper "submodules/alt_sld_fab_alt_sld_fab_trfabric_capture_remap"</message>
@@ -3421,25 +3421,25 @@
    <message level="Progress" culprit="max"></message>
    <message level="Progress" culprit="current"></message>
    <message level="Info" culprit="avalon_st_adapter">Inserting error_adapter: error_adapter_0</message>
-   <message level="Debug" culprit="avalon_st_adapter.clk_bridge_0">Timing: ELA:1/0.001s</message>
-   <message level="Debug" culprit="avalon_st_adapter.rst_bridge_0">Timing: ELA:2/0.000s/0.000s</message>
-   <message level="Debug" culprit="avalon_st_adapter.error_adapter_0">Timing: ELA:1/0.006s</message>
-   <message level="Debug" culprit="avalon_st_adapter">Timing: COM:3/0.020s/0.037s</message>
+   <message level="Debug" culprit="avalon_st_adapter.clk_bridge_0">Timing: ELA:1/0.000s</message>
+   <message level="Debug" culprit="avalon_st_adapter.rst_bridge_0">Timing: ELA:2/0.000s/0.001s</message>
+   <message level="Debug" culprit="avalon_st_adapter.error_adapter_0">Timing: ELA:1/0.007s</message>
+   <message level="Debug" culprit="avalon_st_adapter">Timing: COM:3/0.022s/0.037s</message>
    <message level="Progress" culprit="min"></message>
    <message level="Progress" culprit="max"></message>
    <message level="Progress" culprit="current"></message>
    <message level="Info" culprit="avalon_st_adapter_001">Inserting error_adapter: error_adapter_0</message>
-   <message level="Debug" culprit="avalon_st_adapter_001.clk_bridge_0">Timing: ELA:1/0.000s</message>
+   <message level="Debug" culprit="avalon_st_adapter_001.clk_bridge_0">Timing: ELA:1/0.001s</message>
    <message level="Debug" culprit="avalon_st_adapter_001.rst_bridge_0">Timing: ELA:2/0.000s/0.001s</message>
-   <message level="Debug" culprit="avalon_st_adapter_001.error_adapter_0">Timing: ELA:1/0.006s</message>
-   <message level="Debug" culprit="avalon_st_adapter_001">Timing: COM:3/0.015s/0.023s</message>
+   <message level="Debug" culprit="avalon_st_adapter_001.error_adapter_0">Timing: ELA:1/0.007s</message>
+   <message level="Debug" culprit="avalon_st_adapter_001">Timing: COM:3/0.014s/0.020s</message>
    <message level="Progress" culprit="min"></message>
    <message level="Progress" culprit="max"></message>
    <message level="Progress" culprit="current"></message>
    <message level="Info" culprit="avalon_st_adapter_002">Inserting error_adapter: error_adapter_0</message>
    <message level="Debug" culprit="avalon_st_adapter_002.clk_bridge_0">Timing: ELA:1/0.000s</message>
-   <message level="Debug" culprit="avalon_st_adapter_002.rst_bridge_0">Timing: ELA:2/0.001s/0.001s</message>
-   <message level="Debug" culprit="avalon_st_adapter_002.error_adapter_0">Timing: ELA:1/0.006s</message>
+   <message level="Debug" culprit="avalon_st_adapter_002.rst_bridge_0">Timing: ELA:2/0.000s/0.000s</message>
+   <message level="Debug" culprit="avalon_st_adapter_002.error_adapter_0">Timing: ELA:1/0.008s</message>
    <message level="Debug" culprit="avalon_st_adapter_002">Timing: COM:3/0.012s/0.013s</message>
    <message
        level="Debug"
@@ -4351,7 +4351,7 @@
   <messages>
    <message level="Debug" culprit="alt_sld_fab">queue size: 31 starting:altera_avalon_onchip_memory2 "submodules/alt_sld_fab_alt_sld_fab_trfabric_mem"</message>
    <message level="Info" culprit="mem">Starting RTL generation for module 'alt_sld_fab_alt_sld_fab_trfabric_mem'</message>
-   <message level="Info" culprit="mem">  Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=alt_sld_fab_alt_sld_fab_trfabric_mem --dir=C:/Users/Aom92/AppData/Local/Temp/alt9351_3466195787235891533.dir/0017_mem_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/Aom92/AppData/Local/Temp/alt9351_3466195787235891533.dir/0017_mem_gen//alt_sld_fab_alt_sld_fab_trfabric_mem_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="mem">  Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=alt_sld_fab_alt_sld_fab_trfabric_mem --dir=C:/Users/Aom92/AppData/Local/Temp/alt9357_2993928448760413016.dir/0017_mem_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/Aom92/AppData/Local/Temp/alt9357_2993928448760413016.dir/0017_mem_gen//alt_sld_fab_alt_sld_fab_trfabric_mem_component_configuration.pl  --do_build_sim=0  ]</message>
    <message level="Info" culprit="mem">Done RTL generation for module 'alt_sld_fab_alt_sld_fab_trfabric_mem'</message>
    <message level="Info" culprit="mem"><![CDATA["<b>trfabric</b>" instantiated <b>altera_avalon_onchip_memory2</b> "<b>mem</b>"]]></message>
   </messages>
@@ -4807,25 +4807,25 @@
    <message level="Progress" culprit="max"></message>
    <message level="Progress" culprit="current"></message>
    <message level="Info" culprit="avalon_st_adapter">Inserting error_adapter: error_adapter_0</message>
-   <message level="Debug" culprit="avalon_st_adapter.clk_bridge_0">Timing: ELA:1/0.001s</message>
-   <message level="Debug" culprit="avalon_st_adapter.rst_bridge_0">Timing: ELA:2/0.000s/0.000s</message>
-   <message level="Debug" culprit="avalon_st_adapter.error_adapter_0">Timing: ELA:1/0.006s</message>
-   <message level="Debug" culprit="avalon_st_adapter">Timing: COM:3/0.020s/0.037s</message>
+   <message level="Debug" culprit="avalon_st_adapter.clk_bridge_0">Timing: ELA:1/0.000s</message>
+   <message level="Debug" culprit="avalon_st_adapter.rst_bridge_0">Timing: ELA:2/0.000s/0.001s</message>
+   <message level="Debug" culprit="avalon_st_adapter.error_adapter_0">Timing: ELA:1/0.007s</message>
+   <message level="Debug" culprit="avalon_st_adapter">Timing: COM:3/0.022s/0.037s</message>
    <message level="Progress" culprit="min"></message>
    <message level="Progress" culprit="max"></message>
    <message level="Progress" culprit="current"></message>
    <message level="Info" culprit="avalon_st_adapter_001">Inserting error_adapter: error_adapter_0</message>
-   <message level="Debug" culprit="avalon_st_adapter_001.clk_bridge_0">Timing: ELA:1/0.000s</message>
+   <message level="Debug" culprit="avalon_st_adapter_001.clk_bridge_0">Timing: ELA:1/0.001s</message>
    <message level="Debug" culprit="avalon_st_adapter_001.rst_bridge_0">Timing: ELA:2/0.000s/0.001s</message>
-   <message level="Debug" culprit="avalon_st_adapter_001.error_adapter_0">Timing: ELA:1/0.006s</message>
-   <message level="Debug" culprit="avalon_st_adapter_001">Timing: COM:3/0.015s/0.023s</message>
+   <message level="Debug" culprit="avalon_st_adapter_001.error_adapter_0">Timing: ELA:1/0.007s</message>
+   <message level="Debug" culprit="avalon_st_adapter_001">Timing: COM:3/0.014s/0.020s</message>
    <message level="Progress" culprit="min"></message>
    <message level="Progress" culprit="max"></message>
    <message level="Progress" culprit="current"></message>
    <message level="Info" culprit="avalon_st_adapter_002">Inserting error_adapter: error_adapter_0</message>
    <message level="Debug" culprit="avalon_st_adapter_002.clk_bridge_0">Timing: ELA:1/0.000s</message>
-   <message level="Debug" culprit="avalon_st_adapter_002.rst_bridge_0">Timing: ELA:2/0.001s/0.001s</message>
-   <message level="Debug" culprit="avalon_st_adapter_002.error_adapter_0">Timing: ELA:1/0.006s</message>
+   <message level="Debug" culprit="avalon_st_adapter_002.rst_bridge_0">Timing: ELA:2/0.000s/0.000s</message>
+   <message level="Debug" culprit="avalon_st_adapter_002.error_adapter_0">Timing: ELA:1/0.008s</message>
    <message level="Debug" culprit="avalon_st_adapter_002">Timing: COM:3/0.012s/0.013s</message>
    <message
        level="Debug"

@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11f MIXED_VERSIONS
 !s11e vcom 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
@@ -46,10 +47,10 @@ R6
 R7
 R8
 R9
-Z20 DEx4 work 15 audiobuffertest 0 22 WhWE;iC@zCQlz2TM[96PX2
+DEx4 work 15 audiobuffertest 0 22 WhWE;iC@zCQlz2TM[96PX2
 !i122 13
-Z21 l1008
-Z22 L159 17397
+l1008
+L159 17397
 V;UOT?5JNVXK?9h]mBlNa42
 !s100 B6cPjIdNG:QoYmPfV:;j^2
 R13
@@ -63,24 +64,24 @@ R17
 R18
 R19
 Eaudiobuffertest_vhd_vec_tst
-Z23 w1668793312
+Z20 w1668793312
 R7
 R8
 !i122 11
 R0
-Z24 8Simulacion.vwf.vht
-Z25 FSimulacion.vwf.vht
+Z21 8Simulacion.vwf.vht
+Z22 FSimulacion.vwf.vht
 l0
 L32 1
 V3TO?PZ_Ec`G8TWnZHAM3^3
 !s100 [iKJ7HjeInlLo>Se4FUB=2
 R13
 32
-Z26 !s110 1668793314
+Z23 !s110 1668793314
 !i10b 1
-Z27 !s108 1668793314.000000
-Z28 !s90 -work|work|Simulacion.vwf.vht|
-Z29 !s107 Simulacion.vwf.vht|
+Z24 !s108 1668793314.000000
+Z25 !s90 -work|work|Simulacion.vwf.vht|
+Z26 !s107 Simulacion.vwf.vht|
 !i113 1
 R18
 R19
@@ -95,11 +96,59 @@ V@I_5HH7LT32SHQQKXfXkQ1
 !s100 8mG;Q842^0f2^?1@C1_>B3
 R13
 32
-R26
+R23
 !i10b 1
-R27
-R28
-R29
+R24
+R25
+R26
 !i113 1
 R18
 R19
+vAudioBufferWout
+Z27 !s110 1672510975
+!i10b 1
+!s100 2Z_AJ=D1:3nLPE2LLa4EO1
+Z28 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Il`ABbN3YOzTVE;m=Lh4ZW1
+Z29 VDg1SIo80bB@j0V0VzS_@n1
+Z30 dC:/Users/Aom92/Desktop/Servicio Social/DE10_AudioFun/AudioBuffer_Test/simulation/qsim
+w1672510972
+8AudioBufferTest.vo
+FAudioBufferTest.vo
+!i122 22
+L0 32 145616
+Z31 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1672510973.000000
+!s107 AudioBufferTest.vo|
+!s90 -work|work|AudioBufferTest.vo|
+!i113 1
+R18
+Z32 tCvgOpt 0
+n@audio@buffer@wout
+vAudioBufferWout_vlg_vec_tst
+R27
+!i10b 1
+!s100 eeXFM2ATI0L^G3jEjkmV[0
+R28
+I5@R_mZ=fi^edGYz^6Pcn:0
+R29
+R30
+w1672510970
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 23
+L0 30 156
+R31
+r1
+!s85 0
+31
+!s108 1672510975.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R18
+R32
+n@audio@buffer@wout_vlg_vec_tst

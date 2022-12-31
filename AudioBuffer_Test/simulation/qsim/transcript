@@ -1,27 +1,203 @@
 # do AudioBufferTest.do
 # ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:44:47 on Nov 30,2022
-# vcom -work work AudioBufferTest.vho 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
-# -- Loading package fiftyfivenm_atom_pack
-# -- Loading package fiftyfivenm_components
-# -- Compiling entity AudioBufferTest
-# -- Compiling architecture structure of AudioBufferTest
-# End time: 01:44:47 on Nov 30,2022, Elapsed time: 0:00:00
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:22:53 on Dec 31,2022
+# vlog -work work AudioBufferTest.vo 
+# -- Compiling module AudioBufferWout
+# 
+# Top level modules:
+# 	AudioBufferWout
+# End time: 12:22:55 on Dec 31,2022, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:44:47 on Nov 30,2022
-# vcom -work work output_files/Waveform.vwf.vht 
-# ** Error: (vcom-7) Failed to open design unit file "output_files/Waveform.vwf.vht" in read mode.
-# No such file or directory. (errno = ENOENT)
-# End time: 01:44:47 on Nov 30,2022, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
-# Executing ONERROR command at macro ./AudioBufferTest.do line 4
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:22:55 on Dec 31,2022
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module AudioBufferWout_vlg_vec_tst
+# 
+# Top level modules:
+# 	AudioBufferWout_vlg_vec_tst
+# End time: 12:22:55 on Dec 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.AudioBufferWout_vlg_vec_tst 
+# Start time: 12:22:55 on Dec 31,2022
+# Loading work.AudioBufferWout_vlg_vec_tst
+# Loading work.AudioBufferWout
+# Loading fiftyfivenm_ver.fiftyfivenm_io_obuf
+# Loading fiftyfivenm_ver.fiftyfivenm_io_ibuf
+# Loading fiftyfivenm_ver.fiftyfivenm_pll
+# Loading fiftyfivenm_ver.fiftyfivenm_m_cntr
+# Loading fiftyfivenm_ver.fiftyfivenm_n_cntr
+# Loading fiftyfivenm_ver.fiftyfivenm_scale_cntr
+# Loading fiftyfivenm_ver.fiftyfivenm_lcell_comb
+# Loading altera_ver.dffeas
+# Loading fiftyfivenm_ver.fiftyfivenm_jtag
+# Loading fiftyfivenm_ver.fiftyfivenm_ram_block
+# Loading fiftyfivenm_ver.fiftyfivenm_ram_register
+# Loading fiftyfivenm_ver.fiftyfivenm_ram_pulse_generator
+# Loading fiftyfivenm_ver.fiftyfivenm_adcblock
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i1'.  Expected 23, found 19.
+#    Time: 0 ps  Iteration: 0  Instance: /AudioBufferWout_vlg_vec_tst/i1 File: Waveform.vwf.vt Line: 57
+# ** Warning: (vsim-3722) Waveform.vwf.vt(57): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
+# ** Warning: (vsim-3722) Waveform.vwf.vt(57): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
+# ** Warning: (vsim-3722) Waveform.vwf.vt(57): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
+# ** Warning: (vsim-3722) Waveform.vwf.vt(57): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'altera_internal_jtag'.  Expected 20, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /AudioBufferWout_vlg_vec_tst/i1/altera_internal_jtag File: AudioBufferTest.vo Line: 14742
+# ** Warning: (vsim-3722) AudioBufferTest.vo(14742): [TFMPC] - Missing connection for port 'tdoutap'.
+# ** Warning: (vsim-3722) AudioBufferTest.vo(14742): [TFMPC] - Missing connection for port 'tmscore'.
+# ** Warning: (vsim-3722) AudioBufferTest.vo(14742): [TFMPC] - Missing connection for port 'tckcore'.
+# ** Warning: (vsim-3722) AudioBufferTest.vo(14742): [TFMPC] - Missing connection for port 'tdicore'.
+# ** Warning: (vsim-3722) AudioBufferTest.vo(14742): [TFMPC] - Missing connection for port 'corectl'.
+# ** Warning: (vsim-3722) AudioBufferTest.vo(14742): [TFMPC] - Missing connection for port 'ntdopinena'.
+# ** Warning: (vsim-3722) AudioBufferTest.vo(14742): [TFMPC] - Missing connection for port 'tdocore'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance '.  Expected 8, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance  File: AudioBufferTest.vo Line: 60106
+# ** Warning: (vsim-3722) AudioBufferTest.vo(60106): [TFMPC] - Missing connection for port 'clk_dft'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected> File: $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: Design size of 27417 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# after#27
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch0" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch1" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch2" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch3" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch4" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch5" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch6" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch7" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch8" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch9" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch10" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch11" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch12" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch13" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch14" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch15" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch16" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /AudioBufferWout_vlg_vec_tst/i1/\inst|u0|modular_adc_0|control_internal|adc_inst|adcblock_instance|primitive_instance /inst/<protected>/<protected>/<protected>
+# Simulation time: 0 ps
+#  Note : Fiftyfivenm PLL locked to incoming clock
+# Time: 90000  Instance: AudioBufferWout_vlg_vec_tst.i1.\inst|DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1 
+#  Note : Fiftyfivenm PLL locked to incoming clock
+# Time: 450000  Instance: AudioBufferWout_vlg_vec_tst.i1.\inst|u0|altpll_0|sd1|pll7 
+# ** Note: $finish    : Waveform.vwf.vt(81)
+#    Time: 1 us  Iteration: 0  Instance: /AudioBufferWout_vlg_vec_tst
+# End time: 12:23:00 on Dec 31,2022, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 75

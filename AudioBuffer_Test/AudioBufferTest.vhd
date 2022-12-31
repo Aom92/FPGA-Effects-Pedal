@@ -57,18 +57,12 @@ signal RW_request : std_logic := '0';
 --	 display 
 signal sal_disp0, sal_disp1, sal_disp2,sal_disp3 : std_logic_vector(3 downto 0) := (others => '0');
 
--- Declaracion de tipos --
-
-type estado_type is (e1, e2, e3, e4);
-signal estado_pres : estado_type;
-signal estado_sig  : estado_type;
-
 
 -- LOGIC
 
 signal addressCounter : std_logic_vector(25 downto 0) := "00000000000000000000000000";
 signal BufferFull : std_logic := '0';
-
+signal write_done : boolean;
 	
 -- Componentes
 component ADC is
@@ -212,9 +206,9 @@ begin
 	sal_disp3 <= X"F" when BufferFull = '1' else X"0";	  
 	
 
-	bufferFullProc : process(ADCCLK)
+	bufferFullProc : process(DE10CLK)
   begin
-	if rising_edge (ADCCLK) then
+	if rising_edge (DE10CLK) then
 		
 		-- La Lógica de las muestras es que:
 		-- Tenemos 64 MB de RAM, la cual tiene una organización de 32M x 16. Lo cual significa que tenemos:
@@ -226,7 +220,7 @@ begin
 		-- Entonces, si se busca un "delay" de 3 segundos debemos guardar: 50k * 3 = 150k muestras solamente.
 		-- siguiendo esta logica, con 2**16 muestras guardamos 1.31 minutos de audio.
 
-		if (memaddress > X"B71B0") then --0x249F0 = 150k, grabamos 150k muestras equivale a 3 segundos aprox. según la explicacion anterior. 
+		if (memaddress > X"B71B0") then --0xB71B0 = 750k, grabamos 750k muestras equivale a 5 segundos aprox. según la explicacion anterior. 
 		
 			BufferFull <= not BufferFull;
 			
@@ -240,12 +234,10 @@ begin
 	begin
 		IF rising_edge(DE10CLK) then
 
-			if (adc_valid = '1' and adc_rchannel = "00001") then
+			if (adc_valid = '1' and adc_rchannel = "00001" ) then
 				addressCounter <= addressCounter + 1;
 
-				if BufferFull = '1' then
-				  --addressCounter <= "00000000000000000000000000";
-				end if;
+
 				-- Revisar (?) : Convertir en constante el valor maximo que almacena
 				if addressCounter > X"B71B0" then --
 					addressCounter <= "00000000000000000000000000";
@@ -266,18 +258,22 @@ begin
 			-- Cuando el contador < addressCounter > llega a su valor maximo la señal 
 			-- BufferFull se activa y por lo tanto cambiamos de escribir a leer.
 			IF (BufferFull = '0' and adc_valid = '1' and adc_rchannel = "00001") THEN							
-				fread := SDRAM_write(addressCounter	, X"0" & adc_rdata  );
+				write_done <= SDRAM_write(addressCounter	, X"0" & adc_rdata  );
 
 					sal_disp0 <= dataIN(3 downto 0);
 					sal_disp1 <= dataIN(7 downto 4);
 					sal_disp2 <= dataIN(11 downto 8);
+					Audio_Out <= X"0" & adc_rdata;
 			elsif (BufferFull = '1' and adc_valid = '1' and adc_rchannel = "00001") then
 					fread := SDRAM_read(addressCounter);
 					sal_disp0 <= dataOUT(3 downto 0);
 					sal_disp1 <= dataOUT(7 downto 4);
 					sal_disp2 <= dataOUT(11 downto 8);
 					--Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
-					Audio_Out <= dataOUT;
+					Audio_Out <= dataOUT(11 downto 0) + adc_rdata;
+			
+				
+
 			end if;
 
 		END IF; 
