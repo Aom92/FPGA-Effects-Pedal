@@ -1,4 +1,4 @@
 */output_files/*.*
-AudioBuffer_Test/.qsys_edit
-AudioBuffer_Test/db
-AudioBuffer_Test/incremental_db
+*/.qsys_edit
+*/db
+*/incremental_db
