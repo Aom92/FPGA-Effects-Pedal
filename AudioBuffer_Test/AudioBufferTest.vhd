@@ -270,7 +270,7 @@ begin
 					sal_disp1 <= dataOUT(7 downto 4);
 					sal_disp2 <= dataOUT(11 downto 8);
 					--Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
-					Audio_Out <= dataOUT(11 downto 0) + adc_rdata;
+					Audio_Out <= dataOUT + adc_rdata;
 			
 				
 

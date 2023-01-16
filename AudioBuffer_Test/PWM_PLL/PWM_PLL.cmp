@@ -1,0 +1,8 @@
+	component PWM_PLL is
+		port (
+			clk_clk       : in  std_logic := 'X'; -- clk
+			pwm_clk_clk   : out std_logic;        -- clk
+			reset_reset_n : in  std_logic := 'X'  -- reset_n
+		);
+	end component PWM_PLL;
+

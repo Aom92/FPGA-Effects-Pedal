@@ -1,0 +1,186 @@
+component SYSCLK is
+        port (
+            ref_clk_clk        : in  std_logic := 'X'; -- clk
+            ref_reset_reset    : in  std_logic := 'X'; -- reset
+            reset_source_reset : out std_logic;        -- reset
+            sdram_clk_clk      : out std_logic;        -- clk
+            sys_clk_clk        : out std_logic         -- clk
+        );
+    end component SYSCLK;
+
+u0 : component SYSCLK
+        port map (
+            clk ,     	 
+            clr  , 		
+            MainReset,	 
+            DRAM_CLK  ,    
+            Mainclk      
+        );
+	
+	-- Máquina de Estados Principal.
+	Controller: process(clk, boton_command, boton_command1)
+	begin
+		
+		if (rising_edge(clk)) then
+		
+			-- RESET
+			if (clr = '1' ) then
+			
+				--NOP (no necesita delay)
+				DRAM_CS_N  <= '0';
+				DRAM_RAS_N <= '1';
+				DRAM_CAS_N <= '1';
+				DRAM_WE_N  <= '1';
+				
+				DRAM_UDQM  <= '1'; -- DQM = UDQM + LDQM
+				DRAM_LDQM  <= '1'; -- DQM: DQMH-DQML <- Output Disable
+			
+			
+			else
+				-- ESTADO INICIAL : (Inicializar SDRAM )
+				-- Aplicar un voltaje (Automatico)
+				-- Reloj estable con DQM y CKE en alto.
+				DRAM_CKE <= '1';
+				DRAM_UDQM <= '1';
+				DRAM_LDQM <= '1';
+				
+				-- Delay de 100ns antes de cualquier comando. 
+				
+				--NOP (no necesita delay)
+				DRAM_CS_N  <= '0';
+				DRAM_RAS_N <= '1';
+				DRAM_CAS_N <= '1';
+				DRAM_WE_N  <= '1';
+					
+				--Mandamos un precharge despues de 100ns
+				
+				DRAM_CS_N  <= '0' after 100ns;
+				DRAM_RAS_N <= '0' after 100ns;
+				DRAM_CAS_N <= '1' after 100ns;
+				DRAM_WE_N  <= '0' after 100ns;
+				
+				presente <= ACTIVATE; 
+				
+				case presente is 
+				
+					when ACTIVATE => 
+						-- Configure mode register. 
+						
+						DRAM_ADDR <= "0001000100000";
+						
+						-- LOAD MODE REGISTER 
+						DRAM_CS_N  <= '0';
+						DRAM_RAS_N <= '0';
+						DRAM_CAS_N <= '0';
+						DRAM_WE_N  <= '0';
+						
+						siguiente <= IDLE after 100ns;
+						
+				
+					when IDLE => 
+						--NOP (no necesita delay)
+						
+						DRAM_CS_N  <= '0';
+						DRAM_RAS_N <= '1';
+						DRAM_CAS_N <= '1';
+						DRAM_WE_N  <= '1';
+						
+						DRAM_UDQM  <= '1'; -- DQM = UDQM + LDQM
+						DRAM_LDQM  <= '1'; -- DQM: DQMH-DQML <- Output Disable
+						
+						if (RW_request = '1' ) then
+							
+							if ( Escritura = '0'	) then
+								siguiente <= NWRITE;
+							else 
+								siguiente <= NREAD;
+							
+							end if;
+						else 
+							siguiente <= IDLE;
+						end if;
+						
+					when NREAD =>
+						
+						if (Lectura = '1') then
+						
+							-- LECTURA	
+							DRAM_UDQM <= '0';
+							DRAM_LDQM <= '0'; -- Habilitar Salidas
+							
+							DRAM_ADDR <= b"00000000000" & address;
+							DRAM_CS_N  <= '1';
+							DRAM_RAS_N <= '0';
+							DRAM_CAS_N <= '1';
+							DRAM_WE_N  <= '0';
+							
+							data_out <= DRAM_DQ;
+							
+							
+							
+							siguiente <= PRECHARGE after 60ns;
+							
+						else 
+							
+							siguiente <= PRECHARGE after 60ns;
+							
+						end if;
+					
+					when NWRITE =>
+						if (Escritura = '1') then
+							-- ESCRITURA	
+							DRAM_UDQM <= '1';
+							DRAM_LDQM <= '1'; -- Deshabilitar Salidas
+							DRAM_ADDR <= b"00000000000" & address;
+							DRAM_CS_N  <= '1';
+							DRAM_RAS_N <= '0';
+							DRAM_CAS_N <= '1';
+							DRAM_WE_N  <= '0';
+							
+							--DRAM_DQ <= "AAAA" ;
+							
+							siguiente <= NWRITE after 60ns; 							
+						else 
+							
+							siguiente <= PRECHARGE after 60ns;
+						end if;
+					
+					
+					when PRECHARGE =>
+						
+						DRAM_UDQM <= '0';
+						DRAM_LDQM <= '0'; -- Habilitar Salidas
+						
+						-- PRECHARGE ALL
+						DRAM_CS_N  <= '0'	;
+						DRAM_RAS_N <= '0' ;
+						DRAM_CAS_N <= '1' ;
+						DRAM_WE_N  <= '0' ;
+						
+						
+						siguiente <= IDLE;
+					
+					when others =>
+						DRAM_UDQM <= '1';
+						DRAM_LDQM <= '1'; -- Deshabilitar Salidas
+						--NOP (no necesita delay)
+						DRAM_CS_N  <= '0';
+						DRAM_RAS_N <= '1';
+						DRAM_CAS_N <= '1';
+						DRAM_WE_N  <= '1';
+						
+						siguiente <= IDLE;	
+				
+				end case ;
+				
+				
+			
+			
+			end if;
+		end if;
+		
+		
+		
+		
+	
+	end process;

@@ -1,0 +1,41 @@
+2022
+==================================
+-Semana del 10 al 16 de Octubre:
+	* https://community.intel.com/t5/FPGA-Intellectual-Property/AVALON-MM-Master-Template-on-DE10-Lite/m-p/250097#M16603%3Fwapkw=de10-lite
+	Este articulo me salvó, pues me dio las pistas necesarias para utilizar el controlador de la SDRAM.
+
+	* De la mimsa manera este repositorio en GitHub fue con el que pude encontrar el mistico modulo IP para controlar la SDRAM.
+	https://github.com/hildebrandmw/de10lite-hdl/tree/master/components/dram
+
+
+Que sigue... 
+	La Manera de utilizar el ADC y la memoria para almcenar unas muestras de audio. 
+
+==================================
+-Semana del 17 al 22 de Octubre: 
+	* Utilizando la guía actualizada de intel para el controlador del ADC:
+https://www.intel.com/content/www/us/en/docs/programmable/683596/20-1/analog-to-digital-converter-overview.html
+	* Logramos hacer un DEMO de ADC en VHDL, donde leemos de un canal y vemos la informacion binaria en bruto, sin ningun tipo de conversión en los displays
+  	de 7 segmentos y los LEDs de la tarjeta. 
+
+
+-Semana del 24 al 28 de Octubre:
+	* Del DEMO del ADC en VHDL, hubo que hacer correcciones al comportamiento del código.
+
+===================================
+-Semana del 31 de Octubre al 4 de Noviembre:
+	* Replanteamiento del código, no se comporta como es esperado 
+-Semana del 7 al 11 de Noviembre:
+	* Corrección de malas prácticas de Programación en VHDL. Montañas de latches inferidos.
+-Semana del 14 al 18 de Noviembre:
+	* Segunda parte de la corrección de malas Prácticas.
+	* Configuración de Ubuntu para la Laptop del IIMAS.
+	* Configuración de Quartus y el USB-Blaster para Laptop del IIMAS.
+
+-Semana del 21 al 25 de Noviembre:
+	* Tercera parte de corrección de malas prácticas. 
+	* Configuración de VSCode como editor de texto para Quartus. ( horrible el editor default )
+	* Replanteamiento del programa:
+		- https://vhdlwhiz.com/ring-buffer-fifo/
+		- Link de utilidad.
+	

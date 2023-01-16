@@ -1,0 +1,41 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate "D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\AudioBuffer_Test\PWM_PLL.qsys" --block-symbol-file --output-directory="D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\AudioBuffer_Test\PWM_PLL" --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading AudioBuffer_Test/PWM_PLL.qsys
+Progress: Reading input file
+Progress: Adding PWM_PLL [altpll 20.1]
+Progress: Parameterizing module PWM_PLL
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: PWM_PLL.PWM_PLL: PWM_PLL.areset_conduit must be exported, or connected to a matching conduit.
+Warning: PWM_PLL.PWM_PLL: PWM_PLL.locked_conduit must be exported, or connected to a matching conduit.
+Warning: PWM_PLL.PWM_PLL: PWM_PLL.pll_slave must be connected to an Avalon-MM master
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate "D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\AudioBuffer_Test\PWM_PLL.qsys" --synthesis=VHDL --greybox --output-directory="D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\AudioBuffer_Test\PWM_PLL\synthesis" --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading AudioBuffer_Test/PWM_PLL.qsys
+Progress: Reading input file
+Progress: Adding PWM_PLL [altpll 20.1]
+Progress: Parameterizing module PWM_PLL
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: PWM_PLL.PWM_PLL: PWM_PLL.areset_conduit must be exported, or connected to a matching conduit.
+Warning: PWM_PLL.PWM_PLL: PWM_PLL.locked_conduit must be exported, or connected to a matching conduit.
+Warning: PWM_PLL.PWM_PLL: PWM_PLL.pll_slave must be connected to an Avalon-MM master
+Info: PWM_PLL: Generating PWM_PLL "PWM_PLL" for QUARTUS_SYNTH
+Info: PWM_PLL: "PWM_PLL" instantiated altpll "PWM_PLL"
+Info: rst_controller: "PWM_PLL" instantiated altera_reset_controller "rst_controller"
+Info: PWM_PLL: Done "PWM_PLL" with 3 modules, 5 files
+Info: Generating third-party timing and resource estimation model ...
+Info: Done generating third-party timing and resource estimation model.
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
