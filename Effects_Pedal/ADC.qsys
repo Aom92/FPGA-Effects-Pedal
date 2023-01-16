@@ -33,6 +33,14 @@
          type = "int";
       }
    }
+   element clock_bridge_0
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
    element modular_adc_0
    {
       datum _sortIndex
@@ -63,7 +71,7 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="AudioBufferTest.qpf" />
+ <parameter name="projectName" value="Effects_Pedal.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
@@ -78,6 +86,11 @@
    dir="start" />
  <interface name="clk_adc" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
+ <interface
+   name="sample_clk"
+   internal="clock_bridge_0.out_clk"
+   type="clock"
+   dir="start" />
  <module
    name="AvalonBridge"
    kind="altera_jtag_avalon_master"
@@ -264,6 +277,15 @@
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   name="clock_bridge_0"
+   kind="altera_clock_bridge"
+   version="20.1"
+   enabled="1">
+  <parameter name="DERIVED_CLOCK_RATE" value="2000000" />
+  <parameter name="EXPLICIT_CLOCK_RATE" value="0" />
+  <parameter name="NUM_CLOCK_OUTPUTS" value="1" />
  </module>
  <module
    name="modular_adc_0"
@@ -479,6 +501,11 @@
    version="20.1"
    start="altpll_0.c0"
    end="AvalonBridge.clk" />
+ <connection
+   kind="clock"
+   version="20.1"
+   start="altpll_0.c0"
+   end="clock_bridge_0.in_clk" />
  <connection
    kind="clock"
    version="20.1"

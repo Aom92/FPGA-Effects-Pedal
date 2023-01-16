@@ -8,6 +8,8 @@ Progress: Adding altpll_0 [altpll 20.1]
 Progress: Parameterizing module altpll_0
 Progress: Adding clk_0 [clock_source 20.1]
 Progress: Parameterizing module clk_0
+Progress: Adding clock_bridge_0 [altera_clock_bridge 20.1]
+Progress: Parameterizing module clock_bridge_0
 Progress: Adding modular_adc_0 [altera_modular_adc 20.1]
 Progress: Parameterizing module modular_adc_0
 Progress: Building connections
@@ -30,6 +32,8 @@ Progress: Adding altpll_0 [altpll 20.1]
 Progress: Parameterizing module altpll_0
 Progress: Adding clk_0 [clock_source 20.1]
 Progress: Parameterizing module clk_0
+Progress: Adding clock_bridge_0 [altera_clock_bridge 20.1]
+Progress: Parameterizing module clock_bridge_0
 Progress: Adding modular_adc_0 [altera_modular_adc 20.1]
 Progress: Parameterizing module modular_adc_0
 Progress: Building connections

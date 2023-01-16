@@ -15,7 +15,8 @@ entity ADC is
 		adc_response_channel       : out std_logic_vector(4 downto 0);         --             .channel
 		adc_response_data          : out std_logic_vector(11 downto 0);        --             .data
 		clk_adc_clk                : in  std_logic                     := '0'; --      clk_adc.clk
-		reset_reset_n              : in  std_logic                     := '0'  --        reset.reset_n
+		reset_reset_n              : in  std_logic                     := '0'; --        reset.reset_n
+		sample_clk_clk             : out std_logic                             --   sample_clk.clk
 	);
 end entity ADC;
 
@@ -248,7 +249,7 @@ architecture rtl of ADC is
 		);
 	end component adc_rst_controller_001;
 
-	signal altpll_0_c0_clk                                         : std_logic;                     -- altpll_0:c0 -> [AvalonBridge:clk_clk, mm_interconnect_0:altpll_0_c0_clk, modular_adc_0:adc_pll_clock_clk, rst_controller_002:clk]
+	signal altpll_0_c0_clk                                         : std_logic;                     -- altpll_0:c0 -> [sample_clk_clk, AvalonBridge:clk_clk, mm_interconnect_0:altpll_0_c0_clk, modular_adc_0:adc_pll_clock_clk, rst_controller_002:clk]
 	signal altpll_0_locked_conduit_export                          : std_logic;                     -- altpll_0:locked -> modular_adc_0:adc_pll_locked_export
 	signal avalonbridge_master_readdata                            : std_logic_vector(31 downto 0); -- mm_interconnect_0:AvalonBridge_master_readdata -> AvalonBridge:master_readdata
 	signal avalonbridge_master_waitrequest                         : std_logic;                     -- mm_interconnect_0:AvalonBridge_master_waitrequest -> AvalonBridge:master_waitrequest
@@ -562,5 +563,7 @@ begin
 	reset_reset_n_ports_inv <= not reset_reset_n;
 
 	rst_controller_001_reset_out_reset_ports_inv <= not rst_controller_001_reset_out_reset;
+
+	sample_clk_clk <= altpll_0_c0_clk;
 
 end architecture rtl; -- of ADC

@@ -7,7 +7,8 @@
 			adc_response_channel       : out std_logic_vector(4 downto 0);         -- channel
 			adc_response_data          : out std_logic_vector(11 downto 0);        -- data
 			clk_adc_clk                : in  std_logic                     := 'X'; -- clk
-			reset_reset_n              : in  std_logic                     := 'X'  -- reset_n
+			reset_reset_n              : in  std_logic                     := 'X'; -- reset_n
+			sample_clk_clk             : out std_logic                             -- clk
 		);
 	end component ADC;
 
