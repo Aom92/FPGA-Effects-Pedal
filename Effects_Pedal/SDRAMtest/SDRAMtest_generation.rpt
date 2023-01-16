@@ -1,0 +1,57 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate "D:\UNAM\Servicio Social\Trabajo\SDRAM_tst2\SDRAMtest.qsys" --block-symbol-file --output-directory="D:\UNAM\Servicio Social\Trabajo\SDRAM_tst2\SDRAMtest" --family="MAX 10" --part=10M08DAF484C8G
+Progress: Loading SDRAM_tst2/SDRAMtest.qsys
+Progress: Reading input file
+Progress: Adding Avalon_MM_0 [Avalon_MM 1.0]
+Progress: Parameterizing module Avalon_MM_0
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 20.1]
+Progress: Parameterizing module new_sdram_controller_0
+Progress: Adding sys_sdram_pll_0 [altera_up_avalon_sys_sdram_pll 18.0]
+Progress: Parameterizing module sys_sdram_pll_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: SDRAMtest.new_sdram_controller_0: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: SDRAMtest.sys_sdram_pll_0: Refclk Freq: 50.0
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate "D:\UNAM\Servicio Social\Trabajo\SDRAM_tst2\SDRAMtest.qsys" --synthesis=VHDL --greybox --output-directory="D:\UNAM\Servicio Social\Trabajo\SDRAM_tst2\SDRAMtest\synthesis" --family="MAX 10" --part=10M08DAF484C8G
+Progress: Loading SDRAM_tst2/SDRAMtest.qsys
+Progress: Reading input file
+Progress: Adding Avalon_MM_0 [Avalon_MM 1.0]
+Progress: Parameterizing module Avalon_MM_0
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 20.1]
+Progress: Parameterizing module new_sdram_controller_0
+Progress: Adding sys_sdram_pll_0 [altera_up_avalon_sys_sdram_pll 18.0]
+Progress: Parameterizing module sys_sdram_pll_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: SDRAMtest.new_sdram_controller_0: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: SDRAMtest.sys_sdram_pll_0: Refclk Freq: 50.0
+Info: SDRAMtest: Generating SDRAMtest "SDRAMtest" for QUARTUS_SYNTH
+Info: Interconnect is inserted between master Avalon_MM_0.avm_m0 and slave new_sdram_controller_0.s1 because the master has address signal 26 bit wide, but the slave is 25 bit wide.
+Info: new_sdram_controller_0: Starting RTL generation for module 'SDRAMtest_new_sdram_controller_0'
+Info: new_sdram_controller_0:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=SDRAMtest_new_sdram_controller_0 --dir=C:/Users/Aom92/AppData/Local/Temp/alt9277_4078423863304276927.dir/0008_new_sdram_controller_0_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/Aom92/AppData/Local/Temp/alt9277_4078423863304276927.dir/0008_new_sdram_controller_0_gen//SDRAMtest_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]
+Info: new_sdram_controller_0: Done RTL generation for module 'SDRAMtest_new_sdram_controller_0'
+Info: new_sdram_controller_0: "SDRAMtest" instantiated altera_avalon_new_sdram_controller "new_sdram_controller_0"
+Info: sys_sdram_pll_0: "SDRAMtest" instantiated altera_up_avalon_sys_sdram_pll "sys_sdram_pll_0"
+Info: mm_interconnect_0: "SDRAMtest" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: rst_controller: "SDRAMtest" instantiated altera_reset_controller "rst_controller"
+Info: sys_pll: "sys_sdram_pll_0" instantiated altera_up_altpll "sys_pll"
+Info: reset_from_locked: "sys_sdram_pll_0" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
+Info: Avalon_MM_0_avm_m0_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "Avalon_MM_0_avm_m0_translator"
+Info: new_sdram_controller_0_s1_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "new_sdram_controller_0_s1_translator"
+Info: SDRAMtest: Done "SDRAMtest" with 9 modules, 11 files
+Info: Generating third-party timing and resource estimation model ...
+Info: Done generating third-party timing and resource estimation model.
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
