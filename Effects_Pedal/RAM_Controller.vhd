@@ -32,6 +32,7 @@ end entity;
 architecture rtl of RAM_controller is
     -- RAM Signals
     signal reset_dram : std_logic;
+    signal fread : boolean;
     signal reset_n : std_logic;
     signal memaddress : std_logic_vector (25 downto 0) := "00000000000000000000000000";
     signal readrequest, writerequest : std_logic;
@@ -84,7 +85,7 @@ architecture rtl of RAM_controller is
 	begin
 		memaddress <= Address;
 		
-		writerequest <= '0' after 15 ns;
+		writerequest <= '0' ;
 		readrequest <= '1';
 
         
@@ -119,22 +120,24 @@ begin
 	  );
 
     read_buff <= dataOUT;
-    
+    dataIN <= write_buff;
+    memaddress <= address;
+    readrequest <= read_op;
+    writerequest <= write_op;
 
-    controlador : process (DE10CLK) is
-    variable fread, fwrite : boolean;
-    begin
-        if rising_edge(DE10CLK) then
-            if read_op = '1' then
-              fread := SDRAM_read(memaddress);
-            end if;
 
-            if write_op = '1' then
-              fwrite := SDRAM_write(memaddress, write_buff);
-            end if;
-        end if;
-
-    end process;
+--controlador : process (DE10CLK) is
+--variable fread, fwrite : boolean;
+--begin
+--    if rising_edge(DE10CLK) then
+--        if read_op = '1' and write_op = '0' then
+--          fread := SDRAM_read(memaddress);
+--        end if--
+--        if write_op = '1' and read_op = '0' then
+--          fwrite := SDRAM_write(memaddress, write_buff);
+--        end if;
+--    end if--
+--end process;
 
 
 end architecture;

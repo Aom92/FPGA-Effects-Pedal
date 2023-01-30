@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2023.01.16.16:46:06</td>
+    <td class="l">2023.01.17.18:26:30</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -89,10 +89,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <br/>All Components
      <br/>&#160;&#160;
      <a href="#module_altpll_0"><b>altpll_0</b>
-     </a> altpll 20.1
-     <br/>&#160;&#160;
-     <a href="#module_modular_adc_0"><b>modular_adc_0</b>
-     </a> altera_modular_adc 20.1</span>
+     </a> altpll 20.1</span>
    </div>
   </div>
   <div style="width:100% ;  height:10px"> </div>
@@ -100,155 +97,17 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   <table class="mmap">
    <tr>
     <td class="empty" rowspan="2"></td>
-    <td class="mastermodule" colspan="1">
-     <a href="#module_AvalonBridge"><b>AvalonBridge</b>
-     </a>
-    </td>
-   </tr>
-   <tr>
-    <td class="masterlr">&#160;master</td>
    </tr>
    <tr>
     <td class="slavemodule">&#160;
      <a href="#module_altpll_0"><b>altpll_0</b>
      </a>
     </td>
-    <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">pll_slave&#160;</td>
-    <td class="empty"></td>
-   </tr>
-   <tr>
-    <td class="slavemodule">&#160;
-     <a href="#module_modular_adc_0"><b>modular_adc_0</b>
-     </a>
-    </td>
-    <td class="empty"></td>
-   </tr>
-   <tr>
-    <td class="slaveb">sequencer_csr&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>00000200</td>
    </tr>
   </table>
-  <a name="module_AvalonBridge"> </a>
-  <div>
-   <hr/>
-   <h2>AvalonBridge</h2>altera_jtag_avalon_master v20.1
-   <br/>
-   <div class="greydiv">
-    <table class="connectionboxes">
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_altpll_0">altpll_0</a>
-      </td>
-      <td class="from">c0&#160;&#160;</td>
-      <td class="main" rowspan="10">AvalonBridge</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;clk</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_clk_0">clk_0</a>
-      </td>
-      <td class="from">clk_reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;clk_reset</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">master&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_modular_adc_0">modular_adc_0</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;sequencer_csr</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">master_reset&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_altpll_0">altpll_0</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;inclk_interface_reset</td>
-     </tr>
-    </table>
-   </div>
-   <br/>
-   <br/>
-   <table class="flowbox">
-    <tr>
-     <td class="parametersbox">
-      <h2>Parameters</h2>
-      <table>
-       <tr>
-        <td class="parametername">USE_PLI</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">PLI_PORT</td>
-        <td class="parametervalue">50000</td>
-       </tr>
-       <tr>
-        <td class="parametername">COMPONENT_CLOCK</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">FAST_VER</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">FIFO_DEPTHS</td>
-        <td class="parametervalue">2</td>
-       </tr>
-       <tr>
-        <td class="parametername">AUTO_DEVICE_FAMILY</td>
-        <td class="parametervalue">MAX10FPGA</td>
-       </tr>
-       <tr>
-        <td class="parametername">AUTO_DEVICE</td>
-        <td class="parametervalue">10M50DAF484C7G</td>
-       </tr>
-       <tr>
-        <td class="parametername">AUTO_DEVICE_SPEEDGRADE</td>
-        <td class="parametervalue">7</td>
-       </tr>
-       <tr>
-        <td class="parametername">deviceFamily</td>
-        <td class="parametervalue">MAX 10</td>
-       </tr>
-       <tr>
-        <td class="parametername">generateLegacySim</td>
-        <td class="parametervalue">false</td>
-       </tr>
-      </table>
-     </td>
-    </tr>
-   </table>&#160;&#160;
-   <table class="flowbox">
-    <tr>
-     <td class="parametersbox">
-      <h2>Software Assignments</h2>(none)</td>
-    </tr>
-   </table>
-  </div>
   <a name="module_altpll_0"> </a>
   <div>
    <hr/>
@@ -261,7 +120,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_clk_0">clk_0</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="18">altpll_0</td>
+      <td class="main" rowspan="9">altpll_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;inclk_interface</td>
@@ -284,18 +143,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td class="to">&#160;&#160;locked_conduit</td>
      </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_AvalonBridge">AvalonBridge</a>
-      </td>
-      <td class="from">master_reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;inclk_interface_reset</td>
-     </tr>
      <tr>
       <td></td>
       <td></td>
@@ -308,38 +155,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="to">&#160;&#160;adc_pll_clock</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">c0&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_AvalonBridge">AvalonBridge</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;clk</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">c0&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_clock_bridge_0">clock_bridge_0</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;in_clk</td>
      </tr>
     </table>
    </div>
@@ -1076,63 +891,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
-  <a name="module_clock_bridge_0"> </a>
-  <div>
-   <hr/>
-   <h2>clock_bridge_0</h2>altera_clock_bridge v20.1
-   <br/>
-   <div class="greydiv">
-    <table class="connectionboxes">
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_altpll_0">altpll_0</a>
-      </td>
-      <td class="from">c0&#160;&#160;</td>
-      <td class="main" rowspan="2">clock_bridge_0</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;in_clk</td>
-     </tr>
-    </table>
-   </div>
-   <br/>
-   <br/>
-   <table class="flowbox">
-    <tr>
-     <td class="parametersbox">
-      <h2>Parameters</h2>
-      <table>
-       <tr>
-        <td class="parametername">DERIVED_CLOCK_RATE</td>
-        <td class="parametervalue">2000000</td>
-       </tr>
-       <tr>
-        <td class="parametername">EXPLICIT_CLOCK_RATE</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">NUM_CLOCK_OUTPUTS</td>
-        <td class="parametervalue">1</td>
-       </tr>
-       <tr>
-        <td class="parametername">deviceFamily</td>
-        <td class="parametervalue">UNKNOWN</td>
-       </tr>
-       <tr>
-        <td class="parametername">generateLegacySim</td>
-        <td class="parametervalue">false</td>
-       </tr>
-      </table>
-     </td>
-    </tr>
-   </table>&#160;&#160;
-   <table class="flowbox">
-    <tr>
-     <td class="parametersbox">
-      <h2>Software Assignments</h2>(none)</td>
-    </tr>
-   </table>
-  </div>
   <a name="module_modular_adc_0"> </a>
   <div>
    <hr/>
@@ -1142,22 +900,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <table class="connectionboxes">
      <tr>
       <td class="neighbor" rowspan="2">
-       <a href="#module_AvalonBridge">AvalonBridge</a>
-      </td>
-      <td class="from">master&#160;&#160;</td>
-      <td class="main" rowspan="12">modular_adc_0</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;sequencer_csr</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="2">
        <a href="#module_altpll_0">altpll_0</a>
       </td>
       <td class="from">c0&#160;&#160;</td>
+      <td class="main" rowspan="9">modular_adc_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;adc_pll_clock</td>
@@ -1204,11 +950,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">CORE_VAR</td>
-        <td class="parametervalue">2</td>
+        <td class="parametervalue">3</td>
        </tr>
        <tr>
         <td class="parametername">ENABLE_DEBUG</td>
-        <td class="parametervalue">1</td>
+        <td class="parametervalue">0</td>
        </tr>
        <tr>
         <td class="parametername">MONITOR_COUNT_WIDTH</td>
@@ -1312,7 +1058,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">enable_usr_sim</td>
-        <td class="parametervalue">0</td>
+        <td class="parametervalue">1</td>
        </tr>
        <tr>
         <td class="parametername">use_tsd</td>
@@ -1384,7 +1130,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">use_ch2</td>
-        <td class="parametervalue">true</td>
+        <td class="parametervalue">false</td>
        </tr>
        <tr>
         <td class="parametername">en_thmax_ch2</td>
@@ -1752,7 +1498,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">seq_order_length</td>
-        <td class="parametervalue">2</td>
+        <td class="parametervalue">1</td>
        </tr>
        <tr>
         <td class="parametername">seq_order_slot_1</td>
@@ -2033,267 +1779,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">CORE_VARIANT</td>
-        <td class="parametervalue">2</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_LENGTH</td>
-        <td class="parametervalue">2</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_0</td>
-        <td class="parametervalue">CH1</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_1</td>
-        <td class="parametervalue">CH2</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_10</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_11</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_12</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_13</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_14</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_15</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_16</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_17</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_18</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_19</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_2</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_20</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_21</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_22</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_23</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_24</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_25</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_26</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_27</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_28</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_29</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_3</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_30</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_31</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_32</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_33</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_34</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_35</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_36</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_37</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_38</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_39</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_4</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_40</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_41</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_42</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_43</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_44</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_45</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_46</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_47</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_48</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_49</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_5</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_50</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_51</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_52</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_53</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_54</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_55</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_56</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_57</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_58</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_59</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_6</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_60</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_61</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_62</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_63</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_7</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_8</td>
-        <td class="parametervalue">CH0</td>
-       </tr>
-       <tr>
-        <td class="parametername">CSD_SLOT_9</td>
-        <td class="parametervalue">CH0</td>
+        <td class="parametervalue">3</td>
        </tr>
        <tr>
         <td class="parametername">DUAL_ADC_MODE</td>
@@ -2353,7 +1839,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">USE_CH2</td>
-        <td class="parametervalue">1</td>
+        <td class="parametervalue">0</td>
        </tr>
        <tr>
         <td class="parametername">USE_CH3</td>
@@ -2398,8 +1884,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </div>
   <table class="blueBar">
    <tr>
-    <td class="l">generation took 0.01 seconds</td>
-    <td class="r">rendering took 0.03 seconds</td>
+    <td class="l">generation took 0.00 seconds</td>
+    <td class="r">rendering took 0.02 seconds</td>
    </tr>
   </table>
  </body>

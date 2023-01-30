@@ -38,4 +38,27 @@ https://www.intel.com/content/www/us/en/docs/programmable/683596/20-1/analog-to-
 	* Replanteamiento del programa:
 		- https://vhdlwhiz.com/ring-buffer-fifo/
 		- Link de utilidad.
+
+===================================
+-Semana del 28 de Noviembre al 2 de Diciembre:
+	*Generacion de funciones para abstraer operaciones de R/W de la memoria RAM.
+	*Reestructuracion del codigo de buffer full
+-Semana del 5 al 9 de Diciembre:
+	* Cambios a la logica del AddressCounter, por fin se repite la informacion correctamente.
+	Haciendo calculos de acuerdo con el tamaño de la memoria y los datos de entrada se obtuvieron delays de aprox 3 segundos, tambien se tuvo que cambiar el reloj que se utiliza para dicha lògica, siendo el del ADC el adecuado
+- Periodo vacacional:
+
+	* Reestructuracion general del proyecto para utilizar diagramas de bloques.
+
+===================================
+- Semana del 16 de Febrero:
+	* Nuevo proyecto: Effect Pedal, abstraccion de los demas proyectos para incluir efectos variados y toda la logica de una pedalera.
+
+
+	* Para las conexiones del circuito, con una conexion a tierra a la entrada (+) del OP AMP eliminamos el ruido de entrada
+
+	*** Posibles soluciones, bit clipping y endianess del ADC al DAC.
 	
+	*** NO ES PROBLEMA DE ENDIANESS, problema electrio. DC Offset de 600mV
+
+

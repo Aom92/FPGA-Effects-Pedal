@@ -6,9 +6,17 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
+   element ADC_0
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
    element Effect_Pedal
    {
       datum _originalDeviceFamily
@@ -79,19 +87,39 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="Effects_Pedal.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
  <parameter name="timeStamp" value="0" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
+ <interface
+   name="adc_0_adc_response"
+   internal="ADC_0.adc_response"
+   type="avalon_streaming"
+   dir="start" />
+ <interface
+   name="adc_0_sample_clk"
+   internal="ADC_0.sample_clk"
+   type="clock"
+   dir="start" />
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
+ <module name="ADC_0" kind="ADC" version="1.0" enabled="1">
+  <parameter name="AUTO_CLK_ADC_CLOCK_DOMAIN" value="2" />
+  <parameter name="AUTO_CLK_ADC_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_CLK_ADC_RESET_DOMAIN" value="2" />
+  <parameter name="AUTO_DEVICE" value="10M50DAF484C7G" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="MAX 10" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_UNIQUE_ID" value="$${FILENAME}_ADC_0" />
+ </module>
  <module name="Memory_Controller" kind="subsystemA" version="1.0" enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="2" />
   <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
-  <parameter name="AUTO_CLK_RESET_DOMAIN" value="1" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="2" />
   <parameter name="AUTO_DEVICE" value="10M50DAF484C7G" />
   <parameter name="AUTO_DEVICE_FAMILY" value="MAX 10" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
@@ -109,11 +137,13 @@
    version="20.1"
    start="clk_0.clk"
    end="Memory_Controller.clk" />
+ <connection kind="clock" version="20.1" start="clk_0.clk" end="ADC_0.clk_adc" />
  <connection
    kind="reset"
    version="20.1"
    start="clk_0.clk_reset"
    end="Memory_Controller.reset" />
+ <connection kind="reset" version="20.1" start="clk_0.clk_reset" end="ADC_0.reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />

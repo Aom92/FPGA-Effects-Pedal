@@ -1,7 +1,14 @@
 	component Effect_Pedal is
 		port (
-			clk_clk       : in std_logic := 'X'; -- clk
-			reset_reset_n : in std_logic := 'X'  -- reset_n
+			adc_0_adc_response_valid         : out std_logic;                            -- valid
+			adc_0_adc_response_startofpacket : out std_logic;                            -- startofpacket
+			adc_0_adc_response_endofpacket   : out std_logic;                            -- endofpacket
+			adc_0_adc_response_empty         : out std_logic_vector(0 downto 0);         -- empty
+			adc_0_adc_response_channel       : out std_logic_vector(4 downto 0);         -- channel
+			adc_0_adc_response_data          : out std_logic_vector(11 downto 0);        -- data
+			adc_0_sample_clk_clk             : out std_logic;                            -- clk
+			clk_clk                          : in  std_logic                     := 'X'; -- clk
+			reset_reset_n                    : in  std_logic                     := 'X'  -- reset_n
 		);
 	end component Effect_Pedal;
 

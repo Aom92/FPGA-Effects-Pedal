@@ -1,0 +1,177 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate "D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\Effect_Pedal.qsys" --block-symbol-file --output-directory="D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\Effect_Pedal" --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading Effects_Pedal/Effect_Pedal.qsys
+Progress: Reading input file
+Progress: Adding ADC_0 [ADC 1.0]
+Progress: Reading input file
+Progress: Adding AvalonBridge [altera_jtag_avalon_master 20.1]
+Progress: Parameterizing module AvalonBridge
+Progress: Adding altpll_0 [altpll 20.1]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding clock_bridge_0 [altera_clock_bridge 20.1]
+Progress: Parameterizing module clock_bridge_0
+Progress: Adding modular_adc_0 [altera_modular_adc 20.1]
+Progress: Parameterizing module modular_adc_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Progress: Parameterizing module ADC_0
+Progress: Adding Memory_Controller [subsystemA 1.0]
+Progress: Reading input file
+Progress: Adding SDRAMtest_0 [SDRAMtest 1.0]
+Progress: Reading input file
+Progress: Adding Avalon_Pipelined_MM_0 [Avalon_Pipelined_MM 1.0]
+Progress: Parameterizing module Avalon_Pipelined_MM_0
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 20.1]
+Progress: Parameterizing module new_sdram_controller_0
+Progress: Adding sys_sdram_pll_0 [altera_up_avalon_sys_sdram_pll 18.0]
+Progress: Parameterizing module sys_sdram_pll_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Progress: Parameterizing module SDRAMtest_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Progress: Parameterizing module Memory_Controller
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Effect_Pedal.ADC_0.modular_adc_0.control_internal.response/st_splitter_internal.in: The sink has a empty signal of 1 bits, but the source does not. Avalon-ST Adapter will be inserted.
+Info: Effect_Pedal.ADC_0.modular_adc_0.st_splitter_internal.out1/adc_monitor_internal.adc_data: The source has a empty signal of 1 bits, but the sink does not. Avalon-ST Adapter will be inserted.
+Warning: Effect_Pedal.ADC_0.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Info: Effect_Pedal.Memory_Controller.SDRAMtest_0.new_sdram_controller_0: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: Effect_Pedal.Memory_Controller.SDRAMtest_0.sys_sdram_pll_0: Refclk Freq: 50.0
+Warning: Effect_Pedal.Memory_Controller.SDRAMtest_0: SDRAMtest_0.Avalon_Pipelined_MM_0_avm_m0 must be exported, or connected to a matching conduit.
+Warning: Effect_Pedal.Memory_Controller.SDRAMtest_0: SDRAMtest_0.Avalon_Pipelined_MM_0_reset must be exported, or connected to a matching conduit.
+Warning: Effect_Pedal.Memory_Controller.SDRAMtest_0: SDRAMtest_0.sdram_wire must be exported, or connected to a matching conduit.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate "D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\Effect_Pedal.qsys" --synthesis=VHDL --output-directory="D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\Effect_Pedal\synthesis" --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading Effects_Pedal/Effect_Pedal.qsys
+Progress: Reading input file
+Progress: Adding ADC_0 [ADC 1.0]
+Progress: Parameterizing module ADC_0
+Progress: Adding Memory_Controller [subsystemA 1.0]
+Progress: Parameterizing module Memory_Controller
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Effect_Pedal.ADC_0.modular_adc_0.control_internal.response/st_splitter_internal.in: The sink has a empty signal of 1 bits, but the source does not. Avalon-ST Adapter will be inserted.
+Info: Effect_Pedal.ADC_0.modular_adc_0.st_splitter_internal.out1/adc_monitor_internal.adc_data: The source has a empty signal of 1 bits, but the sink does not. Avalon-ST Adapter will be inserted.
+Warning: Effect_Pedal.ADC_0.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Info: Effect_Pedal.Memory_Controller.SDRAMtest_0.new_sdram_controller_0: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: Effect_Pedal.Memory_Controller.SDRAMtest_0.sys_sdram_pll_0: Refclk Freq: 50.0
+Warning: Effect_Pedal.Memory_Controller.SDRAMtest_0: SDRAMtest_0.Avalon_Pipelined_MM_0_avm_m0 must be exported, or connected to a matching conduit.
+Warning: Effect_Pedal.Memory_Controller.SDRAMtest_0: SDRAMtest_0.Avalon_Pipelined_MM_0_reset must be exported, or connected to a matching conduit.
+Warning: Effect_Pedal.Memory_Controller.SDRAMtest_0: SDRAMtest_0.sdram_wire must be exported, or connected to a matching conduit.
+Info: Effect_Pedal: Generating Effect_Pedal "Effect_Pedal" for QUARTUS_SYNTH
+Info: Interconnect is inserted between master AvalonBridge.master and slave modular_adc_0.sequencer_csr because the master has address signal 32 bit wide, but the slave is 1 bit wide.
+Info: Interconnect is inserted between master AvalonBridge.master and slave modular_adc_0.sequencer_csr because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master AvalonBridge.master and slave modular_adc_0.sequencer_csr because the master has readdatavalid signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master AvalonBridge.master and slave modular_adc_0.sequencer_csr because the master has byteenable signal 4 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master AvalonBridge.master and slave modular_adc_0.sequencer_csr because they have different clock source.
+Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
+Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
+Info: ADC_0: "Effect_Pedal" instantiated ADC "ADC_0"
+Info: Memory_Controller: "Effect_Pedal" instantiated subsystemA "Memory_Controller"
+Info: AvalonBridge: "ADC_0" instantiated altera_jtag_avalon_master "AvalonBridge"
+Info: altpll_0: "ADC_0" instantiated altpll "altpll_0"
+Info: avalon_st_adapter: Inserting data_format_adapter: data_format_adapter_0
+Info: avalon_st_adapter: Inserting timing_adapter: timing_adapter_0
+Info: avalon_st_adapter: Inserting timing_adapter: timing_adapter_1
+Info: avalon_st_adapter_001: Inserting data_format_adapter: data_format_adapter_0
+Info: avalon_st_adapter_001: Inserting timing_adapter: timing_adapter_0
+Info: avalon_st_adapter_001: Inserting timing_adapter: timing_adapter_1
+Info: modular_adc_0: "ADC_0" instantiated altera_modular_adc "modular_adc_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "ADC_0" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: rst_controller: "ADC_0" instantiated altera_reset_controller "rst_controller"
+Info: Interconnect is inserted between master Avalon_Pipelined_MM_0.avm_m0 and slave new_sdram_controller_0.s1 because the master has address signal 26 bit wide, but the slave is 25 bit wide.
+Info: Interconnect is inserted between master Avalon_Pipelined_MM_0.avm_m0 and slave new_sdram_controller_0.s1 because the master has readdata signal 32 bit wide, but the slave is 16 bit wide.
+Info: Interconnect is inserted between master Avalon_Pipelined_MM_0.avm_m0 and slave new_sdram_controller_0.s1 because the master has writedata signal 32 bit wide, but the slave is 16 bit wide.
+Info: SDRAMtest_0: "Memory_Controller" instantiated SDRAMtest "SDRAMtest_0"
+Info: jtag_phy_embedded_in_jtag_master: "AvalonBridge" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: "AvalonBridge" instantiated timing_adapter "timing_adt"
+Info: fifo: "AvalonBridge" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "AvalonBridge" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "AvalonBridge" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "AvalonBridge" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "AvalonBridge" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "AvalonBridge" instantiated channel_adapter "p2b_adapter"
+Info: control_internal: "modular_adc_0" instantiated altera_modular_adc_control "control_internal"
+Info: adc_monitor_internal: "modular_adc_0" instantiated altera_trace_adc_monitor "adc_monitor_internal"
+Info: sequencer_internal: "modular_adc_0" instantiated altera_modular_adc_sequencer "sequencer_internal"
+Info: st_splitter_internal: "modular_adc_0" instantiated altera_avalon_st_splitter "st_splitter_internal"
+Info: avalon_st_adapter: "modular_adc_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_001: "modular_adc_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
+Info: AvalonBridge_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "AvalonBridge_master_translator"
+Info: modular_adc_0_sequencer_csr_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "modular_adc_0_sequencer_csr_translator"
+Info: AvalonBridge_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "AvalonBridge_master_agent"
+Info: modular_adc_0_sequencer_csr_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "modular_adc_0_sequencer_csr_agent"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/Effect_Pedal/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/Effect_Pedal/synthesis/submodules/altera_avalon_st_clock_crosser.v
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/Effect_Pedal/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/Effect_Pedal/synthesis/submodules/altera_std_synchronizer_nocut.v
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: new_sdram_controller_0: Starting RTL generation for module 'Effect_Pedal_Memory_Controller_SDRAMtest_0_new_sdram_controller_0'
+Info: new_sdram_controller_0:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=Effect_Pedal_Memory_Controller_SDRAMtest_0_new_sdram_controller_0 --dir=C:/Users/Aom92/AppData/Local/Temp/alt9374_1736890068897791014.dir/0073_new_sdram_controller_0_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/Aom92/AppData/Local/Temp/alt9374_1736890068897791014.dir/0073_new_sdram_controller_0_gen//Effect_Pedal_Memory_Controller_SDRAMtest_0_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]
+Info: new_sdram_controller_0: Done RTL generation for module 'Effect_Pedal_Memory_Controller_SDRAMtest_0_new_sdram_controller_0'
+Info: new_sdram_controller_0: "SDRAMtest_0" instantiated altera_avalon_new_sdram_controller "new_sdram_controller_0"
+Info: sys_sdram_pll_0: "SDRAMtest_0" instantiated altera_up_avalon_sys_sdram_pll "sys_sdram_pll_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "SDRAMtest_0" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: altera_trace_adc_monitor_wa_inst: "Generating: altera_trace_adc_monitor_wa_inst"
+Info: core: "adc_monitor_internal" instantiated altera_trace_adc_monitor_core "core"
+Info: trace_endpoint: "adc_monitor_internal" instantiated altera_trace_monitor_endpoint "trace_endpoint"
+Info: data_format_adapter_0: "avalon_st_adapter" instantiated data_format_adapter "data_format_adapter_0"
+Info: timing_adapter_0: "avalon_st_adapter" instantiated timing_adapter "timing_adapter_0"
+Info: timing_adapter_1: "avalon_st_adapter" instantiated timing_adapter "timing_adapter_1"
+Info: data_format_adapter_0: "avalon_st_adapter_001" instantiated data_format_adapter "data_format_adapter_0"
+Info: timing_adapter_0: "avalon_st_adapter_001" instantiated timing_adapter "timing_adapter_0"
+Info: timing_adapter_1: "avalon_st_adapter_001" instantiated timing_adapter "timing_adapter_1"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: sys_pll: "sys_sdram_pll_0" instantiated altera_up_altpll "sys_pll"
+Info: reset_from_locked: "sys_sdram_pll_0" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: new_sdram_controller_0_s1_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "new_sdram_controller_0_s1_burst_adapter"
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/Effect_Pedal/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/Effect_Pedal/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/Effect_Pedal/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/Effect_Pedal/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: new_sdram_controller_0_s1_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "new_sdram_controller_0_s1_rsp_width_adapter"
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/Effect_Pedal/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/Effect_Pedal/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: altera_trace_adc_monitor_wa_inst: "core" instantiated altera_trace_adc_monitor_core "altera_trace_adc_monitor_wa_inst"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: altera_trace_adc_monitor_wa_inst: "altera_trace_adc_monitor_wa_inst" instantiated altera_trace_adc_monitor_wa "altera_trace_adc_monitor_wa_inst"
+Info: Effect_Pedal: Done "Effect_Pedal" with 60 modules, 92 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

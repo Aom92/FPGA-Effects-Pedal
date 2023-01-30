@@ -6,14 +6,16 @@ use ieee.std_logic_unsigned.all;
 entity EffectPedal is 
 port( 
 
-			-- CONEXIONES GENERALES DE LA FPGA -- 
+			-- RELOJES y RESETS -- 
 			DE10CLK : in std_logic; -- RELOJES
 			DE10Reset : in std_logic;
+
+			-- SALIDAS VISUALES --
 			led_out : out std_logic_vector(15 downto 0);
 			display0, display1, display2, display3 : out std_logic_vector (7 downto 0);
-
-
-			-- CONEXIONES AL RAM DRIVER --
+			-- ENTRADAS DE CONTROL --
+			delay_enable : in std_logic;
+	
 
 			-- CONEXIONES AL DEL CONTROLADOR DE LA RAM --
 			address : out std_logic_vector(25 downto 0) := "00000000000000000000000000";
@@ -24,16 +26,11 @@ port(
 			-- CONEXIONES PARA DEL ADC.
 			adc_valid : in std_logic;
 			adc_rdata : in std_logic_vector(11 downto 0);
-			adc_rchannel : in std_logic_vector(4 downto 0);
+			adc_channel : in std_logic_vector(4 downto 0);
 
 			--CONEXIONES PARA DAC
 			Audio_Out : out std_logic_vector(15 downto 0)
 			
-			
-
-
-
-
 	);
 
 end entity;
@@ -50,52 +47,17 @@ signal sal_disp0, sal_disp1, sal_disp2,sal_disp3 : std_logic_vector(3 downto 0) 
 signal addressCounter : std_logic_vector(25 downto 0) := "00000000000000000000000000";
 signal BufferFull : std_logic := '0';
 signal write_done : boolean;
-	
+constant SAMPLE_DELAY : std_logic_vector := X"124F8";
+
+
 begin
 	
-	-- Instancias de componenetes. 
-	--# INSTANCIA NUEVA DEL CONVERTIDOR A/D. AHORA UTILIZA EL MODULO ADC CON SECUENCIADOR E INTERFAZ AVALON MM.
-	-- Ventajas: Requerimos menor cantidad de señales. Permite ver la señal desde el System Console. 
-	-- Desventaja: Aumenta el tiempo de Compilacion al triple ( 30 segundos a 1 minuto con 55 segundos)
-
-
-
-	-- # INSTANCIA ANTERIOR DEL CONVERTIDOR A/D. UTILIZANDO UNICAMENTE EL MODULO:  ADC CORE 
-	--u1 : component ADC
-    --    port map (
-    --        ADCCLK                ,    --clk_adc.clk
-    --        DE10RESET              ,      --reset.reset_n
-    --        adc_cvalid          ,     -- adc_command.valid
-    --        adc_cchannel        ,     --.channel
-    --        adc_csop  ,  --             .startofpacket
-    --        adc_ceop    ,    --         .endofpacket
-    --        adc_ready         ,       --.ready
-    --        adc_valid      ,         -- adc_response.valid
-    --        adc_rchannel     ,       --.channel
-    --        adc_rdata        ,       --.data
-    --        adc_sop,  --             	.startofpacket
-    --        adc_eop     --             .endofpacket
-    --    );  
-	--	adc_cvalid <= '1';
-	--	adc_cchannel <= "00001"; -- ??? ESto esta raro, no se cual sea la dedicated analog input pin, usando el canal "1" corresponde al pin 0 de la fpga
-	--							 -- !!! La DE10-Lite no cuenta con el canal 0 dedicado a lecturas analogicas, por tanto se comienza desde el canal 1.
-	--	adc_csop <= '1';
-	--	adc_ceop <= '1';
-	
-	
-	
-
-
-
 	-- PROCESOS CONCURRENTES
 
 	led_out <=  "0000" & adc_rdata;
 	-- Salidas hacia los displays 7 segmentos
 	--BufferFull <= not BufferFull when memaddress = X"3FFFFFF";
 	sal_disp3 <= X"F" when BufferFull = '1' else X"0";
-
-	address <= addressCounter;	  
-	
 
 	bufferFullProc : process(DE10CLK)
   begin
@@ -111,7 +73,7 @@ begin
 		-- Entonces, si se busca un "delay" de 3 segundos debemos guardar: 50k * 3 = 150k muestras solamente.
 		-- siguiendo esta logica, con 2**16 muestras guardamos 1.31 minutos de audio.
 
-		if (addressCounter > X"B71B0") then --0xB71B0 = 750k, grabamos 750k muestras equivale a 5 segundos aprox. según la explicacion anterior. 
+		if (addressCounter > SAMPLE_DELAY) then --0xB71B0 = 750k, grabamos 750k muestras equivale a 5 segundos aprox. según la explicacion anterior. 
 		
 			BufferFull <= not BufferFull;
 			
@@ -125,12 +87,12 @@ begin
 	begin
 		IF rising_edge(DE10CLK) then
 
-			if (adc_valid = '1' and adc_rchannel = "00001" ) then
+			if (adc_valid = '1' and adc_channel = "00001" ) then
 				addressCounter <= addressCounter + 1;
 
 
 				-- Revisar (?) : Convertir en constante el valor maximo que almacena
-				if addressCounter > X"B71B0" then --
+				if addressCounter > SAMPLE_DELAY then --
 					addressCounter <= "00000000000000000000000000";
 				end if;
 			else
@@ -145,37 +107,48 @@ begin
 	variable fread : boolean;
 	begin
 		IF rising_edge(DE10CLK) THEN						  
+			address <= addressCounter;
 			
 			-- Cuando el contador < addressCounter > llega a su valor maximo la señal 
 			-- BufferFull se activa y por lo tanto cambiamos de escribir a leer.
-			IF (BufferFull = '0' and adc_valid = '1' and adc_rchannel = "00001") THEN							
-			-- ESCRITURA	
-					sal_disp0 <= adc_rdata(3 downto 0);
-					sal_disp1 <= adc_rdata(7 downto 4);
-					sal_disp2 <= adc_rdata(11 downto 8);
+			if delay_enable = '1' then
+				IF (BufferFull = '0' and adc_valid = '1' and adc_channel = "00001" ) THEN							
+				-- ESCRITURA	
+						sal_disp0 <= adc_rdata(3 downto 0);
+						sal_disp1 <= adc_rdata(7 downto 4);
+						sal_disp2 <= adc_rdata(11 downto 8);
+						read_op <= '0';
+						write_op <= '1';
+						
+						write_buff <= X"0" & adc_rdata;
+						Audio_Out <= X"0" & adc_rdata;
 
-					write_op <= '1';
-					read_op <= '0';
-					write_buff <= X"0" & adc_rdata;
-					Audio_Out <= X"0" & adc_rdata;
+				elsif (BufferFull = '1' and adc_valid = '1' and adc_channel = "00001" ) then
+				-- LECTURA 
+						write_op <= '0';
+						read_op <= '1';
+						
 
-			elsif (BufferFull = '1' and adc_valid = '1' and adc_rchannel = "00001") then
-			-- LECTURA 
-					read_op <= '1';
-					write_op <= '0';
-
-					sal_disp0 <= adc_rdata(3 downto 0);
-					sal_disp1 <= adc_rdata(7 downto 4);
-					sal_disp2 <= adc_rdata(11 downto 8);
-					--Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
-					Audio_Out <= read_buff + adc_rdata;
-			
+						sal_disp0 <= adc_rdata(3 downto 0);
+						sal_disp1 <= adc_rdata(7 downto 4);
+						sal_disp2 <= adc_rdata(11 downto 8);
+						--Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
+						Audio_Out <= adc_rdata + read_buff ;
 				
+					
 
+				end if;
+			
+			else
+				if (adc_valid = '1' and adc_channel = "00001") then
+				  Audio_Out <= X"0" & adc_rdata;
+				end if;
+				-- OUT CLEAN AUDIO --
+				
 			end if;
-
+				
+			
 		END IF; 
-	
 	end process;
 
 
