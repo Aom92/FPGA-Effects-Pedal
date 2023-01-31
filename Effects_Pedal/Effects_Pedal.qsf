@@ -145,7 +145,6 @@ set_location_assignment PIN_A10 -to led_out[2]
 set_location_assignment PIN_A9 -to led_out[1]
 set_location_assignment PIN_A8 -to led_out[0]
 set_global_assignment -name VHDL_FILE ADC_simple.vhd
-set_global_assignment -name QIP_FILE unnamed/synthesis/unnamed.qip
 set_global_assignment -name QIP_FILE ADC/synthesis/ADC.qip
 set_global_assignment -name VHDL_FILE RAM_Controller.vhd
 set_global_assignment -name QIP_FILE SDRAMtest/synthesis/SDRAMtest.qip

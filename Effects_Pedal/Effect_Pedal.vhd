@@ -121,7 +121,7 @@ begin
 						write_op <= '1';
 						
 						write_buff <= X"0" & adc_rdata;
-						Audio_Out <= X"0" & adc_rdata;
+						Audio_Out <= adc_rdata + read_buff;
 
 				elsif (BufferFull = '1' and adc_valid = '1' and adc_channel = "00001" ) then
 				-- LECTURA 

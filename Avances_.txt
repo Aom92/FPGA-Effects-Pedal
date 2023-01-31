@@ -51,7 +51,7 @@ https://www.intel.com/content/www/us/en/docs/programmable/683596/20-1/analog-to-
 	* Reestructuracion general del proyecto para utilizar diagramas de bloques.
 
 ===================================
-- Semana del 16 de Febrero:
+- Semana del 16 de Enero:
 	* Nuevo proyecto: Effect Pedal, abstraccion de los demas proyectos para incluir efectos variados y toda la logica de una pedalera.
 
 
@@ -60,5 +60,13 @@ https://www.intel.com/content/www/us/en/docs/programmable/683596/20-1/analog-to-
 	*** Posibles soluciones, bit clipping y endianess del ADC al DAC.
 	
 	*** NO ES PROBLEMA DE ENDIANESS, problema electrio. DC Offset de 600mV
+
+- Semana del 30 de Enero:
+	* Problema de ruido "Solucionado", los posibles causantes son todos mis circuitos propuestos, ademas de la fuente de alimentación.
+	
+	* A dia de hoy 31 de enero, no haciendo uso del circuito nivelador de entrada, el ruido que se generaba despues de los 2 minutos de reproduccion se ha eliminado,
+ahora la salida de audio es bastante limpia al no tener ningún efecto,
+		- Respecto al delay, aun hay un pequeño DC offset al momento de leer informacion de la RAM. (Tal vez podamos solucionar esto al siempre estar leyendo algo de la RAM).
+
 
 
