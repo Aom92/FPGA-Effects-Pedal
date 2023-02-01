@@ -48,30 +48,44 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 80)
 		(input)
-		(text "read_buff[15..0]" (rect 0 0 63 12)(font "Arial" ))
-		(text "read_buff[15..0]" (rect 21 75 84 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
+		(text "phase_enable" (rect 0 0 54 12)(font "Arial" ))
+		(text "phase_enable" (rect 21 75 75 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
 	)
 	(port
 		(pt 0 96)
 		(input)
-		(text "adc_valid" (rect 0 0 37 12)(font "Arial" ))
-		(text "adc_valid" (rect 21 91 58 103)(font "Arial" ))
+		(text "distort_enable" (rect 0 0 54 12)(font "Arial" ))
+		(text "distort_enable" (rect 21 91 75 103)(font "Arial" ))
 		(line (pt 0 96)(pt 16 96)(line_width 1))
 	)
 	(port
 		(pt 0 112)
 		(input)
-		(text "adc_rdata[11..0]" (rect 0 0 62 12)(font "Arial" ))
-		(text "adc_rdata[11..0]" (rect 21 107 83 119)(font "Arial" ))
+		(text "read_buff[15..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "read_buff[15..0]" (rect 21 107 84 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 3))
 	)
 	(port
 		(pt 0 128)
 		(input)
+		(text "adc_valid" (rect 0 0 37 12)(font "Arial" ))
+		(text "adc_valid" (rect 21 123 58 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "adc_rdata[11..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "adc_rdata[11..0]" (rect 21 139 83 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 0 160)
+		(input)
 		(text "adc_channel[4..0]" (rect 0 0 70 12)(font "Arial" ))
-		(text "adc_channel[4..0]" (rect 21 123 91 135)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128)(line_width 3))
+		(text "adc_channel[4..0]" (rect 21 155 91 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 3))
 	)
 	(port
 		(pt 240 32)
@@ -143,7 +157,23 @@ https://fpgasoftware.intel.com/eula.
 		(text "Audio_Out[15..0]" (rect 152 171 219 183)(font "Arial" ))
 		(line (pt 240 176)(pt 224 176)(line_width 3))
 	)
+	(parameter
+		"SAMPLE_WIDTH"
+		"12"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"PHASE_SHIFT"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"FEEDBACK_GAIN"
+		"14"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 224 192)(line_width 1))
 	)
+	(annotation_block (parameter)(rect 256 -64 356 16))
 )
