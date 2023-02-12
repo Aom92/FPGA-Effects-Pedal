@@ -25,21 +25,22 @@ Todos los proyectos siguen el siguiente pinout tanto para las entradas como para
 | 5V (VCC5)| Alimentación para circuitos externos |
 | GND  |  Tierra Común  |
 
-La señal de audio analógica que entra a la FPGA debe ser nivelada para entrar en el rango de 0 a 5V, ya que el ADC solo opera con valores de voltaje positivos. Por lo tanto se puede utilizar un circuito sencillo como el siguiente para poder nivelar el voltaje y opere dentro del rango adecuado. 
+La señal de audio analógica que entra a la FPGA debe ser nivelada para entrar en el rango de 0 a 5V, ya que el ADC solo opera con valores de voltaje positivos. En caso de no hacerlo, la señal de entrada se vería como el siguiente ejemplo y se distorsiona el audio.
 
-![Circuito Nivelador](https://user-images.githubusercontent.com/9735721/215594323-21b9fc3a-d449-42f6-b820-cae92a8238dc.png)
-
-
-Tambien es preferible que la salida de audio sea amplificada, durante el desarrollo de este proyecto se utilizó un circuito como el siguiente:
-
-![CircuitoAmplificador](https://user-images.githubusercontent.com/9735721/215594671-3b325f12-9d30-4d6e-a234-db7f96b5d785.png)
+![entrada de audio sin offset de voltaje](https://user-images.githubusercontent.com/9735721/218288852-55d38257-8de1-4a95-9a18-44cfaa98c755.png)
 
 
+Por lo tanto se puede utilizar un circuito nivelador de voltaje para la señal de entrada y entre dentro del rango apropiado para el ADC. Tambien es preferible que la salida de audio sea amplificada, ya que a la salida de la FPGA tenemos una señal de audio muy debíl.
+
+Para el desarrollo de este proyecto se utilizó un circuito como el siguiente, el cual aun presenta incosistencias pero es es el que produce la menor cantidad de interferencia y ruido añadido a la señal de audio que se procesa.
+
+
+![CIRCUITO AMPLIFICADOR](https://user-images.githubusercontent.com/9735721/218288832-148a48d7-123a-40c6-9e0f-f6ca73fd0c17.png)
 
 
 
-
-
+La respuesta en frecuencia del adc muestra que incluso con un circuito nivelador sencillo el total de distorsión armónica está dentro de un rango aceptable.
+![FreqResponse1200](https://user-images.githubusercontent.com/9735721/218288911-2d41bf02-f93a-4ab0-9854-2ace07bf7d4b.png)
 
 
 
