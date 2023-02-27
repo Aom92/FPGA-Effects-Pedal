@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "01/31/2023 18:13:30"
+-- DATE "02/27/2023 11:33:01"
 
 -- 
 -- Device: Altera 10M50DAF484C7G Package FBGA484
@@ -1521,18 +1521,18 @@ SIGNAL \inst|u1|modular_adc_0|control_internal|u_control_fsm|u_eoc_synchronizer|
 SIGNAL \inst2|DRAM|new_sdram_controller_0|active_data\ : std_logic_vector(15 DOWNTO 0);
 SIGNAL \inst|u1|modular_adc_0|control_internal|u_control_fsm|chsel\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \inst|u1|modular_adc_0|control_internal|u_control_fsm|u_clk_dft_synchronizer|dreg\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|DRAM|new_sdram_controller_0|ALT_INV_oe~_Duplicate_15_q\ : std_logic;
-SIGNAL \inst4|ALT_INV_BufferFull~q\ : std_logic;
-SIGNAL \inst4|ALT_INV_Mux14~0_combout\ : std_logic;
-SIGNAL \inst4|ALT_INV_Mux7~0_combout\ : std_logic;
-SIGNAL \inst4|ALT_INV_Mux0~0_combout\ : std_logic;
-SIGNAL \inst2|DRAM|new_sdram_controller_0|ALT_INV_m_state.000010000~q\ : std_logic;
 SIGNAL \inst2|DRAM|new_sdram_controller_0|ALT_INV_Selector22~1_combout\ : std_logic;
 SIGNAL \inst2|DRAM|new_sdram_controller_0|ALT_INV_Selector20~0_combout\ : std_logic;
 SIGNAL \inst2|DRAM|new_sdram_controller_0|ALT_INV_Selector19~3_combout\ : std_logic;
 SIGNAL \inst2|DRAM|rst_controller|alt_rst_sync_uq1|ALT_INV_altera_reset_synchronizer_int_chain_out~q\ : std_logic;
 SIGNAL \inst2|DRAM|new_sdram_controller_0|ALT_INV_Selector21~1_combout\ : std_logic;
 SIGNAL \inst2|DRAM|new_sdram_controller_0|ALT_INV_always5~0_combout\ : std_logic;
+SIGNAL \inst2|DRAM|new_sdram_controller_0|ALT_INV_m_state.000010000~q\ : std_logic;
+SIGNAL \inst4|ALT_INV_BufferFull~q\ : std_logic;
+SIGNAL \inst4|ALT_INV_Mux14~0_combout\ : std_logic;
+SIGNAL \inst4|ALT_INV_Mux7~0_combout\ : std_logic;
+SIGNAL \inst4|ALT_INV_Mux0~0_combout\ : std_logic;
+SIGNAL \inst2|DRAM|new_sdram_controller_0|ALT_INV_oe~_Duplicate_15_q\ : std_logic;
 SIGNAL \inst2|DRAM|new_sdram_controller_0|ALT_INV_oe~_Duplicate_14_q\ : std_logic;
 SIGNAL \inst2|DRAM|new_sdram_controller_0|ALT_INV_oe~_Duplicate_13_q\ : std_logic;
 SIGNAL \inst2|DRAM|new_sdram_controller_0|ALT_INV_oe~_Duplicate_12_q\ : std_logic;
@@ -1617,18 +1617,18 @@ ww_devpor <= devpor;
 \inst2|DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk[0]~clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \inst2|DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk\(0));
 
 \inst2|DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk[1]~clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \inst2|DRAM|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|clk\(1));
-\inst2|DRAM|new_sdram_controller_0|ALT_INV_oe~_Duplicate_15_q\ <= NOT \inst2|DRAM|new_sdram_controller_0|oe~_Duplicate_15_q\;
-\inst4|ALT_INV_BufferFull~q\ <= NOT \inst4|BufferFull~q\;
-\inst4|ALT_INV_Mux14~0_combout\ <= NOT \inst4|Mux14~0_combout\;
-\inst4|ALT_INV_Mux7~0_combout\ <= NOT \inst4|Mux7~0_combout\;
-\inst4|ALT_INV_Mux0~0_combout\ <= NOT \inst4|Mux0~0_combout\;
-\inst2|DRAM|new_sdram_controller_0|ALT_INV_m_state.000010000~q\ <= NOT \inst2|DRAM|new_sdram_controller_0|m_state.000010000~q\;
 \inst2|DRAM|new_sdram_controller_0|ALT_INV_Selector22~1_combout\ <= NOT \inst2|DRAM|new_sdram_controller_0|Selector22~1_combout\;
 \inst2|DRAM|new_sdram_controller_0|ALT_INV_Selector20~0_combout\ <= NOT \inst2|DRAM|new_sdram_controller_0|Selector20~0_combout\;
 \inst2|DRAM|new_sdram_controller_0|ALT_INV_Selector19~3_combout\ <= NOT \inst2|DRAM|new_sdram_controller_0|Selector19~3_combout\;
 \inst2|DRAM|rst_controller|alt_rst_sync_uq1|ALT_INV_altera_reset_synchronizer_int_chain_out~q\ <= NOT \inst2|DRAM|rst_controller|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out~q\;
 \inst2|DRAM|new_sdram_controller_0|ALT_INV_Selector21~1_combout\ <= NOT \inst2|DRAM|new_sdram_controller_0|Selector21~1_combout\;
 \inst2|DRAM|new_sdram_controller_0|ALT_INV_always5~0_combout\ <= NOT \inst2|DRAM|new_sdram_controller_0|always5~0_combout\;
+\inst2|DRAM|new_sdram_controller_0|ALT_INV_m_state.000010000~q\ <= NOT \inst2|DRAM|new_sdram_controller_0|m_state.000010000~q\;
+\inst4|ALT_INV_BufferFull~q\ <= NOT \inst4|BufferFull~q\;
+\inst4|ALT_INV_Mux14~0_combout\ <= NOT \inst4|Mux14~0_combout\;
+\inst4|ALT_INV_Mux7~0_combout\ <= NOT \inst4|Mux7~0_combout\;
+\inst4|ALT_INV_Mux0~0_combout\ <= NOT \inst4|Mux0~0_combout\;
+\inst2|DRAM|new_sdram_controller_0|ALT_INV_oe~_Duplicate_15_q\ <= NOT \inst2|DRAM|new_sdram_controller_0|oe~_Duplicate_15_q\;
 \inst2|DRAM|new_sdram_controller_0|ALT_INV_oe~_Duplicate_14_q\ <= NOT \inst2|DRAM|new_sdram_controller_0|oe~_Duplicate_14_q\;
 \inst2|DRAM|new_sdram_controller_0|ALT_INV_oe~_Duplicate_13_q\ <= NOT \inst2|DRAM|new_sdram_controller_0|oe~_Duplicate_13_q\;
 \inst2|DRAM|new_sdram_controller_0|ALT_INV_oe~_Duplicate_12_q\ <= NOT \inst2|DRAM|new_sdram_controller_0|oe~_Duplicate_12_q\;
