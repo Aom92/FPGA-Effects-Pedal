@@ -140,6 +140,8 @@ begin
 -- Proceso para detectar cuando la memoria se haya llenado. 
 	Efectos : process(DE10CLK )
 	variable fread : boolean;
+	variable sample_escaled : std_logic_vector (15 downto 0 );
+	variable sample_out : std_logic_vector (15 downto 0);
 	variable factor1 : integer := 1;
 	begin
 		IF rising_edge(DE10CLK) THEN						  
@@ -156,9 +158,12 @@ begin
 						read_op <= '0';
 						write_op <= '1';
 						
-						write_buff <= X"0" & std_logic_vector(adc_rdata);
-
-						audioMix <= ( read_buff*17/10) + adc_rdata*3/4 ;
+						
+						--write_buff <= ( X"0" & std_logic_vector(adc_rdata) );
+						-- EXTENSION y NORMALIZACIÓN:
+						
+						write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
+						audioMix <= (( read_buff*17/10) + adc_rdata*3/4)/32767;
 
 				elsif (BufferFull = '1' and adc_valid = '1' and adc_channel = "00001" ) then
 				-- LECTURA 
@@ -170,7 +175,7 @@ begin
 						sal_disp1 <= std_logic_vector(adc_rdata)(7 downto 4);
 						sal_disp2 <= std_logic_vector(adc_rdata)(11 downto 8);
 						--Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
-						audioMix <= ( read_buff*17/10)  + adc_rdata*20/10  ;
+						audioMix <= (( read_buff*17/10)  + adc_rdata*20/10)/32767  ;
 				
 					
 
