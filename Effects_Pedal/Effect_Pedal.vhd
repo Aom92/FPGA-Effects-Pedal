@@ -78,7 +78,7 @@ constant MAX_VAL  : integer := 1023;
 constant MIN_VAL  : integer := -2048;
 constant PI_OVER_SAMPLE_WIDTH : real := PI / (2.0 ** PHASE_SHIFT);
 
-constant THRESHOLD : integer := 64;
+constant THRESHOLD : integer := 48;
 signal phase_offset : unsigned (30 downto 0);
 signal audio_int : integer;
 
@@ -163,7 +163,7 @@ begin
 						-- EXTENSION y NORMALIZACIÓN:
 						
 						write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
-						audioMix <= (( read_buff*17/10) + adc_rdata*3/4)/32767;
+						audioMix <= (( read_buff*17/10) + unsigned(write_buff)*20/10);
 
 				elsif (BufferFull = '1' and adc_valid = '1' and adc_channel = "00001" ) then
 				-- LECTURA 
@@ -175,7 +175,7 @@ begin
 						sal_disp1 <= std_logic_vector(adc_rdata)(7 downto 4);
 						sal_disp2 <= std_logic_vector(adc_rdata)(11 downto 8);
 						--Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
-						audioMix <= (( read_buff*17/10)  + adc_rdata*20/10)/32767  ;
+						audioMix <= (( read_buff*42/10)  + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*25/10)  ;
 				
 					
 
@@ -183,7 +183,7 @@ begin
 			
 			else
 				if (adc_valid = '1' and adc_channel = "00001") then
-				  audioMix <= X"00000" & adc_rdata;
+				  audioMix <= ( unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*100);
 				end if;
 				-- OUT CLEAN AUDIO --
 				
