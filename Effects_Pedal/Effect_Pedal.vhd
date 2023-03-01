@@ -163,7 +163,7 @@ begin
 						-- EXTENSION y NORMALIZACIÓN:
 						
 						write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
-						audioMix <= (( read_buff*17/10) + unsigned(write_buff)*20/10);
+						audioMix <= (( read_buff*17/10) + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*20/10);
 
 				elsif (BufferFull = '1' and adc_valid = '1' and adc_channel = "00001" ) then
 				-- LECTURA 
