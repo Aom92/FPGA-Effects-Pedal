@@ -1,4 +1,4 @@
-%CODIGO DE STACKOVERFLOW:
+% CODIGO DE STACKOVERFLOW:
 % Paul_sysu, (2015, April 25). Extracting Memory Initialization File (MIF)
 % from a BMP photo. StackOverflow. https://stackoverflow.com/a/29865485
 
@@ -23,5 +23,7 @@
     end
     fprintf(fid, 'END;\n'); % prinf the end
     fclose(fid); % close your file
+    
+    
 
 
