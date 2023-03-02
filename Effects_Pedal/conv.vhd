@@ -11,8 +11,9 @@ entity conv is
     reset : in std_logic;
     valid : out std_logic;
     x : in std_logic_vector(15 downto 0);
-    h : in std_logic_vector(15 downto 0);
+    h : in std_logic_vector(31 downto 0);
     y : out unsigned(31 downto 0);
+    y_trunc : out unsigned (15 downto 0);
     rom_address : out std_logic_vector(15 downto 0 )
   );
 end entity conv;
@@ -46,6 +47,7 @@ begin
                  temp <= unsigned(temp) + unsigned(intermediate_result);
             end loop;
             y <= (temp);
+            
         end if;
     end process;
 

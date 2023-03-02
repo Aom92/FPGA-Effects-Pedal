@@ -25,7 +25,10 @@ port(
 			delay_enable : in std_logic;
 			phase_enable : in std_logic;
 			distort_enable : in std_logic;
-	
+			reverb_enable : in std_logic;
+			-- CONEXIONES AL CONVOLUCIONADOR -- 
+			valid_reverb : in std_logic;
+			reverb_sample : in unsigned (31 downto 0);
 
 			-- CONEXIONES AL DEL CONTROLADOR DE LA RAM --
 			address : out std_logic_vector(25 downto 0) := "00000000000000000000000000";
@@ -150,6 +153,7 @@ begin
 			-- Cuando el contador < addressCounter > llega a su valor maximo la señal 
 			-- BufferFull se activa y por lo tanto cambiamos de escribir a leer.
 			if delay_enable = '1' then
+				
 				IF (BufferFull = '0' and adc_valid = '1' and adc_channel = "00001" ) THEN							
 				-- ESCRITURA	
 						sal_disp0 <= std_logic_vector(adc_rdata)(3 downto 0);
@@ -182,6 +186,7 @@ begin
 				end if;
 			
 			else
+				
 				if (adc_valid = '1' and adc_channel = "00001") then
 				  audioMix <= ( unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*100);
 				end if;
@@ -209,6 +214,7 @@ begin
 			end if;
 
 			if distort_enable = '1' then
+				
 				audio_int <= to_integer(adc_rdata);
 				if (adc_valid = '1' and adc_channel = "00001") then
 					
@@ -222,6 +228,23 @@ begin
 				  	--audioMix <= X"00000" & shift_right(adc_rdata,4);
 				end if;
 
+			end if;
+
+			if reverb_enable = '1' then
+				
+				if (adc_valid = '1' and adc_channel = "00001") then
+
+					
+					write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
+
+					if (valid_reverb = '1' ) then
+
+						audioMix <= reverb_sample;
+
+					end if;
+
+				end if;
+			  
 			end if;
 
 
