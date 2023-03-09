@@ -1,4 +1,4 @@
-clear all
+clear;
 %Encuentra los coeficientes de un filtro FIR, a partir de la respuesta al
 %impulso dada
 % Tomado a partir de codigo generado por ChatGPT.
@@ -9,13 +9,13 @@ a = [1 1 0 0];         % desired amplitude in each band
 
 % Step 2: Design an ideal filter with the desired frequency response using the Fourier transform
 N = 32;                % number of frequency points
-h = fir2(N-1, f, a);    % ideal impulse response 
+%h = fir2(N-1, f, a);    % ideal impulse response 
 %(?) y cambiamos esto por la respusta al impulso que nos interesa
 
-%[h, Fs] = audioread("r1_omni-short.wav");    % Room Impulse Response.
+[h, Fs] = audioread("r1_omni-short.wav");    % Room Impulse Response.
 
 % Step 3: Convert the ideal filter to a causal FIR filter by applying the inverse Fourier transform
-b = ifft(h);
+b = h;
 
 % Step 4: Truncate the filter coefficients to a finite length
 M = 32;                 % number of filter coefficients
@@ -43,7 +43,7 @@ for i = 0 : M-1
 end
 
 %Testeamos en un archivo wav
-[input,fs] = audioread('KIKEN.wav');
+[input,fs] = audioread('SINE.wav');
 
 
 output = filter(b,1,input);
