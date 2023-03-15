@@ -1,0 +1,722 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/simulation/modelsim
+Eadc
+Z1 w1678505130
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 13
+R0
+Z5 8ADC.vhd
+Z6 FADC.vhd
+l0
+L9 1
+VIScZ?LB52e>WWLhK3I0cA0
+!s100 SbaQzCePYE:=7fgGW^UFW2
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1678506944
+!i10b 1
+Z9 !s108 1678506944.000000
+Z10 !s90 -reportprogress|300|ADC.vhd|REVERB.vhd|REVERB_fir_compiler_ii_0.vhd|REVERB_fir_compiler_ii_0_ast.vhd|REVERB_fir_compiler_ii_0_rtl_core.vhd|REVERB_fir_compiler_ii_0_tb.vhd|auk_dspip_avalon_streaming_controller_hpfir.vhd|auk_dspip_avalon_streaming_sink_hpfir.vhd|auk_dspip_avalon_streaming_source_hpfir.vhd|auk_dspip_lib_pkg_hpfir.vhd|auk_dspip_math_pkg_hpfir.vhd|auk_dspip_roundsat_hpfir.vhd|dspba_library.vhd|dspba_library_package.vhd|
+Z11 !s107 dspba_library_package.vhd|dspba_library.vhd|auk_dspip_roundsat_hpfir.vhd|auk_dspip_math_pkg_hpfir.vhd|auk_dspip_lib_pkg_hpfir.vhd|auk_dspip_avalon_streaming_source_hpfir.vhd|auk_dspip_avalon_streaming_sink_hpfir.vhd|auk_dspip_avalon_streaming_controller_hpfir.vhd|REVERB_fir_compiler_ii_0_tb.vhd|REVERB_fir_compiler_ii_0_rtl_core.vhd|REVERB_fir_compiler_ii_0_ast.vhd|REVERB_fir_compiler_ii_0.vhd|REVERB.vhd|ADC.vhd|
+!i113 1
+Z12 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+DEx4 work 3 adc 0 22 IScZ?LB52e>WWLhK3I0cA0
+!i122 13
+l135
+L26 215
+V7fSIQaNS4>MH48UF27C4>1
+!s100 0bfJJf:G869_Ni58?IDZ71
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+Eadc_simple
+Z13 w1674001981
+R2
+R3
+R4
+!i122 1
+R0
+Z14 8D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_simple.vhd
+Z15 FD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_simple.vhd
+l0
+L5 1
+VfZc39?cf<6P>0D2V6^2C>2
+!s100 d]PWX>3bF<49MLoT<MT?j1
+R7
+31
+Z16 !s110 1678503680
+!i10b 1
+Z17 !s108 1678503680.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_simple.vhd|
+Z19 !s107 D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_simple.vhd|
+!i113 1
+Z20 o-93 -work work
+R12
+Abh
+R2
+R3
+R4
+DEx4 work 10 adc_simple 0 22 fZc39?cf<6P>0D2V6^2C>2
+!i122 1
+l49
+L17 61
+VVF?YUG]@FB`h^^ZAc_cN^1
+!s100 3>jo=C[Y86H5HY_=KWCYz2
+R7
+31
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R20
+R12
+Eauk_dspip_avalon_streaming_controller_hpfir
+Z21 w1678503591
+Z22 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R3
+R4
+!i122 18
+R0
+Z23 8auk_dspip_avalon_streaming_controller_hpfir.vhd
+Z24 Fauk_dspip_avalon_streaming_controller_hpfir.vhd
+l0
+L41 1
+VmzLKcb3?XGg7F;Pc`g^U30
+!s100 ORMaER9G]`b[YkFGoXo<C3
+R7
+32
+Z25 !s110 1678507127
+!i10b 1
+Z26 !s108 1678507127.000000
+Z27 !s90 -reportprogress|300|auk_dspip_avalon_streaming_controller_hpfir.vhd|
+Z28 !s107 auk_dspip_avalon_streaming_controller_hpfir.vhd|
+!i113 1
+R12
+Astruct
+R22
+R3
+R4
+DEx4 work 43 auk_dspip_avalon_streaming_controller_hpfir 0 22 mzLKcb3?XGg7F;Pc`g^U30
+!i122 18
+l72
+L64 25
+V5[9N9aCPWceEVmzW7?haR3
+!s100 MWO51>Fz`WN=CIY16D1gH2
+R7
+32
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R12
+Eauk_dspip_avalon_streaming_sink_hpfir
+R21
+Z29 DPx9 altera_mf 20 altera_mf_components 0 22 HVLmIbRl@QhXfWVOmhK<j1
+Z30 DPx4 work 24 auk_dspip_math_pkg_hpfir 0 22 SMh<mnKIT3f?e`UL8YAf30
+Z31 DPx4 work 23 auk_dspip_lib_pkg_hpfir 0 22 ]n@P0Cg`Kmfb@EQ`hbJ3C2
+R2
+R3
+R4
+!i122 19
+R0
+Z32 8auk_dspip_avalon_streaming_sink_hpfir.vhd
+Z33 Fauk_dspip_avalon_streaming_sink_hpfir.vhd
+l0
+L56 1
+Vc3aP]jD`FWLDmMbL02M?71
+!s100 0WO5KznO2MM4IEKTLL4ea1
+R7
+32
+Z34 !s110 1678507134
+!i10b 1
+Z35 !s108 1678507134.000000
+Z36 !s90 -reportprogress|300|auk_dspip_avalon_streaming_sink_hpfir.vhd|
+Z37 !s107 auk_dspip_avalon_streaming_sink_hpfir.vhd|
+!i113 1
+R12
+Artl
+R29
+R30
+R31
+R2
+R3
+R4
+DEx4 work 37 auk_dspip_avalon_streaming_sink_hpfir 0 22 c3aP]jD`FWLDmMbL02M?71
+!i122 19
+l164
+L106 440
+V>JXTP:[nnkgAK4J09X0Y10
+!s100 aKlIFR2DezO>78LXQeZZW1
+R7
+32
+R34
+!i10b 1
+R35
+R36
+R37
+!i113 1
+R12
+Eauk_dspip_avalon_streaming_source_hpfir
+R21
+R30
+R29
+R2
+R3
+R4
+!i122 20
+R0
+Z38 8auk_dspip_avalon_streaming_source_hpfir.vhd
+Z39 Fauk_dspip_avalon_streaming_source_hpfir.vhd
+l0
+L70 1
+Vh0^KLKk9RPWE9FkPV688a0
+!s100 z_E>RhDjTK@iSkAe6<CzM1
+R7
+32
+Z40 !s110 1678507142
+!i10b 1
+Z41 !s108 1678507142.000000
+Z42 !s90 -reportprogress|300|auk_dspip_avalon_streaming_source_hpfir.vhd|
+Z43 !s107 auk_dspip_avalon_streaming_source_hpfir.vhd|
+!i113 1
+R12
+Artl
+R30
+R29
+R2
+R3
+R4
+DEx4 work 39 auk_dspip_avalon_streaming_source_hpfir 0 22 h0^KLKk9RPWE9FkPV688a0
+!i122 20
+l190
+L109 358
+Vam1ie5h2KMKXT`jCDKfMG0
+!s100 9_^:d_>A;JGb2ekO`XAiL1
+R7
+32
+R40
+!i10b 1
+R41
+R42
+R43
+!i113 1
+R12
+Pauk_dspip_lib_pkg_hpfir
+R30
+R2
+R3
+R4
+!i122 17
+R21
+R0
+8auk_dspip_lib_pkg_hpfir.vhd
+Fauk_dspip_lib_pkg_hpfir.vhd
+l0
+L22 1
+V]n@P0Cg`Kmfb@EQ`hbJ3C2
+!s100 f?>LI6^Y:?0:4C>aOS6?X2
+R7
+32
+!s110 1678507097
+!i10b 1
+!s108 1678507097.000000
+!s90 -reportprogress|300|auk_dspip_lib_pkg_hpfir.vhd|
+!s107 auk_dspip_lib_pkg_hpfir.vhd|
+!i113 1
+R12
+Pauk_dspip_math_pkg_hpfir
+R2
+R3
+R4
+!i122 15
+R21
+R0
+Z44 8auk_dspip_math_pkg_hpfir.vhd
+Z45 Fauk_dspip_math_pkg_hpfir.vhd
+l0
+L54 1
+VSMh<mnKIT3f?e`UL8YAf30
+!s100 @O6TWU38[<`Y=f_oja2am1
+R7
+32
+b1
+Z46 !s110 1678507078
+!i10b 1
+Z47 !s108 1678507078.000000
+Z48 !s90 -reportprogress|300|auk_dspip_math_pkg_hpfir.vhd|
+Z49 !s107 auk_dspip_math_pkg_hpfir.vhd|
+!i113 1
+R12
+Bbody
+R30
+R2
+R3
+R4
+!i122 15
+l0
+L131 1
+V`OCm?;Q96zD:4j0=aCH`Y0
+!s100 EDZNSThdcYV1lkL7HbnIz0
+R7
+32
+R46
+!i10b 1
+R47
+R48
+R49
+!i113 1
+R12
+Eauk_dspip_roundsat_hpfir
+R21
+R2
+R3
+R4
+!i122 21
+R0
+Z50 8auk_dspip_roundsat_hpfir.vhd
+Z51 Fauk_dspip_roundsat_hpfir.vhd
+l0
+L39 1
+VL8Q=Q6XfD:5e:WVJZ6k@E3
+!s100 S`Ha]KjQXV0CDDgljgCX;0
+R7
+32
+Z52 !s110 1678507151
+!i10b 1
+Z53 !s108 1678507151.000000
+Z54 !s90 -reportprogress|300|auk_dspip_roundsat_hpfir.vhd|
+Z55 !s107 auk_dspip_roundsat_hpfir.vhd|
+!i113 1
+R12
+Abeh
+R2
+R3
+R4
+DEx4 work 24 auk_dspip_roundsat_hpfir 0 22 L8Q=Q6XfD:5e:WVJZ6k@E3
+!i122 21
+l66
+L57 131
+Va<FU3bo7Iz2RgbS_<XQf52
+!s100 SAz6VWg0=:KiPPFk<lih43
+R7
+32
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 1
+R12
+Econv
+Z56 w1678412490
+R4
+R3
+R2
+!i122 0
+R0
+Z57 8D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/conv.vhd
+Z58 FD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/conv.vhd
+l0
+L8 1
+V;5i9FRW:QASRK96ai=KcN0
+!s100 Q?6@Q?zbAZMgF`[WU0W?h3
+R7
+31
+R16
+!i10b 1
+R17
+Z59 !s90 -reportprogress|300|-93|-work|work|D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/conv.vhd|
+Z60 !s107 D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/conv.vhd|
+!i113 1
+R20
+R12
+Artl
+R4
+R3
+R2
+DEx4 work 4 conv 0 22 ;5i9FRW:QASRK96ai=KcN0
+!i122 0
+l30
+L21 47
+VFbI4ZK;4a[?GnGO9ZEQ>=0
+!s100 oJL7VHWV`X3JPoJQm3?eg0
+R7
+31
+R16
+!i10b 1
+R17
+R59
+R60
+!i113 1
+R20
+R12
+Edspba_delay
+R21
+Z61 DPx4 work 21 dspba_library_package 0 22 KTlXWShT2<@=FUf9L`nD@1
+R3
+R4
+!i122 23
+R0
+Z62 8dspba_library.vhd
+Z63 Fdspba_library.vhd
+l0
+L18 1
+Vh_99QD]IcO`z?>TBh9:D_2
+!s100 >TY9@l4a>2O5Wd_6jF4:g0
+R7
+32
+Z64 !s110 1678507169
+!i10b 1
+Z65 !s108 1678507168.000000
+Z66 !s90 -reportprogress|300|dspba_library.vhd|
+Z67 !s107 dspba_library.vhd|
+!i113 1
+R12
+Adelay
+R61
+R3
+R4
+DEx4 work 11 dspba_delay 0 22 h_99QD]IcO`z?>TBh9:D_2
+!i122 23
+l37
+L34 51
+VJ?aanBflNgc[^b7nS;oh72
+!s100 DAfPXKZhR<Ac>Wg8zYj1H3
+R7
+32
+R64
+!i10b 1
+R65
+R66
+R67
+!i113 1
+R12
+Pdspba_library_package
+R3
+R4
+!i122 22
+R21
+R0
+8dspba_library_package.vhd
+Fdspba_library_package.vhd
+l0
+L17 1
+VKTlXWShT2<@=FUf9L`nD@1
+!s100 @e;XE0e^oAdIdzY=Rc];H3
+R7
+32
+!s110 1678507167
+!i10b 1
+!s108 1678507167.000000
+!s90 -reportprogress|300|dspba_library_package.vhd|
+!s107 dspba_library_package.vhd|
+!i113 1
+R12
+Edspba_pipe
+R21
+R2
+R3
+R4
+!i122 23
+R0
+R62
+R63
+l0
+L343 1
+VI4KODRF]=ojndU_8;Qa<A0
+!s100 ko3XcgZgdPgSD;SDR?Wmi2
+R7
+32
+R64
+!i10b 1
+R65
+R66
+R67
+!i113 1
+R12
+Artl
+R2
+R3
+R4
+DEx4 work 10 dspba_pipe 0 22 I4KODRF]=ojndU_8;Qa<A0
+!i122 23
+l362
+L356 21
+V04Zm]fe?nYFNSJ9@9:?0J0
+!s100 =]hA3YBJaaU9dNBMla?I?2
+R7
+32
+R64
+!i10b 1
+R65
+R66
+R67
+!i113 1
+R12
+Edspba_sync_reg
+R21
+R61
+R2
+R3
+R4
+!i122 23
+R0
+R62
+R63
+l0
+L93 1
+V^:zbgnPCjHS7<>M40RfPY2
+!s100 G`[2Ci2RQWoL`zK>2h>oj2
+R7
+32
+R64
+!i10b 1
+R65
+R66
+R67
+!i113 1
+R12
+Async_reg
+R61
+R2
+R3
+R4
+DEx4 work 14 dspba_sync_reg 0 22 ^:zbgnPCjHS7<>M40RfPY2
+!i122 23
+l136
+L117 219
+VOYn_^=KgGaaGf37QRQJb;1
+!s100 3CF6gEiK7^`H_<3Ne[inV2
+R7
+32
+R64
+!i10b 1
+R65
+R66
+R67
+!i113 1
+R12
+Eram_controller
+w1673987635
+R2
+R3
+R4
+!i122 2
+R0
+8D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/RAM_Controller.vhd
+FD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/RAM_Controller.vhd
+l0
+L5 1
+V6OFVlOCMnUTf1jZfMViHK0
+!s100 EU>47^hncSd94hzO_4<aF3
+R7
+31
+R16
+!i10b 1
+R17
+!s90 -reportprogress|300|-93|-work|work|D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/RAM_Controller.vhd|
+!s107 D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/RAM_Controller.vhd|
+!i113 1
+R20
+R12
+Ereverb
+Z68 w1678503590
+R2
+R3
+R4
+!i122 25
+R0
+Z69 8REVERB.vhd
+Z70 FREVERB.vhd
+l0
+L9 1
+V32c0jU_n;RF5<I:MfUMlP1
+!s100 ]Jf]o6CkD`UN0zNHIQiXN2
+R7
+32
+Z71 !s110 1678507209
+!i10b 1
+Z72 !s108 1678507209.000000
+Z73 !s90 -reportprogress|300|REVERB.vhd|
+Z74 !s107 REVERB.vhd|
+!i113 1
+R12
+Artl
+R2
+R3
+R4
+Z75 DEx4 work 6 reverb 0 22 32c0jU_n;RF5<I:MfUMlP1
+!i122 25
+l36
+L22 29
+VFgaQgN22Ak>HiaNf1MT<]3
+!s100 4oz[7>ccm;V1d8RO?Ob8A2
+R7
+32
+R71
+!i10b 1
+R72
+R73
+R74
+!i113 1
+R12
+Ereverb_fir_compiler_ii_0
+R21
+R30
+R2
+R31
+R3
+R4
+!i122 24
+R0
+Z76 8REVERB_fir_compiler_ii_0.vhd
+Z77 FREVERB_fir_compiler_ii_0.vhd
+l0
+L19 1
+V6TSfaZj^7ZW3o__;DTIZ@3
+!s100 3VVIZXQ;>zQ7GMEU3X_El3
+R7
+32
+Z78 !s110 1678507197
+!i10b 1
+Z79 !s108 1678507197.000000
+Z80 !s90 -reportprogress|300|REVERB_fir_compiler_ii_0.vhd|
+Z81 !s107 REVERB_fir_compiler_ii_0.vhd|
+!i113 1
+R12
+Asyn
+R30
+R2
+R31
+R3
+R4
+DEx4 work 24 reverb_fir_compiler_ii_0 0 22 6TSfaZj^7ZW3o__;DTIZ@3
+!i122 24
+l56
+L33 48
+VaOZ_;IDac9aTi]AI6`NH20
+!s100 ]XQ?[U4]zLW9efU6^OfDY3
+R7
+32
+R78
+!i10b 1
+R79
+R80
+R81
+!i113 1
+R12
+Ereverb_fir_compiler_ii_0_ast
+R21
+R30
+R31
+R2
+R3
+R4
+!i122 26
+R0
+Z82 8REVERB_fir_compiler_ii_0_ast.vhd
+Z83 FREVERB_fir_compiler_ii_0_ast.vhd
+l0
+L9 1
+VagB]nB>nCm3UQZJ89jM=f3
+!s100 k5P3ECHe:=mMPU4WB>3?P3
+R7
+32
+Z84 !s110 1678507409
+!i10b 1
+Z85 !s108 1678507409.000000
+Z86 !s90 -reportprogress|300|REVERB_fir_compiler_ii_0_ast.vhd|
+!s107 REVERB_fir_compiler_ii_0_ast.vhd|
+!i113 1
+R12
+Astruct
+R30
+R31
+R2
+R3
+R4
+DEx4 work 28 reverb_fir_compiler_ii_0_ast 0 22 agB]nB>nCm3UQZJ89jM=f3
+!i122 26
+l88
+L55 215
+VE@<:S4L9_1I?z]5Fe=8U52
+!s100 OXF[TWifRB^zUJP[5Gl`X2
+R7
+32
+R84
+!i10b 1
+R85
+R86
+Z87 !s107 REVERB_fir_compiler_ii_0_ast.vhd|
+!i113 1
+R12
+Etest_bench
+Z88 w1678505959
+R22
+Z89 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+R3
+R4
+!i122 12
+R0
+Z90 8fiR_testbench.vht
+Z91 FfiR_testbench.vht
+l0
+L5 1
+VBS[[XoMV:V3F33UCT4lcF3
+!s100 fcFelR>5EzfmM;56n1c]L1
+R7
+32
+Z92 !s110 1678505970
+!i10b 1
+Z93 !s108 1678505970.000000
+Z94 !s90 -reportprogress|300|fiR_testbench.vht|
+Z95 !s107 fiR_testbench.vht|
+!i113 1
+R12
+Abehavior
+R2
+R75
+R22
+R89
+R3
+R4
+DEx4 work 10 test_bench 0 22 BS[[XoMV:V3F33UCT4lcF3
+!i122 12
+l56
+L8 92
+Vbn>@6lOG2I9OhdE_6bfE61
+!s100 cO:3:SLoPMGBnHUE8KUYV3
+R7
+32
+R92
+!i10b 1
+R93
+R94
+R95
+!i113 1
+R12

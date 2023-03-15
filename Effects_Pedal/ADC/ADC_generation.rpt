@@ -1,3 +1,53 @@
+Info: Starting: Create simulation model
+Info: qsys-generate "D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\ADC.qsys" --simulation=VHDL --allow-mixed-language-simulation --output-directory="D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\ADC\simulation" --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading Effects_Pedal/ADC.qsys
+Progress: Reading input file
+Progress: Adding AvalonBridge [altera_jtag_avalon_master 20.1]
+Progress: Parameterizing module AvalonBridge
+Progress: Adding altpll_0 [altpll 20.1]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding clock_bridge_0 [altera_clock_bridge 20.1]
+Progress: Parameterizing module clock_bridge_0
+Progress: Adding modular_adc_0 [altera_modular_adc 20.1]
+Progress: Parameterizing module modular_adc_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: ADC.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Info: ADC: Generating ADC "ADC" for SIM_VHDL
+Info: altpll_0: Generating VHDL simulation model
+Warning: Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Warning: Verilog HDL or VHDL warning at ADC_altpll_0.vhd(317): object "wire_w_address_range2w" assigned a value but never read File: C:/Users/Aom92/AppData/Local/Temp/alt9431_5431291431036640019.dir/0004_sopcqmap/ADC_altpll_0.vhd Line: 317
+Info: altpll_0: Generated simulation model ADC_altpll_0.vho
+Info: altpll_0: "ADC" instantiated altpll "altpll_0"
+Info: modular_adc_0: "ADC" instantiated altera_modular_adc "modular_adc_0"
+Info: rst_controller: "ADC" instantiated altera_reset_controller "rst_controller"
+Info: control_internal: "modular_adc_0" instantiated altera_modular_adc_control "control_internal"
+Info: ADC: Done "ADC" with 5 modules, 12 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd="D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\ADC\ADC.spd" --output-directory="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/simulation/" --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\ADC\ADC.spd --output-directory=D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	4 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
 Info: Starting: Create block symbol file (.bsf)
 Info: qsys-generate "D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\ADC.qsys" --block-symbol-file --output-directory="D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\ADC" --family="MAX 10" --part=10M50DAF484C7G
 Progress: Loading Effects_Pedal/ADC.qsys

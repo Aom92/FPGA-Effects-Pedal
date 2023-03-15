@@ -90,7 +90,7 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect -464 360 -296 376)
+	(rect -192 360 -24 376)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "DISROT_EN" (rect 5 0 67 12)(font "Arial" ))
 	(pt 168 8)
@@ -103,23 +103,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect -544 352 -480 376))
-)
-(pin
-	(input)
-	(rect -464 376 -296 392)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "REVERB_EN" (rect 5 0 72 12)(font "Arial" ))
-	(pt 168 8)
-	(drawing
-		(line (pt 84 12)(pt 109 12))
-		(line (pt 84 4)(pt 109 4))
-		(line (pt 113 8)(pt 168 8))
-		(line (pt 84 12)(pt 84 4))
-		(line (pt 109 4)(pt 113 8))
-		(line (pt 109 12)(pt 113 8))
-	)
-	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -240 304 -176 328))
 )
 (pin
 	(output)
@@ -544,7 +528,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect -352 448 -120 560)
+	(rect -296 448 -64 560)
 	(text "ADC_simple" (rect 5 0 66 12)(font "Arial" ))
 	(text "inst" (rect 8 96 25 108)(font "Arial" ))
 	(port
@@ -773,51 +757,44 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 112)
 		(input)
-		(text "reverb_enable" (rect 0 0 69 12)(font "Arial" ))
-		(text "reverb_enable" (rect 21 107 90 119)(font "Arial" ))
+		(text "valid_reverb" (rect 0 0 61 12)(font "Arial" ))
+		(text "valid_reverb" (rect 21 107 82 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112))
 	)
 	(port
 		(pt 0 128)
 		(input)
-		(text "valid_reverb" (rect 0 0 61 12)(font "Arial" ))
-		(text "valid_reverb" (rect 21 123 82 135)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128))
+		(text "reverb_sample[31..0]" (rect 0 0 105 12)(font "Arial" ))
+		(text "reverb_sample[31..0]" (rect 21 123 126 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
 	)
 	(port
 		(pt 0 144)
 		(input)
-		(text "reverb_sample[31..0]" (rect 0 0 105 12)(font "Arial" ))
-		(text "reverb_sample[31..0]" (rect 21 139 126 151)(font "Arial" ))
+		(text "read_buff[15..0]" (rect 0 0 80 12)(font "Arial" ))
+		(text "read_buff[15..0]" (rect 21 139 101 151)(font "Arial" ))
 		(line (pt 0 144)(pt 16 144)(line_width 3))
 	)
 	(port
 		(pt 0 160)
 		(input)
-		(text "read_buff[15..0]" (rect 0 0 80 12)(font "Arial" ))
-		(text "read_buff[15..0]" (rect 21 155 101 167)(font "Arial" ))
-		(line (pt 0 160)(pt 16 160)(line_width 3))
+		(text "adc_valid" (rect 0 0 47 12)(font "Arial" ))
+		(text "adc_valid" (rect 21 155 68 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160))
 	)
 	(port
 		(pt 0 176)
 		(input)
-		(text "adc_valid" (rect 0 0 47 12)(font "Arial" ))
-		(text "adc_valid" (rect 21 171 68 183)(font "Arial" ))
-		(line (pt 0 176)(pt 16 176))
+		(text "adc_rdata[11..0]" (rect 0 0 80 12)(font "Arial" ))
+		(text "adc_rdata[11..0]" (rect 21 171 101 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
 	)
 	(port
 		(pt 0 192)
 		(input)
-		(text "adc_rdata[11..0]" (rect 0 0 80 12)(font "Arial" ))
-		(text "adc_rdata[11..0]" (rect 21 187 101 199)(font "Arial" ))
-		(line (pt 0 192)(pt 16 192)(line_width 3))
-	)
-	(port
-		(pt 0 208)
-		(input)
 		(text "adc_channel[4..0]" (rect 0 0 87 12)(font "Arial" ))
-		(text "adc_channel[4..0]" (rect 21 203 108 215)(font "Arial" ))
-		(line (pt 0 208)(pt 16 208)(line_width 3))
+		(text "adc_channel[4..0]" (rect 21 187 108 199)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192)(line_width 3))
 	)
 	(port
 		(pt 256 32)
@@ -1257,78 +1234,9 @@ https://fpgasoftware.intel.com/eula.
 	(pt 288 336)
 )
 (connector
-	(pt -296 368)
-	(pt 288 368)
-)
-(connector
-	(pt -408 328)
-	(pt -408 480)
-)
-(connector
-	(pt -408 480)
-	(pt -352 480)
-)
-(connector
-	(pt -416 320)
-	(pt -416 496)
-)
-(connector
-	(pt -416 496)
-	(pt -352 496)
-)
-(connector
-	(pt 16 496)
-	(pt -120 496)
-)
-(connector
-	(pt 32 480)
-	(pt -120 480)
-	(bus)
-)
-(connector
-	(pt 32 464)
-	(pt 32 480)
-	(bus)
-)
-(connector
-	(pt 32 464)
-	(pt 288 464)
-	(bus)
-)
-(connector
-	(pt 16 496)
-	(pt 16 448)
-)
-(connector
-	(pt 16 448)
-	(pt 288 448)
-)
-(connector
 	(pt 1128 240)
 	(pt 216 240)
 	(bus)
-)
-(connector
-	(pt 216 432)
-	(pt 216 240)
-	(bus)
-)
-(connector
-	(pt 216 432)
-	(pt 288 432)
-	(bus)
-)
-(connector
-	(pt -296 384)
-	(pt 288 384)
-)
-(connector
-	(pt 288 400)
-	(pt 224 400)
-)
-(connector
-	(pt 224 40)
-	(pt 224 400)
 )
 (connector
 	(pt 224 40)
@@ -1337,16 +1245,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 256 232)
 	(pt 704 232)
-	(bus)
-)
-(connector
-	(pt 256 232)
-	(pt 256 416)
-	(bus)
-)
-(connector
-	(pt 256 416)
-	(pt 288 416)
 	(bus)
 )
 (connector
@@ -1449,6 +1347,108 @@ https://fpgasoftware.intel.com/eula.
 	(pt 624 -104)
 	(bus)
 )
+(connector
+	(pt -408 328)
+	(pt -408 480)
+)
+(connector
+	(pt -416 320)
+	(pt -416 496)
+)
+(connector
+	(pt 32 480)
+	(pt -64 480)
+	(bus)
+)
+(connector
+	(pt 16 496)
+	(pt -64 496)
+)
+(connector
+	(pt -408 480)
+	(pt -296 480)
+)
+(connector
+	(pt -416 496)
+	(pt -296 496)
+)
+(connector
+	(pt 32 448)
+	(pt 32 480)
+	(bus)
+)
+(connector
+	(pt 32 448)
+	(pt 288 448)
+	(bus)
+)
+(connector
+	(pt -64 512)
+	(pt 104 512)
+	(bus)
+)
+(connector
+	(pt 104 512)
+	(pt 104 464)
+	(bus)
+)
+(connector
+	(pt 104 464)
+	(pt 288 464)
+	(bus)
+)
+(connector
+	(pt 16 432)
+	(pt 16 496)
+)
+(connector
+	(pt 216 240)
+	(pt 216 416)
+	(bus)
+)
+(connector
+	(pt 16 432)
+	(pt 288 432)
+)
+(connector
+	(pt 256 400)
+	(pt 256 232)
+	(bus)
+)
+(connector
+	(pt 256 400)
+	(pt 288 400)
+	(bus)
+)
+(connector
+	(pt 288 416)
+	(pt 216 416)
+	(bus)
+)
+(connector
+	(pt 224 384)
+	(pt 224 40)
+)
+(connector
+	(pt 224 384)
+	(pt 288 384)
+)
+(connector
+	(pt 288 352)
+	(pt 264 352)
+)
+(connector
+	(pt 264 352)
+	(pt 264 368)
+)
+(connector
+	(pt 288 368)
+	(pt 264 368)
+)
+(connector
+	(pt 264 368)
+	(pt -24 368)
+)
 (junction (pt -280 200))
 (junction (pt 128 168))
 (junction (pt 120 200))
@@ -1458,3 +1458,4 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt 360 -192))
 (junction (pt 784 432))
 (junction (pt 656 -120))
+(junction (pt 264 368))

@@ -1,0 +1,31 @@
+# system info ADC on 2023.03.14.18:54:20
+system_info:
+name,value
+DEVICE,10M50DAF484C7G
+DEVICE_FAMILY,MAX 10
+GENERATION_ID,1678841651
+#
+#
+# Files generated for ADC on 2023.03.14.18:54:20
+files:
+filepath,kind,attributes,module,is_top
+simulation/ADC.vhd,VHDL,,ADC,true
+simulation/submodules/ADC_altpll_0.vho,VHDL,,ADC_altpll_0,false
+simulation/submodules/ADC_modular_adc_0.vhd,VHDL,,ADC_modular_adc_0,false
+simulation/submodules/altera_reset_controller.v,VERILOG,,altera_reset_controller,false
+simulation/submodules/altera_reset_synchronizer.v,VERILOG,,altera_reset_controller,false
+simulation/submodules/altera_reset_controller.sdc,SDC,,altera_reset_controller,false
+simulation/submodules/altera_modular_adc_control.v,VERILOG,,ADC_modular_adc_0_control_internal,false
+simulation/submodules/altera_modular_adc_control_avrg_fifo.v,VERILOG,,ADC_modular_adc_0_control_internal,false
+simulation/submodules/altera_modular_adc_control_fsm.v,VERILOG,,ADC_modular_adc_0_control_internal,false
+simulation/submodules/chsel_code_converter_sw_to_hw.v,VERILOG,,ADC_modular_adc_0_control_internal,false
+simulation/submodules/fiftyfivenm_adcblock_primitive_wrapper.v,VERILOG,,ADC_modular_adc_0_control_internal,false
+simulation/submodules/fiftyfivenm_adcblock_top_wrapper.v,VERILOG,,ADC_modular_adc_0_control_internal,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+ADC.altpll_0,ADC_altpll_0
+ADC.modular_adc_0,ADC_modular_adc_0
+ADC.modular_adc_0.control_internal,ADC_modular_adc_0_control_internal
+ADC.rst_controller,altera_reset_controller

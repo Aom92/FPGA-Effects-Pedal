@@ -1,0 +1,372 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/simulation/modelsim
+Eadc
+Z1 w1674001591
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 43
+R0
+Z5 8D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/ADC.vhd
+Z6 FD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/ADC.vhd
+l0
+L9 1
+VKe0HE_IdCgT_I2B]cn=Xn1
+!s100 SbaQzCePYE:=7fgGW^UFW2
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1678503680
+!i10b 1
+Z9 !s108 1678503680.000000
+Z10 !s90 -reportprogress|300|-93|-work|ADC|D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/ADC.vhd|
+Z11 !s107 D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/ADC.vhd|
+!i113 1
+Z12 o-93 -work ADC
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+Z14 DEx4 work 3 adc 0 22 Ke0HE_IdCgT_I2B]cn=Xn1
+!i122 43
+l150
+Z15 L26 245
+Z16 VBTk9>BbR4h_a9H5c`Q^=53
+Z17 !s100 oJz3j^NMDW:MTRHOA?m_[2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vADC_altpll_0
+Z18 !s110 1678503679
+!i10b 1
+!s100 =>fSfbKBU0bK30g``hTe=0
+Z19 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ik^Y[XIah7FFIRG462GM]G3
+Z20 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z21 w1674001592
+Z22 8D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/ADC_altpll_0.v
+Z23 FD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/ADC_altpll_0.v
+!i122 42
+L0 214 113
+Z24 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z25 !s108 1678503679.000000
+Z26 !s107 D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/ADC_altpll_0.v|
+Z27 !s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules|D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/ADC_altpll_0.v|
+!i113 1
+Z28 o-vlog01compat -work ADC
+Z29 !s92 -vlog01compat -work ADC {+incdir+D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules}
+Z30 tCvgOpt 0
+n@a@d@c_altpll_0
+vADC_altpll_0_altpll_kr22
+R18
+!i10b 1
+!s100 M5B;zf1SzzAQODhMPjb5<3
+R19
+IQOjKLcellfHla;;[_SN[M0
+R20
+R0
+R21
+R22
+R23
+!i122 42
+L0 131 78
+R24
+r1
+!s85 0
+31
+R25
+R26
+R27
+!i113 1
+R28
+R29
+R30
+n@a@d@c_altpll_0_altpll_kr22
+vADC_altpll_0_dffpipe_l2c
+R18
+!i10b 1
+!s100 3lCcX=1A5jkNojYIVbOCn1
+R19
+IDhATBl9`BTz_Scc6?;AZR0
+R20
+R0
+R21
+R22
+R23
+!i122 42
+L0 38 56
+R24
+r1
+!s85 0
+31
+R25
+R26
+R27
+!i113 1
+R28
+R29
+R30
+n@a@d@c_altpll_0_dffpipe_l2c
+vADC_altpll_0_stdsync_sv6
+R18
+!i10b 1
+!s100 J_^n6?@?ZEQ3zTWj::NGJ2
+R19
+IBDZhS5Wbok:KKJ5B9MeW;0
+R20
+R0
+R21
+R22
+R23
+!i122 42
+L0 99 22
+R24
+r1
+!s85 0
+31
+R25
+R26
+R27
+!i113 1
+R28
+R29
+R30
+n@a@d@c_altpll_0_stdsync_sv6
+vADC_modular_adc_0
+Z31 !s110 1678503678
+!i10b 1
+!s100 XaE2l4>l19bLmA9C1Z_]I3
+R19
+I^ldUSmXB?23bUVmY6d?7<1
+R20
+R0
+Z32 w1674001593
+8D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/ADC_modular_adc_0.v
+FD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/ADC_modular_adc_0.v
+!i122 35
+L0 9 86
+R24
+r1
+!s85 0
+31
+Z33 !s108 1678503678.000000
+!s107 D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/ADC_modular_adc_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules|D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/ADC_modular_adc_0.v|
+!i113 1
+R28
+R29
+R30
+n@a@d@c_modular_adc_0
+valtera_modular_adc_control
+R31
+!i10b 1
+!s100 Qlm>?QLb[a8WBGB1J_;hz2
+R19
+I=VEin_19n]8DGUzY4dP=03
+R20
+R0
+R32
+8D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_modular_adc_control.v
+FD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_modular_adc_control.v
+!i122 36
+L0 18 137
+R24
+r1
+!s85 0
+31
+R33
+!s107 D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_modular_adc_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules|D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_modular_adc_control.v|
+!i113 1
+R28
+R29
+R30
+valtera_modular_adc_control_avrg_fifo
+R31
+!i10b 1
+!s100 c20GRJo3Zo_>4MDNFH2QI2
+R19
+I[:3ZNnKkSz0PY]oz2CeP<1
+R20
+R0
+R32
+8D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v
+FD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v
+!i122 37
+L0 53 54
+R24
+r1
+!s85 0
+31
+R33
+!s107 D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules|D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v|
+!i113 1
+R28
+R29
+R30
+valtera_modular_adc_control_fsm
+R31
+!i10b 1
+!s100 L<7^e5CWC7909g63U853c1
+R19
+IPCRWAAQO@I4ZRHPc0CM4A3
+R20
+R0
+R32
+8D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_modular_adc_control_fsm.v
+FD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_modular_adc_control_fsm.v
+!i122 38
+L0 18 989
+R24
+r1
+!s85 0
+31
+R33
+!s107 D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_modular_adc_control_fsm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules|D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_modular_adc_control_fsm.v|
+!i113 1
+R28
+R29
+R30
+valtera_reset_controller
+R31
+!i10b 1
+!s100 oA9lUzaO95KXSKU3fUHXM0
+R19
+IMHSH4^NengFIdVS4H7LF73
+R20
+R0
+R32
+8D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_reset_controller.v
+FD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_reset_controller.v
+!i122 33
+L0 42 278
+R24
+r1
+!s85 0
+31
+R33
+!s107 D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_reset_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules|D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_reset_controller.v|
+!i113 1
+R28
+R29
+R30
+valtera_reset_synchronizer
+R31
+!i10b 1
+!s100 D^dgdIfBaVUo6:<:oWOdC3
+R19
+I_U>L7GZF6nBXI5no;Jled2
+R20
+R0
+R32
+8D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_reset_synchronizer.v
+FD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_reset_synchronizer.v
+!i122 34
+L0 24 63
+R24
+r1
+!s85 0
+31
+R33
+!s107 D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_reset_synchronizer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules|D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/altera_reset_synchronizer.v|
+!i113 1
+R28
+R29
+R30
+vchsel_code_converter_sw_to_hw
+R31
+!i10b 1
+!s100 L5H2n0B16f^@6l4ZT8P`T0
+R19
+IJ12D^ZoX;P>6jRY23QAVm0
+R20
+R0
+R32
+8D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/chsel_code_converter_sw_to_hw.v
+FD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/chsel_code_converter_sw_to_hw.v
+!i122 39
+L0 32 178
+R24
+r1
+!s85 0
+31
+R33
+!s107 D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/chsel_code_converter_sw_to_hw.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules|D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/chsel_code_converter_sw_to_hw.v|
+!i113 1
+R28
+R29
+R30
+vfiftyfivenm_adcblock_primitive_wrapper
+R31
+!i10b 1
+!s100 h2NG@U2G<27;LT?M7D=A`2
+R19
+I:haG1]ofe;KBeL6S211Bm2
+R20
+R0
+R32
+8D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v
+FD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v
+!i122 40
+L0 37 207
+R24
+r1
+!s85 0
+31
+R33
+!s107 D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules|D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v|
+!i113 1
+R28
+R29
+R30
+vfiftyfivenm_adcblock_top_wrapper
+R18
+!i10b 1
+!s100 Bf][;EfN^G9l@h3WoIKe32
+R19
+IFk1NBiNZ[H_Lz2UoV=:QI3
+R20
+R0
+R32
+8D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v
+FD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v
+!i122 41
+L0 31 218
+R24
+r1
+!s85 0
+31
+R33
+!s107 D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v|
+!s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules|D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v|
+!i113 1
+R28
+R29
+R30

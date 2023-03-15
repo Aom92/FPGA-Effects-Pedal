@@ -159,8 +159,6 @@ set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
 set_global_assignment -name VHDL_FILE conv.vhd
 set_global_assignment -name MIF_FILE audio_data.mif
-set_global_assignment -name VHDL_FILE fixed_fload_types.vhd
-set_global_assignment -name VHDL_FILE fixed_pkg.vhd
 set_global_assignment -name VHDL_FILE ADC_simple.vhd
 set_global_assignment -name QIP_FILE ADC/synthesis/ADC.qip
 set_global_assignment -name VHDL_FILE RAM_Controller.vhd

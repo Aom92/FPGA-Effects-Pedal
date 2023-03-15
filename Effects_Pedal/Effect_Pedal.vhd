@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
-use work.fixed_pkg.all;
+
 
 
 
@@ -25,7 +25,7 @@ port(
 			delay_enable : in std_logic;
 			phase_enable : in std_logic;
 			distort_enable : in std_logic;
-			reverb_enable : in std_logic;
+			--reverb_enable : in std_logic;
 			-- CONEXIONES AL CONVOLUCIONADOR -- 
 			valid_reverb : in std_logic;
 			reverb_sample : in unsigned (31 downto 0);
@@ -230,22 +230,22 @@ begin
 
 			end if;
 
-			if reverb_enable = '1' then
-				
-				if (adc_valid = '1' and adc_channel = "00001") then
-
-					
-					write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
-
-					if (valid_reverb = '1' ) then
-
-						audioMix <= reverb_sample;
-
-					end if;
-
-				end if;
-			  
-			end if;
+			--if reverb_enable = '1' then
+			--	
+			--	if (adc_valid = '1' and adc_channel = "00001") then
+--
+			--		
+			--		write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
+--
+			--		if (valid_reverb = '1' ) then
+--
+			--			audioMix <= reverb_sample;
+--
+			--		end if;
+--
+			--	end if;
+			--  
+			--end if;
 
 
 			
