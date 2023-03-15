@@ -22,11 +22,9 @@ entity REVERB_fir_compiler_ii_0 is
     reset_n : in STD_LOGIC;
     ast_sink_data : in STD_LOGIC_VECTOR((0 + 1*12) * 1 + 0 - 1 downto 0);
     ast_sink_valid : in STD_LOGIC;
-    ast_sink_ready : out STD_LOGIC;
     ast_sink_error : in STD_LOGIC_VECTOR(1 downto 0);
-    ast_source_data : out STD_LOGIC_VECTOR(16 * 1*1 - 1 downto 0);
+    ast_source_data : out STD_LOGIC_VECTOR(51 * 1*1 - 1 downto 0);
     ast_source_valid : out STD_LOGIC;
-    ast_source_ready : in STD_LOGIC;
     ast_source_error : out STD_LOGIC_VECTOR(1 downto 0)
   );
 end REVERB_fir_compiler_ii_0;
@@ -43,7 +41,7 @@ architecture syn of REVERB_fir_compiler_ii_0 is
     ast_sink_sop : in STD_LOGIC;
     ast_sink_eop : in STD_LOGIC;
     ast_sink_error : in STD_LOGIC_VECTOR(1 downto 0);
-    ast_source_data : out STD_LOGIC_VECTOR(1*16 * 1 - 1 downto 0);
+    ast_source_data : out STD_LOGIC_VECTOR(1*51 * 1 - 1 downto 0);
     ast_source_ready : in STD_LOGIC;
     ast_source_valid : out STD_LOGIC;
     ast_source_sop : out STD_LOGIC;
@@ -68,8 +66,8 @@ begin
     ast_sink_data => ast_sink_data,
     ast_source_data => ast_source_data,
     ast_sink_valid => ast_sink_valid,
-        ast_sink_ready => ast_sink_ready,
-        ast_source_ready => ast_source_ready,
+        ast_sink_ready => open,
+        ast_source_ready => '1',
     ast_source_valid => ast_source_valid,
         ast_sink_sop => '0',
         ast_sink_eop => '0',

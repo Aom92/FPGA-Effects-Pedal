@@ -79,7 +79,7 @@
   <parameter name="baseAddress" value="0" />
   <parameter name="channelModes" value="0,1,2,3" />
   <parameter name="clockRate" value="50" />
-  <parameter name="clockSlack" value="10" />
+  <parameter name="clockSlack" value="0" />
   <parameter name="coeffBitWidth" value="32" />
   <parameter name="coeffComplex" value="false" />
   <parameter name="coeffFracBitWidth" value="0" />
@@ -97,7 +97,7 @@
   <parameter name="inputBitWidth" value="12" />
   <parameter name="inputChannelNum" value="1" />
   <parameter name="inputFracBitWidth" value="0" />
-  <parameter name="inputRate" value="10.75" />
+  <parameter name="inputRate" value="0.08" />
   <parameter name="inputType" value="int" />
   <parameter name="interpFactor" value="1" />
   <parameter name="karatsuba" value="false" />

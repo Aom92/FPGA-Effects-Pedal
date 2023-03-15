@@ -11,11 +11,9 @@ entity REVERB is
 		ast_sink_data    : in  std_logic_vector(11 downto 0) := (others => '0'); --   avalon_streaming_sink.data
 		ast_sink_valid   : in  std_logic                     := '0';             --                        .valid
 		ast_sink_error   : in  std_logic_vector(1 downto 0)  := (others => '0'); --                        .error
-		ast_sink_ready   : out std_logic;                                        --                        .ready
-		ast_source_data  : out std_logic_vector(15 downto 0);                    -- avalon_streaming_source.data
+		ast_source_data  : out std_logic_vector(50 downto 0);                    -- avalon_streaming_source.data
 		ast_source_valid : out std_logic;                                        --                        .valid
 		ast_source_error : out std_logic_vector(1 downto 0);                     --                        .error
-		ast_source_ready : in  std_logic                     := '0';             --                        .ready
 		clk              : in  std_logic                     := '0';             --                     clk.clk
 		reset_n          : in  std_logic                     := '0'              --                     rst.reset_n
 	);
@@ -29,11 +27,9 @@ architecture rtl of REVERB is
 			ast_sink_data    : in  std_logic_vector(11 downto 0) := (others => 'X'); -- data
 			ast_sink_valid   : in  std_logic                     := 'X';             -- valid
 			ast_sink_error   : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- error
-			ast_sink_ready   : out std_logic;                                        -- ready
-			ast_source_data  : out std_logic_vector(15 downto 0);                    -- data
+			ast_source_data  : out std_logic_vector(50 downto 0);                    -- data
 			ast_source_valid : out std_logic;                                        -- valid
-			ast_source_error : out std_logic_vector(1 downto 0);                     -- error
-			ast_source_ready : in  std_logic                     := 'X'              -- ready
+			ast_source_error : out std_logic_vector(1 downto 0)                      -- error
 		);
 	end component REVERB_fir_compiler_ii_0;
 
@@ -46,11 +42,9 @@ begin
 			ast_sink_data    => ast_sink_data,    --   avalon_streaming_sink.data
 			ast_sink_valid   => ast_sink_valid,   --                        .valid
 			ast_sink_error   => ast_sink_error,   --                        .error
-			ast_sink_ready   => ast_sink_ready,   --                        .ready
 			ast_source_data  => ast_source_data,  -- avalon_streaming_source.data
 			ast_source_valid => ast_source_valid, --                        .valid
-			ast_source_error => ast_source_error, --                        .error
-			ast_source_ready => ast_source_ready  --                        .ready
+			ast_source_error => ast_source_error  --                        .error
 		);
 
 end architecture rtl; -- of REVERB

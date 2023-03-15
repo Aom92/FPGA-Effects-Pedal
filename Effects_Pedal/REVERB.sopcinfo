@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="REVERB" kind="REVERB" version="1.0" fabric="QSYS">
  <!-- Format version 20.1 720 (Future versions may contain additional information.) -->
- <!-- 2023.03.09.19:33:59 -->
+ <!-- 2023.03.14.19:13:26 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1678412039</value>
+  <value>1678842806</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -160,7 +160,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="clockSlack">
    <type>int</type>
-   <value>10</value>
+   <value>0</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -168,7 +168,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="inputRate">
    <type>java.lang.String</type>
-   <value>10.75</value>
+   <value>0.08</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -553,7 +553,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="latency_realOnly">
    <type>int</type>
-   <value>22</value>
+   <value>18</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -561,7 +561,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="outputfifodepth_realOnly">
    <type>int</type>
-   <value>7</value>
+   <value>3</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -609,7 +609,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="latency">
    <type>int</type>
-   <value>22</value>
+   <value>18</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -617,7 +617,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="outputfifodepth">
    <type>int</type>
-   <value>8</value>
+   <value>4</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -625,8 +625,8 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="funcResult">
    <type>java.lang.String</type>
-   <value><![CDATA[-interp=1 -decim=1 -incycles=4 -len=128 -bankcount=1 -nsym -nband=1 -chans=1 -family="MAX 10" 
-|{}|1|1|1|1|51|0|22|7|noCode|LUTS: 9807 DSPs: 64 RAM Bits: 48|]]></value>
+   <value><![CDATA[-interp=1 -decim=1 -incycles=625 -len=128 -bankcount=1 -nsym -nband=1 -chans=1 -family="MAX 10" 
+|{}|1|1|1|1|51|0|18|3|noCode|LUTS: 240 DSPs: 2 RAM Bits: 5632|]]></value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -666,7 +666,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="lutCount">
    <type>int</type>
-   <value>9807</value>
+   <value>240</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -674,7 +674,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="dspCount">
    <type>int</type>
-   <value>64</value>
+   <value>2</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -682,7 +682,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="memBitCount">
    <type>int</type>
-   <value>48</value>
+   <value>5632</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>true</visible>

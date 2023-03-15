@@ -2,7 +2,7 @@ set_global_assignment -entity "REVERB" -library "REVERB" -name IP_TOOL_NAME "Qsy
 set_global_assignment -entity "REVERB" -library "REVERB" -name IP_TOOL_VERSION "20.1"
 set_global_assignment -entity "REVERB" -library "REVERB" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "REVERB" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../REVERB.sopcinfo"]
-set_global_assignment -entity "REVERB" -library "REVERB" -name SLD_INFO "QSYS_NAME REVERB HAS_SOPCINFO 1 GENERATION_ID 1678412039"
+set_global_assignment -entity "REVERB" -library "REVERB" -name SLD_INFO "QSYS_NAME REVERB HAS_SOPCINFO 1 GENERATION_ID 1678842806"
 set_global_assignment -library "REVERB" -name MISC_FILE [file join $::quartus(qip_path) "../REVERB.cmp"]
 set_global_assignment -library "REVERB" -name SLD_FILE [file join $::quartus(qip_path) "REVERB.debuginfo"]
 set_global_assignment -entity "REVERB" -library "REVERB" -name IP_TARGETED_DEVICE_FAMILY "MAX 10"
@@ -15,7 +15,7 @@ set_global_assignment -entity "REVERB" -library "REVERB" -name IP_COMPONENT_DISP
 set_global_assignment -entity "REVERB" -library "REVERB" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "REVERB" -library "REVERB" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "REVERB" -library "REVERB" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "REVERB" -library "REVERB" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTY3ODQxMjAzOQ==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "REVERB" -library "REVERB" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTY3ODg0MjgwNg==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "REVERB" -library "REVERB" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::TUFYIDEw::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "REVERB" -library "REVERB" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::MTBNNTBEQUY0ODRDN0c=::QXV0byBERVZJQ0U="
 set_global_assignment -entity "REVERB" -library "REVERB" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Nw==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -36,8 +36,8 @@ set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name
 set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "TF9iYW5kc0ZpbHRlcg==::MQ==::TC10aCBCYW5kIEZpbHRlcg=="
 set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "aW5wdXRDaGFubmVsTnVt::MQ==::TWF4IE51bWJlciBvZiBDaGFubmVscw=="
 set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "Y2xvY2tSYXRl::NTA=::Q2xvY2sgUmF0ZQ=="
-set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "Y2xvY2tTbGFjaw==::MTA=::Q2xvY2sgU2xhY2s="
-set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "aW5wdXRSYXRl::MTAuNzU=::SW5wdXQgU2FtcGxlIFJhdGUgKE1TUFMp"
+set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "Y2xvY2tTbGFjaw==::MA==::Q2xvY2sgU2xhY2s="
+set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "aW5wdXRSYXRl::MC4wOA==::SW5wdXQgU2FtcGxlIFJhdGUgKE1TUFMp"
 set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "Y29lZmZSZWxvYWQ=::ZmFsc2U=::Q29lZmZpY2llbnRzIFJlbG9hZA=="
 set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "Y29lZmZpY2llbnRSZWFkYmFjaw==::ZmFsc2U=::Y29lZmZpY2llbnRSZWFkYmFjaw=="
 set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "Y29lZmZpY2llbnRXcml0ZWFibGU=::ZmFsc2U=::Y29lZmZpY2llbnRXcml0ZWFibGU="
@@ -79,16 +79,16 @@ set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name
 set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "b3V0cHV0SW50ZXJmYWNlTnVt::MQ==::TnVtYmVyIG9mIFBhcmFsbGVsIE91dHB1dCBTeW1ib2xz"
 set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "Y2hhblBlcklucHV0SW50ZXJmYWNl::MQ==::TnVtYmVyIG9mIENoYW5uZWxzIHBlciBJbnB1dCBJbnRlcmZhY2U="
 set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "Y2hhblBlck91dHB1dEludGVyZmFjZQ==::MQ==::TnVtYmVyIG9mIENoYW5uZWxzIHBlciBPdXRwdXQgSW50ZXJmYWNl"
-set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "bGF0ZW5jeQ==::MjI=::bGF0ZW5jeQ=="
-set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "b3V0cHV0Zmlmb2RlcHRo::OA==::b3V0cHV0Zmlmb2RlcHRo"
-set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "ZnVuY1Jlc3VsdA==::LWludGVycD0xIC1kZWNpbT0xIC1pbmN5Y2xlcz00IC1sZW49MTI4IC1iYW5rY291bnQ9MSAtbnN5bSAtbmJhbmQ9MSAtY2hhbnM9MSAtZmFtaWx5PSJNQVggMTAiIAp8e318MXwxfDF8MXw1MXwwfDIyfDd8bm9Db2RlfExVVFM6IDk4MDcgRFNQczogNjQgUkFNIEJpdHM6IDQ4fA==::ZnVuY1Jlc3VsdA=="
+set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "bGF0ZW5jeQ==::MTg=::bGF0ZW5jeQ=="
+set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "b3V0cHV0Zmlmb2RlcHRo::NA==::b3V0cHV0Zmlmb2RlcHRo"
+set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "ZnVuY1Jlc3VsdA==::LWludGVycD0xIC1kZWNpbT0xIC1pbmN5Y2xlcz02MjUgLWxlbj0xMjggLWJhbmtjb3VudD0xIC1uc3ltIC1uYmFuZD0xIC1jaGFucz0xIC1mYW1pbHk9Ik1BWCAxMCIgCnx7fXwxfDF8MXwxfDUxfDB8MTh8M3xub0NvZGV8TFVUUzogMjQwIERTUHM6IDIgUkFNIEJpdHM6IDU2MzJ8::ZnVuY1Jlc3VsdA=="
 set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "YnVzQWRkcmVzc1dpZHRo::Nw==::YnVzQWRkcmVzc1dpZHRo"
 set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "YmFua0NvdW50::MQ==::TnVtYmVyIG9mIENvZWZmaWNpZW50IEJhbmtz"
 set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "YmFua0luV2lkdGg=::MA==::YmFua0luV2lkdGg="
 set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "YmFua0Rpc3BsYXk=::MA==::YmFua0Rpc3BsYXk="
-set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "bHV0Q291bnQ=::OTgwNw==::TnVtYmVyIG9mIExVVHM="
-set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "ZHNwQ291bnQ=::NjQ=::TnVtYmVyIG9mIERTUHM="
-set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "bWVtQml0Q291bnQ=::NDg=::TnVtYmVyIG9mIE1lbW9yeSBCaXRz"
+set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "bHV0Q291bnQ=::MjQw::TnVtYmVyIG9mIExVVHM="
+set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "ZHNwQ291bnQ=::Mg==::TnVtYmVyIG9mIERTUHM="
+set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "bWVtQml0Q291bnQ=::NTYzMg==::TnVtYmVyIG9mIE1lbW9yeSBCaXRz"
 set_global_assignment -entity "REVERB_fir_compiler_ii_0" -library "REVERB" -name IP_COMPONENT_PARAMETER "ZXJyb3JMaXN0::MA==::ZXJyb3JMaXN0"
 
 set_global_assignment -library "REVERB" -name VHDL_FILE [file join $::quartus(qip_path) "REVERB.vhd"]
@@ -101,6 +101,7 @@ set_global_assignment -library "REVERB" -name VHDL_FILE [file join $::quartus(qi
 set_global_assignment -library "REVERB" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/auk_dspip_avalon_streaming_source_hpfir.vhd"]
 set_global_assignment -library "REVERB" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/auk_dspip_roundsat_hpfir.vhd"]
 set_global_assignment -library "REVERB" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_avalon_sc_fifo.v"]
+set_global_assignment -library "REVERB" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm0_lutmem.hex"]
 set_global_assignment -library "REVERB" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/REVERB_fir_compiler_ii_0_rtl_core.vhd"]
 set_global_assignment -library "REVERB" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/REVERB_fir_compiler_ii_0_ast.vhd"]
 set_global_assignment -library "REVERB" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/REVERB_fir_compiler_ii_0.vhd"]

@@ -27,7 +27,7 @@ entity REVERB_fir_compiler_ii_0_tb is
     constant PHYSCHANIN_c             : natural := 1;
     constant PHYSCHANOUT_c            : natural := 1;
     constant INWIDTH_c                : natural := 12;
-    constant OUTWIDTH_c               : natural := 16;
+    constant OUTWIDTH_c               : natural := 51;
     constant BANKINWIDTH_c            : natural := 0;
     constant BANKCOUNT_c              : natural := 1;
     constant DATA_WIDTH_c             : natural := (INWIDTH_c+BANKINWIDTH_c) * PHYSCHANIN_c;
@@ -36,16 +36,16 @@ entity REVERB_fir_compiler_ii_0_tb is
     constant CHANSPERPHYIN_c          : natural := 1;
     constant CHANSPERPHYOUT_c         : natural := 1;
     constant LOG2_CHANSPERPHYOUT_c    : natural := 0;
-    constant TDM_FACTOR_c             : natural := 5;
+    constant TDM_FACTOR_c             : natural := 625;
     constant INVERSE_TDM_FACTOR_c     : natural := 1;
-    constant INVALID_CYCLES_c         : natural := 4;
+    constant INVALID_CYCLES_c         : natural := 624;
     constant INTERP_FACTOR_c          : natural := 1;
     constant TOTAL_INCHANS_ALLOWED    : natural := PHYSCHANIN_c * CHANSPERPHYIN_c;
     constant TOTAL_OUTCHANS_ALLOWED   : natural := PHYSCHANOUT_c * CHANSPERPHYOUT_c;
     constant NUM_OF_TAPS_c            : natural := 128;
     constant TOTAL_EFF_COEF_c         : natural := 128;
-    constant COEFF_BIT_WIDTH_c        : natural := 8;
-    constant COEFF_BUS_DATA_WIDTH_c   : natural := 16;
+    constant COEFF_BIT_WIDTH_c        : natural := 32;
+    constant COEFF_BUS_DATA_WIDTH_c   : natural := 32;
     constant COEFF_BUS_ADDR_WIDTH   : natural := 7;
 
 end entity REVERB_fir_compiler_ii_0_tb;
@@ -145,12 +145,10 @@ port map (
     clk                => clk,
     reset_n            => reset_design,
 
-    ast_sink_ready     => ast_sink_ready,
     ast_sink_data      => ast_sink_data,
     ast_source_data    => ast_source_data,
     ast_sink_valid     => ast_sink_valid,
     ast_source_valid   => ast_source_valid,
-    ast_source_ready   => ast_source_ready,
 
 
 
@@ -161,6 +159,7 @@ port map (
 
 -- for example purposes, the ready signal is always asserted.
 ast_source_ready <= '1';
+ast_sink_ready <= '1';
 
 
 
@@ -333,7 +332,7 @@ sink_model : process(clk) is
     variable realOutChansCount  : natural := NUM_OF_CHANNELS_c * INVERSE_TDM_FACTOR_c;
     variable totalOutChansCount : natural := TOTAL_OUTCHANS_ALLOWED;
 
-    type Out_2D is array (CHANSPERPHYOUT_c-1 downto 0, PHYSCHANOUT_c-1 downto 0) of integer;
+    type Out_2D is array (CHANSPERPHYOUT_c-1 downto 0, PHYSCHANOUT_c-1 downto 0) of string(div_ceil(OUTWIDTH_c,4) downto 1);
     variable arrayOut : Out_2D;
 
 begin
@@ -361,7 +360,8 @@ begin
                 end if;
 
 
-                arrayOut(y,x) := to_integer(signed(ast_source_data(z*OUTWIDTH_c+OUTWIDTH_c-1 downto OUTWIDTH_c*z)));
+                -- report as hex representation of integer.
+                arrayOut(y,x) := to_hex(signed(ast_source_data(z*OUTWIDTH_c+OUTWIDTH_c-1 downto OUTWIDTH_c*z)));
             end loop;
 
             if (y < CHANSPERPHYOUT_c - 1) then

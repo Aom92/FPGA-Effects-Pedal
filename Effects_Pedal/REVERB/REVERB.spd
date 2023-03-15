@@ -37,6 +37,10 @@
    type="VERILOG"
    library="fir_compiler_ii_0" />
  <file
+   path="simulation/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm0_lutmem.hex"
+   type="HEX"
+   library="fir_compiler_ii_0" />
+ <file
    path="simulation/submodules/REVERB_fir_compiler_ii_0_rtl_core.vhd"
    type="VHDL"
    library="fir_compiler_ii_0" />
