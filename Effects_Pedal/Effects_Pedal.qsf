@@ -158,7 +158,6 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
 set_global_assignment -name DSP_BLOCK_BALANCING "DSP BLOCKS"
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name QIP_FILE REVERB/synthesis/REVERB.qip
 set_global_assignment -name VHDL_FILE conv.vhd
 set_global_assignment -name MIF_FILE audio_data.mif
@@ -172,3 +171,4 @@ set_global_assignment -name VHDL_FILE pwm.vhd
 set_global_assignment -name BSF_FILE ADC/ADC.bsf
 set_global_assignment -name BDF_FILE Effects_Pedal.bdf
 set_global_assignment -name BDF_FILE mul.bdf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,3 +1,39 @@
+Info: Starting: Create simulation model
+Info: qsys-generate "D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\REVERB.qsys" --simulation=VHDL --allow-mixed-language-simulation --output-directory="D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\REVERB\simulation" --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading Effects_Pedal/REVERB.qsys
+Progress: Reading input file
+Progress: Adding fir_compiler_ii_0 [altera_fir_compiler_ii 20.1]
+Progress: Parameterizing module fir_compiler_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: REVERB.fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 55, Bankcount 1, CoefBitWidth 32
+Info: REVERB: Generating REVERB "REVERB" for SIM_VHDL
+Info: fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 55, Bankcount 1, Latency 24, CoefBitWidth 32
+Info: fir_compiler_ii_0: "REVERB" instantiated altera_fir_compiler_ii "fir_compiler_ii_0"
+Info: REVERB: Done "REVERB" with 2 modules, 21 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd="D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\REVERB\REVERB.spd" --output-directory="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/REVERB/simulation/" --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\REVERB\REVERB.spd --output-directory=D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/REVERB/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/REVERB/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/REVERB/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/REVERB/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	1 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/REVERB/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/REVERB/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
 Info: Starting: Create block symbol file (.bsf)
 Info: qsys-generate "D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\REVERB.qsys" --block-symbol-file --output-directory="D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\REVERB" --family="MAX 10" --part=10M50DAF484C7G
 Progress: Loading Effects_Pedal/REVERB.qsys
@@ -8,7 +44,7 @@ Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Info: REVERB.fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 51, Bankcount 1, CoefBitWidth 32
+Info: REVERB.fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 55, Bankcount 1, CoefBitWidth 32
 Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
@@ -22,9 +58,9 @@ Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Info: REVERB.fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 51, Bankcount 1, CoefBitWidth 32
+Info: REVERB.fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 55, Bankcount 1, CoefBitWidth 32
 Info: REVERB: Generating REVERB "REVERB" for QUARTUS_SYNTH
-Info: fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 51, Bankcount 1, Latency 22, CoefBitWidth 32
+Info: fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 55, Bankcount 1, Latency 24, CoefBitWidth 32
 Info: fir_compiler_ii_0: "REVERB" instantiated altera_fir_compiler_ii "fir_compiler_ii_0"
 Info: REVERB: Done "REVERB" with 2 modules, 13 files
 Info: qsys-generate succeeded.

@@ -14,7 +14,6 @@ set_global_assignment -library "lib_REVERB" -name MISC_FILE [file join $::quartu
 set_global_assignment -library "lib_REVERB" -name MISC_FILE [file join $::quartus(sip_path) "submodules/auk_dspip_avalon_streaming_source_hpfir.vhd"]
 set_global_assignment -library "lib_REVERB" -name MISC_FILE [file join $::quartus(sip_path) "submodules/auk_dspip_roundsat_hpfir.vhd"]
 set_global_assignment -library "lib_REVERB" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_avalon_sc_fifo.v"]
-set_global_assignment -library "lib_REVERB" -name MISC_FILE [file join $::quartus(sip_path) "submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm0_lutmem.hex"]
 set_global_assignment -library "lib_REVERB" -name MISC_FILE [file join $::quartus(sip_path) "submodules/REVERB_fir_compiler_ii_0_rtl_core.vhd"]
 set_global_assignment -library "lib_REVERB" -name MISC_FILE [file join $::quartus(sip_path) "submodules/REVERB_fir_compiler_ii_0_ast.vhd"]
 set_global_assignment -library "lib_REVERB" -name MISC_FILE [file join $::quartus(sip_path) "submodules/REVERB_fir_compiler_ii_0.vhd"]

@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 20.1 720 win32 2023.03.14.19:13:24
+# ACDS 20.1 720 win32 2023.03.14.23:48:06
 # ----------------------------------------
 # Auto-generated simulation script rivierapro_setup.tcl
 # ----------------------------------------
@@ -152,7 +152,6 @@ if { [ string match "Active" $Aldec ] } {
 # Copy ROM/RAM files to simulation directory
 alias file_copy {
   echo "\[exec\] file_copy"
-  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm0_lutmem.hex ./
 }
 
 # ----------------------------------------

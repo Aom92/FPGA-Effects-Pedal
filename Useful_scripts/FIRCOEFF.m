@@ -18,15 +18,15 @@ N = 32;                % number of frequency points
 b = h;
 
 % Step 4: Truncate the filter coefficients to a finite length
-M = 32;                 % number of filter coefficients
+M = 2048;                 % number of filter coefficients
 b = b(1:M);
 
 % Step 5: Apply windowing to improve the filter performance
-w = hamming(M);         % Hamming window
+w = triang(M);         % Hamming window
 b = b .* w;
 
 % Normalize the filter coefficients
-b = b / sum(b);
+b = (b / sum(b))*0.1;
 
 % Plot the frequency response
 freqz(b, 1);
@@ -43,11 +43,12 @@ for i = 0 : M-1
 end
 
 %Testeamos en un archivo wav
-[input,fs] = audioread('SINE.wav');
+[input,fs] = audioread('literary girl.wav');
 
 
 output = filter(b,1,input);
-%output = conv2(input,h);
+
+%output = conv2(input,b);
 audiowrite('test.wav',real(output),fs);
 
 

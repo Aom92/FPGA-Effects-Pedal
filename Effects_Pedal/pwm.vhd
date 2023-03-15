@@ -13,23 +13,23 @@ use ieee.std_logic_unsigned.all;
 
 entity DAC is 
 	Port( Reloj : in std_logic;
-			D : in std_logic_vector (15 downto 0);
+			D : in std_logic_vector (31 downto 0);
 			S : out std_logic);
 end DAC;
 
 architecture Behavioral of DAC is
-signal PWM_Acumulador : std_logic_vector(16 downto 0);
+signal PWM_Acumulador : std_logic_vector(32 downto 0);
 begin 
 	process (Reloj)	
 	begin	
 		if rising_edge(Reloj) then
 		
-		PWM_Acumulador <= ( "0" & PWM_Acumulador(15 downto 0) ) + ( "0" & D  ) ;
+		PWM_Acumulador <= ( "0" & PWM_Acumulador(31 downto 0) ) + ( "0" & D  ) ;
 		
 		end if;
 		
 	end process;
-	S <= PWM_Acumulador(16);
+	S <= PWM_Acumulador(32);
 	
 end Behavioral;
 
