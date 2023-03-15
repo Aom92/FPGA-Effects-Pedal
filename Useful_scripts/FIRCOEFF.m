@@ -26,7 +26,7 @@ w = triang(M);         % Hamming window
 b = b .* w;
 
 % Normalize the filter coefficients
-b = (b / sum(b))*0.1;
+b = (b / sum(b)); % COMO EVITAR ESTE PASO???? 
 
 % Plot the frequency response
 freqz(b, 1);
