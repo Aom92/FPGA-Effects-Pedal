@@ -12,21 +12,21 @@ N = 32;                % number of frequency points
 %h = fir2(N-1, f, a);    % ideal impulse response 
 %(?) y cambiamos esto por la respusta al impulso que nos interesa
 
-[h, Fs] = audioread("r1_omni-short.wav");    % Room Impulse Response.
+[h, Fs] = audioread("r1_omni-mini.wav");    % Room Impulse Response.
 
 % Step 3: Convert the ideal filter to a causal FIR filter by applying the inverse Fourier transform
-b = h;
+b = (h);
 
 % Step 4: Truncate the filter coefficients to a finite length
-M = 2048;                 % number of filter coefficients
+M = 2048*8;                 % number of filter coefficients
 b = b(1:M);
 
 % Step 5: Apply windowing to improve the filter performance
-w = triang(M);         % Hamming window
+w = hanning(M);         % Hamming window
 b = b .* w;
 
 % Normalize the filter coefficients
-b = (b / norm(b)); % COMO EVITAR ESTE PASO???? 
+b = (b / norm(b));  
 
 % Plot the frequency response
 freqz(b, 1);
@@ -43,13 +43,13 @@ for i = 0 : M-1
 end
 
 %Testeamos en un archivo wav
-[input,fs] = audioread('literary girl.wav');
+[input,fs] = audioread('literary girl-mono.wav');
 
 
 output = filter(b,1,input);
 
 %output = conv2(input,b);
-audiowrite('test.wav',real(output),fs);
+audiowrite('test-ifft.wav',real(output),fs);
 
 
 

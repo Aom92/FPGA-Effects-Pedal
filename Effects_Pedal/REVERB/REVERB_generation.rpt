@@ -8,11 +8,11 @@ Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Info: REVERB.fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 32, Bankcount 1, CoefBitWidth 9
+Info: REVERB.fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 39, Bankcount 1, CoefBitWidth 13
 Info: REVERB: Generating REVERB "REVERB" for SIM_VHDL
-Info: fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 32, Bankcount 1, Latency 23, CoefBitWidth 9
+Info: fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 39, Bankcount 1, Latency 25, CoefBitWidth 13
 Info: fir_compiler_ii_0: "REVERB" instantiated altera_fir_compiler_ii "fir_compiler_ii_0"
-Info: REVERB: Done "REVERB" with 2 modules, 21 files
+Info: REVERB: Done "REVERB" with 2 modules, 99 files
 Info: qsys-generate succeeded.
 Info: Finished: Create simulation model
 Info: Starting: Create Modelsim Project.
@@ -44,7 +44,7 @@ Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Info: REVERB.fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 32, Bankcount 1, CoefBitWidth 9
+Info: REVERB.fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 39, Bankcount 1, CoefBitWidth 13
 Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
@@ -58,10 +58,10 @@ Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Info: REVERB.fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 32, Bankcount 1, CoefBitWidth 9
+Info: REVERB.fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 39, Bankcount 1, CoefBitWidth 13
 Info: REVERB: Generating REVERB "REVERB" for QUARTUS_SYNTH
-Info: fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 32, Bankcount 1, Latency 23, CoefBitWidth 9
+Info: fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 39, Bankcount 1, Latency 25, CoefBitWidth 13
 Info: fir_compiler_ii_0: "REVERB" instantiated altera_fir_compiler_ii "fir_compiler_ii_0"
-Info: REVERB: Done "REVERB" with 2 modules, 13 files
+Info: REVERB: Done "REVERB" with 2 modules, 91 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

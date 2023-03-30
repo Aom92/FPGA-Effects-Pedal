@@ -19,16 +19,21 @@ port(
 			DE10Reset : in std_logic;
 
 			-- SALIDAS VISUALES --
-			led_out : out std_logic_vector(15 downto 0);
+			led_out : out std_logic_vector(9 downto 0);
 			display0, display1, display2, display3 : out std_logic_vector (7 downto 0);
 			-- ENTRADAS DE CONTROL --
 			delay_enable : in std_logic;
 			phase_enable : in std_logic;
 			distort_enable : in std_logic;
 			--reverb_enable : in std_logic;
-			-- CONEXIONES AL CONVOLUCIONADOR -- 
-			valid_reverb : in std_logic;
-			reverb_sample : in unsigned (31 downto 0);
+
+			-- CONEXIONES AL DELAY FIFO -- 
+			--fifo_empty : in std_logic;
+			--fifo_full  : in std_logic;
+			--fifo_read  : out std_logic;
+			--fifo_write : out std_logic;
+
+
 
 			-- CONEXIONES AL DEL CONTROLADOR DE LA RAM --
 			address : out std_logic_vector(25 downto 0) := "00000000000000000000000000";
@@ -62,7 +67,7 @@ signal addressCounter : integer range 0 to 67108863;
 signal BufferFull : std_logic := '0';
 signal write_done : boolean;
 constant SAMPLE_DELAY : integer :=  16#124F8#;
-constant DELAY_TIME : integer := 16#6DDD0#;
+constant DELAY_TIME : integer := 16#36EE8#;
 
 signal audioMix : unsigned (31 downto 0 ) := (others => '0');
 
@@ -96,6 +101,7 @@ begin
 	-- Salidas hacia los displays 7 segmentos
 	--BufferFull <= not BufferFull when memaddress = X"3FFFFFF";
 	sal_disp3 <= X"F" when BufferFull = '1' else X"0";
+	led_out <= std_logic_vector(adc_rdata(9 downto 0));
 
 	bufferFullProc : process(DE10CLK)
   begin
@@ -167,7 +173,7 @@ begin
 						-- EXTENSION y NORMALIZACIÓN:
 						
 						write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
-						audioMix <= (( read_buff*17/10) + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*20/10);
+						audioMix <= (( read_buff*100) + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*100);
 
 				elsif (BufferFull = '1' and adc_valid = '1' and adc_channel = "00001" ) then
 				-- LECTURA 
@@ -179,7 +185,7 @@ begin
 						sal_disp1 <= std_logic_vector(adc_rdata)(7 downto 4);
 						sal_disp2 <= std_logic_vector(adc_rdata)(11 downto 8);
 						--Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
-						audioMix <= (( read_buff*42/10)  + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*25/10)  ;
+						audioMix <= (( read_buff*100)  + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*75)  ;
 				
 					
 
@@ -229,6 +235,9 @@ begin
 				end if;
 
 			end if;
+
+
+
 
 			--if reverb_enable = '1' then
 			--	

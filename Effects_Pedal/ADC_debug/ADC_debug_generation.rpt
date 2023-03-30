@@ -1,0 +1,219 @@
+Info: Starting: Create simulation model
+Info: qsys-generate "D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\ADC_debug.qsys" --simulation=VHDL --allow-mixed-language-simulation --output-directory="D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\ADC_debug\simulation" --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading Effects_Pedal/ADC_debug.qsys
+Progress: Reading input file
+Progress: Adding AvalonBridge [altera_jtag_avalon_master 20.1]
+Progress: Parameterizing module AvalonBridge
+Progress: Adding altpll_0 [altpll 20.1]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding clock_bridge_0 [altera_clock_bridge 20.1]
+Progress: Parameterizing module clock_bridge_0
+Progress: Adding modular_adc_0 [altera_modular_adc 20.1]
+Progress: Parameterizing module modular_adc_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ADC_debug.modular_adc_0.control_internal.response/st_splitter_internal.in: The sink has a empty signal of 1 bits, but the source does not. Avalon-ST Adapter will be inserted.
+Info: ADC_debug.modular_adc_0.st_splitter_internal.out1/adc_monitor_internal.adc_data: The source has a empty signal of 1 bits, but the sink does not. Avalon-ST Adapter will be inserted.
+Warning: ADC_debug.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Info: ADC_debug: Generating ADC_debug "ADC_debug" for SIM_VHDL
+Info: Interconnect is inserted between master AvalonBridge.master and slave modular_adc_0.sequencer_csr because the master has address signal 32 bit wide, but the slave is 1 bit wide.
+Info: Interconnect is inserted between master AvalonBridge.master and slave modular_adc_0.sequencer_csr because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master AvalonBridge.master and slave modular_adc_0.sequencer_csr because the master has readdatavalid signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master AvalonBridge.master and slave modular_adc_0.sequencer_csr because the master has byteenable signal 4 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master AvalonBridge.master and slave modular_adc_0.sequencer_csr because they have different clock source.
+Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
+Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
+Info: AvalonBridge: "ADC_debug" instantiated altera_jtag_avalon_master "AvalonBridge"
+Info: altpll_0: Generating VHDL simulation model
+Warning: Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Warning: Verilog HDL or VHDL warning at ADC_debug_altpll_0.vhd(317): object "wire_w_address_range2w" assigned a value but never read File: C:/Users/Aom92/AppData/Local/Temp/alt9440_7350214048309720670.dir/0004_sopcqmap/ADC_debug_altpll_0.vhd Line: 317
+Info: altpll_0: Generated simulation model ADC_debug_altpll_0.vho
+Info: altpll_0: "ADC_debug" instantiated altpll "altpll_0"
+Info: avalon_st_adapter: Inserting data_format_adapter: data_format_adapter_0
+Info: avalon_st_adapter: Inserting timing_adapter: timing_adapter_0
+Info: avalon_st_adapter: Inserting timing_adapter: timing_adapter_1
+Info: avalon_st_adapter_001: Inserting data_format_adapter: data_format_adapter_0
+Info: avalon_st_adapter_001: Inserting timing_adapter: timing_adapter_0
+Info: avalon_st_adapter_001: Inserting timing_adapter: timing_adapter_1
+Info: modular_adc_0: "ADC_debug" instantiated altera_modular_adc "modular_adc_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "ADC_debug" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: rst_controller: "ADC_debug" instantiated altera_reset_controller "rst_controller"
+Info: jtag_phy_embedded_in_jtag_master: "AvalonBridge" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: "AvalonBridge" instantiated timing_adapter "timing_adt"
+Info: fifo: "AvalonBridge" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "AvalonBridge" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "AvalonBridge" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "AvalonBridge" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "AvalonBridge" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "AvalonBridge" instantiated channel_adapter "p2b_adapter"
+Info: control_internal: "modular_adc_0" instantiated altera_modular_adc_control "control_internal"
+Info: adc_monitor_internal: "modular_adc_0" instantiated altera_trace_adc_monitor "adc_monitor_internal"
+Info: sequencer_internal: "modular_adc_0" instantiated altera_modular_adc_sequencer "sequencer_internal"
+Info: st_splitter_internal: "modular_adc_0" instantiated altera_avalon_st_splitter "st_splitter_internal"
+Info: avalon_st_adapter: "modular_adc_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_001: "modular_adc_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
+Info: AvalonBridge_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "AvalonBridge_master_translator"
+Info: modular_adc_0_sequencer_csr_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "modular_adc_0_sequencer_csr_translator"
+Info: AvalonBridge_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "AvalonBridge_master_agent"
+Info: modular_adc_0_sequencer_csr_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "modular_adc_0_sequencer_csr_agent"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_debug/simulation/submodules/altera_merlin_arbitrator.sv
+Info: crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_debug/simulation/submodules/altera_avalon_st_clock_crosser.v
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_debug/simulation/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_debug/simulation/submodules/altera_std_synchronizer_nocut.v
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: altera_trace_adc_monitor_wa_inst: "Generating: altera_trace_adc_monitor_wa_inst"
+Info: core: "adc_monitor_internal" instantiated altera_trace_adc_monitor_core "core"
+Info: trace_endpoint: "adc_monitor_internal" instantiated altera_trace_monitor_endpoint "trace_endpoint"
+Info: data_format_adapter_0: "avalon_st_adapter" instantiated data_format_adapter "data_format_adapter_0"
+Info: timing_adapter_0: "avalon_st_adapter" instantiated timing_adapter "timing_adapter_0"
+Info: timing_adapter_1: "avalon_st_adapter" instantiated timing_adapter "timing_adapter_1"
+Info: data_format_adapter_0: "avalon_st_adapter_001" instantiated data_format_adapter "data_format_adapter_0"
+Info: timing_adapter_0: "avalon_st_adapter_001" instantiated timing_adapter "timing_adapter_0"
+Info: timing_adapter_1: "avalon_st_adapter_001" instantiated timing_adapter "timing_adapter_1"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: altera_trace_adc_monitor_wa_inst: "core" instantiated altera_trace_adc_monitor_core "altera_trace_adc_monitor_wa_inst"
+Info: altera_trace_adc_monitor_wa_inst: "altera_trace_adc_monitor_wa_inst" instantiated altera_trace_adc_monitor_wa "altera_trace_adc_monitor_wa_inst"
+Info: ADC_debug: Done "ADC_debug" with 43 modules, 67 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd="D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\ADC_debug\ADC_debug.spd" --output-directory="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_debug/simulation/" --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\ADC_debug\ADC_debug.spd --output-directory=D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_debug/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_debug/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_debug/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_debug/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	37 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_debug/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_debug/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate "D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\ADC_debug.qsys" --block-symbol-file --output-directory="D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\ADC_debug" --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading Effects_Pedal/ADC_debug.qsys
+Progress: Reading input file
+Progress: Adding AvalonBridge [altera_jtag_avalon_master 20.1]
+Progress: Parameterizing module AvalonBridge
+Progress: Adding altpll_0 [altpll 20.1]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding clock_bridge_0 [altera_clock_bridge 20.1]
+Progress: Parameterizing module clock_bridge_0
+Progress: Adding modular_adc_0 [altera_modular_adc 20.1]
+Progress: Parameterizing module modular_adc_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ADC_debug.modular_adc_0.control_internal.response/st_splitter_internal.in: The sink has a empty signal of 1 bits, but the source does not. Avalon-ST Adapter will be inserted.
+Info: ADC_debug.modular_adc_0.st_splitter_internal.out1/adc_monitor_internal.adc_data: The source has a empty signal of 1 bits, but the sink does not. Avalon-ST Adapter will be inserted.
+Warning: ADC_debug.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate "D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\ADC_debug.qsys" --synthesis=VHDL --output-directory="D:\UNAM\Servicio Social\Trabajo\DE10_AudioFun\Effects_Pedal\ADC_debug\synthesis" --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading Effects_Pedal/ADC_debug.qsys
+Progress: Reading input file
+Progress: Adding AvalonBridge [altera_jtag_avalon_master 20.1]
+Progress: Parameterizing module AvalonBridge
+Progress: Adding altpll_0 [altpll 20.1]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding clock_bridge_0 [altera_clock_bridge 20.1]
+Progress: Parameterizing module clock_bridge_0
+Progress: Adding modular_adc_0 [altera_modular_adc 20.1]
+Progress: Parameterizing module modular_adc_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ADC_debug.modular_adc_0.control_internal.response/st_splitter_internal.in: The sink has a empty signal of 1 bits, but the source does not. Avalon-ST Adapter will be inserted.
+Info: ADC_debug.modular_adc_0.st_splitter_internal.out1/adc_monitor_internal.adc_data: The source has a empty signal of 1 bits, but the sink does not. Avalon-ST Adapter will be inserted.
+Warning: ADC_debug.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Info: ADC_debug: Generating ADC_debug "ADC_debug" for QUARTUS_SYNTH
+Info: Interconnect is inserted between master AvalonBridge.master and slave modular_adc_0.sequencer_csr because the master has address signal 32 bit wide, but the slave is 1 bit wide.
+Info: Interconnect is inserted between master AvalonBridge.master and slave modular_adc_0.sequencer_csr because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master AvalonBridge.master and slave modular_adc_0.sequencer_csr because the master has readdatavalid signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master AvalonBridge.master and slave modular_adc_0.sequencer_csr because the master has byteenable signal 4 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master AvalonBridge.master and slave modular_adc_0.sequencer_csr because they have different clock source.
+Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
+Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
+Info: AvalonBridge: "ADC_debug" instantiated altera_jtag_avalon_master "AvalonBridge"
+Info: altpll_0: "ADC_debug" instantiated altpll "altpll_0"
+Info: avalon_st_adapter: Inserting data_format_adapter: data_format_adapter_0
+Info: avalon_st_adapter: Inserting timing_adapter: timing_adapter_0
+Info: avalon_st_adapter: Inserting timing_adapter: timing_adapter_1
+Info: avalon_st_adapter_001: Inserting data_format_adapter: data_format_adapter_0
+Info: avalon_st_adapter_001: Inserting timing_adapter: timing_adapter_0
+Info: avalon_st_adapter_001: Inserting timing_adapter: timing_adapter_1
+Info: modular_adc_0: "ADC_debug" instantiated altera_modular_adc "modular_adc_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "ADC_debug" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: rst_controller: "ADC_debug" instantiated altera_reset_controller "rst_controller"
+Info: jtag_phy_embedded_in_jtag_master: "AvalonBridge" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: "AvalonBridge" instantiated timing_adapter "timing_adt"
+Info: fifo: "AvalonBridge" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "AvalonBridge" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "AvalonBridge" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "AvalonBridge" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "AvalonBridge" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "AvalonBridge" instantiated channel_adapter "p2b_adapter"
+Info: control_internal: "modular_adc_0" instantiated altera_modular_adc_control "control_internal"
+Info: adc_monitor_internal: "modular_adc_0" instantiated altera_trace_adc_monitor "adc_monitor_internal"
+Info: sequencer_internal: "modular_adc_0" instantiated altera_modular_adc_sequencer "sequencer_internal"
+Info: st_splitter_internal: "modular_adc_0" instantiated altera_avalon_st_splitter "st_splitter_internal"
+Info: avalon_st_adapter: "modular_adc_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_001: "modular_adc_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
+Info: AvalonBridge_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "AvalonBridge_master_translator"
+Info: modular_adc_0_sequencer_csr_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "modular_adc_0_sequencer_csr_translator"
+Info: AvalonBridge_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "AvalonBridge_master_agent"
+Info: modular_adc_0_sequencer_csr_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "modular_adc_0_sequencer_csr_agent"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_debug/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_debug/synthesis/submodules/altera_avalon_st_clock_crosser.v
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_debug/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/ADC_debug/synthesis/submodules/altera_std_synchronizer_nocut.v
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: altera_trace_adc_monitor_wa_inst: "Generating: altera_trace_adc_monitor_wa_inst"
+Info: core: "adc_monitor_internal" instantiated altera_trace_adc_monitor_core "core"
+Info: trace_endpoint: "adc_monitor_internal" instantiated altera_trace_monitor_endpoint "trace_endpoint"
+Info: data_format_adapter_0: "avalon_st_adapter" instantiated data_format_adapter "data_format_adapter_0"
+Info: timing_adapter_0: "avalon_st_adapter" instantiated timing_adapter "timing_adapter_0"
+Info: timing_adapter_1: "avalon_st_adapter" instantiated timing_adapter "timing_adapter_1"
+Info: data_format_adapter_0: "avalon_st_adapter_001" instantiated data_format_adapter "data_format_adapter_0"
+Info: timing_adapter_0: "avalon_st_adapter_001" instantiated timing_adapter "timing_adapter_0"
+Info: timing_adapter_1: "avalon_st_adapter_001" instantiated timing_adapter "timing_adapter_1"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: altera_trace_adc_monitor_wa_inst: "core" instantiated altera_trace_adc_monitor_core "altera_trace_adc_monitor_wa_inst"
+Info: altera_trace_adc_monitor_wa_inst: "altera_trace_adc_monitor_wa_inst" instantiated altera_trace_adc_monitor_wa "altera_trace_adc_monitor_wa_inst"
+Info: ADC_debug: Done "ADC_debug" with 43 modules, 68 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

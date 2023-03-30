@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 20.1 720 win32 2023.03.14.23:48:06
+# ACDS 20.1 720 win32 2023.03.29.11:44:59
 
 # ----------------------------------------
 # Initialize variables
@@ -141,6 +141,84 @@ if ![ string match "*-64 vsim*" [ vsim -version ] ] {
 # Copy ROM/RAM files to simulation directory
 alias file_copy {
   echo "\[exec\] file_copy"
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm10_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm11_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm12_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm13_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm14_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm15_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm16_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm17_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm18_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm19_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm1_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm20_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm21_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm22_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm23_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm24_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm25_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm26_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm27_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm28_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm29_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm2_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm30_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm31_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm32_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm33_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm34_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm35_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm36_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm37_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm38_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm39_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm3_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm40_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm41_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm42_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm43_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm44_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm45_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm46_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm47_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm48_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm49_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm4_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm50_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm51_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm52_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm53_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm54_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm55_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm56_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm57_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm58_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm59_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm5_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm60_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm61_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm62_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm63_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm64_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm65_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm66_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm67_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm68_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm69_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm6_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm70_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm71_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm72_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm73_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm74_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm75_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm76_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm77_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm7_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm8_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm9_lutmem.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_wi0_r0_ra81_count1_lut_lutmem.hex ./
 }
 
 # ----------------------------------------
