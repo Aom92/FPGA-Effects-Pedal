@@ -1,6 +1,6 @@
 clear;
-[RIR, fs] = audioread("r1_omni-short.wav");
-[audio, fs2] = audioread("literary girl-mono.wav");
+[RIR, fs] = audioread("IR\rir_jack_lyons_chan3_44k.wav");
+[audio, fs2] = audioread("audios\literary girl-mono.wav");
 
 
 %Grafica de las señales de entrada:
@@ -24,7 +24,7 @@ xlabel('tiempo')
 ylabel('amplitud')
 title('Audio entrada')
 
-W = conv(audio, RIR);
+W = conv2(audio, RIR);
 
 t2 = [1:length(W)]/fs2;
 subplot(3,1,3)
@@ -56,6 +56,6 @@ freqz(b, 1);
 title('Respuesta en Frecuencia - Coeficientes Calculados')
 
 output = conv(audio,b);
-audiowrite('test.wav',output,fs2);
+audiowrite('test.wav',output,fs);
 
 
