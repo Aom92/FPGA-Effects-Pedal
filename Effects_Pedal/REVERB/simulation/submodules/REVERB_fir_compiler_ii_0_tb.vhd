@@ -27,7 +27,7 @@ entity REVERB_fir_compiler_ii_0_tb is
     constant PHYSCHANIN_c             : natural := 1;
     constant PHYSCHANOUT_c            : natural := 1;
     constant INWIDTH_c                : natural := 12;
-    constant OUTWIDTH_c               : natural := 39;
+    constant OUTWIDTH_c               : natural := 43;
     constant BANKINWIDTH_c            : natural := 0;
     constant BANKCOUNT_c              : natural := 1;
     constant DATA_WIDTH_c             : natural := (INWIDTH_c+BANKINWIDTH_c) * PHYSCHANIN_c;
@@ -45,7 +45,7 @@ entity REVERB_fir_compiler_ii_0_tb is
     constant NUM_OF_TAPS_c            : natural := 16384;
     constant TOTAL_EFF_COEF_c         : natural := 16384;
     constant COEFF_BIT_WIDTH_c        : natural := 32;
-    constant COEFF_BUS_DATA_WIDTH_c   : natural := 16;
+    constant COEFF_BUS_DATA_WIDTH_c   : natural := 32;
     constant COEFF_BUS_ADDR_WIDTH   : natural := 14;
 
 end entity REVERB_fir_compiler_ii_0_tb;

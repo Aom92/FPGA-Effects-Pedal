@@ -77,10 +77,6 @@
    type="HEX"
    library="fir_compiler_ii_0" />
  <file
-   path="simulation/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm1_lutmem.hex"
-   type="HEX"
-   library="fir_compiler_ii_0" />
- <file
    path="simulation/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm20_lutmem.hex"
    type="HEX"
    library="fir_compiler_ii_0" />
@@ -118,10 +114,6 @@
    library="fir_compiler_ii_0" />
  <file
    path="simulation/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm29_lutmem.hex"
-   type="HEX"
-   library="fir_compiler_ii_0" />
- <file
-   path="simulation/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm2_lutmem.hex"
    type="HEX"
    library="fir_compiler_ii_0" />
  <file
@@ -330,6 +322,14 @@
    library="fir_compiler_ii_0" />
  <file
    path="simulation/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm77_lutmem.hex"
+   type="HEX"
+   library="fir_compiler_ii_0" />
+ <file
+   path="simulation/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm78_lutmem.hex"
+   type="HEX"
+   library="fir_compiler_ii_0" />
+ <file
+   path="simulation/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm79_lutmem.hex"
    type="HEX"
    library="fir_compiler_ii_0" />
  <file

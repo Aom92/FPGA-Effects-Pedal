@@ -12,7 +12,7 @@ module REVERB (
 	input	[11:0]	ast_sink_data;
 	input		ast_sink_valid;
 	input	[1:0]	ast_sink_error;
-	output	[38:0]	ast_source_data;
+	output	[42:0]	ast_source_data;
 	output		ast_source_valid;
 	output	[1:0]	ast_source_error;
 	input		clk;

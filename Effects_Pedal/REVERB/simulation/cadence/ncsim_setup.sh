@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 20.1 720 win32 2023.03.29.11:44:59
+# ACDS 20.1 720 win32 2023.04.26.17:29:44
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -106,7 +106,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 20.1 720 win32 2023.03.29.11:44:59
+# ACDS 20.1 720 win32 2023.04.26.17:29:44
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="REVERB"
@@ -172,7 +172,6 @@ if [ $SKIP_FILE_COPY -eq 0 ]; then
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm17_lutmem.hex ./
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm18_lutmem.hex ./
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm19_lutmem.hex ./
-  cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm1_lutmem.hex ./
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm20_lutmem.hex ./
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm21_lutmem.hex ./
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm22_lutmem.hex ./
@@ -183,7 +182,6 @@ if [ $SKIP_FILE_COPY -eq 0 ]; then
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm27_lutmem.hex ./
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm28_lutmem.hex ./
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm29_lutmem.hex ./
-  cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm2_lutmem.hex ./
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm30_lutmem.hex ./
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm31_lutmem.hex ./
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm32_lutmem.hex ./
@@ -236,6 +234,8 @@ if [ $SKIP_FILE_COPY -eq 0 ]; then
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm75_lutmem.hex ./
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm76_lutmem.hex ./
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm77_lutmem.hex ./
+  cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm78_lutmem.hex ./
+  cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm79_lutmem.hex ./
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm7_lutmem.hex ./
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm8_lutmem.hex ./
   cp -f $QSYS_SIMDIR/submodules/REVERB_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm9_lutmem.hex ./

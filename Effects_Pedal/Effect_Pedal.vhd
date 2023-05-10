@@ -33,8 +33,6 @@ port(
 			--fifo_read  : out std_logic;
 			--fifo_write : out std_logic;
 
-
-
 			-- CONEXIONES AL DEL CONTROLADOR DE LA RAM --
 			address : out std_logic_vector(25 downto 0) := "00000000000000000000000000";
 			read_op , write_op : out std_logic;
@@ -86,9 +84,11 @@ constant MAX_VAL  : integer := 1023;
 constant MIN_VAL  : integer := -2048;
 constant PI_OVER_SAMPLE_WIDTH : real := PI / (2.0 ** PHASE_SHIFT);
 
-constant THRESHOLD : integer := 48;
+-- DISTORSION
+constant THRESHOLD : integer := 65;
 signal phase_offset : unsigned (30 downto 0);
 signal audio_int : integer;
+signal voltaje_in : integer;
 
 
 
@@ -219,18 +219,20 @@ begin
 
 			end if;
 
+			-- Distorcion
 			if distort_enable = '1' then
 				
-				audio_int <= to_integer(adc_rdata);
+				voltaje_in <= to_integer(adc_rdata)/4095 * 5;  --Valor del voltaje de entrada
+				audio_int <= to_integer(adc_rdata); 
 				if (adc_valid = '1' and adc_channel = "00001") then
 					
 					if audio_int > THRESHOLD then
 						audio_int <= audio_int - THRESHOLD;
 					end if;
 					if audio_int < -THRESHOLD then
-						audio_int <= audio_int + THRESHOLD;
+						audio_int <= audio_int ;
 					end if;
-					audioMix <=  to_unsigned(audio_int,16)*3/4 ;
+					audioMix <= to_unsigned(audio_int,16)*100;
 				  	--audioMix <= X"00000" & shift_right(adc_rdata,4);
 				end if;
 
