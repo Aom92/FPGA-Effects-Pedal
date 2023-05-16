@@ -25,6 +25,7 @@ port(
 			delay_enable : in std_logic;
 			phase_enable : in std_logic;
 			distort_enable : in std_logic;
+			octave_enable : in std_logic;
 			--reverb_enable : in std_logic;
 
 			-- CONEXIONES AL DELAY FIFO -- 
@@ -83,7 +84,7 @@ constant TWO_PI   : real := 6.283185307179586;
 constant MAX_VAL  : integer := 1023;
 constant MIN_VAL  : integer := -2048;
 constant PI_OVER_SAMPLE_WIDTH : real := PI / (2.0 ** PHASE_SHIFT);
-
+constant INTERPOLATION_FACTOR : natural := 2;
 -- DISTORSION
 constant THRESHOLD : integer := 65;
 signal phase_offset : unsigned (30 downto 0);
@@ -91,6 +92,10 @@ signal audio_int : integer;
 signal voltaje_in : integer;
 
 
+-- OCTAVER
+signal counter : natural range 0 to INTERPOLATION_FACTOR -1 := 0;
+signal oct_in_reg : integer;
+signal oct_out_reg : integer;
 
 
 begin
@@ -236,6 +241,28 @@ begin
 				  	--audioMix <= X"00000" & shift_right(adc_rdata,4);
 				end if;
 
+			end if;
+
+			-- Octavador +1 Octave
+			if octave_enable = '1' then
+			-- Incrementaremos la frecuencia de muestreo en un factor de 2 
+			-- para obtener una octava mas arriba.
+				audio_int <= to_integer(adc_rdata);
+				if (adc_valid = '1' and adc_channel = "00001") then
+					oct_in_reg <= audio_int;
+					counter <= counter + 1;
+
+					if counter = 0 then
+						oct_out_reg <= oct_in_reg;
+					else
+						oct_out_reg <= audio_int;
+					end if;
+
+
+				end if;
+
+				audioMix <= to_unsigned(oct_out_reg,16)*100;
+			
 			end if;
 
 
