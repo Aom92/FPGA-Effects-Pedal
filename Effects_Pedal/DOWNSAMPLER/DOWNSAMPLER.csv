@@ -1,0 +1,38 @@
+# system info DOWNSAMPLER on 2023.05.17.01:33:59
+system_info:
+name,value
+DEVICE,10M50DAF484C7G
+DEVICE_FAMILY,MAX 10
+GENERATION_ID,1684305238
+#
+#
+# Files generated for DOWNSAMPLER on 2023.05.17.01:33:59
+files:
+filepath,kind,attributes,module,is_top
+simulation/DOWNSAMPLER.vhd,VHDL,,DOWNSAMPLER,true
+simulation/submodules/dspba_library_package.vhd,VHDL,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/dspba_library.vhd,VHDL,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/auk_dspip_math_pkg_hpfir.vhd,VHDL,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/auk_dspip_lib_pkg_hpfir.vhd,VHDL,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/auk_dspip_avalon_streaming_controller_hpfir.vhd,VHDL,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/auk_dspip_avalon_streaming_sink_hpfir.vhd,VHDL,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/auk_dspip_avalon_streaming_source_hpfir.vhd,VHDL,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/auk_dspip_roundsat_hpfir.vhd,VHDL,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/altera_avalon_sc_fifo.v,VERILOG,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/DOWNSAMPLER_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm0_lutmem.hex,HEX,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/DOWNSAMPLER_fir_compiler_ii_0_rtl_core.vhd,VHDL,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/DOWNSAMPLER_fir_compiler_ii_0_ast.vhd,VHDL,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/DOWNSAMPLER_fir_compiler_ii_0.vhd,VHDL,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/DOWNSAMPLER_fir_compiler_ii_0_nativelink.tcl,OTHER,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/DOWNSAMPLER_fir_compiler_ii_0_msim.tcl,OTHER,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/DOWNSAMPLER_fir_compiler_ii_0_tb.vhd,VHDL,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/DOWNSAMPLER_fir_compiler_ii_0_mlab.m,OTHER,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/DOWNSAMPLER_fir_compiler_ii_0_model.m,OTHER,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/DOWNSAMPLER_fir_compiler_ii_0_coef_int.txt,OTHER,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/DOWNSAMPLER_fir_compiler_ii_0_input.txt,OTHER,,DOWNSAMPLER_fir_compiler_ii_0,false
+simulation/submodules/DOWNSAMPLER_fir_compiler_ii_0_param.txt,OTHER,,DOWNSAMPLER_fir_compiler_ii_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+DOWNSAMPLER.fir_compiler_ii_0,DOWNSAMPLER_fir_compiler_ii_0

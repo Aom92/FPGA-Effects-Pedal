@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2023.05.17.01:34:03"
+ outputDirectory="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="MAX 10"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="10M50DAF484C7G"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="avalon_streaming_sink" kind="avalon_streaming" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="rst" />
+   <property name="beatsPerCycle" value="1" />
+   <property name="dataBitsPerSymbol" value="13" />
+   <property name="emptyWithinPacket" value="false" />
+   <property name="errorDescriptor" value="" />
+   <property name="firstSymbolInHighOrderBits" value="true" />
+   <property name="highOrderSymbolAtMSB" value="false" />
+   <property name="maxChannel" value="0" />
+   <property name="packetDescription" value="" />
+   <property name="readyLatency" value="0" />
+   <property name="symbolsPerBeat" value="1" />
+   <port name="ast_sink_data" direction="input" role="data" width="13" />
+   <port name="ast_sink_valid" direction="input" role="valid" width="1" />
+   <port name="ast_sink_error" direction="input" role="error" width="2" />
+  </interface>
+  <interface name="avalon_streaming_source" kind="avalon_streaming" start="1">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="rst" />
+   <property name="beatsPerCycle" value="1" />
+   <property name="dataBitsPerSymbol" value="26" />
+   <property name="emptyWithinPacket" value="false" />
+   <property name="errorDescriptor" value="" />
+   <property name="firstSymbolInHighOrderBits" value="true" />
+   <property name="highOrderSymbolAtMSB" value="false" />
+   <property name="maxChannel" value="0" />
+   <property name="packetDescription" value="" />
+   <property name="readyLatency" value="0" />
+   <property name="symbolsPerBeat" value="1" />
+   <port name="ast_source_data" direction="output" role="data" width="26" />
+   <port name="ast_source_valid" direction="output" role="valid" width="1" />
+   <port name="ast_source_error" direction="output" role="error" width="2" />
+  </interface>
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="rst" kind="reset" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="DOWNSAMPLER:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10M50DAF484C7G,AUTO_DEVICE_FAMILY=MAX 10,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1684305242,AUTO_UNIQUE_ID=(altera_fir_compiler_ii:20.1:L_bandsFilter=1,MODE_STRING=None Set,ModeWidth=0,backPressure=false,bankCount=2,bankDisplay=1,bankInWidth=1,baseAddress=0,busAddressWidth=7,busDataWidth=16,chanPerInputInterface=1,chanPerOutputInterface=1,channelModes=0,1,2,3,clockRate=10,clockSlack=0,coeffBitWidth=8,coeffBitWidth_derived=8,coeffComplex=false,coeffFracBitWidth=0,coeffNum=37,coeffReload=false,coeffScaling=auto,coeffSetFixedValue=8,6,0,-7,-11,-8,0,10,16,12,0,-16,-26,-22,0,38,80,114,127,114,80,38,0,-22,-26,-16,0,12,16,10,0,-8,-11,-7,0,6,8;127,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,coeffSetFixedValueImag=0,0,0,0,0,0,0,0,coeffSetRealValue=0.0176663,0.013227,0.0,-0.0149911,-0.0227152,-0.0172976,0.0,0.0204448,0.0318046,0.0249882,0.0,-0.0321283,-0.0530093,-0.04498,0.0,0.0749693,0.159034,0.224907,0.249809,0.224907,0.159034,0.0749693,0.0,-0.04498,-0.0530093,-0.0321283,0.0,0.0249882,0.0318046,0.0204448,0.0,-0.0172976,-0.0227152,-0.0149911,0.0,0.013227,0.0176663;5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,coeffSetRealValueImag=0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.0530093, -0.04498, 0.0, 0.0749693, 0.159034, 0.224907, 0.249809, 0.224907, 0.159034, 0.0749693, 0.0, -0.04498, -0.0530093, -0.0321283, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,coeffSetScaleValue=0.015736,0.011802,0.0,-0.013769,-0.021637,-0.015736,0.0,0.01967,0.031472,0.023604,0.0,-0.031472,-0.051142,-0.043274,0.0,0.07474599999999999,0.15736,0.224238,0.249809,0.224238,0.15736,0.07474599999999999,0.0,-0.043274,-0.051142,-0.031472,0.0,0.023604,0.031472,0.01967,0.0,-0.015736,-0.021637,-0.013769,0.0,0.011802,0.015736;5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,coeffSetScaleValueImag=0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,coeffType=int,coefficientReadback=false,coefficientWriteable=false,decimFactor=2,delayRAMBlockThreshold=20,deviceFamily=MAX 10,dspCount=1,dualMemDistRAMThreshold=1280,errorList=0,filterType=decim,funcResult=-interp=1 -decim=2 -incycles=200 -len=37 -bankcount=2 -nsym -nband=1 -chans=1 -family=&quot;MAX 10&quot; 
+|{}|1|1|1|1|26|0|17|3|noCode|LUTS: 191 DSPs: 1 RAM Bits: 1577|,hardMultiplierThreshold=-1,inputBitWidth=12,inputChannelNum=1,inputFracBitWidth=0,inputInterfaceNum=1,inputRate=0.05,inputType=int,interpFactor=1,karatsuba=false,latency=17,latency_realOnly=17,lutCount=191,mRAMThreshold=1000000,memBitCount=1577,modeFormatted=--,num_modes=2,outBitWidth=26,outFracBitWidth=0,outFullFracBitWidth=0,outFullFracBitWidth_realOnly=0,outLSBRound=trunc,outLsbBitRem=0,outMSBRound=trunc,outMsbBitRem=0,outType=int,outWidth=26,outWidth_realOnly=26,outputInterfaceNum=1,outputfifodepth=4,outputfifodepth_realOnly=3,readWriteMode=read_write,reconfigurable=false,reconfigurable_list=0,speedGrade=medium,symmetryMode=nsym)"
+   instancePathKey="DOWNSAMPLER"
+   kind="DOWNSAMPLER"
+   version="1.0"
+   name="DOWNSAMPLER">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1684305242" />
+  <parameter name="AUTO_DEVICE" value="10M50DAF484C7G" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="MAX 10" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <generatedFiles>
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/DOWNSAMPLER.vhd"
+       type="VHDL" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/dspba_library_package.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/dspba_library.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/auk_dspip_math_pkg_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/auk_dspip_lib_pkg_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/auk_dspip_avalon_streaming_controller_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/auk_dspip_avalon_streaming_sink_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/auk_dspip_avalon_streaming_source_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/auk_dspip_roundsat_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/altera_avalon_sc_fifo.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/DOWNSAMPLER_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm0_lutmem.hex"
+       type="HEX"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/DOWNSAMPLER_fir_compiler_ii_0_rtl_core.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/DOWNSAMPLER_fir_compiler_ii_0_ast.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/DOWNSAMPLER_fir_compiler_ii_0.vhd"
+       type="VHDL"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/dsp/altera_fir_compiler_ii/src/HP_FIR_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="DOWNSAMPLER">queue size: 0 starting:DOWNSAMPLER "DOWNSAMPLER"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="DOWNSAMPLER"><![CDATA["<b>DOWNSAMPLER</b>" reuses <b>altera_fir_compiler_ii</b> "<b>submodules/DOWNSAMPLER_fir_compiler_ii_0</b>"]]></message>
+   <message level="Debug" culprit="DOWNSAMPLER">queue size: 0 starting:altera_fir_compiler_ii "submodules/DOWNSAMPLER_fir_compiler_ii_0"</message>
+   <message level="Debug" culprit="fir_compiler_ii_0"><![CDATA[C:/intelfpga_lite/20.1/quartus/dspba/backend/windows64/fir_ip_api_interface DOWNSAMPLER_fir_compiler_ii_0_rtl_core . MAX10 medium 0 10 1 0.05 37 1 2 1 nsym 1 12 0 8 0 0 false false -- 16 7 20 1280 1000000 -1 true false 2 -- <<< 8,6,0,-7,-11,-8,0,10,16,12,0,-16,-26,-22,0,38,80,114,127,114,80,38,0,-22,-26,-16,0,12,16,10,0,-8,-11,-7,0,6,8,127,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 ]]></message>
+   <message level="Debug" culprit="fir_compiler_ii_0"><![CDATA[OUTPARAMS -interp=1 -decim=2 -incycles=200 -len=37 -bankcount=2 -nsym -nband=1 -chans=1 -family="MAX 10" 
+|{}|1|1|1|1|26|0|17|3|true|LUTS: 191 DSPs: 1 RAM Bits: 1577|DOWNSAMPLER_fir_compiler_ii_0_rtl_core.vhd|DOWNSAMPLER_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm0_lutmem.hex|DOWNSAMPLER_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm0_lutmem.hex|]]></message>
+   <message level="Info" culprit="fir_compiler_ii_0">PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 26, Bankcount 2, Latency 17, CoefBitWidth 8</message>
+   <message level="Info" culprit="fir_compiler_ii_0"><![CDATA["<b>DOWNSAMPLER</b>" instantiated <b>altera_fir_compiler_ii</b> "<b>fir_compiler_ii_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_fir_compiler_ii:20.1:L_bandsFilter=1,MODE_STRING=None Set,ModeWidth=0,backPressure=false,bankCount=2,bankDisplay=1,bankInWidth=1,baseAddress=0,busAddressWidth=7,busDataWidth=16,chanPerInputInterface=1,chanPerOutputInterface=1,channelModes=0,1,2,3,clockRate=10,clockSlack=0,coeffBitWidth=8,coeffBitWidth_derived=8,coeffComplex=false,coeffFracBitWidth=0,coeffNum=37,coeffReload=false,coeffScaling=auto,coeffSetFixedValue=8,6,0,-7,-11,-8,0,10,16,12,0,-16,-26,-22,0,38,80,114,127,114,80,38,0,-22,-26,-16,0,12,16,10,0,-8,-11,-7,0,6,8;127,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,coeffSetFixedValueImag=0,0,0,0,0,0,0,0,coeffSetRealValue=0.0176663,0.013227,0.0,-0.0149911,-0.0227152,-0.0172976,0.0,0.0204448,0.0318046,0.0249882,0.0,-0.0321283,-0.0530093,-0.04498,0.0,0.0749693,0.159034,0.224907,0.249809,0.224907,0.159034,0.0749693,0.0,-0.04498,-0.0530093,-0.0321283,0.0,0.0249882,0.0318046,0.0204448,0.0,-0.0172976,-0.0227152,-0.0149911,0.0,0.013227,0.0176663;5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,coeffSetRealValueImag=0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.0530093, -0.04498, 0.0, 0.0749693, 0.159034, 0.224907, 0.249809, 0.224907, 0.159034, 0.0749693, 0.0, -0.04498, -0.0530093, -0.0321283, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,coeffSetScaleValue=0.015736,0.011802,0.0,-0.013769,-0.021637,-0.015736,0.0,0.01967,0.031472,0.023604,0.0,-0.031472,-0.051142,-0.043274,0.0,0.07474599999999999,0.15736,0.224238,0.249809,0.224238,0.15736,0.07474599999999999,0.0,-0.043274,-0.051142,-0.031472,0.0,0.023604,0.031472,0.01967,0.0,-0.015736,-0.021637,-0.013769,0.0,0.011802,0.015736;5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,coeffSetScaleValueImag=0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,coeffType=int,coefficientReadback=false,coefficientWriteable=false,decimFactor=2,delayRAMBlockThreshold=20,deviceFamily=MAX 10,dspCount=1,dualMemDistRAMThreshold=1280,errorList=0,filterType=decim,funcResult=-interp=1 -decim=2 -incycles=200 -len=37 -bankcount=2 -nsym -nband=1 -chans=1 -family=&quot;MAX 10&quot; 
+|{}|1|1|1|1|26|0|17|3|noCode|LUTS: 191 DSPs: 1 RAM Bits: 1577|,hardMultiplierThreshold=-1,inputBitWidth=12,inputChannelNum=1,inputFracBitWidth=0,inputInterfaceNum=1,inputRate=0.05,inputType=int,interpFactor=1,karatsuba=false,latency=17,latency_realOnly=17,lutCount=191,mRAMThreshold=1000000,memBitCount=1577,modeFormatted=--,num_modes=2,outBitWidth=26,outFracBitWidth=0,outFullFracBitWidth=0,outFullFracBitWidth_realOnly=0,outLSBRound=trunc,outLsbBitRem=0,outMSBRound=trunc,outMsbBitRem=0,outType=int,outWidth=26,outWidth_realOnly=26,outputInterfaceNum=1,outputfifodepth=4,outputfifodepth_realOnly=3,readWriteMode=read_write,reconfigurable=false,reconfigurable_list=0,speedGrade=medium,symmetryMode=nsym"
+   instancePathKey="DOWNSAMPLER:.:fir_compiler_ii_0"
+   kind="altera_fir_compiler_ii"
+   version="20.1"
+   name="DOWNSAMPLER_fir_compiler_ii_0">
+  <parameter name="outBitWidth" value="26" />
+  <parameter name="inputFracBitWidth" value="0" />
+  <parameter
+     name="coeffSetRealValueImag"
+     value="0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.0530093, -0.04498, 0.0, 0.0749693, 0.159034, 0.224907, 0.249809, 0.224907, 0.159034, 0.0749693, 0.0, -0.04498, -0.0530093, -0.0321283, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0" />
+  <parameter name="inputInterfaceNum" value="1" />
+  <parameter name="MODE_STRING" value="None Set" />
+  <parameter
+     name="funcResult"
+     value="-interp=1 -decim=2 -incycles=200 -len=37 -bankcount=2 -nsym -nband=1 -chans=1 -family=&quot;MAX 10&quot; 
+|{}|1|1|1|1|26|0|17|3|noCode|LUTS: 191 DSPs: 1 RAM Bits: 1577|" />
+  <parameter name="speedGrade" value="medium" />
+  <parameter name="outFullFracBitWidth_realOnly" value="0" />
+  <parameter name="coeffBitWidth" value="8" />
+  <parameter name="coeffType" value="int" />
+  <parameter name="outMSBRound" value="trunc" />
+  <parameter name="outLSBRound" value="trunc" />
+  <parameter name="coeffReload" value="false" />
+  <parameter name="delayRAMBlockThreshold" value="20" />
+  <parameter name="inputType" value="int" />
+  <parameter name="chanPerOutputInterface" value="1" />
+  <parameter name="busAddressWidth" value="7" />
+  <parameter name="coefficientWriteable" value="false" />
+  <parameter name="coeffSetFixedValueImag" value="0,0,0,0,0,0,0,0" />
+  <parameter name="num_modes" value="2" />
+  <parameter name="karatsuba" value="false" />
+  <parameter name="coeffBitWidth_derived" value="8" />
+  <parameter name="bankDisplay" value="1" />
+  <parameter name="baseAddress" value="0" />
+  <parameter
+     name="coeffSetRealValue"
+     value="0.0176663,0.013227,0.0,-0.0149911,-0.0227152,-0.0172976,0.0,0.0204448,0.0318046,0.0249882,0.0,-0.0321283,-0.0530093,-0.04498,0.0,0.0749693,0.159034,0.224907,0.249809,0.224907,0.159034,0.0749693,0.0,-0.04498,-0.0530093,-0.0321283,0.0,0.0249882,0.0318046,0.0204448,0.0,-0.0172976,-0.0227152,-0.0149911,0.0,0.013227,0.0176663;5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0" />
+  <parameter name="coeffSetScaleValueImag" value="0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0" />
+  <parameter name="chanPerInputInterface" value="1" />
+  <parameter name="deviceFamily" value="MAX 10" />
+  <parameter name="dspCount" value="1" />
+  <parameter name="outType" value="int" />
+  <parameter name="symmetryMode" value="nsym" />
+  <parameter name="outLsbBitRem" value="0" />
+  <parameter name="decimFactor" value="2" />
+  <parameter name="ModeWidth" value="0" />
+  <parameter name="memBitCount" value="1577" />
+  <parameter name="outputInterfaceNum" value="1" />
+  <parameter name="filterType" value="decim" />
+  <parameter name="backPressure" value="false" />
+  <parameter name="inputBitWidth" value="12" />
+  <parameter name="coeffScaling" value="auto" />
+  <parameter name="outFullFracBitWidth" value="0" />
+  <parameter name="coeffNum" value="37" />
+  <parameter name="busDataWidth" value="16" />
+  <parameter name="coeffComplex" value="false" />
+  <parameter name="outputfifodepth_realOnly" value="3" />
+  <parameter name="inputChannelNum" value="1" />
+  <parameter name="channelModes" value="0,1,2,3" />
+  <parameter
+     name="coeffSetScaleValue"
+     value="0.015736,0.011802,0.0,-0.013769,-0.021637,-0.015736,0.0,0.01967,0.031472,0.023604,0.0,-0.031472,-0.051142,-0.043274,0.0,0.07474599999999999,0.15736,0.224238,0.249809,0.224238,0.15736,0.07474599999999999,0.0,-0.043274,-0.051142,-0.031472,0.0,0.023604,0.031472,0.01967,0.0,-0.015736,-0.021637,-0.013769,0.0,0.011802,0.015736;5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0" />
+  <parameter name="latency" value="17" />
+  <parameter name="lutCount" value="191" />
+  <parameter name="outFracBitWidth" value="0" />
+  <parameter name="outputfifodepth" value="4" />
+  <parameter name="clockRate" value="10" />
+  <parameter name="readWriteMode" value="read_write" />
+  <parameter name="reconfigurable" value="false" />
+  <parameter name="outWidth" value="26" />
+  <parameter name="coeffFracBitWidth" value="0" />
+  <parameter
+     name="coeffSetFixedValue"
+     value="8,6,0,-7,-11,-8,0,10,16,12,0,-16,-26,-22,0,38,80,114,127,114,80,38,0,-22,-26,-16,0,12,16,10,0,-8,-11,-7,0,6,8;127,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" />
+  <parameter name="modeFormatted" value="--" />
+  <parameter name="mRAMThreshold" value="1000000" />
+  <parameter name="bankCount" value="2" />
+  <parameter name="interpFactor" value="1" />
+  <parameter name="outWidth_realOnly" value="26" />
+  <parameter name="errorList" value="0" />
+  <parameter name="L_bandsFilter" value="1" />
+  <parameter name="clockSlack" value="0" />
+  <parameter name="outMsbBitRem" value="0" />
+  <parameter name="reconfigurable_list" value="0" />
+  <parameter name="dualMemDistRAMThreshold" value="1280" />
+  <parameter name="latency_realOnly" value="17" />
+  <parameter name="inputRate" value="0.05" />
+  <parameter name="coefficientReadback" value="false" />
+  <parameter name="bankInWidth" value="1" />
+  <parameter name="hardMultiplierThreshold" value="-1" />
+  <generatedFiles>
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/dspba_library_package.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/dspba_library.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/auk_dspip_math_pkg_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/auk_dspip_lib_pkg_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/auk_dspip_avalon_streaming_controller_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/auk_dspip_avalon_streaming_sink_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/auk_dspip_avalon_streaming_source_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/auk_dspip_roundsat_hpfir.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/altera_avalon_sc_fifo.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/DOWNSAMPLER_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm0_lutmem.hex"
+       type="HEX"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/DOWNSAMPLER_fir_compiler_ii_0_rtl_core.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/DOWNSAMPLER_fir_compiler_ii_0_ast.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Effects_Pedal/DOWNSAMPLER/synthesis/submodules/DOWNSAMPLER_fir_compiler_ii_0.vhd"
+       type="VHDL"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_lite/20.1/ip/altera/dsp/altera_fir_compiler_ii/src/HP_FIR_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="DOWNSAMPLER" as="fir_compiler_ii_0" />
+  <messages>
+   <message level="Debug" culprit="DOWNSAMPLER">queue size: 0 starting:altera_fir_compiler_ii "submodules/DOWNSAMPLER_fir_compiler_ii_0"</message>
+   <message level="Debug" culprit="fir_compiler_ii_0"><![CDATA[C:/intelfpga_lite/20.1/quartus/dspba/backend/windows64/fir_ip_api_interface DOWNSAMPLER_fir_compiler_ii_0_rtl_core . MAX10 medium 0 10 1 0.05 37 1 2 1 nsym 1 12 0 8 0 0 false false -- 16 7 20 1280 1000000 -1 true false 2 -- <<< 8,6,0,-7,-11,-8,0,10,16,12,0,-16,-26,-22,0,38,80,114,127,114,80,38,0,-22,-26,-16,0,12,16,10,0,-8,-11,-7,0,6,8,127,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 ]]></message>
+   <message level="Debug" culprit="fir_compiler_ii_0"><![CDATA[OUTPARAMS -interp=1 -decim=2 -incycles=200 -len=37 -bankcount=2 -nsym -nband=1 -chans=1 -family="MAX 10" 
+|{}|1|1|1|1|26|0|17|3|true|LUTS: 191 DSPs: 1 RAM Bits: 1577|DOWNSAMPLER_fir_compiler_ii_0_rtl_core.vhd|DOWNSAMPLER_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm0_lutmem.hex|DOWNSAMPLER_fir_compiler_ii_0_rtl_core_u0_m0_wo0_cm0_lutmem.hex|]]></message>
+   <message level="Info" culprit="fir_compiler_ii_0">PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 26, Bankcount 2, Latency 17, CoefBitWidth 8</message>
+   <message level="Info" culprit="fir_compiler_ii_0"><![CDATA["<b>DOWNSAMPLER</b>" instantiated <b>altera_fir_compiler_ii</b> "<b>fir_compiler_ii_0</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

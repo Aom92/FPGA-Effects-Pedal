@@ -93,9 +93,9 @@ signal voltaje_in : integer;
 
 
 -- OCTAVER
-signal counter : natural range 0 to INTERPOLATION_FACTOR := 0;
-signal oct_in_reg : integer;
-signal oct_out_reg : integer;
+signal counter : integer range 0 to 1 := 0;
+signal sample_hold : unsigned (11 downto 0) := (others => '0');
+signal oct_out : unsigned (11 downto 0) := (others => '0');
 
 
 begin
@@ -253,8 +253,24 @@ begin
 
 			--Octavador +1 Octave
 			if octave_enable = '1' then
-				
-				-- ESCRIBIR AL BUFFER.
+
+				-- Segunda opcion DOWNSAMPLER
+				--if (adc_valid = '1' and adc_channel = "00001") then
+--
+				--	sample_hold <= adc_rdata;
+				--	counter <= counter + 1;
+--
+				--	if counter = 0 then
+				--		oct_out <= sample_hold;
+				--	else
+				--		oct_out <= adc_rdata;
+				--	end if;
+--
+				--	
+				--end if;
+				--audioMix <= ( unsigned(std_logic_vector(oct_out)(11) & X"0" & std_logic_vector(oct_out)(10 downto 0))*100);
+				--
+				-- primera opcion ESCRIBIR AL BUFFER.
 				read_op <= '0';
 				write_op <= '1';
 				write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
@@ -264,57 +280,11 @@ begin
 				write_op <= '0';
 				read_op <= '1';
 				audioMix <= (( read_buff*100)  + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*75);
+				--Desde otro proceso se estan leyendo al doble de velocidad. veremos que sucede
 
-				-- Desde otro proceso se estan leyendo al doble de velocidad. veremos que sucede
-
-			---- Incrementaremos la frecuencia de muestreo en un factor de 2 
-			---- para obtener una octava mas arriba.
-			--	audio_int <= to_integer(adc_rdata);
-			--	--
-			--		
-			--	if (adc_valid = '1' and adc_channel = "00001") then
-			--		counter <= counter + 1;
-			--		
---
---
-			--		if counter = 1 then
-			--
-			--			oct_out_reg <= oct_in_reg; -- Sacamos el valor de la muestra del registro.
-			--
-			--		else
---
-			--			oct_in_reg <= audio_int; -- La muestra actual se guarda en el registro de entrada.
-			--			oct_out_reg <= audio_int; -- Se reproduce la muestra actual.
---
-			--		end if;
---
---
-			--	end if;
---
-			--	audioMix <= to_unsigned(oct_out_reg,16)*100;
-			--
-			--end if;
-
-
-
-
-			--if reverb_enable = '1' then
-			--	
-			--	if (adc_valid = '1' and adc_channel = "00001") then
---
-			--		
-			--		write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
---
-			--		if (valid_reverb = '1' ) then
---
-			--			audioMix <= reverb_sample;
---
-			--		end if;
---
-			--	end if;
-			--  
+			
 			end if;
-
+			
 
 			
 		END IF; 
