@@ -1,0 +1,154 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/simulation/qsim
+Ehard_block
+Z1 w1684304113
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 ]LY<>e3?`4Wb8dl1GV_X90
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 `f]nQdYHZLbCG_>oYeZOo2
+!i122 79
+R0
+Z8 8OctaveTest.vho
+Z9 FOctaveTest.vho
+l0
+L35 1
+Vhj[i;a0dD85B`o1JPT^cg2
+!s100 3A]XnMhF<;9mKUe5mn3aM1
+Z10 OV;C;2020.1;71
+32
+Z11 !s110 1684304113
+!i10b 1
+Z12 !s108 1684304113.000000
+Z13 !s90 -work|work|OctaveTest.vho|
+Z14 !s107 OctaveTest.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 hj[i;a0dD85B`o1JPT^cg2
+!i122 79
+l76
+L54 28
+Va5ClDYec`9chO`Ne0M1NL2
+!s100 >:Wi^nX[YiN=@>>JC6K_83
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Eoctave
+R1
+R3
+R7
+R2
+Z17 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
+R4
+R5
+R6
+Z18 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
+!i122 79
+R0
+R8
+R9
+l0
+L91 1
+VLSN2d051>`4@1hPK8CU[L1
+!s100 NNEa`1;6EhLC<4OgNm:^M1
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R3
+R7
+R2
+R17
+R4
+R5
+R6
+R18
+DEx4 work 6 octave 0 22 LSN2d051>`4@1hPK8CU[L1
+!i122 79
+l289
+L154 1922
+Vh1zN7]@:3Tom>d8<Q>@Cz2
+!s100 l_Pi8_c7nWMXL]PF8c7gG2
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Eoctave_vhd_vec_tst
+Z19 w1684304112
+R5
+R6
+!i122 80
+R0
+Z20 8Waveform.vwf.vht
+Z21 FWaveform.vwf.vht
+l0
+L32 1
+V]fGR49Qi@H=S<`S^N_Fna0
+!s100 d[o;o<@]5oiGjS7mjY2`f2
+R10
+32
+Z22 !s110 1684304114
+!i10b 1
+Z23 !s108 1684304114.000000
+Z24 !s90 -work|work|Waveform.vwf.vht|
+Z25 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Aoctave_arch
+R5
+R6
+Z26 DEx4 work 18 octave_vhd_vec_tst 0 22 ]fGR49Qi@H=S<`S^N_Fna0
+!i122 80
+l51
+Z27 L34 163
+VXP3X@o`caJ7oXDFzT=c]=2
+!s100 WecanK5VP23YZj:29IdDg0
+R10
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R15
+R16
