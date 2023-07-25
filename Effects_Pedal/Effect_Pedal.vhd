@@ -4,8 +4,6 @@ use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 
 
-
-
 entity EffectPedal is 
 generic (
     SAMPLE_WIDTH  : positive := 12;
@@ -20,7 +18,7 @@ port(
 
 			-- SALIDAS VISUALES --
 			led_out : out std_logic_vector(9 downto 0);
-			display0, display1, display2, display3 : out std_logic_vector (7 downto 0);
+			display0, display1, display2, display3 : out std_logic_vector (3 downto 0);
 			-- ENTRADAS DE CONTROL --
 			delay_enable : in std_logic;
 			phase_enable : in std_logic;
@@ -86,10 +84,12 @@ constant MIN_VAL  : integer := -2048;
 constant PI_OVER_SAMPLE_WIDTH : real := PI / (2.0 ** PHASE_SHIFT);
 constant INTERPOLATION_FACTOR : natural := 2;
 -- DISTORSION
-constant THRESHOLD : integer := 65;
+constant THRESHOLD_P : integer := 2113;
+constant THRESHOLD_N : integer := 1983;
 signal phase_offset : unsigned (30 downto 0);
 signal audio_int : integer;
 signal voltaje_in : integer;
+signal audio_dist : unsigned (11 downto 0);
 
 
 -- OCTAVER
@@ -101,12 +101,18 @@ signal oct_out : unsigned (11 downto 0) := (others => '0');
 begin
 	
 	-- PROCESOS CONCURRENTES
+	sal_disp3 <= X"F" when BufferFull = '1' else X"0";
+	led_out <= std_logic_vector(adc_rdata(9 downto 0));
+	display0 <= std_logic_vector(adc_rdata)(3 downto 0);
+	display1 <= std_logic_vector(adc_rdata)(7 downto 4);
+	display2 <= std_logic_vector(adc_rdata)(11 downto 8);
+
 
 	--led_out <=  "0000" & adc_rdata;
 	-- Salidas hacia los displays 7 segmentos
 	--BufferFull <= not BufferFull when memaddress = X"3FFFFFF";
-	sal_disp3 <= X"F" when BufferFull = '1' else X"0";
-	led_out <= std_logic_vector(adc_rdata(9 downto 0));
+
+	
 
 	bufferFullProc : process(DE10CLK)
   begin
@@ -175,13 +181,10 @@ begin
 				
 				IF (BufferFull = '0' and adc_valid = '1' and adc_channel = "00001" ) THEN							
 				-- ESCRITURA	
-						sal_disp0 <= std_logic_vector(adc_rdata)(3 downto 0);
-						sal_disp1 <= std_logic_vector(adc_rdata)(7 downto 4);
-						sal_disp2 <= std_logic_vector(adc_rdata)(11 downto 8);
+						
 						read_op <= '0';
 						write_op <= '1';
-						
-						
+											
 						--write_buff <= ( X"0" & std_logic_vector(adc_rdata) );
 						-- EXTENSION y NORMALIZACIÓN:
 						
@@ -194,9 +197,6 @@ begin
 						read_op <= '1';
 						
 
-						sal_disp0 <= std_logic_vector(adc_rdata)(3 downto 0);
-						sal_disp1 <= std_logic_vector(adc_rdata)(7 downto 4);
-						sal_disp2 <= std_logic_vector(adc_rdata)(11 downto 8);
 						--Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
 						audioMix <= (( read_buff*100)  + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*75)  ;
 				
@@ -237,15 +237,22 @@ begin
 				
 				voltaje_in <= to_integer(adc_rdata)/4095 * 5;  --Valor del voltaje de entrada
 				audio_int <= to_integer(adc_rdata); 
+				
 				if (adc_valid = '1' and adc_channel = "00001") then
 					
-					if audio_int > THRESHOLD then
-						audio_int <= audio_int - THRESHOLD;
+					if adc_rdata > 2196 then
+						audio_int <= audio_int + 2196;
+
+					
+				
+					else
+						audio_int <= to_integer(adc_rdata); 
+					
 					end if;
-					if audio_int < -THRESHOLD then
-						audio_int <= audio_int ;
-					end if;
+					
+					
 					audioMix <= to_unsigned(audio_int,16)*100;
+					
 				  	--audioMix <= X"00000" & shift_right(adc_rdata,4);
 				end if;
 

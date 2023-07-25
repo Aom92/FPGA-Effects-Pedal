@@ -160,6 +160,7 @@ set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -
 set_global_assignment -name DSP_BLOCK_BALANCING "DSP BLOCKS"
 set_location_assignment PIN_AB8 -to FIR_OUT
 set_location_assignment PIN_C12 -to OCT_EN
+set_global_assignment -name VHDL_FILE 7SegDecoder.vhd
 set_global_assignment -name VHDL_FILE DAC2.vhd
 set_global_assignment -name VHDL_FILE ADC_debug.vhd
 set_global_assignment -name QIP_FILE ADC_debug/synthesis/ADC_debug.qip

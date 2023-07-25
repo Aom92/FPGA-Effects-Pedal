@@ -804,7 +804,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 136 32)
 		(output)
 		(text "S" (rect 0 0 7 12)(font "Arial" ))
-		(text "S" (rect 110 27 115 39)(font "Arial" ))
+		(text "S" (rect 110 27 117 39)(font "Arial" ))
 		(line (pt 136 32)(pt 120 32))
 	)
 	(drawing
