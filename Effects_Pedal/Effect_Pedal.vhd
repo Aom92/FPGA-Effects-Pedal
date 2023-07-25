@@ -97,12 +97,12 @@ signal oct_out : unsigned (11 downto 0) := (others => '0');
 begin
 	
 	-- PROCESOS CONCURRENTES
-	sal_disp3 <= X"F" when BufferFull = '1' else X"0";
+	
 	led_out <= std_logic_vector(adc_rdata(9 downto 0));
 	display0 <= std_logic_vector(adc_rdata)(3 downto 0);
 	display1 <= std_logic_vector(adc_rdata)(7 downto 4);
 	display2 <= std_logic_vector(adc_rdata)(11 downto 8);
-
+	display3 <= X"F" when BufferFull = '1' else X"0";
 
 	--led_out <=  "0000" & adc_rdata;
 	-- Salidas hacia los displays 7 segmentos
