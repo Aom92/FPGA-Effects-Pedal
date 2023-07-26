@@ -1,0 +1,306 @@
+# Reading pref.tcl
+# do OctaveTest_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/circ_buffer.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:31:54 on Jul 25,2023
+# vcom -reportprogress 300 -93 -work work D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/circ_buffer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity circ_buffer
+# -- Compiling architecture behavioral of circ_buffer
+# End time: 22:31:54 on Jul 25,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.circ_buffer
+# vsim work.circ_buffer 
+# Start time: 22:31:58 on Jul 25,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.circ_buffer(behavioral)
+add wave -position end  sim:/circ_buffer/clk
+force -freeze sim:/circ_buffer/clk 1 0, 0 {50 ps} -r 100
+add wave -position end  sim:/circ_buffer/rst
+force -freeze sim:/circ_buffer/rst 0 0
+add wave -position end  sim:/circ_buffer/data_in
+force -freeze sim:/circ_buffer/data_in 11111111 0
+add wave -position end  sim:/circ_buffer/wr_en
+force -freeze sim:/circ_buffer/wr_en 1 0
+force -freeze sim:/circ_buffer/clk 1 0, 0 {225 ps} -r 450
+add wave -position end  sim:/circ_buffer/rd_en
+force -freeze sim:/circ_buffer/rd_en 0 0
+run
+run
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 25 ps.
+step -over
+# Next activity is in 50 ps.
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 50 ps.
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 50 ps.
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 50 ps.
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 50 ps.
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 50 ps.
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 50 ps.
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 50 ps.
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 25 ps.
+step -over
+# Next activity is in 25 ps.
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 50 ps.
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 50 ps.
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+# ** Fatal: (vsim-3421) Value 8 is out of range 0 to 7.
+#    Time: 800 ps  Iteration: 0  Process: /circ_buffer/line__37 File: D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/circ_buffer.vhd Line: 52
+# Fatal error in Process line__37 at D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/circ_buffer.vhd line 52
+# 
+# HDL call sequence:
+# Stopped at D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/circ_buffer.vhd 52 Process line__37
+# 
+step -over
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/circ_buffer.vhd 52 Process line__37
+# 
+step -over
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/circ_buffer.vhd 52 Process line__37
+# 
+step -over
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/circ_buffer.vhd 52 Process line__37
+# 
+step
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/circ_buffer.vhd 52 Process line__37
+# 
+step
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/circ_buffer.vhd 52 Process line__37
+# 
+step
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/circ_buffer.vhd 52 Process line__37
+# 
+step
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/circ_buffer.vhd 52 Process line__37
+# 
+quit -sim
+# End time: 22:36:05 on Jul 25,2023, Elapsed time: 0:04:07
+# Errors: 1, Warnings: 0
+vcom -93 -work work {D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/circ_buffer.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:38:04 on Jul 25,2023
+# vcom -reportprogress 300 -93 -work work D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/circ_buffer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity circ_buffer
+# -- Compiling architecture behavioral of circ_buffer
+# End time: 22:38:04 on Jul 25,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.circ_buffer
+# vsim work.circ_buffer 
+# Start time: 22:38:07 on Jul 25,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.circ_buffer(behavioral)
+force -freeze sim:/circ_buffer/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/circ_buffer/rst 0 0
+force -freeze sim:/circ_buffer/rd_en 0 0
+force -freeze sim:/circ_buffer/wr_en 1 0
+force -freeze sim:/circ_buffer/data_in 11111111 0
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 50 ps.
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 50 ps.
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 50 ps.
+run
+run
+
+run
+run
+run
+run
+run
+run
+run
+restart -f
+add wave -position end  sim:/circ_buffer/clk
+add wave -position end  sim:/circ_buffer/rst
+add wave -position end  sim:/circ_buffer/wr_ptr
+add wave -position end  sim:/circ_buffer/memory
+add wave -position end  sim:/circ_buffer/data_in
+force -freeze sim:/circ_buffer/data_in 11111111 0
+force -freeze sim:/circ_buffer/rst 0 0
+force -freeze sim:/circ_buffer/clk 1 0, 0 {100 ps} -r 200
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+add wave -position end  sim:/circ_buffer/wr_en
+add wave -position end  sim:/circ_buffer/rd_en
+force -freeze sim:/circ_buffer/rd_en 0 0
+force -freeze sim:/circ_buffer/wr_en 1 0
+run 
+run
+run
+
+run 
+run 
+run 200
+run 200
+run 200
+run 200
+run 200
+run 200
+run 200
+run 200
+force -freeze sim:/circ_buffer/wr_en 0 0
+force -freeze sim:/circ_buffer/rd_en 1 0
+run 200
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 100 ps.
+# End time: 22:47:48 on Jul 25,2023, Elapsed time: 0:09:41
+# Errors: 0, Warnings: 0

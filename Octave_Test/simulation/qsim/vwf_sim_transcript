@@ -26,7 +26,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed May 17 00:15:12 2023
+    Info: Processing started: Tue Jul 25 22:42:23 2023
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off OctaveTest -c OctaveTest --vector_source="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/Waveform.vwf" --testbench_file="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/simulation/qsim/Waveform.vwf.vht"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -53,13 +53,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed May 17 00:15:12 2023
+    Info: Processing started: Tue Jul 25 22:42:23 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/simulation/qsim/" OctaveTest -c OctaveTest
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file OctaveTest.vho in folder "D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4644 megabytes
-    Info: Processing ended: Wed May 17 00:15:13 2023
+    Info: Peak virtual memory: 4645 megabytes
+    Info: Processing ended: Tue Jul 25 22:42:24 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
@@ -79,12 +79,13 @@ Reading pref.tcl
 
 # 2020.1
 
-# do OctaveTest.do
 
+# do OctaveTest.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:15:13 on May 17,2023
+# Start time: 22:42:24 on Jul 25,2023
 # vcom -work work OctaveTest.vho 
+
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -92,29 +93,28 @@ Reading pref.tcl
 # -- Loading package VITAL_Primitives
 # -- Loading package fiftyfivenm_atom_pack
 # -- Loading package fiftyfivenm_components
-
 # -- Compiling entity hard_block
 # -- Compiling architecture structure of hard_block
 # -- Loading package dffeas_pack
 # -- Loading package altera_primitives_components
-# -- Compiling entity Octave
-# -- Compiling architecture structure of Octave
-# End time: 00:15:13 on May 17,2023, Elapsed time: 0:00:00
+# -- Compiling entity circ_buffer
+# -- Compiling architecture structure of circ_buffer
+# End time: 22:42:24 on Jul 25,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:15:14 on May 17,2023
+# Start time: 22:42:24 on Jul 25,2023
 # vcom -work work Waveform.vwf.vht 
 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity Octave_vhd_vec_tst
-# -- Compiling architecture Octave_arch of Octave_vhd_vec_tst
-# End time: 00:15:14 on May 17,2023, Elapsed time: 0:00:00
+# -- Compiling entity circ_buffer_vhd_vec_tst
+# -- Compiling architecture circ_buffer_arch of circ_buffer_vhd_vec_tst
+# End time: 22:42:25 on Jul 25,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Octave_vhd_vec_tst 
-# Start time: 00:15:14 on May 17,2023
+# Start time: 22:42:25 on Jul 25,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -139,7 +139,7 @@ Reading pref.tcl
 # Expect performance to be adversely affected.
 # after#35
 
-# End time: 00:15:14 on May 17,2023, Elapsed time: 0:00:00
+# End time: 22:42:25 on Jul 25,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
@@ -152,7 +152,51 @@ Reading D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/simulation/qsi
 
 Processing channel transitions... 
 
-Writing the resulting VWF to D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/simulation/qsim/OctaveTest_20230517001514.sim.vwf
+Warning: buff_empty - signal not found in VCD.
+
+Warning: buff_full - signal not found in VCD.
+
+Warning: clk - signal not found in VCD.
+
+Warning: data_in[7] - signal not found in VCD.
+
+Warning: data_in[6] - signal not found in VCD.
+
+Warning: data_in[5] - signal not found in VCD.
+
+Warning: data_in[4] - signal not found in VCD.
+
+Warning: data_in[3] - signal not found in VCD.
+
+Warning: data_in[2] - signal not found in VCD.
+
+Warning: data_in[1] - signal not found in VCD.
+
+Warning: data_in[0] - signal not found in VCD.
+
+Warning: data_out[7] - signal not found in VCD.
+
+Warning: data_out[6] - signal not found in VCD.
+
+Warning: data_out[5] - signal not found in VCD.
+
+Warning: data_out[4] - signal not found in VCD.
+
+Warning: data_out[3] - signal not found in VCD.
+
+Warning: data_out[2] - signal not found in VCD.
+
+Warning: data_out[1] - signal not found in VCD.
+
+Warning: data_out[0] - signal not found in VCD.
+
+Warning: rd_en - signal not found in VCD.
+
+Warning: rst - signal not found in VCD.
+
+Warning: wr_en - signal not found in VCD.
+
+Writing the resulting VWF to D:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/simulation/qsim/OctaveTest_20230725224225.sim.vwf
 
 Finished VCD to VWF conversion.
 

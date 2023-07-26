@@ -1,7 +1,7 @@
 # do OctaveTest.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:15:13 on May 17,2023
+# Start time: 22:42:24 on Jul 25,2023
 # vcom -work work OctaveTest.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -14,22 +14,22 @@
 # -- Compiling architecture structure of hard_block
 # -- Loading package dffeas_pack
 # -- Loading package altera_primitives_components
-# -- Compiling entity Octave
-# -- Compiling architecture structure of Octave
-# End time: 00:15:13 on May 17,2023, Elapsed time: 0:00:00
+# -- Compiling entity circ_buffer
+# -- Compiling architecture structure of circ_buffer
+# End time: 22:42:24 on Jul 25,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:15:14 on May 17,2023
+# Start time: 22:42:24 on Jul 25,2023
 # vcom -work work Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity Octave_vhd_vec_tst
-# -- Compiling architecture Octave_arch of Octave_vhd_vec_tst
-# End time: 00:15:14 on May 17,2023, Elapsed time: 0:00:00
+# -- Compiling entity circ_buffer_vhd_vec_tst
+# -- Compiling architecture circ_buffer_arch of circ_buffer_vhd_vec_tst
+# End time: 22:42:25 on Jul 25,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Octave_vhd_vec_tst 
-# Start time: 00:15:14 on May 17,2023
+# Start time: 22:42:25 on Jul 25,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -53,5 +53,5 @@
 # ** Warning: Design size of 11521 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#35
-# End time: 00:15:14 on May 17,2023, Elapsed time: 0:00:00
+# End time: 22:42:25 on Jul 25,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1

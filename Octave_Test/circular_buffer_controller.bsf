@@ -1,0 +1,253 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 616 288)
+	(text "circular_buffer_controller" (rect 5 0 105 12)(font "Arial" ))
+	(text "inst" (rect 8 256 20 268)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "wr_clk_i" (rect 0 0 33 12)(font "Arial" ))
+		(text "wr_clk_i" (rect 21 27 54 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "rd_clk_i" (rect 0 0 31 12)(font "Arial" ))
+		(text "rd_clk_i" (rect 21 43 52 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "rst_i" (rect 0 0 17 12)(font "Arial" ))
+		(text "rst_i" (rect 21 59 38 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "wr_req_i" (rect 0 0 35 12)(font "Arial" ))
+		(text "wr_req_i" (rect 21 75 56 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "wr_finish_i" (rect 0 0 42 12)(font "Arial" ))
+		(text "wr_finish_i" (rect 21 91 63 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "wr_en_i" (rect 0 0 31 12)(font "Arial" ))
+		(text "wr_en_i" (rect 21 107 52 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "wr_data_i[WRITE_DATA_WIDTH-1..0]" (rect 0 0 168 12)(font "Arial" ))
+		(text "wr_data_i[WRITE_DATA_WIDTH-1..0]" (rect 21 123 189 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "wr_addr_i[WRITE_ADDR_WIDTH-1..0]" (rect 0 0 171 12)(font "Arial" ))
+		(text "wr_addr_i[WRITE_ADDR_WIDTH-1..0]" (rect 21 139 192 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "rd_req_i" (rect 0 0 34 12)(font "Arial" ))
+		(text "rd_req_i" (rect 21 155 55 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "rd_finish_i" (rect 0 0 41 12)(font "Arial" ))
+		(text "rd_finish_i" (rect 21 171 62 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 1))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "rd_addr_i[READ_ADDR_WIDTH-1..0]" (rect 0 0 166 12)(font "Arial" ))
+		(text "rd_addr_i[READ_ADDR_WIDTH-1..0]" (rect 21 187 187 199)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192)(line_width 3))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "ram_rd_data_i[READ_DATA_WIDTH-1..0]" (rect 0 0 186 12)(font "Arial" ))
+		(text "ram_rd_data_i[READ_DATA_WIDTH-1..0]" (rect 21 203 207 215)(font "Arial" ))
+		(line (pt 0 208)(pt 16 208)(line_width 3))
+	)
+	(port
+		(pt 600 32)
+		(output)
+		(text "wr_req_ack_o" (rect 0 0 59 12)(font "Arial" ))
+		(text "wr_req_ack_o" (rect 520 27 579 39)(font "Arial" ))
+		(line (pt 600 32)(pt 584 32)(line_width 1))
+	)
+	(port
+		(pt 600 48)
+		(output)
+		(text "wr_req_result_o" (rect 0 0 66 12)(font "Arial" ))
+		(text "wr_req_result_o" (rect 513 43 579 55)(font "Arial" ))
+		(line (pt 600 48)(pt 584 48)(line_width 1))
+	)
+	(port
+		(pt 600 64)
+		(output)
+		(text "wr_finish_ack_o" (rect 0 0 66 12)(font "Arial" ))
+		(text "wr_finish_ack_o" (rect 513 59 579 71)(font "Arial" ))
+		(line (pt 600 64)(pt 584 64)(line_width 1))
+	)
+	(port
+		(pt 600 80)
+		(output)
+		(text "rd_req_ack_o" (rect 0 0 57 12)(font "Arial" ))
+		(text "rd_req_ack_o" (rect 522 75 579 87)(font "Arial" ))
+		(line (pt 600 80)(pt 584 80)(line_width 1))
+	)
+	(port
+		(pt 600 96)
+		(output)
+		(text "rd_req_result_o" (rect 0 0 64 12)(font "Arial" ))
+		(text "rd_req_result_o" (rect 515 91 579 103)(font "Arial" ))
+		(line (pt 600 96)(pt 584 96)(line_width 1))
+	)
+	(port
+		(pt 600 112)
+		(output)
+		(text "rd_finish_ack_o" (rect 0 0 64 12)(font "Arial" ))
+		(text "rd_finish_ack_o" (rect 515 107 579 119)(font "Arial" ))
+		(line (pt 600 112)(pt 584 112)(line_width 1))
+	)
+	(port
+		(pt 600 128)
+		(output)
+		(text "rd_data_o[READ_DATA_WIDTH-1..0]" (rect 0 0 167 12)(font "Arial" ))
+		(text "rd_data_o[READ_DATA_WIDTH-1..0]" (rect 412 123 579 135)(font "Arial" ))
+		(line (pt 600 128)(pt 584 128)(line_width 3))
+	)
+	(port
+		(pt 600 144)
+		(output)
+		(text "ram_wr_clk_o" (rect 0 0 59 12)(font "Arial" ))
+		(text "ram_wr_clk_o" (rect 520 139 579 151)(font "Arial" ))
+		(line (pt 600 144)(pt 584 144)(line_width 1))
+	)
+	(port
+		(pt 600 160)
+		(output)
+		(text "ram_rd_clk_o" (rect 0 0 57 12)(font "Arial" ))
+		(text "ram_rd_clk_o" (rect 522 155 579 167)(font "Arial" ))
+		(line (pt 600 160)(pt 584 160)(line_width 1))
+	)
+	(port
+		(pt 600 176)
+		(output)
+		(text "ram_rst_o" (rect 0 0 43 12)(font "Arial" ))
+		(text "ram_rst_o" (rect 536 171 579 183)(font "Arial" ))
+		(line (pt 600 176)(pt 584 176)(line_width 1))
+	)
+	(port
+		(pt 600 192)
+		(output)
+		(text "ram_wr_en_o" (rect 0 0 57 12)(font "Arial" ))
+		(text "ram_wr_en_o" (rect 522 187 579 199)(font "Arial" ))
+		(line (pt 600 192)(pt 584 192)(line_width 1))
+	)
+	(port
+		(pt 600 208)
+		(output)
+		(text "ram_wr_data_o[WRITE_DATA_WIDTH-1..0]" (rect 0 0 194 12)(font "Arial" ))
+		(text "ram_wr_data_o[WRITE_DATA_WIDTH-1..0]" (rect 385 203 579 215)(font "Arial" ))
+		(line (pt 600 208)(pt 584 208)(line_width 3))
+	)
+	(port
+		(pt 600 224)
+		(output)
+		(text "ram_wr_addr_o[WRITE_ADDR_WIDTH+BUFFER_ADDR_WIDTH-1..0]" (rect 0 0 312 12)(font "Arial" ))
+		(text "ram_wr_addr_o[WRITE_ADDR_WIDTH+BUFFER_ADDR_WIDTH-1..0]" (rect 267 219 579 231)(font "Arial" ))
+		(line (pt 600 224)(pt 584 224)(line_width 3))
+	)
+	(port
+		(pt 600 240)
+		(output)
+		(text "ram_rd_addr_o[READ_ADDR_WIDTH+BUFFER_ADDR_WIDTH-1..0]" (rect 0 0 307 12)(font "Arial" ))
+		(text "ram_rd_addr_o[READ_ADDR_WIDTH+BUFFER_ADDR_WIDTH-1..0]" (rect 272 235 579 247)(font "Arial" ))
+		(line (pt 600 240)(pt 584 240)(line_width 3))
+	)
+	(parameter
+		"WRITE_DATA_WIDTH"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"WRITE_DATA_DEPTH"
+		"256"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"READ_DATA_WIDTH"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"READ_DATA_DEPTH"
+		"256"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"BUFFER_NUM"
+		"2"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"WRITE_ADDR_WIDTH"
+		""
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"READ_ADDR_WIDTH"
+		""
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"BUFFER_ADDR_WIDTH"
+		""
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 584 256)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 616 -64 716 16))
+)

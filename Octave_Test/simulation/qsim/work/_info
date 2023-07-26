@@ -9,146 +9,334 @@ z2
 !i10f 100
 cModel Technology
 Z0 dD:/UNAM/Servicio Social/Trabajo/DE10_AudioFun/Octave_Test/simulation/qsim
-Ehard_block
-Z1 w1684304113
-Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 ]LY<>e3?`4Wb8dl1GV_X90
-Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-Z7 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 `f]nQdYHZLbCG_>oYeZOo2
-!i122 79
+Ecirc_buffer
+Z1 w1690346544
+Z2 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 ]LY<>e3?`4Wb8dl1GV_X90
+Z3 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 `f]nQdYHZLbCG_>oYeZOo2
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z9 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
+!i122 115
 R0
-Z8 8OctaveTest.vho
-Z9 FOctaveTest.vho
+Z10 8OctaveTest.vho
+Z11 FOctaveTest.vho
+l0
+Z12 L91 1
+V>gif:KCKLQ`U4Ob47BkEf0
+!s100 ^l?2?fQ3RDU]56b8k1EBi2
+Z13 OV;C;2020.1;71
+32
+Z14 !s110 1690346544
+!i10b 1
+Z15 !s108 1690346544.000000
+Z16 !s90 -work|work|OctaveTest.vho|
+Z17 !s107 OctaveTest.vho|
+!i113 1
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 11 circ_buffer 0 22 >gif:KCKLQ`U4Ob47BkEf0
+!i122 115
+l195
+L129 645
+VonWEYClQ7SH02ll`A^JUX2
+!s100 2T6GL?Omf1CJz6M35SQ9^2
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R18
+R19
+Ecirc_buffer_vhd_vec_tst
+Z20 w1690346543
+R7
+R8
+!i122 116
+R0
+Z21 8Waveform.vwf.vht
+Z22 FWaveform.vwf.vht
+l0
+Z23 L32 1
+VCg9SUWc9^dklz60@B^IBb1
+!s100 D>zYe=WcedMZ=^H8J6C=B2
+R13
+32
+Z24 !s110 1690346545
+!i10b 1
+R15
+Z25 !s90 -work|work|Waveform.vwf.vht|
+Z26 !s107 Waveform.vwf.vht|
+!i113 1
+R18
+R19
+Acirc_buffer_arch
+R7
+R8
+Z27 DEx4 work 23 circ_buffer_vhd_vec_tst 0 22 Cg9SUWc9^dklz60@B^IBb1
+!i122 116
+l57
+L34 140
+V3Pd`AF8jXNl27YF_FlizE2
+!s100 ?ZhGYbWK?07YIeXfHBj713
+R13
+32
+R24
+!i10b 1
+R15
+R25
+R26
+!i113 1
+R18
+R19
+Ehard_block
+R1
+R4
+R2
+R6
+R7
+R8
+R3
+!i122 115
+R0
+R10
+R11
 l0
 L35 1
 Vhj[i;a0dD85B`o1JPT^cg2
 !s100 3A]XnMhF<;9mKUe5mn3aM1
-Z10 OV;C;2020.1;71
+R13
 32
-Z11 !s110 1684304113
+R14
 !i10b 1
-Z12 !s108 1684304113.000000
-Z13 !s90 -work|work|OctaveTest.vho|
-Z14 !s107 OctaveTest.vho|
+R15
+R16
+R17
 !i113 1
-Z15 o-work work
-Z16 tExplicit 1 CvgOpt 0
+R18
+R19
 Astructure
-R2
-R3
 R4
-R5
+R2
 R6
 R7
+R8
+R3
 DEx4 work 10 hard_block 0 22 hj[i;a0dD85B`o1JPT^cg2
-!i122 79
+!i122 115
 l76
 L54 28
 Va5ClDYec`9chO`Ne0M1NL2
 !s100 >:Wi^nX[YiN=@>>JC6K_83
-R10
-32
-R11
-!i10b 1
-R12
 R13
+32
 R14
-!i113 1
+!i10b 1
 R15
 R16
+R17
+!i113 1
+R18
+R19
 Eoctave
-R1
-R3
-R7
+Z28 w1690249810
 R2
-Z17 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
+R3
 R4
 R5
 R6
-Z18 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 79
-R0
+R7
 R8
 R9
+!i122 81
+R0
+R10
+R11
 l0
-L91 1
+R12
 VLSN2d051>`4@1hPK8CU[L1
 !s100 NNEa`1;6EhLC<4OgNm:^M1
-R10
-32
-R11
-!i10b 1
-R12
 R13
-R14
-!i113 1
-R15
+32
+Z29 !s110 1690249811
+!i10b 1
+Z30 !s108 1690249811.000000
 R16
-Astructure
-R3
-R7
-R2
 R17
+!i113 1
+R18
+R19
+Astructure
+R2
+R3
 R4
 R5
 R6
-R18
+R7
+R8
+R9
 DEx4 work 6 octave 0 22 LSN2d051>`4@1hPK8CU[L1
-!i122 79
+!i122 81
 l289
 L154 1922
 Vh1zN7]@:3Tom>d8<Q>@Cz2
 !s100 l_Pi8_c7nWMXL]PF8c7gG2
-R10
-32
-R11
-!i10b 1
-R12
 R13
-R14
-!i113 1
-R15
+32
+R29
+!i10b 1
+R30
 R16
+R17
+!i113 1
+R18
+R19
 Eoctave_vhd_vec_tst
-Z19 w1684304112
-R5
-R6
-!i122 80
+Z31 w1690249809
+R7
+R8
+!i122 82
 R0
-Z20 8Waveform.vwf.vht
-Z21 FWaveform.vwf.vht
+R21
+R22
 l0
-L32 1
+R23
 V]fGR49Qi@H=S<`S^N_Fna0
 !s100 d[o;o<@]5oiGjS7mjY2`f2
-R10
+R13
 32
-Z22 !s110 1684304114
+R29
 !i10b 1
-Z23 !s108 1684304114.000000
-Z24 !s90 -work|work|Waveform.vwf.vht|
-Z25 !s107 Waveform.vwf.vht|
+R30
+R25
+R26
 !i113 1
-R15
-R16
+R18
+R19
 Aoctave_arch
-R5
-R6
-Z26 DEx4 work 18 octave_vhd_vec_tst 0 22 ]fGR49Qi@H=S<`S^N_Fna0
-!i122 80
+R7
+R8
+DEx4 work 18 octave_vhd_vec_tst 0 22 ]fGR49Qi@H=S<`S^N_Fna0
+!i122 82
 l51
-Z27 L34 163
+L34 163
 VXP3X@o`caJ7oXDFzT=c]=2
 !s100 WecanK5VP23YZj:29IdDg0
-R10
+R13
 32
-R22
+R29
 !i10b 1
-R23
-R24
+R30
 R25
+R26
 !i113 1
-R15
+R18
+R19
+Eoctavetest
+Z32 w1690343334
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+!i122 99
+R0
+R10
+R11
+l0
+L37 1
+V7<M@Y@XJGLUdP[LdD==Nm3
+!s100 2QdCoR<2C[d48LekFA]Ce3
+R13
+32
+Z33 !s110 1690343335
+!i10b 1
+Z34 !s108 1690343335.000000
 R16
+R17
+!i113 1
+R18
+R19
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 10 octavetest 0 22 7<M@Y@XJGLUdP[LdD==Nm3
+!i122 99
+l116
+L52 728
+VzcVDiZ:m4:IKfS6[BNnec3
+!s100 _S6YdHEi90U9BSYQE?GmK3
+R13
+32
+R33
+!i10b 1
+R34
+R16
+R17
+!i113 1
+R18
+R19
+Eoctavetest_vhd_vec_tst
+Z35 w1690343333
+R7
+R8
+!i122 100
+R0
+R21
+R22
+l0
+R23
+V<WVI^S]D1iVGcf6k`BY:^1
+!s100 XY:e9jWZG:1g:caPU`N9S3
+R13
+32
+R33
+!i10b 1
+R34
+R25
+R26
+!i113 1
+R18
+R19
+Aoctavetest_arch
+R7
+R8
+DEx4 work 22 octavetest_vhd_vec_tst 0 22 <WVI^S]D1iVGcf6k`BY:^1
+!i122 100
+l61
+L34 108
+V6@ii@mMUhPm<;:BVUfFJ?2
+!s100 =<ejP1gbW1k1];_[AVJPh2
+R13
+32
+R33
+!i10b 1
+R34
+R25
+R26
+!i113 1
+R18
+R19
