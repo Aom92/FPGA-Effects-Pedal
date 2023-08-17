@@ -93,9 +93,20 @@ signal counter : integer range 0 to 1 := 0;
 signal sample_hold : unsigned (11 downto 0) := (others => '0');
 signal oct_out : unsigned (11 downto 0) := (others => '0');
 
+-- State-Machine
+type fsm_state is (edo1, edo2,play,clear);
+signal estado_act, estado_sig : fsm_state := edo1;
+
+
+
+
 
 begin
 	
+
+
+
+
 	-- PROCESOS CONCURRENTES
 	
 	led_out <= std_logic_vector(adc_rdata(9 downto 0));
@@ -108,7 +119,53 @@ begin
 	-- Salidas hacia los displays 7 segmentos
 	--BufferFull <= not BufferFull when memaddress = X"3FFFFFF";
 
+	process(DE10CLK, DE10Reset, estado_act)
+	begin
+		if (DE10Reset = '1' ) then
+			estado_act <= edo1;
+		else
+			estado_act <= estado_sig;
+		end if;
+	end process;
+
+	pitch : process(DE10CLK, adc_rdata, estado_act, estado_sig, addressCounter)
+  begin
+
+	case estado_act is
+	  when edo1 =>
 	
+		if addressCounter > 128 then
+		  estado_sig <= edo2;
+		else 
+			--Fill up buffer1 output to dac
+			IF (BufferFull = '0' and adc_valid = '1' and adc_channel = "00001" ) THEN							
+			-- ESCRITURA		
+				read_op <= '0';
+				write_op <= '1';
+				write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
+			END IF;
+
+		end if;
+
+	  when edo2 =>
+		if addressCounter > 256 then
+		  estado_sig <= edo1;
+		else 
+			--Fill up buffer2 output to dac
+			IF (BufferFull = '0' and adc_valid = '1' and adc_channel = "00001" ) THEN							
+			-- ESCRITURA		
+				read_op <= '0';
+				write_op <= '1';
+				write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
+			END IF;
+
+		end if;
+
+	end case;
+  end process;
+
+
+
 
 	bufferFullProc : process(DE10CLK)
   begin
@@ -140,20 +197,30 @@ begin
 
 			if (adc_valid = '1' and adc_channel = "00001" ) then
 
+				
 				if octave_enable = '1' then
+					-- Cambiar el valor máximo del contador de memoria 
+					addressCounter <= addressCounter + 1;
 
-					addressCounter <= addressCounter + 2;
+					-- Revisar (?) : Convertir en constante el valor maximo que almacena
+					if addressCounter > 256 then --
+						addressCounter <= 0;
+					end if;
+
+
 
 				else 
 
 					addressCounter <= addressCounter + 1;
 
+					-- Revisar (?) : Convertir en constante el valor maximo que almacena
+					if addressCounter > DELAY_TIME then --
+						addressCounter <= 0;
+					end if;
+
 				end if;
 
-				-- Revisar (?) : Convertir en constante el valor maximo que almacena
-				if addressCounter > DELAY_TIME then --
-					addressCounter <= 0;
-				end if;
+				
 			else
 				addressCounter <= addressCounter + 0;
 			end if;
@@ -274,16 +341,25 @@ begin
 				--audioMix <= ( unsigned(std_logic_vector(oct_out)(11) & X"0" & std_logic_vector(oct_out)(10 downto 0))*100);
 				--
 				-- primera opcion ESCRIBIR AL BUFFER.
-				read_op <= '0';
-				write_op <= '1';
-				write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
+				--read_op <= '0';
+				--write_op <= '1';
+				--write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
 
 
 				-- LECTURA INSTANEA AL BUFFER.
-				write_op <= '0';
-				read_op <= '1';
-				audioMix <= (( read_buff*100)  + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*75);
+				--write_op <= '0';
+				--read_op <= '1';
+				--audioMix <= (( read_buff*100)  + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*75);
 				--Desde otro proceso se estan leyendo al doble de velocidad. veremos que sucede
+				
+				
+
+
+				
+
+
+
+
 
 			
 			end if;
@@ -292,6 +368,8 @@ begin
 			
 		END IF; 
 	end process;
+
+	
 
 
 --phase_offset <= unsigned(resize(round(PHASE_SHIFT * PI_OVER_SAMPLE_WIDTH / PI), phase_offset'length));
