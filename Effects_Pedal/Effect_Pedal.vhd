@@ -92,6 +92,7 @@ signal audio_dist : unsigned (11 downto 0);
 signal counter : integer range 0 to 1 := 0;
 signal sample_hold : unsigned (11 downto 0) := (others => '0');
 signal oct_out : unsigned (11 downto 0) := (others => '0');
+signal reset_address : boolean;
 
 -- State-Machine
 type fsm_state is (edo1, edo2,play,clear);
@@ -131,37 +132,7 @@ begin
 	pitch : process(DE10CLK, adc_rdata, estado_act, estado_sig, addressCounter)
   begin
 
-	case estado_act is
-	  when edo1 =>
 	
-		if addressCounter > 128 then
-		  estado_sig <= edo2;
-		else 
-			--Fill up buffer1 output to dac
-			IF (BufferFull = '0' and adc_valid = '1' and adc_channel = "00001" ) THEN							
-			-- ESCRITURA		
-				read_op <= '0';
-				write_op <= '1';
-				write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
-			END IF;
-
-		end if;
-
-	  when edo2 =>
-		if addressCounter > 256 then
-		  estado_sig <= edo1;
-		else 
-			--Fill up buffer2 output to dac
-			IF (BufferFull = '0' and adc_valid = '1' and adc_channel = "00001" ) THEN							
-			-- ESCRITURA		
-				read_op <= '0';
-				write_op <= '1';
-				write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
-			END IF;
-
-		end if;
-
-	end case;
   end process;
 
 
@@ -195,17 +166,28 @@ begin
 	begin
 		IF rising_edge(DE10CLK) then
 
+			if (reset_address = true) then
+				addressCounter <= 0;
+				reset_address <= false;
+			end if;
+
 			if (adc_valid = '1' and adc_channel = "00001" ) then
 
 				
 				if octave_enable = '1' then
-					-- Cambiar el valor máximo del contador de memoria 
-					addressCounter <= addressCounter + 1;
 
-					-- Revisar (?) : Convertir en constante el valor maximo que almacena
-					if addressCounter > 256 then --
-						addressCounter <= 0;
-					end if;
+					if estado_act <= play then
+						addressCounter <= addressCounter + 2;
+					else
+						-- Cambiar el valor máximo del contador de memoria 
+						addressCounter <= addressCounter + 1;
+
+						-- Revisar (?) : Convertir en constante el valor maximo que almacena
+						if addressCounter > 256 then --
+							addressCounter <= 0;
+						end if;
+
+					END IF;
 
 
 
@@ -235,7 +217,8 @@ begin
 	variable sample_out : std_logic_vector (15 downto 0);
 	variable factor1 : integer := 1;
 	begin
-		IF rising_edge(DE10CLK) THEN						  
+		IF rising_edge(DE10CLK) THEN	
+			--Update Address Pointer					  
 			address <= std_logic_vector(to_unsigned(addressCounter, address'length));
 			
 			-- Cuando el contador < addressCounter > llega a su valor maximo la señal 
@@ -255,7 +238,7 @@ begin
 						audioMix <= (( read_buff*100) + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*100);
 
 				elsif (BufferFull = '1' and adc_valid = '1' and adc_channel = "00001" ) then
-				-- LECTURA 
+						-- LECTURA 
 						write_op <= '0';
 						read_op <= '1';
 						
@@ -263,38 +246,14 @@ begin
 						--Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
 						audioMix <= (( read_buff*100)  + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*75)  ;
 				
-					
-
-				end if;
-			
-			else
-				
-				if (adc_valid = '1' and adc_channel = "00001") then
-				  audioMix <= ( unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*100);
-				end if;
-				-- OUT CLEAN AUDIO --
-				
+				else
+					if (adc_valid = '1' and adc_channel = "00001") then
+					audioMix <= ( unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*100);
+					end if;
+					-- OUT CLEAN AUDIO --
+				end if;	
 			end if;
 				
-			-- CODIGO DE MUESTRA BASADO EN UNA INTERACCION CON CHATGPT
-			if phase_enable = '1' then
-
-				--if (adc_valid = '1' and adc_channel = "00001") then
-				--	filtered <= adc_rdata + feedback;
-				--	phase(1) <= phase(0) + phase_offset;
-				--	if phase(1) >= TWO_PI then
-				--		phase(1) <= phase(1) - TWO_PI;
-				--	end if;
-				--	cos_phase <= unsigned(resize(round((cos(PI * phase(1) / (2 ** PHASE_SHIFT)) + 1.0) * MAX_VAL / 2.0), cos_phase'length));
-				--	delayed <= filtered * cos_phase;
-				--	feedback <= unsigned(resize(round(delayed * FEEDBACK_GAIN / (2.0 ** (SAMPLE_WIDTH - 1))), feedback'length));
-				--	output_int <= integer(resize(round(delayed / (2.0 ** (SAMPLE_WIDTH - 1))), output_int'length));
-				--	audioMix <= unsigned(output_int);
-				--	phase(0) <= phase(1);
-				--end if;
-
-			end if;
-
 			-- Distorcion
 			if distort_enable = '1' then
 				
@@ -351,17 +310,57 @@ begin
 				--read_op <= '1';
 				--audioMix <= (( read_buff*100)  + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*75);
 				--Desde otro proceso se estan leyendo al doble de velocidad. veremos que sucede
+
+				case estado_act is
+					when edo1 =>
+						if addressCounter > 128 then
+						estado_sig <= edo2;
+						else 
+							--Fill up buffer1 output to dac
+							IF (BufferFull = '0' and adc_valid = '1' and adc_channel = "00001" ) THEN							
+							-- ESCRITURA		
+								read_op <= '0';
+								write_op <= '1';
+								write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
+							END IF;
+
+						end if;
+
+					when edo2 =>
+						if addressCounter > 256 then
+							estado_sig <= play;
+							reset_address <= true;
+
+
+						else 
+							--Fill up buffer2 output to dac
+							IF (BufferFull = '0' and adc_valid = '1' and adc_channel = "00001" ) THEN							
+							-- ESCRITURA		
+								read_op <= '0';
+								write_op <= '1';
+								write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
+							END IF;
+
+						end if;
+
+					when play =>
+
+						if addressCounter > 256 then
+							estado_sig <= edo1;
+						else
+							-- LECTURA 
+							write_op <= '0';
+							read_op <= '1';
+							--Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
+							audioMix <= (( read_buff*100)  + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*75);
+
+						end if;
+					
+					when others =>
+						estado_sig <= edo1;
+
+				end case;
 				
-				
-
-
-				
-
-
-
-
-
-			
 			end if;
 			
 
