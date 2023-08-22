@@ -61,6 +61,7 @@ signal BufferFull : std_logic := '0';
 signal write_done : boolean;
 constant SAMPLE_DELAY : integer :=  16#124F8#;
 constant DELAY_TIME : integer := 16#36EE8#;
+constant OCTAVE_BUFFER : integer := 3072;--524288;  --262144; --Ammount of addresses
 
 signal audioMix : unsigned (31 downto 0 ) := (others => '0');
 
@@ -92,7 +93,7 @@ signal audio_dist : unsigned (11 downto 0);
 signal counter : integer range 0 to 1 := 0;
 signal sample_hold : unsigned (11 downto 0) := (others => '0');
 signal oct_out : unsigned (11 downto 0) := (others => '0');
-signal reset_address : boolean;
+signal reset_address,play_octave : boolean;
 
 -- State-Machine
 type fsm_state is (edo1, edo2,play,clear);
@@ -176,15 +177,20 @@ begin
 				
 				if octave_enable = '1' then
 
-					if estado_act <= play then
+					if play_octave = true then
 						addressCounter <= addressCounter + 2;
+
+						if addressCounter > OCTAVE_BUFFER then --
+							addressCounter <= 0;
+							play_octave <= false;
+						end if;
+
 					else
 						-- Cambiar el valor máximo del contador de memoria 
 						addressCounter <= addressCounter + 1;
-
-						-- Revisar (?) : Convertir en constante el valor maximo que almacena
-						if addressCounter > 256 then --
+						if addressCounter > OCTAVE_BUFFER then --
 							addressCounter <= 0;
+							play_octave <= true;
 						end if;
 
 					END IF;
@@ -194,7 +200,6 @@ begin
 				else 
 
 					addressCounter <= addressCounter + 1;
-
 					-- Revisar (?) : Convertir en constante el valor maximo que almacena
 					if addressCounter > DELAY_TIME then --
 						addressCounter <= 0;
@@ -230,10 +235,8 @@ begin
 						
 						read_op <= '0';
 						write_op <= '1';
-											
 						--write_buff <= ( X"0" & std_logic_vector(adc_rdata) );
 						-- EXTENSION y NORMALIZACIÓN:
-						
 						write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
 						audioMix <= (( read_buff*100) + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*100);
 
@@ -241,8 +244,6 @@ begin
 						-- LECTURA 
 						write_op <= '0';
 						read_op <= '1';
-						
-
 						--Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
 						audioMix <= (( read_buff*100)  + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*75)  ;
 				
@@ -265,14 +266,11 @@ begin
 					if adc_rdata > 2196 then
 						audio_int <= audio_int + 2196;
 
-					
-				
 					else
 						audio_int <= to_integer(adc_rdata); 
 					
 					end if;
-					
-					
+										
 					audioMix <= to_unsigned(audio_int,16)*100;
 					
 				  	--audioMix <= X"00000" & shift_right(adc_rdata,4);
@@ -310,62 +308,43 @@ begin
 				--read_op <= '1';
 				--audioMix <= (( read_buff*100)  + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*75);
 				--Desde otro proceso se estan leyendo al doble de velocidad. veremos que sucede
+				--Fill up buffer1 output to dac
 
-				case estado_act is
-					when edo1 =>
-						if addressCounter > 128 then
-						estado_sig <= edo2;
-						else 
-							--Fill up buffer1 output to dac
-							IF (BufferFull = '0' and adc_valid = '1' and adc_channel = "00001" ) THEN							
-							-- ESCRITURA		
-								read_op <= '0';
-								write_op <= '1';
-								write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
-							END IF;
-
-						end if;
-
-					when edo2 =>
-						if addressCounter > 256 then
-							estado_sig <= play;
-							reset_address <= true;
-
-
-						else 
-							--Fill up buffer2 output to dac
-							IF (BufferFull = '0' and adc_valid = '1' and adc_channel = "00001" ) THEN							
-							-- ESCRITURA		
-								read_op <= '0';
-								write_op <= '1';
-								write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
-							END IF;
-
-						end if;
-
-					when play =>
-
-						if addressCounter > 256 then
-							estado_sig <= edo1;
-						else
-							-- LECTURA 
-							write_op <= '0';
-							read_op <= '1';
-							--Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
-							audioMix <= (( read_buff*100)  + unsigned(std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0))*75);
-
-						end if;
+				if addressCounter < OCTAVE_BUFFER/2 then
+					IF (adc_valid = '1' and adc_channel = "00001" ) THEN							
+					-- ESCRITURA		
+					read_op <= '0';
+					write_op <= '1';
+					--write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
+					write_buff <=  std_logic_vector(adc_rdata) & X"0";
+					END IF;
+				elsif addressCounter > OCTAVE_BUFFER/2 then
+					IF (adc_valid = '1' and adc_channel = "00001" ) THEN							
+					-- ESCRITURA		
+					read_op <= '0';
+					write_op <= '1';
+					--write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
+					write_buff <= std_logic_vector(adc_rdata) & X"0";
+					END IF;
+				elsif addressCounter > OCTAVE_BUFFER then
+					reset_address <= true;
 					
-					when others =>
-						estado_sig <= edo1;
+				end if;
 
-				end case;
+				if play_octave = true then
+					-- LECTURA 
+					write_op <= '0';
+					read_op <= '1';
+					--Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
+					audioMix <= read_buff*1;
+				end if;
 				
-			end if;
+			end if;		
+					
+		end if;			
 			
 
-			
-		END IF; 
+	
 	end process;
 
 	
