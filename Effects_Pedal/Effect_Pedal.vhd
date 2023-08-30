@@ -61,7 +61,7 @@ signal BufferFull : std_logic := '0';
 signal write_done : boolean;
 constant SAMPLE_DELAY : integer :=  16#124F8#;
 constant DELAY_TIME : integer := 16#36EE8#;
-constant OCTAVE_BUFFER : integer := 3072;--524288;  --262144; --Ammount of addresses
+constant OCTAVE_BUFFER : integer := 1024;--524288;  --262144; --Ammount of addresses
 
 signal audioMix : unsigned (31 downto 0 ) := (others => '0');
 
@@ -93,7 +93,8 @@ signal audio_dist : unsigned (11 downto 0);
 signal counter : integer range 0 to 1 := 0;
 signal sample_hold : unsigned (11 downto 0) := (others => '0');
 signal oct_out : unsigned (11 downto 0) := (others => '0');
-signal reset_address,play_octave : boolean;
+signal reset_address : std_logic := '0';
+signal play_octave : boolean;
 
 -- State-Machine
 type fsm_state is (edo1, edo2,play,clear);
@@ -115,6 +116,7 @@ begin
 	display0 <= std_logic_vector(adc_rdata)(3 downto 0);
 	display1 <= std_logic_vector(adc_rdata)(7 downto 4);
 	display2 <= std_logic_vector(adc_rdata)(11 downto 8);
+	--display2 <= X"A" when reset_address = '1' else X"0";
 	display3 <= X"F" when BufferFull = '1' else X"0";
 
 	--led_out <=  "0000" & adc_rdata;
@@ -167,9 +169,9 @@ begin
 	begin
 		IF rising_edge(DE10CLK) then
 
-			if (reset_address = true) then
+			if (reset_address = '1') then
 				addressCounter <= 0;
-				reset_address <= false;
+				reset_address <= '0';
 			end if;
 
 			if (adc_valid = '1' and adc_channel = "00001" ) then
@@ -318,7 +320,7 @@ begin
 					--write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
 					write_buff <=  std_logic_vector(adc_rdata) & X"0";
 					END IF;
-				elsif addressCounter > OCTAVE_BUFFER/2 then
+				elsif addressCounter >= OCTAVE_BUFFER/2  and addressCounter <= OCTAVE_BUFFER then
 					IF (adc_valid = '1' and adc_channel = "00001" ) THEN							
 					-- ESCRITURA		
 					read_op <= '0';
@@ -327,7 +329,7 @@ begin
 					write_buff <= std_logic_vector(adc_rdata) & X"0";
 					END IF;
 				elsif addressCounter > OCTAVE_BUFFER then
-					reset_address <= true;
+					reset_address <= '1';
 					
 				end if;
 
