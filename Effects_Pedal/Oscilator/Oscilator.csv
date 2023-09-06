@@ -1,0 +1,50 @@
+# system info Oscilator on 2023.09.06.00:51:52
+system_info:
+name,value
+DEVICE,10M50DAF484C7G
+DEVICE_FAMILY,MAX 10
+GENERATION_ID,1693979511
+#
+#
+# Files generated for Oscilator on 2023.09.06.00:51:52
+files:
+filepath,kind,attributes,module,is_top
+simulation/Oscilator.vhd,VHDL,,Oscilator,true
+simulation/submodules/mentor/asj_nco_isdr_throughput2.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/aldec/asj_nco_isdr_throughput2.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/mentor/mac_i_lpmd.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/aldec/mac_i_lpmd.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/mentor/asj_nco_pmd2gam.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/aldec/asj_nco_pmd2gam.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/mentor/asj_nco_pmd2.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/aldec/asj_nco_pmd2.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/mentor/las.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/aldec/las.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/mentor/asj_nco_mob_sw.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/aldec/asj_nco_mob_sw.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/mentor/lmsd.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/aldec/lmsd.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/mentor/asj_nco_as_m_dp_cen.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/aldec/asj_nco_as_m_dp_cen.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/mentor/asj_nco_as_m_cen.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/aldec/asj_nco_as_m_cen.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/mentor/asj_altqmcpipe.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/aldec/asj_altqmcpipe.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/mentor/asj_gam_dp.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/aldec/asj_gam_dp.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/mentor/asj_nco_derot.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/aldec/asj_nco_derot.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,Oscilator_nco_ii_0,false
+simulation/submodules/Oscilator_nco_ii_0_sin_c.hex,HEX,,Oscilator_nco_ii_0,false
+simulation/submodules/Oscilator_nco_ii_0_cos_c.hex,HEX,,Oscilator_nco_ii_0,false
+simulation/submodules/Oscilator_nco_ii_0_sin_f.hex,HEX,,Oscilator_nco_ii_0,false
+simulation/submodules/Oscilator_nco_ii_0_cos_f.hex,HEX,,Oscilator_nco_ii_0,false
+simulation/submodules/Oscilator_nco_ii_0.v,VERILOG,,Oscilator_nco_ii_0,false
+simulation/submodules/Oscilator_nco_ii_0_tb.vhd,OTHER,,Oscilator_nco_ii_0,false
+simulation/submodules/c_model/model_wrapper.cpp,OTHER,,Oscilator_nco_ii_0,false
+simulation/submodules/c_model/nco_model.cpp,OTHER,,Oscilator_nco_ii_0,false
+simulation/submodules/c_model/nco_model.h,OTHER,,Oscilator_nco_ii_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+Oscilator.nco_ii_0,Oscilator_nco_ii_0

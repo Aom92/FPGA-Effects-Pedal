@@ -44,7 +44,10 @@ port(
 			adc_channel : in std_logic_vector(4 downto 0);
 
 			--CONEXIONES PARA DAC
-			Audio_Out : out std_logic_vector(15 downto 0)
+			Audio_Out : out std_logic_vector(15 downto 0);
+
+			--CONEXIONES PARA EL NOC
+			increment_out : out std_logic_vector(31 downto 0)
 			
 	);
 
@@ -61,7 +64,7 @@ signal BufferFull : std_logic := '0';
 signal write_done : boolean;
 constant SAMPLE_DELAY : integer :=  16#124F8#;
 constant DELAY_TIME : integer := 16#36EE8#;
-constant OCTAVE_BUFFER : integer := 1024;--524288;  --262144; --Ammount of addresses
+constant OCTAVE_BUFFER : integer := 3072;--524288;  --262144; --Ammount of addresses
 
 signal audioMix : unsigned (31 downto 0 ) := (others => '0');
 
@@ -100,9 +103,10 @@ signal play_octave : boolean;
 type fsm_state is (edo1, edo2,play,clear);
 signal estado_act, estado_sig : fsm_state := edo1;
 
-
-
-
+-- NCO accum
+signal accum_word : std_logic_vector(31 downto 0) := X"00000000";
+-- 7000 HZ ->  0x92CCF
+-- 42 HZ -> 4.2E-5 -> 00000E18
 
 begin
 	
@@ -119,13 +123,18 @@ begin
 	--display2 <= X"A" when reset_address = '1' else X"0";
 	display3 <= X"F" when BufferFull = '1' else X"0";
 
+	Audio_Out <= std_logic_vector(audioMix)(15 downto 0);
+	increment_out <=  accum_word;
 	--led_out <=  "0000" & adc_rdata;
 	-- Salidas hacia los displays 7 segmentos
 	--BufferFull <= not BufferFull when memaddress = X"3FFFFFF";
 
 	process(DE10CLK, DE10Reset, estado_act)
 	begin
-		if (DE10Reset = '1' ) then
+
+		accum_word <= accum_word + X"0092CCF";
+
+		if (DE10Reset = '0' ) then
 			estado_act <= edo1;
 		else
 			estado_act <= estado_sig;
@@ -354,6 +363,6 @@ begin
 
 --phase_offset <= unsigned(resize(round(PHASE_SHIFT * PI_OVER_SAMPLE_WIDTH / PI), phase_offset'length));
 
-Audio_Out <= std_logic_vector(audioMix)(15 downto 0);
+
 
 end;

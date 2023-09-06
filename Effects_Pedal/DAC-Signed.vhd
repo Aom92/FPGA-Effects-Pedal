@@ -11,25 +11,25 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 
-entity DAC2 is 
+entity DAC_signed is 
 	Port( Reloj : in std_logic;
-			D : in std_logic_vector (15 downto 0);
+			D : in signed (25 downto 0);
 			S : out std_logic);
-end DAC2;
+end DAC_signed;
 
-architecture Behavioral of DAC2 is
-signal PWM_Acumulador : std_logic_vector(16 downto 0);
+architecture Behavioral of DAC_signed is
+signal PWM_Acumulador : signed(26 downto 0);
 begin 
 	process (Reloj)	
 	begin	
 		if rising_edge(Reloj) then
 			
-			PWM_Acumulador <= ( "0" & PWM_Acumulador(15 downto 0) ) + ( "0" & D  ) ;
+			PWM_Acumulador <= ( "0" & PWM_Acumulador(25 downto 0) ) + ( "0" & D  ) ;
 			
 		
 		end if;
 		
 	end process;
-	S <= PWM_Acumulador(16);
+	S <= PWM_Acumulador(26);
 	
 end Behavioral;
