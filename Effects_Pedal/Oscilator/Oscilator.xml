@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2023.09.06.00:51:55"
+ date="2023.09.11.22:31:28"
  outputDirectory="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/">
  <perimeter>
   <parameter
@@ -66,7 +66,7 @@
   <interface name="out" kind="conduit" start="0">
    <property name="associatedClock" value="clk" />
    <property name="associatedReset" value="rst" />
-   <port name="fsin_o" direction="output" role="fsin_o" width="26" />
+   <port name="fsin_o" direction="output" role="fsin_o" width="16" />
    <port name="out_valid" direction="output" role="out_valid" width="1" />
   </interface>
   <interface name="rst" kind="reset" start="0">
@@ -77,13 +77,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="Oscilator:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10M50DAF484C7G,AUTO_DEVICE_FAMILY=MAX 10,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1693979514,AUTO_UNIQUE_ID=(altera_nco_ii:20.1:apr=32,aprf=16,apri=24,aprp=16,arch=trig,cordic_arch=parallel,cycles_per_output=2,design_env=NATIVE,dpri=5,fmod_pipe=1,freq_out=4.2E-5,fsamp=50.0,hyper_opt=false,hyper_opt_select=false,mpr=26,numba=1,numch=1,phi_inc=7216,pmod_pipe=1,real_freq_out=4.2E-5,selected_device_family=MAX 10,trig_cycles_per_output=2,use_dedicated_multipliers=true,want_dither=false,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output)"
+   parameterizationKey="Oscilator:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10M50DAF484C7G,AUTO_DEVICE_FAMILY=MAX 10,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1694489487,AUTO_UNIQUE_ID=(altera_nco_ii:20.1:apr=32,aprf=16,apri=24,aprp=16,arch=trig,cordic_arch=parallel,cycles_per_output=2,design_env=NATIVE,dpri=8,fmod_pipe=1,freq_out=4.0E-5,fsamp=50.0,hyper_opt=false,hyper_opt_select=false,mpr=16,numba=1,numch=1,phi_inc=6872,pmod_pipe=1,real_freq_out=4.0E-5,selected_device_family=MAX 10,trig_cycles_per_output=2,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output)"
    instancePathKey="Oscilator"
    kind="Oscilator"
    version="1.0"
    name="Oscilator">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1693979514" />
+  <parameter name="AUTO_GENERATION_ID" value="1694489487" />
   <parameter name="AUTO_DEVICE" value="10M50DAF484C7G" />
   <parameter name="AUTO_DEVICE_FAMILY" value="MAX 10" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
@@ -97,10 +97,6 @@
   </generatedFiles>
   <childGeneratedFiles>
    <file
-       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_nco_isdr_throughput2.v"
-       type="VERILOG"
-       attributes="" />
-   <file
        path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/mac_i_lpmd.v"
        type="VERILOG"
        attributes="" />
@@ -109,19 +105,15 @@
        type="VERILOG"
        attributes="" />
    <file
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_nco_apr_dxx.v"
+       type="VERILOG"
+       attributes="" />
+   <file
        path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_nco_pmd2.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/las.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_nco_mob_sw.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/lmsd.v"
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_dxx_g.v"
        type="VERILOG"
        attributes="" />
    <file
@@ -137,11 +129,31 @@
        type="VERILOG"
        attributes="" />
    <file
-       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_gam_dp.v"
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_nco_derot.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_nco_derot.v"
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_nco_isdr_throughput2.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/las.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_dxx.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_nco_mob_sw.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/lmsd.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_gam_dp.v"
        type="VERILOG"
        attributes="" />
    <file
@@ -208,7 +220,7 @@
  </entity>
  <entity
    path="submodules/"
-   parameterizationKey="altera_nco_ii:20.1:apr=32,aprf=16,apri=24,aprp=16,arch=trig,cordic_arch=parallel,cycles_per_output=2,design_env=NATIVE,dpri=5,fmod_pipe=1,freq_out=4.2E-5,fsamp=50.0,hyper_opt=false,hyper_opt_select=false,mpr=26,numba=1,numch=1,phi_inc=7216,pmod_pipe=1,real_freq_out=4.2E-5,selected_device_family=MAX 10,trig_cycles_per_output=2,use_dedicated_multipliers=true,want_dither=false,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output"
+   parameterizationKey="altera_nco_ii:20.1:apr=32,aprf=16,apri=24,aprp=16,arch=trig,cordic_arch=parallel,cycles_per_output=2,design_env=NATIVE,dpri=8,fmod_pipe=1,freq_out=4.0E-5,fsamp=50.0,hyper_opt=false,hyper_opt_select=false,mpr=16,numba=1,numch=1,phi_inc=6872,pmod_pipe=1,real_freq_out=4.0E-5,selected_device_family=MAX 10,trig_cycles_per_output=2,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output"
    instancePathKey="Oscilator:.:nco_ii_0"
    kind="altera_nco_ii"
    version="20.1"
@@ -222,29 +234,25 @@
   <parameter name="selected_device_family" value="MAX 10" />
   <parameter name="apri" value="24" />
   <parameter name="aprf" value="16" />
-  <parameter name="want_dither" value="false" />
+  <parameter name="want_dither" value="true" />
   <parameter name="hyper_opt_select" value="false" />
   <parameter name="want_phase_mod" value="false" />
   <parameter name="apr" value="32" />
   <parameter name="hyper_opt" value="false" />
   <parameter name="trig_cycles_per_output" value="2" />
-  <parameter name="dpri" value="5" />
-  <parameter name="mpr" value="26" />
+  <parameter name="dpri" value="8" />
+  <parameter name="mpr" value="16" />
   <parameter name="design_env" value="NATIVE" />
   <parameter name="numch" value="1" />
   <parameter name="want_freq_mod" value="false" />
   <parameter name="use_dedicated_multipliers" value="true" />
   <parameter name="want_sin_and_cos" value="single_output" />
-  <parameter name="phi_inc" value="7216" />
+  <parameter name="phi_inc" value="6872" />
   <parameter name="fmod_pipe" value="1" />
   <parameter name="arch" value="trig" />
-  <parameter name="freq_out" value="4.2E-5" />
-  <parameter name="real_freq_out" value="4.2E-5" />
+  <parameter name="freq_out" value="4.0E-5" />
+  <parameter name="real_freq_out" value="4.0E-5" />
   <generatedFiles>
-   <file
-       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_nco_isdr_throughput2.v"
-       type="VERILOG"
-       attributes="" />
    <file
        path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/mac_i_lpmd.v"
        type="VERILOG"
@@ -254,19 +262,15 @@
        type="VERILOG"
        attributes="" />
    <file
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_nco_apr_dxx.v"
+       type="VERILOG"
+       attributes="" />
+   <file
        path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_nco_pmd2.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/las.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_nco_mob_sw.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/lmsd.v"
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_dxx_g.v"
        type="VERILOG"
        attributes="" />
    <file
@@ -282,11 +286,31 @@
        type="VERILOG"
        attributes="" />
    <file
-       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_gam_dp.v"
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_nco_derot.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_nco_derot.v"
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_nco_isdr_throughput2.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/las.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_dxx.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_nco_mob_sw.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/lmsd.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/asj_gam_dp.v"
        type="VERILOG"
        attributes="" />
    <file

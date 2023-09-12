@@ -22,29 +22,29 @@
 
 module Oscilator_nco_ii_0(clk, reset_n, clken, phi_inc_i, fsin_o, out_valid);
 
-parameter mpr = 26;
-parameter opr = 52;
+parameter mpr = 16;
+parameter opr = 32;
 parameter apr = 32;
 parameter apri= 24;
 parameter aprf= 16;
 parameter aprp= 16;
 parameter aprid=29;
-parameter dpri= 5;
-parameter rdw = 26;
+parameter dpri= 8;
+parameter rdw = 16;
 parameter rawc = 12;
 parameter rnwc = 4096;
 parameter rawf = 12;
 parameter rnwf = 4096;
 parameter Pn = 4194304;
-parameter mxnbc = 106496;
-parameter mxnbf = 106496;
+parameter mxnbc = 65536;
+parameter mxnbf = 65536;
 parameter rsfc = "Oscilator_nco_ii_0_sin_c.hex";
 parameter rsff = "Oscilator_nco_ii_0_sin_f.hex";
 parameter rcfc = "Oscilator_nco_ii_0_cos_c.hex";
 parameter rcff = "Oscilator_nco_ii_0_cos_f.hex";
 parameter nc = 1;
 parameter log2nc =0;
-parameter outselinit = 0;
+parameter outselinit = -1;
 parameter paci0= 0;
 parameter paci1= 0;
 parameter paci2= 0;
@@ -85,6 +85,10 @@ wire [rawf-1:0] raxxx001l;
 wire [apri-1:0] ri_dxp2;
 wire cx_en;
 wire cxe_sig;
+wire [aprid-1:0] phi_acc_w_d;
+wire [aprid-1:0] phi_acc_w_di;
+wire [dpri-1:0]  rval_w_d;
+wire [dpri-1:0]  rval_w;
 wire [opr-1:0] result_i;	
 wire [opr-1:0] result_r;	
 wire [mpr-1:0] fsin_o_w;	
@@ -106,6 +110,8 @@ reg [mpr-1:0] fsin_o_w_reg [2-1:0];
 wire [mpr-1:0] fsin_o_w_pipelined;
 reg [opr-1:0] result_i_reg [2-1:0];
 wire [opr-1:0] result_i_pipelined;
+reg [aprid-1:0] phi_acc_w_d_reg [2-1:0];
+wire [aprid-1:0] phi_acc_w_d_pipelined;
 reg [mpr-1:0] rcx_c_reg [2-1:0];
 wire [mpr-1:0] rcx_c_pipelined;
 reg [mpr-1:0] rfx_c_reg [2-1:0];
@@ -208,6 +214,21 @@ endgenerate
 generate
   if (hyper_pipeline == 1) begin
     always @ (posedge clk) begin
+      phi_acc_w_d_reg[0] <= phi_acc_w_d;
+      for (i = 1; i < 2; i=i+1) begin
+        phi_acc_w_d_reg[i] <= phi_acc_w_d_reg[i-1];
+      end
+    end
+    assign phi_acc_w_d_pipelined = phi_acc_w_d_reg[2-1];
+  end
+  else begin
+    assign phi_acc_w_d_pipelined = phi_acc_w_d; // pipeline for this signal is disabled
+  end
+endgenerate
+// Pipeline block
+generate
+  if (hyper_pipeline == 1) begin
+    always @ (posedge clk) begin
       rcx_c_reg[0] <= rcx_c;
       for (i = 1; i < 2; i=i+1) begin
         rcx_c_reg[i] <= rcx_c_reg[i-1];
@@ -294,11 +315,35 @@ defparam ux000.paci5 = paci5 ;
 defparam ux000.paci6 = paci6 ;
 defparam ux000.paci7 = paci7 ;
 
+asj_dxx_g ux001(.clk(clk),
+            .clken(cx_en),
+              .reset(reset_pipelined),
+              .dxxrv(rval_w_d)
+              );
+defparam ux001.dpri = dpri;
+assign rval_w = rval_w_d;
+asj_dxx ux002(.clk(clk),
+            .clken(cx_en),
+	         .reset(reset_pipelined),
+            .dxxpdi(phi_acc_w_di),
+            .rval(rval_w),
+            .dxxpdo(phi_acc_w_d)
+           );
+
+defparam ux002.aprid = aprid;
+defparam ux002.dpri = dpri;
+
+asj_nco_apr_dxx ux0219(.pcc_w(phi_acc_w),
+                         .pcc_d(phi_acc_w_di)
+                         );
+defparam ux0219.apr = apr;
+defparam ux0219.aprid = aprid;
+
 
 asj_nco_pmd2gam ux0145(.clk(clk),
                        .reset(reset_pipelined),
                        .clken(clken_pipelined),
-                       .ri_xxx(phi_acc_w[apr-1:apr-rawc-rawf]),
+                       .ri_xxx(phi_acc_w_d_pipelined[aprid-1:aprid-rawc-rawf]),
 .ri_yyy(ri_dxp2)
 );
 defparam ux0145.apri = apri;
@@ -399,8 +444,8 @@ asj_nco_isdr_throughput2 ux710isdr(.clk(clk),
                     .clken(clken_pipelined),
                     .data_ready(out_valid_w)
                     );
-defparam ux710isdr.ctc=15;
-defparam ux710isdr.cpr=4;
+defparam ux710isdr.ctc=19;
+defparam ux710isdr.cpr=5;
 defparam ux710isdr.depth=1;
 assign out_valid = out_valid_w_pipelined;
 

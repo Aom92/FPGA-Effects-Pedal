@@ -11,7 +11,7 @@ entity Oscilator is
 		clk       : in  std_logic                     := '0';             -- clk.clk
 		clken     : in  std_logic                     := '0';             --  in.clken
 		phi_inc_i : in  std_logic_vector(31 downto 0) := (others => '0'); --    .phi_inc_i
-		fsin_o    : out std_logic_vector(25 downto 0);                    -- out.fsin_o
+		fsin_o    : out std_logic_vector(15 downto 0);                    -- out.fsin_o
 		out_valid : out std_logic;                                        --    .out_valid
 		reset_n   : in  std_logic                     := '0'              -- rst.reset_n
 	);
@@ -24,7 +24,7 @@ architecture rtl of Oscilator is
 			reset_n   : in  std_logic                     := 'X';             -- reset_n
 			clken     : in  std_logic                     := 'X';             -- clken
 			phi_inc_i : in  std_logic_vector(31 downto 0) := (others => 'X'); -- phi_inc_i
-			fsin_o    : out std_logic_vector(25 downto 0);                    -- fsin_o
+			fsin_o    : out std_logic_vector(15 downto 0);                    -- fsin_o
 			out_valid : out std_logic                                         -- out_valid
 		);
 	end component Oscilator_nco_ii_0;

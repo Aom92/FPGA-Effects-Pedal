@@ -2,7 +2,7 @@ set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_TOOL_NAM
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_TOOL_VERSION "20.1"
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "Oscilator" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../Oscilator.sopcinfo"]
-set_global_assignment -entity "Oscilator" -library "Oscilator" -name SLD_INFO "QSYS_NAME Oscilator HAS_SOPCINFO 1 GENERATION_ID 1693979514"
+set_global_assignment -entity "Oscilator" -library "Oscilator" -name SLD_INFO "QSYS_NAME Oscilator HAS_SOPCINFO 1 GENERATION_ID 1694489487"
 set_global_assignment -library "Oscilator" -name MISC_FILE [file join $::quartus(qip_path) "../Oscilator.cmp"]
 set_global_assignment -library "Oscilator" -name SLD_FILE [file join $::quartus(qip_path) "Oscilator.debuginfo"]
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_TARGETED_DEVICE_FAMILY "MAX 10"
@@ -15,7 +15,7 @@ set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONEN
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTY5Mzk3OTUxNA==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTY5NDQ4OTQ4Nw==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::TUFYIDEw::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::MTBNNTBEQUY0ODRDN0c=::QXV0byBERVZJQ0U="
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Nw==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -38,33 +38,37 @@ set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP
 set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "c2VsZWN0ZWRfZGV2aWNlX2ZhbWlseQ==::TUFYIDEw::RGV2aWNlIEZhbWlseQ=="
 set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "YXBy::MzI=::UGhhc2UgQWNjdW11bGF0b3IgUHJlY2lzaW9u"
 set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "YXByaQ==::MjQ=::QW5ndWxhciBSZXNvbHV0aW9u"
-set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "bXBy::MjY=::TWFnbml0dWRlIFJlc29sdXRpb24="
+set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "bXBy::MTY=::TWFnbml0dWRlIFJlc29sdXRpb24="
 set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "Y29yZGljX2FyY2g=::cGFyYWxsZWw=::Q09SRElDIEFyY2hpdGVjdHVyZQ=="
 set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "dHJpZ19jeWNsZXNfcGVyX291dHB1dA==::Mg==::Q2xvY2sgY3ljbGVzIHBlciBvdXRwdXQ="
 set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "Y3ljbGVzX3Blcl9vdXRwdXQ=::Mg==::Q2xvY2sgY3ljbGVzIHBlciBvdXRwdXQ="
-set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "d2FudF9kaXRoZXI=::ZmFsc2U=::SW1wbGVtZW50IFBoYXNlIERpdGhlcmluZw=="
+set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "d2FudF9kaXRoZXI=::dHJ1ZQ==::SW1wbGVtZW50IFBoYXNlIERpdGhlcmluZw=="
+set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "ZHByaQ==::OA==::RGl0aGVyIExldmVs"
 set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "ZnNhbXA=::NTAuMA==::Q2xvY2sgUmF0ZQ=="
-set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "ZnJlcV9vdXQ=::NC4yRS01::RGVzaXJlZCBPdXRwdXQgRnJlcXVlbmN5"
-set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "cGhpX2luYw==::NzIxNg==::UGhhc2UgSW5jcmVtZW50IFZhbHVl"
-set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "cmVhbF9mcmVxX291dA==::NC4yRS01::UmVhbCBPdXRwdXQgRnJlcXVlbmN5"
+set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "ZnJlcV9vdXQ=::NC4wRS01::RGVzaXJlZCBPdXRwdXQgRnJlcXVlbmN5"
+set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "cGhpX2luYw==::Njg3Mg==::UGhhc2UgSW5jcmVtZW50IFZhbHVl"
+set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "cmVhbF9mcmVxX291dA==::NC4wRS01::UmVhbCBPdXRwdXQgRnJlcXVlbmN5"
 set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "d2FudF9mcmVxX21vZA==::ZmFsc2U=::RnJlcXVlbmN5IE1vZHVsYXRpb24gSW5wdXQ="
 set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "d2FudF9waGFzZV9tb2Q=::ZmFsc2U=::UGhhc2UgTW9kdWxhdGlvbiBJbnB1dA=="
 set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "aHlwZXJfb3B0::ZmFsc2U=::aHlwZXJfb3B0"
 set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "aHlwZXJfb3B0X3NlbGVjdA==::ZmFsc2U=::T3B0aW1pemUgZm9yIFN0cmF0aXggMTA="
 
 set_global_assignment -library "Oscilator" -name VHDL_FILE [file join $::quartus(qip_path) "Oscilator.vhd"]
-set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/asj_nco_isdr_throughput2.v"]
 set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/mac_i_lpmd.v"]
 set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/asj_nco_pmd2gam.v"]
+set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/asj_nco_apr_dxx.v"]
 set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/asj_nco_pmd2.v"]
-set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/las.v"]
-set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/asj_nco_mob_sw.v"]
-set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/lmsd.v"]
+set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/asj_dxx_g.v"]
 set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/asj_nco_as_m_dp_cen.v"]
 set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/asj_nco_as_m_cen.v"]
 set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/asj_altqmcpipe.v"]
-set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/asj_gam_dp.v"]
 set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/asj_nco_derot.v"]
+set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/asj_nco_isdr_throughput2.v"]
+set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/las.v"]
+set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/asj_dxx.v"]
+set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/asj_nco_mob_sw.v"]
+set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/lmsd.v"]
+set_global_assignment -library "Oscilator" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/asj_gam_dp.v"]
 set_global_assignment -library "Oscilator" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/Oscilator_nco_ii_0_sin_c.hex"]
 set_global_assignment -library "Oscilator" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/Oscilator_nco_ii_0_cos_c.hex"]
 set_global_assignment -library "Oscilator" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/Oscilator_nco_ii_0_sin_f.hex"]
