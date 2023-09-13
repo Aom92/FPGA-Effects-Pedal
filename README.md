@@ -1,9 +1,10 @@
 # DE10_AudioFun
 
-![Banner](https://user-images.githubusercontent.com/9735721/215595795-00e77a50-db76-4c55-bf58-ca0886cf65de.png)
+![Banner](https://i.imgur.com/pYlIVK3.png)
 
 
-Proyecto de Servicio Social, donde realizaré procesamiento de audio para hacer un sintetizador y pedalera de efectos con la FPGA DE10-Lite
+
+Proyecto de Servicio Social y **Tesis/Tesina**, donde realizaré procesamiento de audio para hacer un sintetizador y pedalera de efectos con la FPGA DE10-Lite
 
 
 
