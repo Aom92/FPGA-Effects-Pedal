@@ -2,7 +2,7 @@ set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_TOOL_NAM
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_TOOL_VERSION "20.1"
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "Oscilator" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../Oscilator.sopcinfo"]
-set_global_assignment -entity "Oscilator" -library "Oscilator" -name SLD_INFO "QSYS_NAME Oscilator HAS_SOPCINFO 1 GENERATION_ID 1694489487"
+set_global_assignment -entity "Oscilator" -library "Oscilator" -name SLD_INFO "QSYS_NAME Oscilator HAS_SOPCINFO 1 GENERATION_ID 1694575325"
 set_global_assignment -library "Oscilator" -name MISC_FILE [file join $::quartus(qip_path) "../Oscilator.cmp"]
 set_global_assignment -library "Oscilator" -name SLD_FILE [file join $::quartus(qip_path) "Oscilator.debuginfo"]
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_TARGETED_DEVICE_FAMILY "MAX 10"
@@ -15,7 +15,7 @@ set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONEN
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTY5NDQ4OTQ4Nw==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTY5NDU3NTMyNQ==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::TUFYIDEw::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::MTBNNTBEQUY0ODRDN0c=::QXV0byBERVZJQ0U="
 set_global_assignment -entity "Oscilator" -library "Oscilator" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Nw==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -45,9 +45,9 @@ set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP
 set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "d2FudF9kaXRoZXI=::dHJ1ZQ==::SW1wbGVtZW50IFBoYXNlIERpdGhlcmluZw=="
 set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "ZHByaQ==::OA==::RGl0aGVyIExldmVs"
 set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "ZnNhbXA=::NTAuMA==::Q2xvY2sgUmF0ZQ=="
-set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "ZnJlcV9vdXQ=::NC4wRS01::RGVzaXJlZCBPdXRwdXQgRnJlcXVlbmN5"
-set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "cGhpX2luYw==::Njg3Mg==::UGhhc2UgSW5jcmVtZW50IFZhbHVl"
-set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "cmVhbF9mcmVxX291dA==::NC4wRS01::UmVhbCBPdXRwdXQgRnJlcXVlbmN5"
+set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "ZnJlcV9vdXQ=::Ny40RS02::RGVzaXJlZCBPdXRwdXQgRnJlcXVlbmN5"
+set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "cGhpX2luYw==::MTI3MQ==::UGhhc2UgSW5jcmVtZW50IFZhbHVl"
+set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "cmVhbF9mcmVxX291dA==::Ny4zOThFLTY=::UmVhbCBPdXRwdXQgRnJlcXVlbmN5"
 set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "d2FudF9mcmVxX21vZA==::ZmFsc2U=::RnJlcXVlbmN5IE1vZHVsYXRpb24gSW5wdXQ="
 set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "d2FudF9waGFzZV9tb2Q=::ZmFsc2U=::UGhhc2UgTW9kdWxhdGlvbiBJbnB1dA=="
 set_global_assignment -entity "Oscilator_nco_ii_0" -library "Oscilator" -name IP_COMPONENT_PARAMETER "aHlwZXJfb3B0::ZmFsc2U=::aHlwZXJfb3B0"

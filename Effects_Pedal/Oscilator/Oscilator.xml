@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2023.09.11.22:31:28"
+ date="2023.09.12.22:22:06"
  outputDirectory="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/">
  <perimeter>
   <parameter
@@ -77,13 +77,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="Oscilator:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10M50DAF484C7G,AUTO_DEVICE_FAMILY=MAX 10,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1694489487,AUTO_UNIQUE_ID=(altera_nco_ii:20.1:apr=32,aprf=16,apri=24,aprp=16,arch=trig,cordic_arch=parallel,cycles_per_output=2,design_env=NATIVE,dpri=8,fmod_pipe=1,freq_out=4.0E-5,fsamp=50.0,hyper_opt=false,hyper_opt_select=false,mpr=16,numba=1,numch=1,phi_inc=6872,pmod_pipe=1,real_freq_out=4.0E-5,selected_device_family=MAX 10,trig_cycles_per_output=2,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output)"
+   parameterizationKey="Oscilator:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10M50DAF484C7G,AUTO_DEVICE_FAMILY=MAX 10,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1694575325,AUTO_UNIQUE_ID=(altera_nco_ii:20.1:apr=32,aprf=16,apri=24,aprp=16,arch=trig,cordic_arch=parallel,cycles_per_output=2,design_env=NATIVE,dpri=8,fmod_pipe=1,freq_out=7.4E-6,fsamp=50.0,hyper_opt=false,hyper_opt_select=false,mpr=16,numba=1,numch=1,phi_inc=1271,pmod_pipe=1,real_freq_out=7.398E-6,selected_device_family=MAX 10,trig_cycles_per_output=2,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output)"
    instancePathKey="Oscilator"
    kind="Oscilator"
    version="1.0"
    name="Oscilator">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1694489487" />
+  <parameter name="AUTO_GENERATION_ID" value="1694575325" />
   <parameter name="AUTO_DEVICE" value="10M50DAF484C7G" />
   <parameter name="AUTO_DEVICE_FAMILY" value="MAX 10" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
@@ -220,7 +220,7 @@
  </entity>
  <entity
    path="submodules/"
-   parameterizationKey="altera_nco_ii:20.1:apr=32,aprf=16,apri=24,aprp=16,arch=trig,cordic_arch=parallel,cycles_per_output=2,design_env=NATIVE,dpri=8,fmod_pipe=1,freq_out=4.0E-5,fsamp=50.0,hyper_opt=false,hyper_opt_select=false,mpr=16,numba=1,numch=1,phi_inc=6872,pmod_pipe=1,real_freq_out=4.0E-5,selected_device_family=MAX 10,trig_cycles_per_output=2,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output"
+   parameterizationKey="altera_nco_ii:20.1:apr=32,aprf=16,apri=24,aprp=16,arch=trig,cordic_arch=parallel,cycles_per_output=2,design_env=NATIVE,dpri=8,fmod_pipe=1,freq_out=7.4E-6,fsamp=50.0,hyper_opt=false,hyper_opt_select=false,mpr=16,numba=1,numch=1,phi_inc=1271,pmod_pipe=1,real_freq_out=7.398E-6,selected_device_family=MAX 10,trig_cycles_per_output=2,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output"
    instancePathKey="Oscilator:.:nco_ii_0"
    kind="altera_nco_ii"
    version="20.1"
@@ -247,11 +247,11 @@
   <parameter name="want_freq_mod" value="false" />
   <parameter name="use_dedicated_multipliers" value="true" />
   <parameter name="want_sin_and_cos" value="single_output" />
-  <parameter name="phi_inc" value="6872" />
+  <parameter name="phi_inc" value="1271" />
   <parameter name="fmod_pipe" value="1" />
   <parameter name="arch" value="trig" />
-  <parameter name="freq_out" value="4.0E-5" />
-  <parameter name="real_freq_out" value="4.0E-5" />
+  <parameter name="freq_out" value="7.4E-6" />
+  <parameter name="real_freq_out" value="7.398E-6" />
   <generatedFiles>
    <file
        path="D:/UNAM/TESIS - SERVICIO SOCIAL/Trabajo/DE10_AudioFun/Effects_Pedal/Oscilator/synthesis/submodules/mac_i_lpmd.v"

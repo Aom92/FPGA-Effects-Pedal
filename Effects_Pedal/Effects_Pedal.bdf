@@ -931,7 +931,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 160 32)
 		(output)
 		(text "outsin[15..0]" (rect 0 0 61 12)(font "Arial" ))
-		(text "outsin[15..0]" (rect 88 27 139 39)(font "Arial" ))
+		(text "outsin[15..0]" (rect 88 27 149 39)(font "Arial" ))
 		(line (pt 160 32)(pt 144 32)(line_width 3))
 	)
 	(drawing
@@ -1073,10 +1073,10 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 100 100)(pt 94 94))
 		(circle (rect 65 49 111 95))
 	)
-	(annotation_block (parameter)(rect 504 -960 828 -751))
+	(annotation_block (parameter)(rect 800 -896 1124 -687))
 )
 (symbol
-	(rect 776 -560 952 -480)
+	(rect 808 -560 984 -480)
 	(text "DAC_signed" (rect 5 0 66 12)(font "Arial" ))
 	(text "inst3" (rect 8 64 31 76)(font "Arial" ))
 	(port
@@ -1097,18 +1097,18 @@ https://fpgasoftware.intel.com/eula.
 		(pt 176 32)
 		(output)
 		(text "S" (rect 0 0 7 12)(font "Arial" ))
-		(text "S" (rect 150 27 155 39)(font "Arial" ))
+		(text "S" (rect 150 27 157 39)(font "Arial" ))
 		(line (pt 176 32)(pt 160 32))
 	)
 	(parameter
 		"data_width"
-		"16"
+		"32"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 160 64))
 	)
-	(annotation_block (parameter)(rect 912 -632 1087 -594))
+	(annotation_block (parameter)(rect 944 -632 1119 -594))
 )
 (connector
 	(pt 1240 96)
@@ -1882,21 +1882,9 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 320 -528)
-	(pt 776 -528)
-)
-(connector
 	(pt 536 -400)
 	(pt 536 -616)
 	(bus)
-)
-(connector
-	(pt 320 -680)
-	(pt 320 -528)
-)
-(connector
-	(pt 320 -528)
-	(pt 320 -464)
 )
 (connector
 	(pt 528 -664)
@@ -1909,26 +1897,43 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 952 -528)
-	(pt 1016 -528)
-)
-(connector
 	(pt 584 -680)
 	(pt 320 -680)
 )
 (connector
-	(pt 528 -512)
-	(pt 776 -512)
-	(bus)
-)
-(connector
-	(pt 528 -464)
-	(pt 528 -512)
-	(bus)
-)
-(connector
-	(pt 528 -512)
 	(pt 528 -664)
+	(pt 528 -464)
+	(bus)
+)
+(connector
+	(pt 768 -640)
+	(pt 752 -640)
+	(bus)
+)
+(connector
+	(pt 1016 -528)
+	(pt 984 -528)
+)
+(connector
+	(pt 768 -640)
+	(pt 768 -512)
+	(bus)
+)
+(connector
+	(pt 320 -680)
+	(pt 320 -528)
+)
+(connector
+	(pt 320 -528)
+	(pt 320 -464)
+)
+(connector
+	(pt 320 -528)
+	(pt 808 -528)
+)
+(connector
+	(pt 768 -512)
+	(pt 808 -512)
 	(bus)
 )
 (junction (pt -280 200))
@@ -1957,4 +1962,3 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt 600 424))
 (junction (pt 320 -464))
 (junction (pt 320 -528))
-(junction (pt 528 -512))
