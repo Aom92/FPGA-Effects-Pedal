@@ -1,11 +1,25 @@
 # Effects Pedal
-Este es el proyecto princiapl, dentro de el se aplican todos los demas bloques generados a partir de los otros proyectos en el repositorio.
+Este es el proyecto princiapl, en el cual se implementan varios instancias/bloques para conformar un pedal de efectos de guitarra simple.
+Los efectos involucrados en esta pedalera de guitarra son:
+  - Distorción
+  - Delay
+  - Reverberación
+  - Tremolo
+  - Octave (Up Octave)
 
 
 ## Funcionamiento
 
-Tenemos un archivo de bloques, donde interconectamos cada uno de los distintos elementos que se han generado, y el bloque "Effects Pedal" Internamente tiene descritos los comportamientos de varios otros efectos, los cuales por medio de la entrada de un switch pueden irse intercambiando entre ellos.
+Se tienen varios archivos bloques, donde interconectamos cada uno de los distintos elementos que se han generado, y por ahora el bloque "Effects Pedal" Internamente tiene descritos los comportamientos de varios otros efectos, los cuales por medio de la entrada de un switch pueden irse alternando entre ellos. Por el momento solo es posible escuchar un efecto a la vez, mas adelante será posible tener varios efectos en cascada.
 
-A continuacion se muestra una imagen del diagrama de bloques hasta este punto.
+
+
+A continuacion se muestra una imagen del diagrama de bloques a:  
+
+12/Sep/2023
+
+![Preview1](https://i.imgur.com/kYXcSOG.png)
+
+13/En/2023
 ![Preview1](https://user-images.githubusercontent.com/9735721/215596976-0fe0f7b9-005a-4b33-b3b6-0efe7b2b6b89.png)
 
