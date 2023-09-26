@@ -165,6 +165,10 @@ set_global_assignment -name ENABLE_SIGNALTAP OFF
 set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
 set_global_assignment -name FLOW_DISABLE_ASSEMBLER OFF
 set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name VHDL_FILE Tremolo.vhd
+set_global_assignment -name VHDL_FILE Octave.vhd
+set_global_assignment -name VHDL_FILE Distortion.vhd
+set_global_assignment -name VHDL_FILE Delay.vhd
 set_global_assignment -name VHDL_FILE mul.vhd
 set_global_assignment -name VHDL_FILE ADD.vhd
 set_global_assignment -name VHDL_FILE "DAC-Signed.vhd"

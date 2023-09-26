@@ -209,7 +209,7 @@ begin
 
 
 				else 
-
+					-- DELAY COUNTER 
 					addressCounter <= addressCounter + 1;
 					-- Revisar (?) : Convertir en constante el valor maximo que almacena
 					if addressCounter > DELAY_TIME then --
