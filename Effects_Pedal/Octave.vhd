@@ -32,7 +32,7 @@ architecture Behavioral of Octave is
     signal addressCounter : integer range 0 to 67108863; -- TODO: Parametrizar despues
 
     constant OCTAVE_BUFFER : integer := 3072;
-    
+    constant DELAY_TIME : integer := 16#36EE8#;
 
     signal audioMix : unsigned (31 downto 0 ) := (others => '0');
 begin
@@ -51,6 +51,8 @@ begin
             end if;
 
             if(sample_valid = '1') then
+
+
                 if enable='1' then
 
                     if play_octave = true then
@@ -64,13 +66,21 @@ begin
 					else
                          -- Cambiar el valor máximo del contador de memoria 
                         addressCounter <= addressCounter + 1;
-
                         if addressCounter > OCTAVE_BUFFER then --
                             addressCounter <= 0;
                             play_octave <= true;
                         end if;
 
                     end if;
+                
+
+                else
+                    -- DELAY COUNTER 
+					addressCounter <= addressCounter + 1;
+					-- Revisar (?) : Convertir en constante el valor maximo que almacena
+					if addressCounter > DELAY_TIME then --
+						addressCounter <= 0;
+					end if;
         
                 end if;
             
@@ -85,34 +95,42 @@ begin
     Octaver: process(CLK)
     begin
 
-        if addressCounter < OCTAVE_BUFFER/2 then
-            IF (sample_valid = '1'  ) THEN							
-            -- ESCRITURA		
-            read_op <= '0';
-            write_op <= '1';
-            --write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
-            write_buff <=  std_logic_vector(input_audio) & X"0";
-            END IF;
-            elsif addressCounter >= OCTAVE_BUFFER/2  and addressCounter <= OCTAVE_BUFFER then
-                IF (sample_valid = '1'  ) THEN							
-                -- ESCRITURA		
-                read_op <= '0';
-                write_op <= '1';
-                --write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
-                write_buff <= std_logic_vector(input_audio) & X"0";
-                END IF;
-            elsif addressCounter > OCTAVE_BUFFER then
-                reset_address <= '1';
-                
+        if rising_edge(CLK) then
+            address <= std_logic_vector(to_unsigned(addressCounter, address'length));
+
+            if enable='1' then
+
+                if addressCounter < OCTAVE_BUFFER/2 then
+                    IF (sample_valid = '1'  ) THEN							
+                    -- ESCRITURA		
+                    read_op <= '0';
+                    write_op <= '1';
+                    --write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
+                    write_buff <=  std_logic_vector(input_audio) & X"0";
+                    END IF;
+                elsif addressCounter >= OCTAVE_BUFFER/2  and addressCounter <= OCTAVE_BUFFER then
+                    IF (sample_valid = '1'  ) THEN							
+                    -- ESCRITURA		
+                    read_op <= '0';
+                    write_op <= '1';
+                    --write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
+                    write_buff <= std_logic_vector(input_audio) & X"0";
+                    END IF;
+                elsif addressCounter > OCTAVE_BUFFER then
+                    reset_address <= '1';
+                    
+                end if;
+
+                if play_octave = true then
+                    -- LECTURA 
+                    write_op <= '0';
+                    read_op <= '1';
+                    --Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
+                    audioMix <= read_buff*1;
+                end if;
             end if;
 
-            if play_octave = true then
-                -- LECTURA 
-                write_op <= '0';
-                read_op <= '1';
-                --Audio_Out <= dataOUT(15 downto 4); -- ??? Problemas de Endianess. 
-                audioMix <= read_buff*1;
-            end if;
+        end if;
 
 
     end process;
