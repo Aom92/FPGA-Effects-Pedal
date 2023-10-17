@@ -52,7 +52,7 @@ architecture Behavioral of Delay is
 begin
 
     -- PROCESOS CONCURRENTES
-    Audio_Out <= std_logic_vector(audioMix)(15 downto 0);
+    Audio_Out <= std_logic_vector(audioMix)(15 downto 0) when enable = '1' else std_logic_vector(input_audio); --No activado mandamos la señal limpia.
 
     isRamFill : process(CLK)
     begin

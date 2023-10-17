@@ -106,7 +106,7 @@ begin
                     read_op <= '0';
                     write_op <= '1';
                     --write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
-                    write_buff <=  std_logic_vector(input_audio) & X"0";
+                    write_buff <=  std_logic_vector(input_audio); --& X"0";
                     END IF;
                 elsif addressCounter >= OCTAVE_BUFFER/2  and addressCounter <= OCTAVE_BUFFER then
                     IF (sample_valid = '1'  ) THEN							
@@ -114,7 +114,7 @@ begin
                     read_op <= '0';
                     write_op <= '1';
                     --write_buff <= std_logic_vector(adc_rdata)(11) & X"0" & std_logic_vector(adc_rdata)(10 downto 0);
-                    write_buff <= std_logic_vector(input_audio) & X"0";
+                    write_buff <= std_logic_vector(input_audio);  --& X"0";
                     END IF;
                 elsif addressCounter > OCTAVE_BUFFER then
                     reset_address <= '1';
@@ -131,7 +131,6 @@ begin
             end if;
 
         end if;
-
 
     end process;
 

@@ -25,9 +25,8 @@ architecture Behavioral of Distortion is
     -- DISTORSION PARAMETERS
     signal audio_int : integer;
     --signal voltaje_in : integer;
-    
-
     signal audioMix : unsigned (25 downto 0 ) := (others => '0');
+
 begin
 
     -- PROCESOS CONCURRENTES
@@ -50,8 +49,15 @@ begin
                     audioMix <= "00" & to_unsigned(audio_int, data_width)*100;
 
                 end if;
+            else
+
+                audioMix <= "00000000000000" & input_audio;
+
 
             end if;
+
+
+
         end if;
     end process;
 

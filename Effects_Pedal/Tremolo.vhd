@@ -59,7 +59,7 @@ begin
         if rising_edge(CLK) then
             if(sample_valid ='1') then
 
-                result <= X"0" & signed(tremolo_wave) * signed(input_audio);
+                result <= signed(tremolo_wave) * signed(input_audio);
 
             end if;
         end if;
