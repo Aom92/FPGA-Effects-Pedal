@@ -96,19 +96,23 @@ begin
                     read_op <= '0';
                     write_op <= '1';
                     -- EXTENSION y NORMALIZACIÓN:
-                    write_buff <= std_logic_vector(input_audio)(11) & X"0" & std_logic_vector(input_audio)(10 downto 0);
-                    audioMix <= (( read_buff*100) + unsigned(std_logic_vector(input_audio)(11) & X"0" & std_logic_vector(input_audio)(10 downto 0))*100);
+                    --write_buff <= std_logic_vector(input_audio)(11) & X"0" & std_logic_vector(input_audio)(10 downto 0);
+                    write_buff <= std_logic_vector(input_audio);
+                    --audioMix <= (( read_buff*1) + unsigned(std_logic_vector(input_audio)(11) & X"0" & std_logic_vector(input_audio)(10 downto 0))*1);
+                    audioMix <= (( read_buff*1));
 
 				elsif (BufferFull = '1' and sample_valid = '1' ) then
                     -- LECTURA 
                     write_op <= '0';
                     read_op <= '1';
-                    audioMix <= (( read_buff*100)  + unsigned(std_logic_vector(input_audio)(11) & X"0" & std_logic_vector(input_audio)(10 downto 0))*75)  ;
+                    --audioMix <= (( read_buff*1)  + unsigned(std_logic_vector(input_audio)(11) & X"0" & std_logic_vector(input_audio)(10 downto 0))*1)  ;
+                    audioMix <= read_buff *1 + input_audio;
             
 				else
                     -- OUT CLEAN AUDIO --
 					if (sample_valid = '1' ) then
-					audioMix <= ( unsigned(std_logic_vector(input_audio)(11) & X"0" & std_logic_vector(input_audio)(10 downto 0))*100);
+					--audioMix <= ( unsigned(std_logic_vector(input_audio)(11) & X"0" & std_logic_vector(input_audio)(10 downto 0))*1);
+                    audioMix <= input_audio*1;
 					end if;
 					
 				end if;	

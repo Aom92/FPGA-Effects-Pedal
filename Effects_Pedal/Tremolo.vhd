@@ -41,7 +41,7 @@ begin
     PHI_INC <=X"00000635";
 
      -- PROCESOS CONCURRENTES
-     Audio_Out <= std_logic_vector(result)(31 downto 16);
+     Audio_Out <= std_logic_vector(result)(31 downto 16) when enable = '1' else std_logic_vector(input_audio);
 
      NCO1 : component Oscilator
         port map (

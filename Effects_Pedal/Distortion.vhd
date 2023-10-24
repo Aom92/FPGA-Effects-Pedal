@@ -25,12 +25,12 @@ architecture Behavioral of Distortion is
     -- DISTORSION PARAMETERS
     signal audio_int : integer;
     --signal voltaje_in : integer;
-    signal audioMix : unsigned (25 downto 0 ) := (others => '0');
+    signal audioMix : unsigned (31 downto 0 ) := (others => '0');
 
 begin
 
     -- PROCESOS CONCURRENTES
-    Audio_out <= std_logic_vector(audioMix)(15 downto 0);
+    Audio_out <= std_logic_vector(audioMix)(15 downto 0) when enable = '1' else std_logic_vector(input_audio);
 
     process(CLK)
     begin
@@ -46,12 +46,11 @@ begin
                         audio_int <= to_integer(input_audio);
                     end if;
 
-                    audioMix <= "00" & to_unsigned(audio_int, data_width)*100;
+                    audioMix <= to_unsigned(audio_int, data_width)*100;
 
                 end if;
             else
-
-                audioMix <= "00000000000000" & input_audio;
+                
 
 
             end if;

@@ -166,6 +166,7 @@ set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
 set_global_assignment -name FLOW_DISABLE_ASSEMBLER OFF
 set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
 set_location_assignment PIN_A12 -to TREMOLO_EN
+set_global_assignment -name VHDL_FILE Preamp.vhd
 set_global_assignment -name VHDL_FILE RAM_MUX.vhd
 set_global_assignment -name VHDL_FILE Concatenador_Efectos.vhd
 set_global_assignment -name VHDL_FILE Tremolo.vhd

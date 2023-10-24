@@ -29,9 +29,9 @@ architecture Behavioral of Octave is
     -- OCTAVER
     signal reset_address : std_logic := '0';
     signal play_octave : boolean;
-    signal addressCounter : integer range 0 to 67108863; -- TODO: Parametrizar despues
+    signal addressCounter : integer range 225000 to 67108863; -- TODO: Parametrizar despues
 
-    constant OCTAVE_BUFFER : integer := 3072;
+    constant OCTAVE_BUFFER : integer := 225000 + 3071;
     constant DELAY_TIME : integer := 16#36EE8#;
 
     signal audioMix : unsigned (31 downto 0 ) := (others => '0');
@@ -39,14 +39,14 @@ begin
 
 
     -- PROCESOS CONCURRENTES
-    Audio_out <= std_logic_vector(audioMix)(15 downto 0);
+    Audio_out <= std_logic_vector(audioMix)(15 downto 0) when enable = '1' else std_logic_vector(input_audio);
 
     ContadorMemoria : process(CLK)
     begin
         if rising_edge(CLK) then
 
             if(reset_address = '1') then
-                addressCounter <= 0;
+                addressCounter <= 225000;
                 reset_address <= '0';
             end if;
 
@@ -59,7 +59,7 @@ begin
 						addressCounter <= addressCounter + 2;
 
 						if addressCounter > OCTAVE_BUFFER then --
-							addressCounter <= 0;
+							addressCounter <= 225000;
 							play_octave <= false;
 						end if;
 
@@ -67,7 +67,7 @@ begin
                          -- Cambiar el valor máximo del contador de memoria 
                         addressCounter <= addressCounter + 1;
                         if addressCounter > OCTAVE_BUFFER then --
-                            addressCounter <= 0;
+                            addressCounter <= 225000;
                             play_octave <= true;
                         end if;
 
@@ -79,7 +79,7 @@ begin
 					addressCounter <= addressCounter + 1;
 					-- Revisar (?) : Convertir en constante el valor maximo que almacena
 					if addressCounter > DELAY_TIME then --
-						addressCounter <= 0;
+						addressCounter <= 225000;
 					end if;
         
                 end if;
