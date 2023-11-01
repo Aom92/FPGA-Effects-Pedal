@@ -46,7 +46,7 @@ begin
                         audio_int <= to_integer(input_audio);
                     end if;
 
-                    audioMix <= to_unsigned(audio_int, data_width)*100;
+                    audioMix <= to_unsigned(audio_int, data_width)*5;
 
                 end if;
             else
