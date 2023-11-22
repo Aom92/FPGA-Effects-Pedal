@@ -11,6 +11,7 @@ entity Preamp is
     sample_valid : in std_logic;
     enable : in std_logic;
     -- Output to DAC
+    output_valid : out std_logic;
     Audio_out : out std_logic_vector(15 downto 0)
   );
 end entity;
@@ -28,8 +29,10 @@ begin
             if enable = '1' then
                 if sample_valid = '1' then
                     audioMix <= "00" & signed(ADC_DATA)*100;
+                    output_valid <= '1';
                 end if;
             else
+                output_valid <= '0';
                 audioMix <= (others => '0');
             end if;
         end if;
