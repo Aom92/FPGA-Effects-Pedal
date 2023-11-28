@@ -22,11 +22,11 @@ M = (1024*10);                 % number of filter coefficients
 b = b(1:M);
 
 % Step 5: Apply windowing to improve the filter performance
-w = blackman(M);         % Hamming window
+w = hamming(M);         % Hamming window
 b = b .* w;
 
 % Normalize the filter coefficients
-b = (b / norm(b));  
+b = (b / norm(b)) *2.15;  
 
 % Plot the frequency response
 freqz(b, 1);
@@ -34,7 +34,6 @@ freqz(b, 1);
 
 %Guardamos los coeficientes como un archivo listo para leerse en Quartus
 %FIR II Builder.
-
 file = fopen('FIR_COEFF','w'); %Abrimos archivo
 fprintf(file, '# banks: 1\n');
 fprintf(file, '# coeffs: %d\n', M);

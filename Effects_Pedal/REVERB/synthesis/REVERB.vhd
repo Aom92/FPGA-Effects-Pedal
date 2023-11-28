@@ -8,10 +8,10 @@ use IEEE.numeric_std.all;
 
 entity REVERB is
 	port (
-		ast_sink_data    : in  std_logic_vector(11 downto 0) := (others => '0'); --   avalon_streaming_sink.data
+		ast_sink_data    : in  std_logic_vector(15 downto 0) := (others => '0'); --   avalon_streaming_sink.data
 		ast_sink_valid   : in  std_logic                     := '0';             --                        .valid
 		ast_sink_error   : in  std_logic_vector(1 downto 0)  := (others => '0'); --                        .error
-		ast_source_data  : out std_logic_vector(42 downto 0);                    -- avalon_streaming_source.data
+		ast_source_data  : out std_logic_vector(29 downto 0);                    -- avalon_streaming_source.data
 		ast_source_valid : out std_logic;                                        --                        .valid
 		ast_source_error : out std_logic_vector(1 downto 0);                     --                        .error
 		clk              : in  std_logic                     := '0';             --                     clk.clk
@@ -24,10 +24,10 @@ architecture rtl of REVERB is
 		port (
 			clk              : in  std_logic                     := 'X';             -- clk
 			reset_n          : in  std_logic                     := 'X';             -- reset_n
-			ast_sink_data    : in  std_logic_vector(11 downto 0) := (others => 'X'); -- data
+			ast_sink_data    : in  std_logic_vector(15 downto 0) := (others => 'X'); -- data
 			ast_sink_valid   : in  std_logic                     := 'X';             -- valid
 			ast_sink_error   : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- error
-			ast_source_data  : out std_logic_vector(42 downto 0);                    -- data
+			ast_source_data  : out std_logic_vector(29 downto 0);                    -- data
 			ast_source_valid : out std_logic;                                        -- valid
 			ast_source_error : out std_logic_vector(1 downto 0)                      -- error
 		);

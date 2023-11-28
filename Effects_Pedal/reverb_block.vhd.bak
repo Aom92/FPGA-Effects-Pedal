@@ -6,30 +6,30 @@ entity reverb_block is
   port (
     clk : in std_logic;
     rst_n : in std_logic;
-    in_data : in std_logic_vector(15 downto 0);
+    in_data : in std_logic_vector(11 downto 0);
     valid : in std_logic;
 
 
-    out_data : out std_logic_vector(29 downto 0)
+    out_data : out std_logic_vector(42 downto 0)
   );
 end entity;
 
 architecture Behavioral of reverb_block is
     signal sorce_error : std_logic_vector(1 downto 0) := (others => '0');
 
-    signal source_data : std_logic_vector(29 downto 0);
+    signal source_data : std_logic_vector(42 downto 0);
     signal source_data_valid : std_logic := '0';
 
     component REVERB is
         port (
-            ast_sink_data    : in  std_logic_vector(15 downto 0) := (others => '0'); --   avalon_streaming_sink.data
+            ast_sink_data    : in  std_logic_vector(11 downto 0) := (others => '0'); --   avalon_streaming_sink.data
             ast_sink_valid   : in  std_logic                     := '0';             --                        .valid
             ast_sink_error   : in  std_logic_vector(1 downto 0)  := (others => '0'); --                        .error
-            ast_source_data  : out std_logic_vector(29 downto 0);                    -- avalon_streaming_source.data
+            ast_source_data  : out std_logic_vector(42 downto 0);                    -- avalon_streaming_source.data
             ast_source_valid : out std_logic;                                        --                        .valid
             ast_source_error : out std_logic_vector(1 downto 0);                     --                        .error
             clk              : in  std_logic                     := '0';             --                     clk.clk
-            reset_n          : in  std_logic                     := '0'            --                     rst.reset_n
+            reset_n          : in  std_logic                     := '0'              --                     rst.reset_n
         );
     end component REVERB;
 
@@ -56,9 +56,9 @@ begin
     begin
 
         if rising_edge(clk) then
-            if source_data_valid = '1' then
-                out_data <= source_data(29 downto 0);
-            end if;
+            --if source_data_valid = '1' then
+                out_data <= source_data(42 downto 0);
+            --end if;
         end if;
     end process;
 

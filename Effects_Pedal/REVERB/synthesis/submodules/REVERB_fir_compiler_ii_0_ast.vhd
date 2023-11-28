@@ -8,13 +8,13 @@ use work.auk_dspip_math_pkg_hpfir.all;
 
 entity REVERB_fir_compiler_ii_0_ast is
   generic (
-        INWIDTH             : integer := 12;
-        OUT_WIDTH_UNTRIMMED : integer := 43;
+        INWIDTH             : integer := 16;
+        OUT_WIDTH_UNTRIMMED : integer := 62;
         BANKINWIDTH         : integer := 0;
-        REM_LSB_BIT_g       : integer := 0;
-        REM_LSB_TYPE_g      : string := "round";
+        REM_LSB_BIT_g       : integer := 32;
+        REM_LSB_TYPE_g      : string := "trunc";
         REM_MSB_BIT_g       : integer := 0;
-        REM_MSB_TYPE_g      : string := "trunc";
+        REM_MSB_TYPE_g      : string := "sat";
         PHYSCHANIN          : integer := 1;
         PHYSCHANOUT         : integer := 1;
         CHANSPERPHYIN       : natural := 1;
@@ -194,10 +194,10 @@ real_passthrough : if COMPLEX_CONST = 1 generate
       port (
         xIn_v                 : in std_logic_vector(0 downto 0);
         xIn_c                 : in std_logic_vector(7 downto 0);
-        xIn_0                : in std_logic_vector(12 - 1 downto 0);
+        xIn_0                : in std_logic_vector(16 - 1 downto 0);
         xOut_v               : out std_logic_vector(0 downto 0);
         xOut_c               : out std_logic_vector(7 downto 0);
-        xOut_0              : out std_logic_vector(43- 1 downto 0);
+        xOut_0              : out std_logic_vector(62- 1 downto 0);
         clk                  : in std_logic;
         areset               : in std_logic
         );
@@ -219,10 +219,10 @@ end component REVERB_fir_compiler_ii_0_rtl_core;
            port map (
             xIn_v     => data_valid_core,
             xIn_c     => "00000000",
-            xIn_0     => data_in_core((0 + 12) * 0 + 12 - 1 downto (0 + 12) * 0),
+            xIn_0     => data_in_core((0 + 16) * 0 + 16 - 1 downto (0 + 16) * 0),
             xOut_v    => core_out_valid_core,
             xOut_c    => core_out_channel_core,
-            xOut_0   => core_out_core(43* 0 + 43- 1 downto 43* 0),
+            xOut_0   => core_out_core(62* 0 + 62- 1 downto 62* 0),
             clk       => clk,
             areset    => reset_fir
         );

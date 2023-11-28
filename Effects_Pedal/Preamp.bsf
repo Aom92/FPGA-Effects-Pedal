@@ -55,9 +55,16 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 248 32)
 		(output)
+		(text "output_valid" (rect 0 0 47 12)(font "Arial" ))
+		(text "output_valid" (rect 180 27 227 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 1))
+	)
+	(port
+		(pt 248 48)
+		(output)
 		(text "Audio_out[15..0]" (rect 0 0 64 12)(font "Arial" ))
-		(text "Audio_out[15..0]" (rect 163 27 227 39)(font "Arial" ))
-		(line (pt 248 32)(pt 232 32)(line_width 3))
+		(text "Audio_out[15..0]" (rect 163 43 227 55)(font "Arial" ))
+		(line (pt 248 48)(pt 232 48)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 232 96)(line_width 1))

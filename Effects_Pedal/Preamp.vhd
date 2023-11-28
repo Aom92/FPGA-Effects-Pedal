@@ -30,6 +30,8 @@ begin
                 if sample_valid = '1' then
                     audioMix <= "00" & signed(ADC_DATA)*100;
                     output_valid <= '1';
+                else
+                    output_valid <= '0';
                 end if;
             else
                 output_valid <= '0';
