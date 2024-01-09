@@ -2,52 +2,51 @@ clear;
 %Encuentra los coeficientes de un filtro FIR, a partir de la respuesta al
 %impulso dada
 % Tomado a partir de codigo generado por ChatGPT.
-
-% Step 1: Determine the desired frequency response of the filter
-f = [0 0.1 0.2 1];     % frequency bands
-a = [1 1 0 0];         % desired amplitude in each band
-
-% Step 2: Design an ideal filter with the desired frequency response using the Fourier transform
-N = 32;                % number of frequency points
-%h = fir2(N-1, f, a);    % ideal impulse response 
-%(?) y cambiamos esto por la respusta al impulso que nos interesa
-
 [h, Fs] = audioread("IR\rir_jack_lyons_chan3_44k.wav");    % Room Impulse Response.
 
-% Step 3: Convert the ideal filter to a causal FIR filter by applying the inverse Fourier transform
+
+% Paso 1: Convertir el filtro ideal a un filtro FIR Causl utilizando la
+% transformada inversa de Fourier. (Omitido)
 b = (h);
 
-% Step 4: Truncate the filter coefficients to a finite length
-M = (1024*10);                 % number of filter coefficients
+% Paso 2: Truncar los coeficientes del filtro a una longitud finita. En
+% este caso 10,000 coeficientes bastaran para tener un resultado bastante
+% aproximado. 
+M = (1024*10);          % number of filter coefficients ( 10k Coeffs)
 b = b(1:M);
 
-% Step 5: Apply windowing to improve the filter performance
+% Paso 3: Applicar una ventana para incrementar el rendimiento del filtro
 w = hamming(M);         % Hamming window
 b = b .* w;
 
-% Normalize the filter coefficients
-b = (b / norm(b)) *2.15;  
+% Paso 4: Normalizar los coeficientes del filtro.
+b = (b / norm(b)) * 1.0  ;  
 
-% Plot the frequency response
+% Paso 5: Graficar su respuesta en frecuencia. 
 freqz(b, 1);
 
 
-%Guardamos los coeficientes como un archivo listo para leerse en Quartus
-%FIR II Builder.
-file = fopen('FIR_COEFF','w'); %Abrimos archivo
-fprintf(file, '# banks: 1\n');
+% Paso 6: Guardamos los coeficientes como un archivo listo para leerse en
+% el FIR II Builder de Quartus.
+
+% Paso 6.1: Abrimos archivo
+file = fopen('FIR_COEFF','w'); 
+%Encabezado de formato
+fprintf(file, '# banks: 1\n'); 
 fprintf(file, '# coeffs: %d\n', M);
+
+% Paso 6.2: Abrimos archivoImprimir cada coeficiente separado por una  coma " , "
 for i = 0 : M-1
     fprintf(file, '%f,', (b(i+1)));
 end
 
-%Testeamos en un archivo wav
+% Paso 6.3: Guardar una demo del filtro utilizando el siguiente clip de audio
 [input,fs] = audioread("audios\masterofpuppets-clean.wav");
 
-
+% Paso 6.4: Aplicamos funcion filter utilizando el clip de audio y el filtro.
 output = filter(b,1,input);
 
-%output = conv2(input,b);
+% Paso 6.5: Escribimos en el archivo de salida. 
 audiowrite('Test-RIR2.wav',output,fs);
 
 
