@@ -3,29 +3,35 @@ library ieee;
   use ieee.numeric_std.all;
 
 entity reverb_block is
+
+  generic(
+    data_width : integer := 16
+  );
   port (
     clk : in std_logic;
     rst_n : in std_logic;
     in_data : in std_logic_vector(15 downto 0);
     valid : in std_logic;
+    enable : in std_logic;
 
-
-    out_data : out std_logic_vector(29 downto 0)
+    out_data : out std_logic_vector(data_width-1 downto 0)
   );
 end entity;
 
 architecture Behavioral of reverb_block is
     signal sorce_error : std_logic_vector(1 downto 0) := (others => '0');
 
-    signal source_data : std_logic_vector(29 downto 0);
-    signal source_data_valid : std_logic := '0';
+    signal source_data : std_logic_vector(data_width-1 downto 0);
+    signal source_data_valid : std_logic;
+
+    signal output_data : std_logic_vector(data_width-1 downto 0);
 
     component REVERB is
         port (
             ast_sink_data    : in  std_logic_vector(15 downto 0) := (others => '0'); --   avalon_streaming_sink.data
             ast_sink_valid   : in  std_logic                     := '0';             --                        .valid
             ast_sink_error   : in  std_logic_vector(1 downto 0)  := (others => '0'); --                        .error
-            ast_source_data  : out std_logic_vector(29 downto 0);                    -- avalon_streaming_source.data
+            ast_source_data  : out std_logic_vector(data_width-1 downto 0);                    -- avalon_streaming_source.data
             ast_source_valid : out std_logic;                                        --                        .valid
             ast_source_error : out std_logic_vector(1 downto 0);                     --                        .error
             clk              : in  std_logic                     := '0';             --                     clk.clk
@@ -37,13 +43,15 @@ architecture Behavioral of reverb_block is
 
 begin
 
+    out_data <= in_data & "0000000000000000000000000000000"   when enable = '0' else output_data;
 
     REVERB_inst : REVERB
         port map (
             ast_sink_data    => in_data,
             ast_sink_valid   => valid,
             ast_sink_error   => sorce_error,
-            ast_source_data  => source_data,
+            --ast_source_data  => source_data,
+            ast_source_data  => output_data,
             ast_source_valid => source_data_valid,
             ast_source_error => open,
             clk              => clk,
@@ -52,14 +60,15 @@ begin
 
 
 
+
+
     process (clk)
     begin
-
-        if rising_edge(clk) then
-            if source_data_valid = '1' then
-                out_data <= source_data(29 downto 0);
-            end if;
-        end if;
+        --if rising_edge(clk) then
+            --if source_data_valid = '1' then
+                --output_data <= source_data(data_width-1 downto 0);
+            --end if;
+        --end if;
     end process;
 
 end architecture;
