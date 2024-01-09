@@ -26,14 +26,14 @@ architecture Behavioral of Tremolo is
             clken     : in  std_logic                     := 'X';             -- clken
             phi_inc_i : in  std_logic_vector(31 downto 0) := (others => 'X'); -- phi_inc_i
             fsin_o    : out std_logic_vector(15 downto 0);                    -- fsin_o
-            reset_n   : in std_logic := 'X'
+            reset_n   : in std_logic := '0'
 
 
         );
     end component Oscilator;
 
 signal PHI_INC : std_logic_vector(31 downto 0) := X"00000635"; 
-signal tremolo_wave : std_logic_vector(15 downto 0) := (others => 'X');
+signal tremolo_wave : std_logic_vector(15 downto 0) := (others => '0');
 
 signal result : signed (31 downto 0); 
 begin
@@ -41,28 +41,32 @@ begin
     PHI_INC <=X"00000635";
 
      -- PROCESOS CONCURRENTES
-     Audio_Out <= std_logic_vector(result)(31 downto 16) when enable = '1' else std_logic_vector(input_audio);
+     --Audio_Out <= std_logic_vector(result)(15 downto 0) when enable = '1' else std_logic_vector(input_audio);
+     Audio_Out <= std_logic_vector(result)(15 downto 0);
 
-     NCO1 : component Oscilator
-        port map (
-            clk       => CLK,       -- clk.clk
-            clken     => enable ,     --  in.clken
-            phi_inc_i => PHI_INC, --    .phi_inc_i
-            fsin_o    => tremolo_wave,   -- out.fsin_o
-            reset_n   => RST
-        );
+
+    NCO1 : component Oscilator
+    port map (
+        clk       => CLK,       -- clk.clk
+        clken     => enable ,     --  in.clken
+        phi_inc_i => PHI_INC, --    .phi_inc_i
+        fsin_o    => tremolo_wave,   -- out.fsin_o
+        reset_n   => RST
+    );
 
 
     Multiplicar : process(clk, tremolo_wave)
     begin
 
-        if rising_edge(CLK) then
-            if(sample_valid ='1') then
-
-                result <= signed(tremolo_wave) * signed(input_audio);
-
+        --if rising_edge(CLK) then
+            if enable = '1'  then        
+                if(sample_valid ='1') then
+                    result <= signed(tremolo_wave) * signed(input_audio);
+                end if;
+            else
+                result <= X"0000" & signed(input_audio);
             end if;
-        end if;
+        --end if;
     end process;
 
    

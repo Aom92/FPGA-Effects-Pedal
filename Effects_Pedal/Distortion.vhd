@@ -34,7 +34,7 @@ begin
 
     process(CLK)
     begin
-        if rising_edge(CLK) then
+        --if rising_edge(CLK) then
             if enable = '1' then
                 --voltaje_in <= to_integer(input_audio)/4095 * 5;
                 audio_int <= to_integer(input_audio);
@@ -51,13 +51,10 @@ begin
                 end if;
             else
                 
-
-
             end if;
 
 
-
-        end if;
+        --end if;
     end process;
 
 end architecture;

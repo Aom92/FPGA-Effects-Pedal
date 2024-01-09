@@ -21,23 +21,23 @@ signal audioMix : signed (25 downto 0) := (others => '0');
 begin
 
 -- PROCESOS CONCURRENTES
-    Audio_out <= std_logic_vector(audioMix)(15 downto 0);
+    Audio_out <= std_logic_vector(audioMix)(25 downto 10);
 
     process(CLK)
     begin
-        if rising_edge(CLK) then
+        --if rising_edge(CLK) then
             if enable = '1' then
                 if sample_valid = '1' then
-                    audioMix <= "00" & signed(ADC_DATA)*100;
-                    output_valid <= '1';
-                else
+                    audioMix <=  signed(ADC_DATA)*50 & "00";
                     output_valid <= '0';
+                else
+                    output_valid <= '1';
                 end if;
             else
                 output_valid <= '0';
                 audioMix <= (others => '0');
             end if;
-        end if;
+        --end if;
     end process;
 
 end architecture;
