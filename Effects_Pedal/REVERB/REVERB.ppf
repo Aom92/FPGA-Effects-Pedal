@@ -10,7 +10,7 @@
   <pin name="ast_sink_data[15..0]" direction="input" scope="external" />
   <pin name="ast_sink_valid" direction="input" scope="external" />
   <pin name="ast_sink_error[1..0]" direction="input" scope="external" />
-  <pin name="ast_source_data[29..0]" direction="output" scope="external" />
+  <pin name="ast_source_data[46..0]" direction="output" scope="external" />
   <pin name="ast_source_valid" direction="output" scope="external" />
   <pin name="ast_source_error[1..0]" direction="output" scope="external" />
  </global>
