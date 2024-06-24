@@ -5,8 +5,9 @@
 *.vho
 *.xrf
 *.qws
+*/*.qws
 *.bak
 *.sopcinfo
 *.vwf
 *.inc
-
+*/simulation/*

@@ -27,8 +27,6 @@ architecture Behavioral of Tremolo is
             phi_inc_i : in  std_logic_vector(31 downto 0) := (others => 'X'); -- phi_inc_i
             fsin_o    : out std_logic_vector(15 downto 0);                    -- fsin_o
             reset_n   : in std_logic := '0'
-
-
         );
     end component Oscilator;
 
@@ -43,8 +41,6 @@ begin
      -- PROCESOS CONCURRENTES
      --Audio_Out <= std_logic_vector(result)(15 downto 0) when enable = '1' else std_logic_vector(input_audio);
      Audio_Out <= std_logic_vector(result)(15 downto 0);
-
-
     NCO1 : component Oscilator
     port map (
         clk       => CLK,       -- clk.clk
