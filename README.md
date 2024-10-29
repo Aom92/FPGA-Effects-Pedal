@@ -4,16 +4,28 @@
 
 
 
-Proyecto de **Tesis**, donde se realiza procesamiento de audio para hacer un una pedalera de efectos de guitarra con la Tarjeta DE10-Lite de Altera.
-
+Proyecto de **Tesis**, donde se realiza procesamiento de digital de audio en tiempo real para hacer un una pedalera de efectos de guitarra con la Tarjeta de desarrollo estudiantíl DE10-Lite de Altera. Esto para proporcionar bases en proyectos basados en FPGA para estudiantes de la carrera de Ingeniería en Computación. Pues los proyectos para esta tecnologia no van mas allá de la teoría vista en las clases. 
 
 
 ## Estructura
 Consiste de varias carpetas donde se tienen proyectos de Quartus individuales, los cuales posteriormente se utilizan como bloques para el proyecto principal ***"Effects-Pedal"***. Dentro de cada carpeta se tiene un proyecto de Quartus Prime, el cual se puede compilar y cargar en cualquier DE10-Lite. También es importante tomar en cuenta que los proyectos fueron realizados en ***Quartus Prime 20.1***, pues a partir de versiones posteriores el modulo controlador de la SDRAM de la FPGA pasa a solo estar disponible en las versiones de paga de Quartus Prime.
 
 
-## Uso
+## Efectos
 
+Se pueden generar los siguientes efectos en *tiempo real* :
+
+* Distorsión
+* Tremolo
+* Reverberación
+* Delay
+* Octavas
+
+Dentro de cada carpeta donde se definen los efectos estan explicaciones a mas detalle de su funcionamiento. 
+
+
+
+## Uso
 Todos los proyectos siguen el siguiente pinout tanto para las entradas como para las salidas:
 | Pin| Descripción |
 | ------------- | ------------- |
